@@ -1,0 +1,76 @@
+package com.nordson.testCases;
+
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+import com.nordson.pageObjects.LoginPage;
+import com.nordson.utilities.ActionMethods;
+import com.nordson.utilities.XLUtils;
+
+public class TC_LoginTest_DDT_001 extends BaseClass {
+
+	LoginPage lp;
+	ActionMethods Am;
+	private SoftAssert softAssert = new SoftAssert();
+
+	@Test(dataProvider = "LoginTestData")
+	public void loginDDT(String user, String pwd) throws InterruptedException, IOException {
+
+		log.info("URL is launched");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);
+		log.info("Wait for the page load time out");
+		lp = new LoginPage(driver);
+		lp.setUserName(user);
+		log.info("user name provided");
+		lp.setPassword(pwd);
+		log.info("password provided");
+		lp.clickLoginBtn();
+		Thread.sleep(6000);
+
+		// verify the login is successful
+		if (driver.getPageSource().contains("ADD NEW ADMIN")) {
+			System.out.println("Login Successful");
+			Am = new ActionMethods();
+			Am.captureScreen(driver, "loginDDT");
+			Assert.assertTrue(true);
+			lp.clickLogoutBtn();
+
+		}
+
+		else {
+
+			Am = new ActionMethods();
+			Am.captureScreen(driver, "loginDDT");
+			System.out.println("Login Failed");
+			softAssert.assertTrue(false);
+
+		}
+	}
+
+	@DataProvider(name = "LoginTestData")
+	String[][] getData() throws IOException {
+		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/LoginData.xlsx";
+
+		int rownum = XLUtils.getRowCount(path, "Login");
+		int colcount = XLUtils.getCellCount(path, "Login", 1);
+
+		System.out.println("No of Rows= " + rownum);
+		System.out.println("No of Columns= " + colcount);
+		String logindata[][] = new String[rownum][colcount];
+
+		for (int i = 1; i <= rownum; i++) {
+			for (int j = 0; j < colcount; j++) {
+				logindata[i - 1][j] = XLUtils.getCellData(path, "Login", i, j);// 1 0
+			}
+
+		}
+		return logindata;
+	}
+
+}

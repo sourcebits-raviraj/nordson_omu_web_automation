@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Nordson OMU">
+
+<listeners>
+<listener class-name="com.nordson.utilities.Reporting" />
+</listeners>
+
+
+  <test name="Nordson OMU Web App Test">
+      <parameter name="browser" value="chrome"/>
+      
+      <classes>
+      
+      <class name="com.nordson.testCases.TC_LoginTest_001"/>
+      <class name="com.nordson.testCases.TC_LoginTest_DDT_001"/>
+      <class name="com.nordson.testCases.TC_Registration_DDT_002"/>
+      <class name="com.nordson.testCases.TC_VerifyLinkTests_003"/>
+      
+      </classes>
+  </test> <!-- Test Login--> 
+   </suite> <!-- Suite -->
