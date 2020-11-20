@@ -31,10 +31,14 @@ public class TC_VerifyLinkTests_003 extends BaseClass {
 		driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);
 		log.info("Wait for the page load time out");
 		lp = new LoginPage(driver);
+
 		lp.setUserName(user);
+
 		log.info("user name provided");
+
 		lp.setPassword(pwd);
 		log.info("password provided");
+
 		lp.clickLoginBtn();
 		Thread.sleep(6000);
 

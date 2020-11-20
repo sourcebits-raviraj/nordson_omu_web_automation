@@ -11,7 +11,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="loginDDT"/>
+          <include name="LinksLoginDDT" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.nordson.testCases.TC_VerifyLinkTests_003 -->
     </classes>

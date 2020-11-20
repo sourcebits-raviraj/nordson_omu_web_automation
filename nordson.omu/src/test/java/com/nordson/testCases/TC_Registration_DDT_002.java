@@ -89,6 +89,7 @@ public class TC_Registration_DDT_002 extends BaseClass {
 
 		if (rp.acceptAndSignUPEnabled() == true) {
 			rp.acceptAndSignUP();
+			Thread.sleep(5000);
 			log.info("Accept and Sign Up Button is enabled");
 		}
 
