@@ -26,12 +26,14 @@ public class TC_LoginTest_DDT_001 extends BaseClass {
 		driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);
 		log.info("Wait for the page load time out");
 		lp = new LoginPage(driver);
+
+		Thread.sleep(2000);
 		lp.setUserName(user);
 		log.info("user name provided");
 		lp.setPassword(pwd);
 		log.info("password provided");
 		lp.clickLoginBtn();
-		Thread.sleep(6000);
+		Thread.sleep(4000);
 
 		// verify the login is successful
 		if (driver.getPageSource().contains("ADD NEW ADMIN")) {
