@@ -90,6 +90,7 @@ public class TC_VerifyLinkTests_003 extends BaseClass {
 		System.out.println("No of Columns= " + colcount);
 		String logindata[][] = new String[rownum][colcount];
 
+		// For Loop to get the array values in Logindata
 		for (int i = 1; i <= rownum; i++) {
 			for (int j = 0; j < colcount; j++) {
 				logindata[i - 1][j] = XLUtils.getCellData(path, "LinksLogin", i, j);// 1 0
