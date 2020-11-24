@@ -25,23 +25,23 @@ This project to run native browser for angularJS  using Hybrid framework with pa
 capabilities: browser: chrome, firefox, ie
 
 # Hybrid Framework Design pattern
-Selenium Webdriver - For launching the Selenium WebDriver is a W3C Recommendation
+*Selenium Webdriver* - For launching the Selenium WebDriver is a W3C Recommendation
 - WebDriver is designed as a simple and more concise programming interface.
 - WebDriver is a compact object-oriented API.
 - It drives the browser effectively.
 
-TestNG - TestNG is a testing framework inspired from JUnit and NUnit, but introducing some new functionalities that make it more powerful and easier to use.
+*TestNG* - TestNG is a testing framework inspired from JUnit and NUnit, but introducing some new functionalities that make it more powerful and easier to use.
 
-Apache POI -Apache POI is a popular API that allows programmers to create, modify, and display MS Office files using Java programs. 
+*Apache POI* -Apache POI is a popular API that allows programmers to create, modify, and display MS Office files using Java programs. 
 It contains classes and methods to decode the user input data or a file into MS Office documents.
 
-Log4j -It views the logging process in terms of levels of priorities and offers mechanisms to direct logging information to a great variety of destinations, such as a database, file, console, UNIX Syslog, etc.
+*Log4j* -It views the logging process in terms of levels of priorities and offers mechanisms to direct logging information to a great variety of destinations, such as a database, file, console, UNIX Syslog, etc.
 log4j has three main components:
 - loggers: Responsible for capturing logging information.
 - appenders: Responsible for publishing logging information to various preferred destinations.
 - layouts: Responsible for formatting logging information in different styles.
 
-Extent Reports: With the ExtentReports library, you can create beautiful, interactive and detailed reports for your tests. Add events, screenshots, tags, devices, authors or any other relevant information you decide is important to create an descriptive and a stunning report that you can totally control.
+*Extent Reports*: With the ExtentReports library, you can create beautiful, interactive and detailed reports for your tests. Add events, screenshots, tags, devices, authors or any other relevant information you decide is important to create an descriptive and a stunning report that you can totally control.
 
 
 # Follow the below commands to run Sample Tests -
