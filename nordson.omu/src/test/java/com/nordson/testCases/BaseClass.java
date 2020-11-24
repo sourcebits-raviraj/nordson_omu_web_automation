@@ -39,6 +39,7 @@ public class BaseClass {
 
 			// Instantiate a FireFox class.
 			driver = new ChromeDriver();
+			log.info("New Chrome driver Instantiated");
 		}
 
 		// Launch the Firefox Browser
@@ -49,6 +50,8 @@ public class BaseClass {
 
 			// Instantiate a FireFox class.
 			driver = new FirefoxDriver();
+			log.info("New Firefox driver Instantiated");
+
 		}
 
 		else if (br.equalsIgnoreCase("IE")) {
@@ -67,10 +70,18 @@ public class BaseClass {
 
 		else {
 			System.out.println("Invalid Browser input");
+			log.info("Invalid browser input in testng.xml");
 		}
 
-		driver.get(baseURL);
+		try
 
+		{
+			driver.get(baseURL);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			log.info("Error in launching the page");
+		}
 	}
 
 	// Tear Down Method Before Class Testng Annotations launching of the Web
@@ -79,6 +90,7 @@ public class BaseClass {
 	public void tearDown() {
 
 		driver.quit();
+		log.info("All the tabs are closed");
 
 	}
 

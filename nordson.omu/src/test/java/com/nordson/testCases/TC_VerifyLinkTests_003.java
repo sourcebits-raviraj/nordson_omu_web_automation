@@ -43,8 +43,10 @@ public class TC_VerifyLinkTests_003 extends BaseClass {
 		Thread.sleep(6000);
 
 		// verify the login is successful
+		log.info("Verify page source contains welcome");
 		if (driver.getPageSource().contains("welcome ravi")) {
 			System.out.println("Login Successful");
+			log.info("Login Successful");
 			Am = new ActionMethods();
 			Am.captureScreen(driver, "LinksLoginDDTPass");
 			Assert.assertTrue(true);
@@ -69,6 +71,7 @@ public class TC_VerifyLinkTests_003 extends BaseClass {
 
 		// used for loop to
 		for (int i = 0; i < links.size(); i++) {
+
 			WebElement element = links.get(i);
 
 			// By using "href" attribute, we could get the url of the requried link
@@ -78,6 +81,7 @@ public class TC_VerifyLinkTests_003 extends BaseClass {
 			// collected in the above link
 			// See the detailed functionality of the verifyLink(url) method
 			lpg = new LinksPages();
+			log.info("Verify Link Method called from LinkPages class");
 			LinksPages.verifyLink(url);
 
 		}

@@ -114,6 +114,7 @@ public class TC_Registration_DDT_002 extends BaseClass {
 			Am.captureScreen(driver, "RegistrationDDTFail");
 			System.out.println("Registration Failed");
 			softAssert.assertTrue(true);
+			log.info("Registration failed");
 
 		}
 	}

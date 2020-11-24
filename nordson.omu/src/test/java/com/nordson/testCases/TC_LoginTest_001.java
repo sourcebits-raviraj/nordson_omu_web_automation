@@ -39,7 +39,7 @@ public class TC_LoginTest_001 extends BaseClass {
 		}
 
 		catch (Exception e) {
-			log.info("Login Button is disbaled");
+			log.error("Login Button is disbaled");
 
 		}
 
@@ -64,6 +64,7 @@ public class TC_LoginTest_001 extends BaseClass {
 		if (driver.getPageSource().contains("ADD NEW ADMIN")) {
 			System.out.println("Login Successful");
 			Assert.assertTrue(true);
+			log.info("Login Successful");
 		}
 
 		else {
@@ -72,6 +73,7 @@ public class TC_LoginTest_001 extends BaseClass {
 			Am.captureScreen(driver, "LoginTest");
 			System.out.println("Invalid Login Credentials");
 			Assert.assertTrue(false);
+			log.debug("Login Failed");
 
 		}
 	}
