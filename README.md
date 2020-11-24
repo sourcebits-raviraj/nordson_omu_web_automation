@@ -24,7 +24,7 @@ This project to run native browser for angularJS  using Hybrid framework with pa
 # Desired Capabilities:
 capabilities: browser: chrome, firefox, ie
 
-# Frame Design pattern
+# Hybrid Framework Design pattern
 Selenium Webdriver - For launching the Selenium WebDriver is a W3C Recommendation
 - WebDriver is designed as a simple and more concise programming interface.
 - WebDriver is a compact object-oriented API.
