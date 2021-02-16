@@ -37,7 +37,7 @@ public class RegistrationPage {
 	@CacheLookup
 	WebElement CompanyType;
 
-	@FindBy(xpath = "//span[contains(@class,'mat-option-text')][normalize-space()='Nordson']")
+	@FindBy(xpath = "//span[contains(@class,'mat-option-text')][normalize-space()='End User']")
 	@CacheLookup
 	WebElement CompanyTypeValue;
 

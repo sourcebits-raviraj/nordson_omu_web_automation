@@ -55,6 +55,7 @@ public class Reporting extends TestListenerAdapter {
 
 		// send the passed information to the report with GREEN color highlighted
 		logger.log(Status.PASS, MarkupHelper.createLabel(tr.getName(), ExtentColor.GREEN));
+
 	}
 
 	public void onTestFailure(ITestResult tr) {

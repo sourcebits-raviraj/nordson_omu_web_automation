@@ -79,6 +79,7 @@ public class BaseClass {
 			driver.get(baseURL);
 
 		} catch (Exception e) {
+
 			e.printStackTrace();
 			log.info("Error in launching the page");
 		}

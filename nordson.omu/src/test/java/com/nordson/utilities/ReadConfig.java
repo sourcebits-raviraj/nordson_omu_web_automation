@@ -11,6 +11,7 @@ public class ReadConfig {
 	public ReadConfig() {
 
 		File src = new File("./configs/config.properties");
+
 		try {
 			FileInputStream fis = new FileInputStream(src);
 			pro = new Properties();
