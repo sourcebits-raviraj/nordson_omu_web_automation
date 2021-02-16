@@ -12,6 +12,7 @@ This project to run native browser for angularJS  using Hybrid framework with pa
 - extentreports 4.0.9
 - log4j 1.2.17
 - reportng 1.1.4
+-Allure Reports
 
 # Supports:
 - Native AngulaJS
