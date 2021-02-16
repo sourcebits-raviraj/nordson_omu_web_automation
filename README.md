@@ -1,6 +1,6 @@
 # nordsonomu_automation
 
- Nordson OMU Web Automation using Selenium 3 with TestNG and Page Object Model design pattern using JAVA lanaguage, integrated with 3rd party jars like Apache POI, Log4j, Testng, ReportNG, Extent Reports, 
+ Nordson OMU Web Automation using Selenium 3 with TestNG and Page Object Model design pattern using JAVA lanaguage, integrated with 3rd party jars like Apache POI, Log4j, Testng, ReportNG, Extent Reports, Allure Reports.
  
 This project to run native browser for angularJS  using Hybrid framework with page object pattern.
 
