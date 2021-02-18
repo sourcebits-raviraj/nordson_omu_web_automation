@@ -12,12 +12,23 @@
   <test name="Nordson OMU Web App Regression Tests on Chrome">
       <parameter name="browser" value="chrome"/>
        <classes>
-     <!--<class name="com.nordson.testCases.TC_LoginTest_001"/> -->
-     
-     <class name="com.nordson.testCases.TC_VerifyLinkTests_003"/>  
-     <class name="com.nordson.testCases.TC_LoginTest_DDT_001"/>   
+    <!--  <class name="com.nordson.testCases.TC_LoginTest_001">
+     <methods><include name="LoginTest"/>
+     </methods>
+     </class> -->
+    <!--  <class name="com.nordson.testCases.TC_VerifyLinkTests_003"/>  
+     <class name="com.nordson.testCases.TC_LoginTest_DDT_001"/>  -->  
         
      <!--   <class name="com.nordson.testCases.TC_Registration_DDT_002"/> -->
+     
+     <class name="com.nordson.testCases.TC_RuntimeSettings_TemperatureTest">
+     <methods>
+             <include name="TestAdminLogin"/>
+              <include name="CreateNORFile"/>   
+              <include name="TestSystemTempPreferences"/>
+              <include name ="TestRuntimeTempZonesDefaultVal"/>
+     </methods>
+     </class>
       </classes>
      
        </test> 

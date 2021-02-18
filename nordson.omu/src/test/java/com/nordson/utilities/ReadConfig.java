@@ -64,5 +64,19 @@ public class ReadConfig {
 		return chropath;
 
 	}
+	
+	public String AdminUsername() {
+
+		String adminname = pro.getProperty("adminusername");
+		return adminname;
+
+	}
+
+	public String AdminPassword() {
+
+		String adminpwd = pro.getProperty("adminpassword");
+		return adminpwd;
+
+	}
 
 }
