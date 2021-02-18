@@ -31,5 +31,18 @@ public class ActionMethods extends BaseClass {
 		String generatedString2 = RandomStringUtils.randomNumeric(4);
 		return (generatedString2);
 	}
+	
+	public static String getConversionToFahrenheit(String celsiustemp)
+	{
+		double fahrenheittemp=0;
+		String fahrheittemp="";
+		
+		   int ctemp = Integer.parseInt(celsiustemp);
+		   fahrenheittemp = ctemp *1.8 +32;
+		   fahrheittemp= String.valueOf((int) Math.round(fahrenheittemp));
+		   return fahrheittemp;
+		
+	}
+	
 
 }
