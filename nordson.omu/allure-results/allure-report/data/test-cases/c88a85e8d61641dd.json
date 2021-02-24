@@ -1,0 +1,377 @@
+{
+  "uid" : "c88a85e8d61641dd",
+  "name" : "PressureValuesMinMax",
+  "fullName" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.PressureValuesMinMax",
+  "historyId" : "7bb9983f28d255abe0758164699735a9",
+  "time" : {
+    "start" : 1614005583521,
+    "stop" : 1614005583521,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "java.lang.NullPointerException",
+  "statusTrace" : "java.lang.RuntimeException: java.lang.NullPointerException\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:51)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:147)\r\n\tat org.testng.internal.Parameters.handleParameters(Parameters.java:801)\r\n\tat org.testng.internal.Parameters.handleParameters(Parameters.java:744)\r\n\tat org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)\r\n\tat org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)\r\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:783)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)\r\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\r\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\r\n\tat java.util.ArrayList.forEach(ArrayList.java:1257)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:766)\r\n\tat org.testng.TestRunner.run(TestRunner.java:587)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:384)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:286)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1109)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1039)\r\n\tat org.testng.TestNG.run(TestNG.java:1007)\r\n\tat org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)\r\n\tat org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)\r\n\tat org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)\r\nCaused by: java.lang.NullPointerException\r\n\tat org.apache.poi.xssf.usermodel.XSSFWorkbook.getSheet(XSSFWorkbook.java:1137)\r\n\tat com.nordson.utilities.XLUtils.getRowCount(XLUtils.java:27)\r\n\tat com.nordson.utilities.XLUtils.getData(XLUtils.java:84)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:78)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:47)\r\n\t... 25 more\r\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1614005469445,
+      "stop" : 1614005518301,
+      "duration" : 48856
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1614005583527,
+      "stop" : 1614005584185,
+      "duration" : 658
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "testClass",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "testMethod",
+    "value" : "PressureValuesMinMax"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "suite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "host",
+    "value" : "SBWIN604"
+  }, {
+    "name" : "thread",
+    "value" : "25248@SBWIN604.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "f0afb78b9d913b25",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1614005410674,
+        "stop" : 1614005410674,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "ea6f4bfd38c134b0",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1614005298120,
+        "stop" : 1614005298121,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "6d3a0068428ad803",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1614005138872,
+        "stop" : 1614005138872,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "12cd5bc315f62e77",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1614005002877,
+        "stop" : 1614005002877,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "b00737830d120508",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1614004981247,
+        "stop" : 1614004981247,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "a6596efc928ed511",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1614004813345,
+        "stop" : 1614004813345,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "2436c4215c2bac9a",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1614004702677,
+        "stop" : 1614004702678,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "fbb45f493980d334",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1614004545719,
+        "stop" : 1614004545719,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "874d0676b5d0537",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1614004387640,
+        "stop" : 1614004387640,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "a7e462eb6b8e6e0e",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1614004119878,
+        "stop" : 1614004119879,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "b09b8a1ee8f5779",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1613996945370,
+        "stop" : 1613996945370,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "d5b38ad13735ed51",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1613996455411,
+        "stop" : 1613996455413,
+        "duration" : 2
+      }
+    }, {
+      "uid" : "a6b228cc73093c14",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1613996233216,
+        "stop" : 1613996233216,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "f54354810dee8c68",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1613995977505,
+        "stop" : 1613995977505,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "73f149a28bded4b7",
+      "status" : "broken",
+      "statusDetails" : "\n[public void com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.PressureValuesMinMax(java.lang.String,java.lang.String) throws java.lang.InterruptedException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).\nData provider mismatch\nMethod: PressureValuesMinMax([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}])\nArguments: [(java.lang.String) 0]",
+      "time" : {
+        "start" : 1613995183593,
+        "stop" : 1613995183594,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "e6ce88acd5fb05b6",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1613995078015,
+        "stop" : 1613995078015,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "9e44098d3c49d8f1",
+      "status" : "broken",
+      "statusDetails" : "\n[public void com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.PressureValuesMinMax(java.lang.String,java.lang.String) throws java.lang.InterruptedException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).\nData provider mismatch\nMethod: PressureValuesMinMax([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}])\nArguments: [(java.lang.String) 0]",
+      "time" : {
+        "start" : 1613994726869,
+        "stop" : 1613994726870,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "64a28e7ef385dfa7",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1613993974228,
+        "stop" : 1613993974228,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "b6172da4cb4d99ed",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1613993862909,
+        "stop" : 1613993862909,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "ebb3ff14f4c6b017",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1613993792514,
+        "stop" : 1613993792514,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "ef18c07d0670b60b",
+      "status" : "broken",
+      "statusDetails" : "\n[public void com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.PressureValuesMinMax(java.lang.String,java.lang.String) throws java.lang.InterruptedException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).\nData provider mismatch\nMethod: PressureValuesMinMax([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}])\nArguments: [(java.lang.String) 0]",
+      "time" : {
+        "start" : 1613991057602,
+        "stop" : 1613991057611,
+        "duration" : 9
+      }
+    }, {
+      "uid" : "21e627a41fadbd2d",
+      "status" : "broken",
+      "statusDetails" : "\n[public void com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.PressureValuesMinMax(java.lang.String,java.lang.String) throws java.lang.InterruptedException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).\nData provider mismatch\nMethod: PressureValuesMinMax([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}])\nArguments: [(java.lang.String) 0]",
+      "time" : {
+        "start" : 1613990913975,
+        "stop" : 1613990913987,
+        "duration" : 12
+      }
+    }, {
+      "uid" : "e824916397c8bbc7",
+      "status" : "skipped",
+      "statusDetails" : "java.lang.NullPointerException",
+      "time" : {
+        "start" : 1613990756973,
+        "stop" : 1613990756979,
+        "duration" : 6
+      }
+    }, {
+      "uid" : "ad5e820e68d20fce",
+      "status" : "broken",
+      "statusDetails" : "\nMethod public void com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.PressureValuesMinMax(java.lang.String,java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : PressureValuesMinMax",
+      "time" : {
+        "start" : 1613990076751,
+        "stop" : 1613990076751,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "a57470519172203f",
+      "status" : "broken",
+      "statusDetails" : "\nMethod public void com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.PressureValuesMinMax(java.lang.String,java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : PressureValuesMinMax",
+      "time" : {
+        "start" : 1613989965998,
+        "stop" : 1613989966013,
+        "duration" : 15
+      }
+    }, {
+      "uid" : "797ae4b7127c76ea",
+      "status" : "unknown",
+      "time" : {
+        "start" : 1613986314597,
+        "stop" : 1613986314598,
+        "duration" : 1
+      }
+    }, {
+      "uid" : "e2b8158aac981c7c",
+      "status" : "broken",
+      "statusDetails" : "\nMethod public void com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.PressureValuesMinMax(java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException requires a @DataProvider named : PressureValues",
+      "time" : {
+        "start" : 1613986125183,
+        "stop" : 1613986125183,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "78f6c9eb17119ae1",
+      "status" : "broken",
+      "statusDetails" : "\nMethod public void com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.PressureValuesMinMax(java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException requires a @DataProvider named : PressureValues",
+      "time" : {
+        "start" : 1613985936746,
+        "stop" : 1613985936746,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "50d8c90904da8b5",
+      "status" : "broken",
+      "statusDetails" : "\nMethod public void com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.PressureValuesMinMax(java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException requires a @DataProvider named : PressureValues",
+      "time" : {
+        "start" : 1613985374978,
+        "stop" : 1613985374978,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "7ad30d0ee0805eec",
+      "status" : "broken",
+      "statusDetails" : "\nMethod public void com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.PressureValuesMinMax(java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException requires a @DataProvider named : PressureValues",
+      "time" : {
+        "start" : 1613985238695,
+        "stop" : 1613985238695,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "2aadf4a18457641f",
+      "status" : "broken",
+      "statusDetails" : "\nMethod public void com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.PressureValuesMinMax(java.lang.String,java.lang.String) throws java.lang.InterruptedException,java.io.IOException requires a @DataProvider named : PressureValues",
+      "time" : {
+        "start" : 1613985130102,
+        "stop" : 1613985130102,
+        "duration" : 0
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "c88a85e8d61641dd.json",
+  "parameterValues" : [ "chrome" ]
+}

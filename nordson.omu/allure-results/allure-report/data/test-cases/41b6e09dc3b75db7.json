@@ -1,0 +1,159 @@
+{
+  "uid" : "41b6e09dc3b75db7",
+  "name" : "PressureValues_BAR_Same_Min_Max",
+  "fullName" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.PressureValues_BAR_Same_Min_Max",
+  "historyId" : "ce3b50f558856a1b1c6d5d7feb5adfd0",
+  "time" : {
+    "start" : 1614175845742,
+    "stop" : 1614175866970,
+    "duration" : 21228
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "implictwaits",
+    "time" : {
+      "start" : 1614175845721,
+      "stop" : 1614175845738,
+      "duration" : 17
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1614175686304,
+      "stop" : 1614175694455,
+      "duration" : 8151
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1614175999053,
+      "stop" : 1614175999741,
+      "duration" : 688
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "testClass",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "testMethod",
+    "value" : "PressureValues_BAR_Same_Min_Max"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "suite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "host",
+    "value" : "SBWIN604"
+  }, {
+    "name" : "thread",
+    "value" : "21720@SBWIN604.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "7"
+  }, {
+    "name" : "arg1",
+    "value" : "7"
+  }, {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "7f7927b0968d09ca",
+      "status" : "passed",
+      "time" : {
+        "start" : 1614172852918,
+        "stop" : 1614172881179,
+        "duration" : 28261
+      }
+    }, {
+      "uid" : "e0132db2bee4f3e7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1614171922042,
+        "stop" : 1614171934189,
+        "duration" : 12147
+      }
+    }, {
+      "uid" : "dace7669c392dd8b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1614159616201,
+        "stop" : 1614159628265,
+        "duration" : 12064
+      }
+    }, {
+      "uid" : "ddf76173786223fa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1614150548944,
+        "stop" : 1614150560991,
+        "duration" : 12047
+      }
+    }, {
+      "uid" : "7c8bba58a78bb935",
+      "status" : "passed",
+      "time" : {
+        "start" : 1614149878179,
+        "stop" : 1614149890294,
+        "duration" : 12115
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "41b6e09dc3b75db7.json",
+  "parameterValues" : [ "7", "7", "chrome" ]
+}

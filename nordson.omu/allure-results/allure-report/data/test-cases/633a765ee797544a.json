@@ -1,0 +1,121 @@
+{
+  "uid" : "633a765ee797544a",
+  "name" : "Pressure_Validation_BAR_Clear_Data_Min_Save",
+  "fullName" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.Pressure_Validation_BAR_Clear_Data_Min_Save",
+  "historyId" : "f2195614a462fd5260aa810433f678dd",
+  "time" : {
+    "start" : 1614146221600,
+    "stop" : 1614146246370,
+    "duration" : 24770
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1614146151165,
+      "stop" : 1614146158563,
+      "duration" : 7398
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1614146345229,
+      "stop" : 1614146345882,
+      "duration" : 653
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "testClass",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "testMethod",
+    "value" : "Pressure_Validation_BAR_Clear_Data_Min_Save"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "suite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "host",
+    "value" : "SBWIN604"
+  }, {
+    "name" : "thread",
+    "value" : "41900@SBWIN604.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "80ae354c3803ee0",
+      "status" : "passed",
+      "time" : {
+        "start" : 1614145089061,
+        "stop" : 1614145113849,
+        "duration" : 24788
+      }
+    }, {
+      "uid" : "8e3a92630e9e8840",
+      "status" : "passed",
+      "time" : {
+        "start" : 1614144806217,
+        "stop" : 1614144830996,
+        "duration" : 24779
+      }
+    }, {
+      "uid" : "48d7f07ef4e6115c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1614077759928,
+        "stop" : 1614077788211,
+        "duration" : 28283
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "633a765ee797544a.json",
+  "parameterValues" : [ "chrome" ]
+}

@@ -1,0 +1,95 @@
+{
+  "uid" : "72a8fa7f3fcde794",
+  "name" : "Pressure_Validation_Kpa_default_values",
+  "fullName" : "com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values.Pressure_Validation_Kpa_default_values",
+  "historyId" : "31001ad7420f1a385023972ce8cab8e6",
+  "time" : {
+    "start" : 1614159381911,
+    "stop" : 1614159402311,
+    "duration" : 20400
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1614159364903,
+      "stop" : 1614159374296,
+      "duration" : 9393
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1614159502759,
+      "stop" : 1614159503483,
+      "duration" : 724
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values"
+  }, {
+    "name" : "testClass",
+    "value" : "com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values"
+  }, {
+    "name" : "testMethod",
+    "value" : "Pressure_Validation_Kpa_default_values"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "suite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values"
+  }, {
+    "name" : "host",
+    "value" : "SBWIN604"
+  }, {
+    "name" : "thread",
+    "value" : "25640@SBWIN604.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "72a8fa7f3fcde794.json",
+  "parameterValues" : [ "chrome" ]
+}

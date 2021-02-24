@@ -1,0 +1,183 @@
+{
+  "uid" : "e9cd6ca827814798",
+  "name" : "Pressure_Validation_PSI_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA",
+  "fullName" : "com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values.Pressure_Validation_PSI_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA",
+  "historyId" : "27e3a5f46a91222ec45f64f915579cc",
+  "time" : {
+    "start" : 1614146133622,
+    "stop" : 1614146150514,
+    "duration" : 16892
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1614146013453,
+      "stop" : 1614146022601,
+      "duration" : 9148
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1614146150517,
+      "stop" : 1614146151163,
+      "duration" : 646
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values"
+  }, {
+    "name" : "testClass",
+    "value" : "com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values"
+  }, {
+    "name" : "testMethod",
+    "value" : "Pressure_Validation_PSI_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "suite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values"
+  }, {
+    "name" : "host",
+    "value" : "SBWIN604"
+  }, {
+    "name" : "thread",
+    "value" : "41900@SBWIN604.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "d12ce091d6cc7978",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613985839034,
+        "stop" : 1613985856222,
+        "duration" : 17188
+      }
+    }, {
+      "uid" : "298831b57e03a54e",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613985278964,
+        "stop" : 1613985294212,
+        "duration" : 15248
+      }
+    }, {
+      "uid" : "ed060cc5173157fb",
+      "status" : "broken",
+      "statusDetails" : "Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'SBWIN604', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'\nDriver info: driver.version: RemoteWebDriver",
+      "time" : {
+        "start" : 1613985245327,
+        "stop" : 1613985247329,
+        "duration" : 2002
+      }
+    }, {
+      "uid" : "87b7477db9dab3dd",
+      "status" : "broken",
+      "statusDetails" : "Session ID is null. Using WebDriver after calling quit()?\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'SBWIN604', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'\nDriver info: driver.version: RemoteWebDriver",
+      "time" : {
+        "start" : 1613985136721,
+        "stop" : 1613985138743,
+        "duration" : 2022
+      }
+    }, {
+      "uid" : "d834fcccce725b21",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613977687714,
+        "stop" : 1613977702495,
+        "duration" : 14781
+      }
+    }, {
+      "uid" : "480788ca333976a3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613977466969,
+        "stop" : 1613977493731,
+        "duration" : 26762
+      }
+    }, {
+      "uid" : "696e779f3f9303c9",
+      "status" : "broken",
+      "statusDetails" : "chrome not reachable\n  (Session info: chrome=88.0.4324.182)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'SBWIN604', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\\Users\\Ravi Raj\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:58771}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: fb86facdc83a5c439a1daa35f282d287\n*** Element info: {Using=xpath, value=//span[@class='heading-text-sidenav']/following::mat-expansion-panel-header[2]}",
+      "time" : {
+        "start" : 1613977344827,
+        "stop" : 1613977359944,
+        "duration" : 15117
+      }
+    }, {
+      "uid" : "d4805b47096b7727",
+      "status" : "broken",
+      "statusDetails" : "element not interactable\n  (Session info: chrome=88.0.4324.182)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'SBWIN604', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\\Users\\Ravi Raj\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:58145}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: e8fbf544130406fa1c24d2046084f3ef",
+      "time" : {
+        "start" : 1613976943935,
+        "stop" : 1613976951077,
+        "duration" : 7142
+      }
+    }, {
+      "uid" : "21b9956ec25ebde9",
+      "status" : "broken",
+      "statusDetails" : "element not interactable\n  (Session info: chrome=88.0.4324.182)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'SBWIN604', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\\Users\\Ravi Raj\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:57621}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: b186c017beff11110e7b1a2514326a7b",
+      "time" : {
+        "start" : 1613976370624,
+        "stop" : 1613976377806,
+        "duration" : 7182
+      }
+    }, {
+      "uid" : "2e0125de8b79de1",
+      "status" : "broken",
+      "statusDetails" : "element not interactable\n  (Session info: chrome=88.0.4324.182)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'SBWIN604', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\\Users\\Ravi Raj\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:60524}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 762e66eb29d9e997b9dd52c814d09b42",
+      "time" : {
+        "start" : 1613973779429,
+        "stop" : 1613973786576,
+        "duration" : 7147
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e9cd6ca827814798.json",
+  "parameterValues" : [ "chrome" ]
+}
