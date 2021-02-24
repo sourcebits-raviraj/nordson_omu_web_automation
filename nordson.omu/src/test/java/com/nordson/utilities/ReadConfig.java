@@ -65,18 +65,12 @@ public class ReadConfig {
 
 	}
 	
-	public String AdminUsername() {
+	public String sheetname() {
 
-		String adminname = pro.getProperty("adminusername");
-		return adminname;
-
-	}
-
-	public String AdminPassword() {
-
-		String adminpwd = pro.getProperty("adminpassword");
-		return adminpwd;
+		String sheetname = pro.getProperty("sheetname");
+		return sheetname;
 
 	}
+
 
 }
