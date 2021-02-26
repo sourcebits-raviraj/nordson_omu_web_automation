@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -48,11 +49,11 @@ public class TemperatureRuntimeSettings {
 
 	WebElement Preferences;
 
-	@FindBy(xpath = " //*[@formcontrolname='TempUnits']//*[contains(@class,'mat-radio-checked') and @value='0']")
+	@FindBy(xpath = "//*[@formcontrolname='TempUnits']//*[contains(@class,'mat-radio-checked')]//div[@class='mat-radio-container']")
 
-	WebElement Temperatureunit;
+	List<WebElement> Temperatureunit;
 
-	@FindBy(xpath = "//*[@formcontrolname='TempUnits']/*[contains(@class,'mat-radio-checked')]//label//div")
+	@FindBy(xpath = "//*[@formcontrolname='TempUnits']/*[contains(@class,'mat-radio-checked')]//div[@class='mat-radio-label-content']")
 
 	WebElement SelectedTemperatureunit;
 
@@ -206,7 +207,8 @@ public class TemperatureRuntimeSettings {
 	public void PreferencesBtnISEnabled() {
 
 		try {
-
+            
+			Am.waitForAnElementPresence(Preferences);
 			Am.waitForAnElementToBeClickable(Preferences);
 
 		}
@@ -218,21 +220,32 @@ public class TemperatureRuntimeSettings {
 	}
 
 	public void clickPreferencesBtn() {
+		
+		Am.waitForAnElementPresence(Preferences);
 		Preferences.click();
 
 	}
 
-	public Boolean getTemperatureunit()
+	public Boolean getTemperatureunitstut()
 
 	{
-		System.out.println(Temperatureunit);
-		Boolean tempvalue = Temperatureunit.isSelected();
-		System.out.println("value" + tempvalue);
-
+		
+		Boolean tempvalue =false;
+	    
+		if(Temperatureunit.size()==1)
+			tempvalue=true;
+		
+		else 
+			tempvalue=false;
+		
 		return tempvalue;
 	}
-	
-	
+	public String getSelectedTemperatureunit()
+	{
+		String tempunt;
+		tempunt=SelectedTemperatureunit.getText();
+		return tempunt;
+	}
 	public String getTemperatureunt()
 	{
 		String tempunt;
@@ -249,6 +262,7 @@ public class TemperatureRuntimeSettings {
 
 	public void clickFarhenitUnit() {
 
+		Am.waitForAnElementPresence(FarhenitTemperatureunit);
 		FarhenitTemperatureunit.click();
 
 	}
@@ -334,7 +348,8 @@ public class TemperatureRuntimeSettings {
 	public void setGlobalSetPoint(String globalpnt) {
 
 		Am.waitForAnElementPresence(GlobalSetPoint);
-		GlobalSetPoint.sendKeys(globalpnt);
+		Actions Sndinput =new Actions(ldriver);
+		Sndinput.sendKeys(GlobalSetPoint, globalpnt).build().perform();	
 
 	}
 
@@ -424,6 +439,23 @@ public class TemperatureRuntimeSettings {
 		}
 
 		return Applicatorsetpointslst;
+	}
+	
+	
+	public String getHosetemp1()
+	
+	{
+		String hsettemp=Hose1.getAttribute("value");
+		return hsettemp;
+		
+	}
+	
+  public String getAPP1temp1()
+	
+	{
+		String appl1=Applicator1.getAttribute("value");
+		return appl1;
+		
 	}
 
 	public void clearTanktemperature() {

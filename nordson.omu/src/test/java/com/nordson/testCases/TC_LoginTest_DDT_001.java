@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -36,12 +38,14 @@ public class TC_LoginTest_DDT_001 extends BaseClass {
 		Thread.sleep(4000);
 
 		// verify the login is successful
-		if (driver.getPageSource().contains("ADD NEW ADMIN")) {
+
+		if (driver.getPageSource().contains(" Sub User Account ")) {
+			
 			System.out.println("Login Successful");
 			Am = new ActionMethods();
 			Am.captureScreen(driver, "loginDDT");
 			Assert.assertTrue(true);
-			lp.clickLogoutBtn();
+			//lp.clickLogoutBtn();
 
 		}
 
@@ -56,7 +60,7 @@ public class TC_LoginTest_DDT_001 extends BaseClass {
 	}
 
 	@DataProvider(name = "LoginTestData")
-	String[][] getData() throws IOException {
+	public static String[][] getData() throws IOException {
 		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/LoginData.xlsx";
 
 		int rownum = XLUtils.getRowCount(path, "Login");

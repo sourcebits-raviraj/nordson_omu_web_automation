@@ -19,8 +19,6 @@ public class BaseClass {
 	public String baseURL = readconfig.getAppURL();
 	public String SuperUsername = readconfig.getSuperAdminUsername();
 	public String SuperPassword = readconfig.getSuperAdminPassword();
-	public String AdminUsername = readconfig.AdminUsername();
-	public String AdminPassword = readconfig.AdminPassword();
 	String expectedTitle = "BBconnCloud";
 	public static WebDriver driver;
 	public static Logger log;

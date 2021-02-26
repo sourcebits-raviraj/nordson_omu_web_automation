@@ -64,13 +64,42 @@ public class ActionMethods extends BaseClass {
 		
 	}
 	
-	public static String getAlertText()
+	public static String getConversionToCelsius(String farnhittemp)
 	{
+		double celsiustemp=0;
+		String celsius ="";
 		
-		Alert alert = driver.switchTo().alert(); // switch to alert
-		String alertMessage= alert.getText(); // capture alert message
-		return alertMessage;	
-		 
+		   int ctemp = Integer.parseInt(farnhittemp);
+		   celsiustemp = (ctemp-32) *5/9;
+		   celsius= String.valueOf((int) Math.round(celsiustemp));
+		   return celsius;
+		
+	}
+	
+	
+	public static String getConversionToFahrenheitSys(String celsiustemp)
+	{
+		double fahrenheittemp=0;
+		String farntemp="";
+		
+		   int ctemp = Integer.parseInt(celsiustemp);
+		   fahrenheittemp = ctemp *1.8;
+		   int value = (int)fahrenheittemp; 
+		   farntemp= String.valueOf(value);
+		   return farntemp;
+		
+	}
+	
+	public static String getConversionToCelsiusSys(String farnhittemp)
+	{
+		double celsiustemp=0;
+		String celsius ="";
+		
+		   int ctemp = Integer.parseInt(farnhittemp);
+		   celsiustemp = ctemp *5/9;
+		   celsius= String.valueOf((double) Math.round(celsiustemp));
+		   return celsius;
+		
 	}
 	
 	
