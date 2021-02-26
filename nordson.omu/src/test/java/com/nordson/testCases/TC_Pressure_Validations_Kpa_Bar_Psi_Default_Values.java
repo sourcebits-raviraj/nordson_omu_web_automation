@@ -8,6 +8,12 @@ import org.testng.asserts.SoftAssert;
 import com.nordson.pageObjects.Runtime_Settings_Pressure_Validations;
 import com.nordson.utilities.ActionMethods;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+
+@Epic("Regression Tests")
+@Feature("Pressure Min & Max Field verification of default Values")
 public class TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values extends TC_LoginTest_DDT_001 {
 
 	Runtime_Settings_Pressure_Validations rsp;
@@ -15,6 +21,7 @@ public class TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values extends TC_Login
 	private SoftAssert softAssert = new SoftAssert();
 
 	@Test(priority = 1, enabled = true)
+	@Description("Verify the Default Values for Kpa Pressure Unit")
 	public void Pressure_Validation_Kpa_default_values() throws InterruptedException, IOException {
 
 		rsp = new Runtime_Settings_Pressure_Validations(driver);
@@ -61,6 +68,7 @@ public class TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values extends TC_Login
 	}
 
 	@Test(priority = 2, enabled = true)
+	@Description("Verify the Default Values for BAR Pressure Unit")
 	public void Pressure_Validation_BAR_default_values() throws InterruptedException, IOException {
 
 		log.info("Clicked on System Setting Link");
@@ -93,6 +101,7 @@ public class TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values extends TC_Login
 	}
 
 	@Test(priority = 3, enabled = true)
+	@Description("Verify the Default Values for PSI Pressure Unit")
 	public void Pressure_Validation_PSI_default_values() throws InterruptedException, IOException {
 
 		log.info("Clicked on System Setting Link");
@@ -125,6 +134,7 @@ public class TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values extends TC_Login
 	}
 
 	@Test(priority = 4, enabled = true)
+	@Description("Verify the Default Values for KPA Pressure Unit with Hydraulic pressure scaling and Pump Ratio-STD STD-DA")
 	public void Pressure_Validation_Kpa_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA()
 			throws InterruptedException, IOException {
 
@@ -161,6 +171,7 @@ public class TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values extends TC_Login
 	}
 
 	@Test(priority = 5, enabled = true)
+	@Description("Verify the Default Values for BAR Pressure Unit with Hydraulic pressure scaling and Pump Ratio-STD STD-DA")
 	public void Pressure_Validation_BAR_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA()
 			throws InterruptedException, IOException {
 
@@ -197,6 +208,7 @@ public class TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values extends TC_Login
 	}
 
 	@Test(priority = 6, enabled = true)
+	@Description("Verify the Default Values for PSI Pressure Unit with Hydraulic pressure scaling and Pump Ratio-STD STD-DA")
 	public void Pressure_Validation_PSI_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA()
 			throws InterruptedException, IOException {
 

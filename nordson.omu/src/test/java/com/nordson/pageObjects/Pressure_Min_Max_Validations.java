@@ -100,6 +100,9 @@ public class Pressure_Min_Max_Validations {
 	@FindBy(xpath = "//span[@class='mat-option-text'][normalize-space()='Hydraulic']")
 	WebElement SelectHydaulicValue;
 
+	@FindBy(css = "div#toast-container")
+	WebElement ToastMessage;
+
 	// Page Action Methods for all the WebElements declared
 	public void clickSetUpToolLink() throws InterruptedException {
 
@@ -325,10 +328,6 @@ public class Pressure_Min_Max_Validations {
 
 	public String getPSIMaxSetPoint() throws InterruptedException {
 
-		// customwait.waitForAnElementPresence(By.xpath(
-		// "//div[contains(@class,'row
-		// display-flex-align-center')]//span[contains(@class,'min')][normalize-space()='PSI']/preceding::input[1]"));
-		// MaxSetPoint.click();
 		Thread.sleep(2000);
 		// boolean bool1 = PSIMaxSetPoint.isDisplayed();
 		// System.out.println("Max Set Point for PSI text box is displayed=" + bool1);
@@ -351,9 +350,21 @@ public class Pressure_Min_Max_Validations {
 		Thread.sleep(2000);
 		SelectHydaulicValue.click();
 		Thread.sleep(2000);
-		// Select ps = new Select(SelectHydaulic);
-		// ps.selectByVisibleText("Hydraulic");
 
+	}
+
+	public boolean toastmessageDisplayed() {
+
+		boolean tmsg = ToastMessage.isDisplayed();
+		System.out.println("The toast message is displayed=" + tmsg);
+		return tmsg;
+	}
+
+	public String getToastMessageText() {
+
+		String tm = ToastMessage.getText();
+		System.out.println("Value of the toast message is=" + tm);
+		return tm;
 	}
 
 }

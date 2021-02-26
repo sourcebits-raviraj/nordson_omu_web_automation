@@ -19,7 +19,7 @@
     <class name="com.nordson.testCases.TC_Registration_DDT_002"/>  -->
     
     
-    <class name="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values"/>   
+   <class name="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values"/>
     <class name= "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"/>
     
       </classes>

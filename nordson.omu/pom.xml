@@ -142,8 +142,18 @@
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
 						<suiteXmlFile>testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
-				</configuration>
+					</suiteXmlFiles>				
+				    <argLine>
+                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.4/aspectjweaver-1.9.4.jar"
+                     </argLine>
+                 </configuration>
+                 <dependencies>
+                   <dependency>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjweaver</artifactId>
+                    <version>1.9.6</version>
+                   </dependency>
+                 </dependencies>
 			</plugin>
 		</plugins>
 	</build>
