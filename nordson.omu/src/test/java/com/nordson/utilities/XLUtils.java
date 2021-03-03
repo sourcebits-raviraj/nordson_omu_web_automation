@@ -20,8 +20,14 @@ public class XLUtils {
 	public static XSSFRow row;
 	public static XSSFCell cell;
 	public static String sheetNm;
-
-
+	
+	
+public static void setExcelSheetNm(String SheetName) {
+		
+		XLUtils.sheetNm=SheetName;
+		
+	}
+	
 	public static int getRowCount(String xlfile, String xlsheet) throws IOException {
 		fi = new FileInputStream(xlfile);
 		wb = new XSSFWorkbook(fi);
@@ -78,8 +84,8 @@ public class XLUtils {
 	}
 
 	
-	@DataProvider(name = "ReadDP")
-	public static String[][] getData() throws IOException {
+	@DataProvider(name = "GlobalPointValues_Celsius")
+	public static String[][] getDataGP_Celsius() throws IOException {
 		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
 
 		int rownum = XLUtils.getRowCount(path, sheetNm);
@@ -101,10 +107,253 @@ public class XLUtils {
 	}
 	
 	
-	public static void setExcelSheetNm(String SheetName) {
-		
-		XLUtils.sheetNm=SheetName;
-		
-	}
+	@DataProvider(name = "GlobalPointValues_Farnhenit")
+	public static String[][] getDataGP_Farnheit() throws IOException {
+		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
 
+		int rownum = XLUtils.getRowCount(path, sheetNm);
+		int colcount = XLUtils.getCellCount(path, sheetNm, 1);
+		int colcnt = colcount - 1;
+
+		System.out.println("No of Rows= " + rownum);
+		System.out.println("No of Columns= " + colcnt);
+		String tempdata[][] = new String[rownum][colcnt];
+
+		for (int i = 1; i <= rownum; i++) {
+			for (int j = 1; j <= colcnt; j++) {
+				tempdata[i - 1][j - 1] = XLUtils.getCellData(path, sheetNm, i, j);// 1 1
+
+			}
+
+		}
+		return tempdata;
+	}
+	
+	@DataProvider(name = "TankPointValues_Celsius")
+	public static String[][] getDataTP_Celsius() throws IOException {
+		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
+
+		int rownum = XLUtils.getRowCount(path, sheetNm);
+		int colcount = XLUtils.getCellCount(path, sheetNm, 1);
+		int colcnt = colcount - 1;
+
+		System.out.println("No of Rows= " + rownum);
+		System.out.println("No of Columns= " + colcnt);
+		String tempdata[][] = new String[rownum][colcnt];
+
+		for (int i = 1; i <= rownum; i++) {
+			for (int j = 1; j <= colcnt; j++) {
+				tempdata[i - 1][j - 1] = XLUtils.getCellData(path, sheetNm, i, j);// 1 1
+
+			}
+
+		}
+		return tempdata;
+	}
+	
+	
+	@DataProvider(name = "TankPointValues_Farnhenit")
+	public static String[][] getDataTP_Farnheit() throws IOException {
+		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
+
+		int rownum = XLUtils.getRowCount(path, sheetNm);
+		int colcount = XLUtils.getCellCount(path, sheetNm, 1);
+		int colcnt = colcount - 1;
+
+		System.out.println("No of Rows= " + rownum);
+		System.out.println("No of Columns= " + colcnt);
+		String tempdata[][] = new String[rownum][colcnt];
+
+		for (int i = 1; i <= rownum; i++) {
+			for (int j = 1; j <= colcnt; j++) {
+				tempdata[i - 1][j - 1] = XLUtils.getCellData(path, sheetNm, i, j);// 1 1
+
+			}
+
+		}
+		return tempdata;
+	}
+	
+	
+	@DataProvider(name = "HoseAppPointValues_Celsius")
+	public static String[][] getDataHAP_Celsius() throws IOException {
+		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
+
+		int rownum = XLUtils.getRowCount(path, sheetNm);
+		int colcount = XLUtils.getCellCount(path, sheetNm, 1);
+		int colcnt = colcount - 1;
+
+		System.out.println("No of Rows= " + rownum);
+		System.out.println("No of Columns= " + colcnt);
+		String tempdata[][] = new String[rownum][colcnt];
+
+		for (int i = 1; i <= rownum; i++) {
+			for (int j = 1; j <= colcnt; j++) {
+				tempdata[i - 1][j - 1] = XLUtils.getCellData(path, sheetNm, i, j);// 1 1
+
+			}
+
+		}
+		return tempdata;
+	}
+	
+	
+	@DataProvider(name = "HoseAppPointValues_Farnhenit")
+	public static String[][] getDataHAP_Farnheit() throws IOException {
+		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
+
+		int rownum = XLUtils.getRowCount(path, sheetNm);
+		int colcount = XLUtils.getCellCount(path, sheetNm, 1);
+		int colcnt = colcount - 1;
+
+		System.out.println("No of Rows= " + rownum);
+		System.out.println("No of Columns= " + colcnt);
+		String tempdata[][] = new String[rownum][colcnt];
+
+		for (int i = 1; i <= rownum; i++) {
+			for (int j = 1; j <= colcnt; j++) {
+				tempdata[i - 1][j - 1] = XLUtils.getCellData(path, sheetNm, i, j);// 1 1
+
+			}
+
+		}
+		return tempdata;
+	}
+	
+	@DataProvider(name = "OTTValues_Celsius")
+	public static String[][] getDataOTT_Celsius() throws IOException {
+		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
+
+		int rownum = XLUtils.getRowCount(path, sheetNm);
+		int colcount = XLUtils.getCellCount(path, sheetNm, 1);
+		int colcnt = colcount - 1;
+
+		System.out.println("No of Rows= " + rownum);
+		System.out.println("No of Columns= " + colcnt);
+		String tempdata[][] = new String[rownum][colcnt];
+
+		for (int i = 1; i <= rownum; i++) {
+			for (int j = 1; j <= colcnt; j++) {
+				tempdata[i - 1][j - 1] = XLUtils.getCellData(path, sheetNm, i, j);// 1 1
+
+			}
+
+		}
+		return tempdata;
+	}
+	
+	@DataProvider(name = "OTTValues_Farnheit")
+	public static String[][] getDataOTT_Farnheit() throws IOException {
+		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
+
+		int rownum = XLUtils.getRowCount(path, sheetNm);
+		int colcount = XLUtils.getCellCount(path, sheetNm, 1);
+		int colcnt = colcount - 1;
+
+		System.out.println("No of Rows= " + rownum);
+		System.out.println("No of Columns= " + colcnt);
+		String tempdata[][] = new String[rownum][colcnt];
+
+		for (int i = 1; i <= rownum; i++) {
+			for (int j = 1; j <= colcnt; j++) {
+				tempdata[i - 1][j - 1] = XLUtils.getCellData(path, sheetNm, i, j);// 1 1
+
+			}
+
+		}
+		return tempdata;
+	}
+	
+	
+	@DataProvider(name = "UTTValues_Celsius")
+	public static String[][] getDataUTT_Celsius() throws IOException {
+		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
+
+		int rownum = XLUtils.getRowCount(path, sheetNm);
+		int colcount = XLUtils.getCellCount(path, sheetNm, 1);
+		int colcnt = colcount - 1;
+
+		System.out.println("No of Rows= " + rownum);
+		System.out.println("No of Columns= " + colcnt);
+		String tempdata[][] = new String[rownum][colcnt];
+
+		for (int i = 1; i <= rownum; i++) {
+			for (int j = 1; j <= colcnt; j++) {
+				tempdata[i - 1][j - 1] = XLUtils.getCellData(path, sheetNm, i, j);// 1 1
+
+			}
+
+		}
+		return tempdata;
+	}
+	
+	@DataProvider(name = "UTTValues_Farnheit")
+	public static String[][] getDataTT_Farnheit() throws IOException {
+		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
+
+		int rownum = XLUtils.getRowCount(path, sheetNm);
+		int colcount = XLUtils.getCellCount(path, sheetNm, 1);
+		int colcnt = colcount - 1;
+
+		System.out.println("No of Rows= " + rownum);
+		System.out.println("No of Columns= " + colcnt);
+		String tempdata[][] = new String[rownum][colcnt];
+
+		for (int i = 1; i <= rownum; i++) {
+			for (int j = 1; j <= colcnt; j++) {
+				tempdata[i - 1][j - 1] = XLUtils.getCellData(path, sheetNm, i, j);// 1 1
+
+			}
+
+		}
+		return tempdata;
+	}
+	
+	
+
+	@DataProvider(name = "TempstbckValues_Celsius")
+	public static String[][] getDataTempstbck_Celsius() throws IOException {
+		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
+
+		int rownum = XLUtils.getRowCount(path, sheetNm);
+		int colcount = XLUtils.getCellCount(path, sheetNm, 1);
+		int colcnt = colcount - 1;
+
+		System.out.println("No of Rows= " + rownum);
+		System.out.println("No of Columns= " + colcnt);
+		String tempdata[][] = new String[rownum][colcnt];
+
+		for (int i = 1; i <= rownum; i++) {
+			for (int j = 1; j <= colcnt; j++) {
+				tempdata[i - 1][j - 1] = XLUtils.getCellData(path, sheetNm, i, j);// 1 1
+
+			}
+
+		}
+		return tempdata;
+	}
+	
+	
+
+	@DataProvider(name = "TempstbckValues_Farnheit")
+	public static String[][] getDataTempstbck_Farnheit() throws IOException {
+		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
+
+		int rownum = XLUtils.getRowCount(path, sheetNm);
+		int colcount = XLUtils.getCellCount(path, sheetNm, 1);
+		int colcnt = colcount - 1;
+
+		System.out.println("No of Rows= " + rownum);
+		System.out.println("No of Columns= " + colcnt);
+		String tempdata[][] = new String[rownum][colcnt];
+
+		for (int i = 1; i <= rownum; i++) {
+			for (int j = 1; j <= colcnt; j++) {
+				tempdata[i - 1][j - 1] = XLUtils.getCellData(path, sheetNm, i, j);// 1 1
+
+			}
+
+		}
+		return tempdata;
+	}
 }

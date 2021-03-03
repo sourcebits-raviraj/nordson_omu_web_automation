@@ -1,862 +1,793 @@
 package com.nordson.testCases;
 
 import java.io.IOException;
-
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.nordson.pageObjects.TemperatureRuntimeSettings;
+import com.nordson.pageObjects.TemperatureSystemSettings;
 import com.nordson.utilities.ActionMethods;
 import com.nordson.utilities.Constants;
 import com.nordson.utilities.XLUtils;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+
+
+@Epic("Regression Tests")
+@Feature(" System settings Temperature verification")
 public class TC_SystemSettings_TemperatureTest extends TC_LoginTest_DDT_001 {
 
-	TemperatureRuntimeSettings Trs;
+	TemperatureSystemSettings Tss;
 	ActionMethods Am;
 	TC_LoginTest_DDT_001 lg;
-	
-	public static String OTTtempcsl="";
-	public static String OTTtempfarnh="";
-	
-	public static String UTTtempcsl="";
-	public static String UTTtempfarnh="";
-	
-	public static String tmpstbckcsl="";
-	public static String tmpstbckfarnh="";
-	
-	
+
+	public static String OTTtempcsl = "";
+	public static String OTTtempfarnh = "";
+
+	public static String UTTtempcsl = "";
+	public static String UTTtempfarnh = "";
+
+	public static String tmpstbckcsl = "";
+	public static String tmpstbckfarnh = "";
+
 	private SoftAssert softAssert = new SoftAssert();
 
 	@Test(priority = 1)
+	@Feature("Temperature System settings Default values validations")
+	@Description("Verify the Default Values for Celsius system settings Temperature Unit")
 	public void Test_Celsius_SysDefaultSettings() throws InterruptedException, IOException {
 
-		Trs = new TemperatureRuntimeSettings(driver);
-		Trs.SetUpToolBtnISEnabled();
-		Trs.clickSetUpToolBtn();
+		Tss = new TemperatureSystemSettings(driver);
+
+		Tss.clickSetUpToolBtn();
 		log.info("Clicked on SetUp Tool button");
-		Thread.sleep(1000);
 
-		Trs.CreateNewBtnISEnabled();
-		Trs.clickCreateNewBtn();
-		log.info("Clicked on CreateNew button");
-		Thread.sleep(1000);
+		Tss.clickCreateNewBtn();
+		log.info("Clicked on CreateNew button");	
 
-		Trs.clickSubmitBtn();
+		Tss.clickSubmitBtn();
 		log.info("Clicked on Submit button");
-		Thread.sleep(1200);
-
-		Trs.SystemSettingsBtnISEnabled();
-		Thread.sleep(2000);
-		Trs.clickSystemSettingsBtn();
+		Thread.sleep(1000);
+		
+		Tss.clickSystemSettingsBtn();
 		log.info("Clicked on System settings button");
-		Thread.sleep(3000);
 
-		Trs.TemperatureBtnISEnabled();
-		Trs.TemperatureBtn();
+		Tss.clickTemperatureBtn();
 		log.info("Clicked on Temperature in System settings button");
-
+		
 		// check for default values
 
-		String OTtemp = Trs.getOTTemperature();
-		softAssert.assertEquals(Constants.OTTemp, OTtemp,
+		softAssert.assertEquals(Tss.getOTTemperature(), Constants.OTTemp,
 				"Over Temperature threshold global temp is not set to Default value : " + Constants.OTTemp);
 		log.info("Over Temperature threshold global temp is set to Default value  :" + Constants.OTTemp);
 
-		String UTtemp = Trs.getUTTemperature();
-		softAssert.assertEquals(Constants.UTTemp, UTtemp,
+		softAssert.assertEquals(Tss.getUTTemperature(), Constants.UTTemp,
 				"Under Temperature threshold global temp is not set to Default value : " + Constants.UTTemp);
 		log.info("Over Temperature threshold global temp is set to Default value  :" + Constants.UTTemp);
 
-		String tempsb = Trs.getTemperatureSetback();
-		softAssert.assertEquals(Constants.Tempsetback, tempsb,
+
+		softAssert.assertEquals(Tss.getTemperatureSetback(),Constants.Tempsetback,
 				"Temperature set back for global temp is not set to Default value : " + Constants.Tempsetback);
 		log.info("Temperature set back for global temp is set to Default value  :" + Constants.Tempsetback);
 
-		Thread.sleep(2200);
+		softAssert.assertAll();
 
 	}
 
 	@Test(priority = 2)
+	@Description("Verify the Default Values for Farnheit system settings Temperature Unit")
 	public void Test_Farnheit_SysDefaultSettings() throws InterruptedException, IOException {
 
 		// Farhenit Validations For default Values
-		
-		
 
-		Trs.PreferencesBtnISEnabled();
-		Trs.clickPreferencesBtn();
-		Thread.sleep(1500);
+		Tss.clickPreferencesBtn();
 
-		Trs.clickFarhenitUnit();
+		Tss.clickFarhenitUnit();
 		log.info("Temperature Unit Farhenit is selected by clicking");
-		Thread.sleep(3200);
 
-		Trs.clickSave();
-		Thread.sleep(2000);
+		Tss.clickSave();
 		log.info("Saved Farhenit OPtion");
-		Thread.sleep(3000);
+		
+		
+		if(Tss.getToastmsgststus()==true)
+			log.info("Prefrences updated sucessfully");	
+		else
+			log.info("Prefrences not updated sucessfully");
+	
 
-		Trs.TemperatureBtnISEnabled();
-		Thread.sleep(1200);
-		Trs.TemperatureBtn();
+		Tss.clickTemperatureBtn();
 		log.info("Clicked on Temperature in System settings button to validate farhenit default options");
 
-		String OTTfhtemp = ActionMethods.getConversionToFahrenheitSys(Constants.OTTemp);
-		String OTtempfh = Trs.getOTTemperature();
-		softAssert.assertEquals(OTTfhtemp, OTtempfh,
-				"Over Temperature threshold global temp is not set to Default Farhenit value : " + OTTfhtemp);
-		log.info("Over Temperature threshold global temp is set to Default Farhenit value  :" + OTTfhtemp);
+		Thread.sleep(2000);	
+		
+		softAssert.assertEquals(Tss.getOTTemperature(), ActionMethods.getConversionToFahrenheitSys(Constants.OTTemp),
+				"Over Temperature threshold global temp is not set to Default Farhenit value : " +  ActionMethods.getConversionToFahrenheitSys(Constants.OTTemp));
+		log.info("Over Temperature threshold global temp is set to Default Farhenit value  :" +  ActionMethods.getConversionToFahrenheitSys(Constants.OTTemp));
 
-		String UTTfhtemp = ActionMethods.getConversionToFahrenheitSys(Constants.UTTemp);
-		String UTtempfh = Trs.getUTTemperature();
-		softAssert.assertEquals(UTTfhtemp, UTtempfh,
-				"Under Temperature threshold global temp is not set to Default Farhenit value : " + UTTfhtemp);
-		log.info("Over Temperature threshold global temp is set to Default Farhenit value  :" + UTTfhtemp);
+		softAssert.assertEquals(Tss.getUTTemperature(), ActionMethods.getConversionToFahrenheitSys(Constants.UTTemp),
+				"Under Temperature threshold global temp is not set to Default Farhenit value : " + ActionMethods.getConversionToFahrenheitSys(Constants.UTTemp));
+		log.info("Over Temperature threshold global temp is set to Default Farhenit value  :" + ActionMethods.getConversionToFahrenheitSys(Constants.UTTemp));
 
-		String tempstbck = ActionMethods.getConversionToFahrenheitSys(Constants.UTTemp);
-		String tempsbfh = Trs.getTemperatureSetback();
-		softAssert.assertEquals(tempstbck, tempsbfh,
-				"Temperature set back for global temp is not set to Default Farhenit value : " + tempstbck);
-		log.info("Temperature set back for global temp is set to Default Farhenit value  :" + tempstbck);
-
-		Thread.sleep(2200);
+		softAssert.assertEquals(Tss.getTemperatureSetback(), ActionMethods.getConversionToFahrenheitSys(Constants.Tempsetback),
+				"Temperature set back for global temp is not set to Default Farhenit value : " + ActionMethods.getConversionToFahrenheitSys(Constants.Tempsetback));
+		log.info("Temperature set back for global temp is set to Default Farhenit value  :" + ActionMethods.getConversionToFahrenheitSys(Constants.Tempsetback));
 
 		XLUtils.setExcelSheetNm("OTTCelsius");
+		softAssert.assertAll();
 
 	}
 
-	@Test(priority = 3, dataProvider = "ReadDP", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	@Test(priority = 3, dataProvider = "OTTValues_Celsius", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	@Feature("Temperature System settings over temperature Threshold validations")
+	@Description("Verify the boundary Values for Celsius Temperature Unit of OTT field")
 	public void Test_Celsius_OTT_Syssettings(String minlssval, String maxplusval, String Inrngval)
 			throws InterruptedException, IOException {
 
-		
-		Trs.PreferencesBtnISEnabled();
-		Thread.sleep(1200);
-		Trs.clickPreferencesBtn();
-		Thread.sleep(1500);
+		Tss.clickPreferencesBtn();
 
-		Trs.clickCelsiusUnit();
-		Thread.sleep(1200);
+		Tss.clickCelsiusUnit();
 		log.info("Temperature Unit Celsius is selected by clicking");
-		Thread.sleep(3200);
 
-		Trs.clickSave();
-		Thread.sleep(2000);
-		log.info("Saved Celsius Option");
-		Thread.sleep(3000);
+		Tss.clickSave();
+     	log.info("Saved Celsius Option");
+     	
+		if(Tss.getToastmsgststus()==true)
+			log.info("Prefrences updated sucessfully");	
+		else
+			log.info("Prefrences not updated sucessfully");
+		
 
-		Trs.TemperatureBtnISEnabled();
-		Thread.sleep(1000);
-		Trs.TemperatureBtn();
+		Tss.clickTemperatureBtn();
 		log.info("Clicked on Temperature in System settings button to validate Celsius OTT Min and max values");
-		Thread.sleep(3000);
+		Thread.sleep(1500);
 
 		// null value validations
 
-		Trs.clearOTTemperature();
-		Thread.sleep(2000);
-		Trs.clickSavebtn();
-		Thread.sleep(2000);
-
-		boolean tststusclrerrmsg = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusclrerrmsg, "Toast error message is shown up for max OTTemp Celsius val");
+		Tss.clearOTTemperature();
+        Tss.clickSavebtn();
+ 
+		String tststusclrerrmsg = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.OTTErrmsg, tststusclrerrmsg,
+				"Toast error message is shown up for max OTTemp Celsius val");
 		log.info("Toast error message is shown up for null OTTemp val save for celsius unit");
-		Thread.sleep(3000);
 
-		boolean stusclrerrmsg = Trs.getbtnstatus();
+		boolean stusclrerrmsg = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusclrerrmsg, " Error message is shown up for max OTTemp Celsius val");
 		log.info("Error message is shown up for null OTTemp val save for celsius unit");
-		Thread.sleep(3000);
 
 		// min-1 val
 
-		Thread.sleep(1200);
-		Trs.setOTTemperature(minlssval);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
-		Thread.sleep(1500);
+		Tss.setOTTemperature(minlssval);
 
-		boolean tststusminerr = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusminerr, "Toast error message is shown up for for celsius unit");
+		Tss.clickSavebtn();
+
+		String tststusminerr = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.OTTErrmsg, tststusminerr,
+				"Toast error message is shown up for for celsius unit");
 		log.info("Toast error message is shown up for OTTemp min val for celsius unit");
-		Thread.sleep(2000);
 
-		boolean stusminerr = Trs.getbtnstatus();
+		boolean stusminerr = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusminerr, "Error message is shown up for for celsius unit");
 		log.info("Error message is shown up for OTTemp min val for celsius unit");
-		Thread.sleep(2000);
 
 		// max+1 val
 
-		Trs.clearOTTemperature();
-		Thread.sleep(1200);
-		Trs.setOTTemperature(maxplusval);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
-		Thread.sleep(1000);
+		Tss.clearOTTemperature();
 
-		boolean tststusmaxerr = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusmaxerr,
+		Tss.setOTTemperature(maxplusval);
+
+		Tss.clickSavebtn();
+
+		String tststusmaxerr = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.OTTErrmsg, tststusmaxerr,
 				"Toast error message is shown up for OTTemp max val for celsius unit");
 		log.info("Toast error message is shown up for max val for celsius unit");
-		Thread.sleep(2000);
 
-		boolean stusmaxerr = Trs.getbtnstatus();
+		boolean stusmaxerr = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusmaxerr, "Error message is shown up for OTTemp max val for celsius unit");
 		log.info("Error message is shown up for max val for celsius unit");
-		Thread.sleep(2000);
 
 		// In Range value testing
 
-		Trs.clearOTTemperature();
-		Thread.sleep(1200);
-		Trs.setOTTemperature(Inrngval);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
-		Thread.sleep(2000);
+		Tss.clearOTTemperature();
 
-		boolean tststus = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststus,
+		Tss.setOTTemperature(Inrngval);
+
+		Tss.clickSavebtn();
+
+		String tststus = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.Sucssmsg, tststus,
 				"Toast msg for In range values are saved successfully for OTTemp for celsius unit");
 		log.info("Toast msg for In range values are saved successfully for celsius unit");
-		Thread.sleep(2000);
 
-	    OTTtempcsl = Trs.getOTTemperature();
-		
+		OTTtempcsl = Tss.getOTTemperature();
+		softAssert.assertAll();
 
 	}
-	
+
 	@Test(priority = 4)
+	@Description("verfication of celsius to farnheit conversion OTT field")
 	public void Test_Celsius_Tofarnhit_Conversion_OTTfield() throws InterruptedException {
-		
-		
-		Trs.PreferencesBtnISEnabled();
-		Trs.clickPreferencesBtn();
-		Thread.sleep(1500);
 
-		Trs.clickFarhenitUnit();
+		Tss.clickPreferencesBtn();
+		Thread.sleep(2000);
+
+		Tss.clickFarhenitUnit();
 		log.info("Temperature Unit Farhenit is selected by clicking to verfiy conversion");
-		Thread.sleep(3200);
 
-		Trs.clickSave();
-		Thread.sleep(2000);
+		Tss.clickSave();
+		if(Tss.getToastmsgststus()==true)
+			log.info("Prefrences updated sucessfully");	
+		else
+			log.info("Prefrences not updated sucessfully");
+	
+
 		log.info("Saved Farhenit Option to verfiy conversion");
-		Thread.sleep(3000);
 
-		Trs.TemperatureBtnISEnabled();
-		Thread.sleep(1200);
-		Trs.TemperatureBtn();
+		Tss.clickTemperatureBtn();
 		log.info("Clicked on Temperature in System settings button to validate OTT Celsius to farhenit conversion");
-		Thread.sleep(2000);
 
 		String cvtfh = ActionMethods.getConversionToFahrenheitSys(OTTtempcsl);
-		String OTTtemp = Trs.getOTTemperature();
+		String OTTtemp = Tss.getOTTemperature();
 		softAssert.assertEquals(cvtfh, OTTtemp, "Celsius to Farnhit unit conversion not correct");
 		log.info("Celsius to Farnhit unit conversion for OTT is correct");
 		XLUtils.setExcelSheetNm("OTTFarnhit");
+		softAssert.assertAll();
 
 	}
 
-	@Test(priority = 5, dataProvider = "ReadDP", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	@Test(priority = 5, dataProvider = "OTTValues_Farnheit", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	@Description("Verify the boundary Values for farnheit Temperature Unit of OTT field")
 	public void Test_Farnhit_OTT_Syssettings(String minlssvalfh, String maxplusvalfh, String Inrngvalfh)
 			throws InterruptedException, IOException {
 
 		// Farhenit Validations For null,min-1,max+1,Inrange Values
 
 		// Null Value Validations for farnhit
-        
-		
-		Trs.clearOTTemperature();
-		Thread.sleep(2000);
 
-		Trs.clickSavebtn();
-		Thread.sleep(2000);
+		Tss.clearOTTemperature();
 
-		boolean tststusclrerrmsgfh = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusclrerrmsgfh,
+		Tss.clickSavebtn();
+
+		String tststusclrerrmsgfh = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.OTTErrmsgFH, tststusclrerrmsgfh,
 				"Toast error message is shown up for max OTTemp val for Farhnit unit");
 		log.info("Toast error message is shown up for null OTTemp val save for Farhnit");
-		Thread.sleep(3000);
 
-		boolean stusclrerrmsgfh = Trs.getbtnstatus();
+		boolean stusclrerrmsgfh = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusclrerrmsgfh, "Error message is shown up for max OTTemp val for Farhnit unit");
 		log.info("Error message is shown up for null OTTemp val save for Farhnit");
-		Thread.sleep(3000);
 
 		// min-1 val
 
-		Thread.sleep(1200);
-		Trs.setOTTemperature(minlssvalfh);
-		Thread.sleep(2200);
-		Trs.clickSavebtn();
-		Thread.sleep(2000);
+		Tss.setOTTemperature(minlssvalfh);
 
-		boolean tststusminerrfh = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusminerrfh, "Toast error message is shown up for Farhnit unit");
+		Tss.clickSavebtn();
+
+		String tststusminerrfh = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.OTTErrmsgFH, tststusminerrfh,
+				"Toast error message is shown up for Farhnit unit");
 		log.info("Toast error message is shown up for OTTemp min val Farhnit unit");
-		Thread.sleep(2000);
 
-		boolean stusminerrfh = Trs.getbtnstatus();
+		boolean stusminerrfh = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusminerrfh, "Error message is shown up for Farhnit unit");
 		log.info("Error message is shown up for OTTemp min val Farhnit unit");
-		Thread.sleep(2000);
 
 		// max+1 val
 
-		Trs.clearOTTemperature();
-		Thread.sleep(1200);
-		Trs.setOTTemperature(maxplusvalfh);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
-		Thread.sleep(2000);
+		Tss.clearOTTemperature();
 
-		boolean tststusmaxerrfh = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusmaxerrfh,
+		Tss.setOTTemperature(maxplusvalfh);
+
+		Tss.clickSavebtn();
+
+		String tststusmaxerrfh = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.OTTErrmsgFH, tststusmaxerrfh,
 				"Toast error message is shown up for OTTemp max val Farhnit unit");
 		log.info("Toast error message is shown up for max val Farhnit unit");
-		Thread.sleep(2000);
 
-		boolean stusmaxerrfh = Trs.getbtnstatus();
+		boolean stusmaxerrfh = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusmaxerrfh, "Error message is shown up for OTTemp max val Farhnit unit");
 		log.info("Error message is shown up for max val Farhnit unit");
-		Thread.sleep(2000);
 
 		// In Range value testing
 
-		Trs.clearOTTemperature();
-		Thread.sleep(1200);
-		Trs.setOTTemperature(Inrngvalfh);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
-		Thread.sleep(2000);
+		Tss.clearOTTemperature();
+    	Tss.setOTTemperature(Inrngvalfh);
 
-		boolean tststusfh = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusfh,
+		Tss.clickSavebtn();
+		String tststusfh = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.Sucssmsg, tststusfh,
 				"Toastmsg for In range values are saved successfully for OTTemp Farhnit unit");
 		log.info("Toast msg for In range values are saved successfully for Farhnit unit");
-		Thread.sleep(2000);
 
-		boolean stusfh = Trs.getbtnstatus();
+		boolean stusfh = Tss.getbtnstatus();
 		softAssert.assertEquals(false, stusfh, "In range values are saved successfully for OTTemp Farhnit unit");
 		log.info("In range values are saved successfully for Farhnit unit");
-		
-		OTTtempfarnh = Trs.getOTTemperature();
-		Thread.sleep(2000);
-	
+
+		OTTtempfarnh = Tss.getOTTemperature();
+
+		softAssert.assertAll();
 
 	}
-    
-	
+
 	@Test(priority = 6)
+	@Description("Verification of Farnheit to Celsius unit conversion for OTT field")
 	public void Test_Farnhit_ToCelsius_Conversion_OTTfield() throws InterruptedException {
-		
-		
-		Trs.PreferencesBtnISEnabled();
-		Trs.clickPreferencesBtn();
-		Thread.sleep(1500);
 
-		Trs.clickCelsiusUnit();
+		Tss.clickPreferencesBtn();
+		Thread.sleep(2000);
+
+		Tss.clickCelsiusUnit();
 		log.info("Temperature Unit Celsius is selected by clicking to verfiy conversion");
-		Thread.sleep(3200);
 
-		Trs.clickSave();
-		Thread.sleep(2000);
-		log.info("Saved Celsius Option to verfiy conversion");
-		Thread.sleep(3000);
+		Tss.clickSave();
+        log.info("Saved Celsius Option to verfiy conversion");
+		   
 
-		Trs.TemperatureBtnISEnabled();
-		Thread.sleep(1200);
-		Trs.TemperatureBtn();
+		if(Tss.getToastmsgststus()==true)
+			log.info("Prefrences updated sucessfully");	
+		else
+			log.info("Prefrences not updated sucessfully");
+	
+		
+
+		Tss.clickTemperatureBtn();
 		log.info("Clicked on Temperature in System settings button to validate OTT farhenit to celsius conversion");
-		Thread.sleep(2000);
 
 		String fhtocelsius = ActionMethods.getConversionToCelsiusSys(OTTtempfarnh);
-		String OTTtemp = Trs.getOTTemperature();
+		String OTTtemp = Tss.getOTTemperature();
 		softAssert.assertEquals(OTTtemp, fhtocelsius, "Farnhit to Celsius unit conversion not correct");
 		log.info("Farnhit to Celsius unit conversion for OTT is correct");
-		Thread.sleep(2000);
+
 		XLUtils.setExcelSheetNm("UTTCelsius");
+		softAssert.assertAll();
 
 	}
 
-	@Test(priority = 7, dataProvider = "ReadDP", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	@Test(priority = 7, dataProvider = "UTTValues_Celsius", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	@Feature("Temperature System settings Under temperature Threshold Field validations")
+	@Description("Verify the boundary Values for celsius Temperature Unit of UTT field")
 	public void Test_Celsius_SysMinmaxForUTT(String minlssval, String maxplusval, String Inrngval)
 			throws InterruptedException, IOException {
-	
 
 		// Null Values Error msg Test
-		Thread.sleep(1000);
-		Trs.clearUTTemperature();
-		Thread.sleep(2000);
-		Trs.clickSavebtn();
-		Thread.sleep(2000);
 
-		boolean tststusclrerrmsg = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusclrerrmsg,
-				"Toast error message is not shown up for max UTTemp Celsius val");
+		Tss.clearUTTemperature();
+
+		Tss.clickSavebtn();
+
+		String tststusclrerrmsg = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.UTTErrmsg, tststusclrerrmsg,
+				"Toast error message is not shown up for null valus UTTemp Celsius val");
 		log.info("Toast error message is shown up for null UTTemp val for Celsius unit after save");
-		Thread.sleep(3000);
 
-		boolean stusclrerrmsg = Trs.getbtnstatus();
+		boolean stusclrerrmsg = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusclrerrmsg, "Error message is not shown up for max UTTemp Celsius val");
 		log.info("Error message is shown up for null UTTemp val for Celsius unit after save");
-		Thread.sleep(3000);
 
 		// min-1 val
 
-		Trs.clearUTTemperature();
-		Thread.sleep(1200);
-		Trs.setUTTemperature(minlssval);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
-		Thread.sleep(1500);
+		Tss.clearUTTemperature();
 
-		boolean tststusminerr = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusminerr, "Toast error message is not shown up for UTTemp Celsius unit");
+		Tss.setUTTemperature(minlssval);
+
+		Tss.clickSavebtn();
+
+		String tststusminerr = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.UTTErrmsg, tststusminerr,
+				"Toast error message is not shown up for UTTemp Celsius unit");
 		log.info("Toast error message is shown up for min UTTemp val for Celsius unit");
-		Thread.sleep(2000);
-
-		boolean stusminerr = Trs.getbtnstatus();
-		softAssert.assertEquals(true, stusminerr, "Error message is not shown up for UTTemp Celsius unit");
-		log.info("Error message is shown up for min UTTemp val for Celsius unit");
-		Thread.sleep(2000);
 
 		// max+1 val
 
-		Trs.clearUTTemperature();
-		Thread.sleep(1200);
-		Trs.setUTTemperature(maxplusval);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
-		Thread.sleep(1000);
+		Tss.clearUTTemperature();
 
-		boolean tststusmaxerr = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusmaxerr, "Toast error message is not shown up for Celsius unit max val");
+		Tss.setUTTemperature(maxplusval);
+
+		Tss.clickSavebtn();
+
+		String tststusmaxerr = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.UTTErrmsg, tststusmaxerr,
+				"Toast error message is not shown up for Celsius unit max val");
 		log.info("Toast error message is shown up for max UTTemp Celsius unit val");
-		Thread.sleep(2000);
 
-		boolean stusmaxerr = Trs.getbtnstatus();
+		boolean stusmaxerr = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusmaxerr, "Error message is not shown up for Celsius unit max val");
 		log.info("Error message is shown up for max UTTemp Celsius unit val");
-		Thread.sleep(2000);
 
 		// In Range value testing
 
-		Trs.clearUTTemperature();
-		Thread.sleep(1200);
-		Trs.setUTTemperature(Inrngval);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
-		Thread.sleep(2000);
+		Tss.clearUTTemperature();
 
-		boolean tstmsgstus = Trs.getToastmsg();
-		softAssert.assertEquals(true, tstmsgstus,
+		Tss.setUTTemperature(Inrngval);
+
+		Tss.clickSavebtn();
+
+		String tstmsgstus = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.Sucssmsg, tstmsgstus,
 				"Toast msg for In range values are not saved successfully for UTTemp Celsius unit");
 		log.info("Toast msg for In range values are saved successfully for UTTemp Celsius unit");
-		Thread.sleep(2000);
 
-		boolean stus = Trs.getbtnstatus();
+		boolean stus = Tss.getbtnstatus();
 		softAssert.assertEquals(false, stus, "In range values are not saved successfully for UTTemp Celsius unit");
 		log.info("In range values are saved successfully for UTTemp Celsius unit");
-		Thread.sleep(2000);
 
-		UTTtempcsl = Trs.getUTTemperature();
-		Thread.sleep(2000);
-		
+		UTTtempcsl = Tss.getUTTemperature();
+
+		softAssert.assertAll();
+
 	}
 
-	
 	@Test(priority = 8)
+	@Description("Verify the celsius to farnheit temperature Unit conversion for UTT field")
 	public void Test_Celsius_Tofarnhit_Conversion_UTTfield() throws InterruptedException {
 
-		
-		Trs.PreferencesBtnISEnabled();
-		Trs.clickPreferencesBtn();
-		Thread.sleep(1500);
+		Tss.clickPreferencesBtn();
+		Thread.sleep(1000);
 
-		Trs.clickFarhenitUnit();
+		Tss.clickFarhenitUnit();
 		log.info("Temperature Unit Farhenit is selected by clicking to verfiy conversion");
-		Thread.sleep(3200);
 
-		Trs.clickSave();
-		Thread.sleep(2000);
-		log.info("Saved Farhenit Option to verfiy conversion");
-		Thread.sleep(3000);
-
-		Trs.TemperatureBtnISEnabled();
-		Thread.sleep(1200);
-		Trs.TemperatureBtn();
-		log.info("Clicked on Temperature in System settings button to validate OTT Celsius to farhenit conversion");
-		Thread.sleep(2000);
-
+		Tss.clickSave();
+        log.info("Saved Farhenit Option to verfiy conversion");
+        
+        
+        if (Tss.getToastmsgststus()==true)
+        	log.info("Preferences are sucessfully updated");
+        else
+        	log.info("Preferences are not sucessfully updated");
+	
+		Tss.clickTemperatureBtn();
+		log.info("Clicked on Temperature in System settings button to validate UTT Celsius to farhenit conversion");
+  
 		String cvtfh = ActionMethods.getConversionToFahrenheitSys(UTTtempcsl);
-		String OTTtemp = Trs.getOTTemperature();
-		softAssert.assertEquals(OTTtemp, cvtfh, "Celsius to Farnhit unit conversion not correct");
-		log.info("Celsius to Farnhit unit conversion for OTT is correct");
-		Thread.sleep(2000);
+		String UTTtemp = Tss.getUTTemperature();
+		softAssert.assertEquals(UTTtemp, cvtfh, "Celsius to Farnhit unit conversion not correct");
+		log.info("Celsius to Farnhit unit conversion for UTT is correct");
+
 		XLUtils.setExcelSheetNm("UTTFarnhit");
+		softAssert.assertAll();
 
 	}
 
-	@Test(priority = 9, dataProvider = "ReadDP", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	@Test(priority = 9, dataProvider = "UTTValues_Farnheit", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	@Description("Verify the boundary Values for farnheit Temperature Unit of UTT field")
 	public void Test_Farnhit_SysMinmaxForUTT(String minlssvalfh, String maxplusvalfh, String Inrngvalfh)
 			throws InterruptedException, IOException {
 
-		
-	
 		// Farhenit Minmax Val testing for Under Threshold Field
 
 		// Null Values Error msg Test
 
-		Trs.clearUTTemperature();
-		Thread.sleep(2000);
-		Trs.clickSavebtn();
-		Thread.sleep(1200);
+		Tss.clearUTTemperature();
 
-		boolean tststusclrerrmsgfh = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusclrerrmsgfh,
+		Tss.clickSavebtn();
+
+		String tststusclrerrmsgfh = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.UTTErrmsgFH, tststusclrerrmsgfh,
 				"Toast error message is not shown up for max UTTemp Farhenit val");
 		log.info("Toast error message is shown up for null UTTemp val for Farhenit unit after save");
-		Thread.sleep(3000);
 
-		boolean stusclrerrmsgfh = Trs.getbtnstatus();
+		boolean stusclrerrmsgfh = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusclrerrmsgfh, "Error message is not shown up for max UTTemp Farhenit val");
 		log.info("Error message is shown up for null UTTemp val for Farhenit unit after save");
-		Thread.sleep(3000);
 
 		// min-1 val
 
-		Trs.clearUTTemperature();
-		Thread.sleep(1200);
-		Trs.setUTTemperature(minlssvalfh);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
-		Thread.sleep(1500);
+		Tss.clearUTTemperature();
 
-		boolean tststusminerrfh = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusminerrfh, "Toast error message is not shown up for UTTemp Farhenit unit");
+		Tss.setUTTemperature(minlssvalfh);
+
+		Tss.clickSavebtn();
+
+		String tststusminerrfh = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.UTTErrmsgFH, tststusminerrfh,
+				"Toast error message is not shown up for UTTemp Farhenit unit");
 		log.info("Toast error message is shown up for min UTTemp val for Farhenit unit");
-		Thread.sleep(2000);
 
-		boolean stusminerrfh = Trs.getbtnstatus();
+		boolean stusminerrfh = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusminerrfh, "Error message is not shown up for UTTemp Farhenit unit");
 		log.info("Error message is shown up for min UTTemp val for Farhenit unit");
-		Thread.sleep(2000);
 
 		// max+1 val
 
-		Trs.clearUTTemperature();
-		Thread.sleep(1200);
-		Trs.setUTTemperature(maxplusvalfh);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
-		Thread.sleep(1000);
+		Tss.clearUTTemperature();
 
-		boolean tststusmaxerrfh = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusmaxerrfh, "Toast error message is not shown up for Farhenit unit max val");
+		Tss.setUTTemperature(maxplusvalfh);
+
+		Tss.clickSavebtn();
+
+		String tststusmaxerrfh = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.UTTErrmsgFH, tststusmaxerrfh,
+				"Toast error message is not shown up for Farhenit unit max val");
 		log.info("Toast error message is shown up for max UTTemp Farhenit unit val");
-		Thread.sleep(2000);
 
-		boolean stusmaxerrfh = Trs.getbtnstatus();
+		boolean stusmaxerrfh = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusmaxerrfh, "Error message is not shown up for Farhenit unit max val");
 		log.info("Error message is shown up for max UTTemp Farhenit unit val");
-		Thread.sleep(2000);
 
 		// In Range value testing
 
-		Trs.clearUTTemperature();
-		Thread.sleep(1200);
-		Trs.setUTTemperature(Inrngvalfh);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
-		Thread.sleep(1800);
+		Tss.clearUTTemperature();
 
-		boolean tststusfh = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusfh,
+		Tss.setUTTemperature(Inrngvalfh);
+
+		Tss.clickSavebtn();
+
+		String tststusfh = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.Sucssmsg, tststusfh,
 				"Toast msgIn range values are not saved successfully for UTTemp Farhenit unit");
 		log.info("Toast msg In range values are saved successfully for UTTemp Farhenit unit");
-		Thread.sleep(2000);
 
-		boolean stusfh = Trs.getbtnstatus();
+		boolean stusfh = Tss.getbtnstatus();
 		softAssert.assertEquals(false, stusfh, "In range values are not saved successfully for UTTemp Farhenit unit");
 		log.info("In range values are saved successfully for UTTemp Farhenit unit");
-		Thread.sleep(1200);
 
-		UTTtempfarnh = Trs.getUTTemperature();
-		Thread.sleep(2000);
-		
+		UTTtempfarnh = Tss.getUTTemperature();
+
+		softAssert.assertAll();
+
 	}
-    
+
 	@Test(priority = 10)
+	@Description("Verify the farnheit to celsius Temperature Unit convesion of UTT field")
 	public void Test_Farnhit_ToCelsius_Conversion_UTTfield() throws InterruptedException {
 
-		
-		Trs.PreferencesBtnISEnabled();
-		Trs.clickPreferencesBtn();
-		Thread.sleep(1500);
+		Tss.clickPreferencesBtn();
+		Thread.sleep(2000);
 
-		Trs.clickCelsiusUnit();
+		Tss.clickCelsiusUnit();
 		log.info("Temperature Unit Celsius is selected by clicking to verfiy conversion");
-		Thread.sleep(3200);
 
-		Trs.clickSave();
-		Thread.sleep(2000);
+		Tss.clickSave();
 		log.info("Saved Celsius Option to verfiy conversion");
-		Thread.sleep(3000);
-
-		Trs.TemperatureBtnISEnabled();
-		Thread.sleep(1200);
-		Trs.TemperatureBtn();
+		
+		  
+        if (Tss.getToastmsgststus()==true)
+        	log.info("Preferences are sucessfully updated");
+        else
+        	log.info("Preferences are not sucessfully updated");
+		Tss.clickTemperatureBtn();
 		log.info("Clicked on Temperature in System settings button to validate OTT farhenit to celsius conversion");
-		Thread.sleep(2000);
 
 		String fhtocelsius = ActionMethods.getConversionToCelsiusSys(UTTtempfarnh);
-		String OTTtemp = Trs.getOTTemperature();
-		softAssert.assertEquals(OTTtemp, fhtocelsius, "Farnhit to Celsius unit conversion not correct");
+		String UTTtemp = Tss.getUTTemperature();
+		softAssert.assertEquals(UTTtemp, fhtocelsius, "Farnhit to Celsius unit conversion not correct");
 		log.info("Farnhit to Celsius unit conversion for OTT is correct");
-		Thread.sleep(2000);
+
 		XLUtils.setExcelSheetNm("TempsetbckCelsius");
+		softAssert.assertAll();
 
 	}
 
-	@Test(priority = 11, dataProvider = "ReadDP", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	@Test(priority = 11, dataProvider = "TempstbckValues_Celsius", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	@Feature("Verfication of Boundary values for temperature system settings")
+	@Description("Verification of boundary Values for farnheit Temperature Unit of temperature set back field")
 	public void Test_Celsius_SysMinmaxForTmpstbck(String minlssval, String maxplusval, String Inrngval)
 			throws InterruptedException, IOException {
 
 		// Null Values validation for Celsius Unit
-		
-		Trs.clearTemperaturesetbck();
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
 
-		boolean tststusclrerrmsg = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusclrerrmsg,
+		Tss.clearTemperaturesetbck();
+
+		Tss.clickSavebtn();
+
+		String tststusclrerrmsg = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.TempstbckErrmsg, tststusclrerrmsg,
 				"Toast error message is not shown up for max Tempsetbck val for celsuis unit");
 		log.info("Toast error message is shown up for null Tempsetbck val save celsuis unit");
-		Thread.sleep(3000);
 
-		boolean stusclrerrmsg = Trs.getbtnstatus();
+		boolean stusclrerrmsg = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusclrerrmsg,
 				"Error message is not shown up for max Tempsetbck val for celsuis unit");
 		log.info("Error message is shown up for null Tempsetbck val save celsuis unit");
-		Thread.sleep(3000);
 
 		// min-1 val
 
-		Trs.clearTemperaturesetbck();
-		Thread.sleep(1200);
-		Trs.setSetbckTemperature(minlssval);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
+		Tss.clearTemperaturesetbck();
 
-		boolean tststusminerr = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusminerr, "Toast error message is not shown up for Tempsetbck celsuis unit");
+		Tss.setSetbckTemperature(minlssval);
+
+		Tss.clickSavebtn();
+
+		String tststusminerr = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.TempstbckErrmsg, tststusminerr,
+				"Toast error message is not shown up for Tempsetbck celsuis unit");
 		log.info("Toast error message is shown up for min Tempsetbck val celsuis unit");
-		Thread.sleep(2000);
 
-		boolean stusminerr = Trs.getbtnstatus();
+		boolean stusminerr = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusminerr, "Error message is not shown up for Tempsetbck celsuis unit");
 		log.info("Error message is shown up for min Tempsetbck val celsuis unit");
-		Thread.sleep(2000);
 
 		// max+1 val
 
-		Trs.clearTemperaturesetbck();
-		Thread.sleep(1200);
-		Trs.setSetbckTemperature(maxplusval);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
-		Thread.sleep(1000);
+		Tss.clearTemperaturesetbck();
 
-		boolean tststusmaxerr = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusmaxerr,
+		Tss.setSetbckTemperature(maxplusval);
+
+		Tss.clickSavebtn();
+
+		String tststusmaxerr = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.TempstbckErrmsg, tststusmaxerr,
 				"Toast error message is not shown up for max Tempsetbck val celsuis unit ");
 		log.info("Toast error message is shown up for max Tempsetbck val celsuis unit");
-		Thread.sleep(2000);
 
-		boolean stusmaxerr = Trs.getbtnstatus();
+		boolean stusmaxerr = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusmaxerr, "Error message is not shown up for max Tempsetbck val celsuis unit ");
 		log.info("Error message is shown up for max Tempsetbck val celsuis unit");
-		Thread.sleep(2000);
 
 		// In Range value testing
 
-		Trs.clearTemperaturesetbck();
-		Thread.sleep(1200);
-		Trs.setSetbckTemperature(Inrngval);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
+		Tss.clearTemperaturesetbck();
 
-		boolean tststus = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststus,
+		Tss.setSetbckTemperature(Inrngval);
+
+		Tss.clickSavebtn();
+
+		String tststus = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.Sucssmsg, tststus,
 				"Toast msg for In range values are not saved successfully for Tempsetbck celsuis unit");
 		log.info("Toast msg for In range values are saved successfully for Tempsetbck celsuis unit");
-		Thread.sleep(2000);
 
-		boolean stus = Trs.getbtnstatus();
+		boolean stus = Tss.getbtnstatus();
 		softAssert.assertEquals(false, stus, "In range values are not saved successfully for Tempsetbck celsuis unit");
 		log.info("In range values are saved successfully for Tempsetbck celsuis unit");
-		Thread.sleep(2000);
 
-		tmpstbckcsl = Trs.getTemperatureSetback();
-		Thread.sleep(2000);
-		
-	
+		tmpstbckcsl = Tss.getTemperatureSetback();
+
+		softAssert.assertAll();
 
 	}
-    
+
 	@Test(priority = 12)
+	@Description("Verfication of celsius to farnheit conversion for temperature set back field in system settings")
 	public void Test_Celsius_Tofarnhit_Conversion_Tempstbck() throws InterruptedException {
 
-		
-		Trs.PreferencesBtnISEnabled();
-		Trs.clickPreferencesBtn();
-		Thread.sleep(1500);
+	    Thread.sleep(1500);
+		Tss.clickPreferencesBtn();
+		 Thread.sleep(1200);
 
-		Trs.clickFarhenitUnit();
+		Tss.clickFarhenitUnit();
 		log.info("Temperature Unit Farhenit is selected by clicking to verfiy conversion");
-		Thread.sleep(3200);
 
-		Trs.clickSave();
-		Thread.sleep(2000);
+		Tss.clickSave();
+
 		log.info("Saved Farhenit Option to verfiy conversion");
-		Thread.sleep(3000);
 
-		Trs.TemperatureBtnISEnabled();
-		Thread.sleep(1200);
-		Trs.TemperatureBtn();
+		if(Tss.getToastmsgststus()==true)
+			log.info("Prefrences updated sucessfully");	
+		else
+			log.info("Prefrences not updated sucessfully");
+	
+
+		Tss.clickTemperatureBtn();
 		log.info("Clicked on Temperature in System settings button to validate OTT Celsius to farhenit conversion");
-		Thread.sleep(2000);
 
 		String cvtfh = ActionMethods.getConversionToFahrenheitSys(tmpstbckcsl);
-		String OTTtemp = Trs.getOTTemperature();
+		String OTTtemp = Tss.getOTTemperature();
 		softAssert.assertEquals(OTTtemp, cvtfh, "Celsius to Farnhit unit conversion not correct");
 		log.info("Celsius to Farnhit unit conversion for OTT is correct");
-		Thread.sleep(2000);
+
 		XLUtils.setExcelSheetNm("TempsetbckFarnhit");
+		softAssert.assertAll();
 
 	}
 
-	@Test(priority = 13, dataProvider = "ReadDP", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	@Test(priority = 13, dataProvider = "TempstbckValues_Farnheit", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	@Description("Verification of boundary Values for farnheit Temperature Unit of temperature set back field")
 	public void Test_Farnhit_SysMinmaxForTmpstbck(String minlssvalfh, String maxplusvalfh, String Inrngvalfh)
 			throws InterruptedException, IOException {
 
 		// Farhenit Validations for Temperature Set Back
 		// Null Values validation for farhenit Unit
-        
-		
-		Trs.clearTemperaturesetbck();
-		Thread.sleep(1800);
-		Trs.clickSavebtn();
 
-		boolean tststusclrerrmsgfh = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusclrerrmsgfh,
+		Tss.clearTemperaturesetbck();
+
+		Tss.clickSavebtn();
+
+		String tststusclrerrmsgfh = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.TempstbckErrmsgFH, tststusclrerrmsgfh,
 				"Toast error message is not shown up for max Tempsetbck val for farhenit unit");
 		log.info("Toast Error message is shown up for null Tempsetbck val save celsuis unit");
-		Thread.sleep(3000);
 
-		boolean stusclrerrmsgfh = Trs.getbtnstatus();
+		boolean stusclrerrmsgfh = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusclrerrmsgfh,
 				"Error message is not shown up for max Tempsetbck val for farhenit unit");
 		log.info("Error message is shown up for null Tempsetbck val save farhenit unit");
-		Thread.sleep(3000);
 
 		// min-1 val
 
-		Trs.clearTemperaturesetbck();
-		Thread.sleep(1200);
-		Trs.setSetbckTemperature(minlssvalfh);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
+		Tss.clearTemperaturesetbck();
 
-		boolean tststusminerrfh = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusminerrfh,
+		Tss.setSetbckTemperature(minlssvalfh);
+
+		Tss.clickSavebtn();
+
+		String tststusminerrfh = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.TempstbckErrmsgFH, tststusminerrfh,
 				"Toast error message is not shown up for Tempsetbck farhenit unit");
 		log.info("Toast error message is shown up for min Tempsetbck val celsuis unit");
-		Thread.sleep(2000);
 
-		boolean stusminerrfh = Trs.getbtnstatus();
+		boolean stusminerrfh = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusminerrfh, "Error message is not shown up for Tempsetbck farhenit unit");
 		log.info("Error message is shown up for min Tempsetbck val celsuis unit");
-		Thread.sleep(2000);
 
 		// max+1 val
 
-		Trs.clearTemperaturesetbck();
-		Thread.sleep(1200);
-		Trs.setSetbckTemperature(maxplusvalfh);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
+		Tss.clearTemperaturesetbck();
 
-		boolean tststusmaxerrfh = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusmaxerrfh,
+		Tss.setSetbckTemperature(maxplusvalfh);
+
+		Tss.clickSavebtn();
+
+		String tststusmaxerrfh = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.TempstbckErrmsgFH, tststusmaxerrfh,
 				"Toast error message is not shown up for max Tempsetbck val farhenit unit ");
 		log.info("Toast error message is shown up for max Tempsetbck val celsuis unit");
-		Thread.sleep(2000);
 
-		boolean stusmaxerrfh = Trs.getbtnstatus();
+		boolean stusmaxerrfh = Tss.getbtnstatus();
 		softAssert.assertEquals(true, stusmaxerrfh,
 				"Error message is not shown up for max Tempsetbck val farhenit unit ");
 		log.info("Error message is shown up for max Tempsetbck val celsuis unit");
-		Thread.sleep(2000);
 
 		// In Range value testing
 
-		Trs.clearTemperaturesetbck();
-		Thread.sleep(1200);
-		Trs.setSetbckTemperature(Inrngvalfh);
-		Thread.sleep(1200);
-		Trs.clickSavebtn();
+		Tss.clearTemperaturesetbck();
 
-		boolean tststusfh = Trs.getToastmsg();
-		softAssert.assertEquals(true, tststusfh,
+		Tss.setSetbckTemperature(Inrngvalfh);
+
+		Tss.clickSavebtn();
+
+		String tststusfh = Tss.getToastmsg();
+		softAssert.assertEquals(Constants.Sucssmsg, tststusfh,
 				"Toast msg for In range values are not saved successfully for Tempsetbck farhenit unit");
 		log.info("Toast msg for In range values are saved successfully for Tempsetbck farhenit unit");
-		Thread.sleep(2000);
 
-		boolean stusfh = Trs.getbtnstatus();
+		boolean stusfh = Tss.getbtnstatus();
 		softAssert.assertEquals(false, stusfh,
 				"In range values are not saved successfully for Tempsetbck farhenit unit");
 		log.info("In range values are saved successfully for Tempsetbck farhenit unit");
-		Thread.sleep(2000);
 
-		tmpstbckfarnh = Trs.getTemperatureSetback();
-		Thread.sleep(2000);
-		
+		tmpstbckfarnh = Tss.getTemperatureSetback();
+
+		softAssert.assertAll();
 
 	}
-    
 
 	@Test(priority = 14)
+	@Description("Verfication of fanheit to celsius conversion for temperature set back field in system settings")
 	public void Test_Farnhit_ToCelsius_Conversion_Tempstbck() throws InterruptedException {
 
-		
-		Trs.PreferencesBtnISEnabled();
-		Trs.clickPreferencesBtn();
-		Thread.sleep(1500);
+		Tss.clickPreferencesBtn();
+		Thread.sleep(2000);
 
-		Trs.clickCelsiusUnit();
+		Tss.clickCelsiusUnit();
 		log.info("Temperature Unit Celsius is selected by clicking to verfiy conversion");
-		Thread.sleep(3200);
 
-		Trs.clickSave();
-		Thread.sleep(2000);
+		Tss.clickSave();
+
 		log.info("Saved Celsius Option to verfiy conversion");
-		Thread.sleep(3000);
+		
 
-		Trs.TemperatureBtnISEnabled();
-		Thread.sleep(1200);
-		Trs.TemperatureBtn();
-		log.info("Clicked on Temperature in System settings button to validate OTT farhenit to celsius conversion");
-		Thread.sleep(2000);
+		if(Tss.getToastmsgststus()==true)
+			log.info("Prefrences updated sucessfully");	
+		else
+			log.info("Prefrences not updated sucessfully");
+	
+
+		Tss.clickTemperatureBtn();
+		log.info(
+				"Clicked on Temperature in System settings button to validate tempstbck farhenit to celsius conversion");
 
 		String fhtocelsius = ActionMethods.getConversionToCelsiusSys(tmpstbckfarnh);
-		String OTTtemp = Trs.getOTTemperature();
-		softAssert.assertEquals(OTTtemp, fhtocelsius, "Farnhit to Celsius unit conversion not correct");
-		log.info("Farnhit to Celsius unit conversion for OTT is correct");
-		Thread.sleep(2000);
+
+		String tmpstbck = Tss.getTemperatureSetback();
+		softAssert.assertEquals(tmpstbck, fhtocelsius, "Farnhit to Celsius unit conversion not correct for tmpstbck");
+		log.info("Farnhit to Celsius unit conversion for tmpstbck is correct");
+
+		softAssert.assertAll();
 
 	}
 

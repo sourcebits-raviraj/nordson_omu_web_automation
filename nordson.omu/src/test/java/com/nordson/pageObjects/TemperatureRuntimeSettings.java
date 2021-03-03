@@ -3,7 +3,9 @@ package com.nordson.pageObjects;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -12,8 +14,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.nordson.utilities.ActionMethods;
+import com.nordson.utilities.Constants;
 
 public class TemperatureRuntimeSettings {
 
@@ -41,7 +45,7 @@ public class TemperatureRuntimeSettings {
 
 	WebElement SubmitButton;
 
-	@FindBy(xpath = "//*[contains(text(),'System Settings')]")
+	@FindBy(xpath = "//*[contains(text(),'System Settings')]/ancestor::span")
 
 	WebElement SystemSettings;
 
@@ -64,11 +68,9 @@ public class TemperatureRuntimeSettings {
 	@FindBy(xpath = "//*[@formcontrolname='TempUnits']//*[contains(text(),'F')]//preceding-sibling::div")
 
 	WebElement FarhenitTemperatureunit;
-	
 
 	@FindBy(xpath = "(//span[@class='min'])[1]")
-    WebElement Temperatureunt;
-	
+	WebElement Temperatureunt;
 
 	@FindBy(xpath = "//*[@class='btn apply']")
 
@@ -85,10 +87,6 @@ public class TemperatureRuntimeSettings {
 	@FindBy(xpath = "//*[contains(@routerlink,'settings/temp-zone')]")
 
 	WebElement ZoneTemperature;
-
-	@FindBy(xpath = "//*[contains(@routerlink,'settings/temperaturesettings')]")
-
-	WebElement Temperature;
 
 	@FindBy(xpath = "//*[contains(text(),'Global Setpoint')]/../following-sibling::tr/td//input")
 
@@ -122,15 +120,6 @@ public class TemperatureRuntimeSettings {
 
 	List<WebElement> ApplicatorSetpoint;
 
-	@FindBy(xpath = "//*[@formcontrolname='OTDelta']")
-	WebElement OTTemperature;
-
-	@FindBy(xpath = "//*[@formcontrolname='UTDelta']")
-	WebElement UTTemperature;
-
-	@FindBy(xpath = "//*[@formcontrolname='StandbyDelta']")
-	WebElement TemperatureSetback;
-
 	@FindBy(xpath = "//*[@name='hose1']")
 	WebElement Hose1;
 
@@ -147,81 +136,44 @@ public class TemperatureRuntimeSettings {
 	WebElement Toastmsg;
 
 	public void clickSetUpToolBtn() {
+		Am.waitForAnElementToBeClickable(SetUpToolButton);
 		SetUpToolButton.click();
 
 	}
 
-	public void SetUpToolBtnISEnabled() {
-		try {
-
-			Am.waitForAnElementToBeClickable(SetUpToolButton);
-		}
-
-		catch (TimeoutException e) {
-			System.out.println("SetUp Tool Element isn't clickable");
-		}
-
-	}
-
-	public void CreateNewBtnISEnabled() {
-
-		try {
-			Am.waitForAnElementToBeClickable(CreateNewButton);
-
-		}
-
-		catch (TimeoutException e) {
-			System.out.println("Create New Element isn't clickable");
-		}
-	}
-
 	public void clickCreateNewBtn() {
+
+		Am.waitForAnElementPresence(CreateNewButton);
+		Am.waitForAnElementToBeClickable(CreateNewButton);
 		CreateNewButton.click();
 
 	}
 
-	public void clickSubmitBtn() {
+	public void clickSubmitBtn() throws InterruptedException {
+
+		Am.waitForAnElementPresence(SubmitButton);
+		Am.waitForAnElementToBeClickable(SubmitButton);
 		SubmitButton.click();
 
 	}
 
-	public void SystemSettingsBtnISEnabled() {
-
-		try {
-
-			Am.waitForAnElementToBeClickable(SystemSettings);
-
-		}
-
-		catch (TimeoutException e) {
-			System.out.println("System Settings Element isn't clickable");
-		}
-
-	}
-
 	public void clickSystemSettingsBtn() {
-		SystemSettings.click();
 
-	}
+		Am.waitForAnElementPresence(By.xpath("//*[contains(text(),'System Settings')]/ancestor::span"));
+		Am.waitForAnElementToBeClickable(SystemSettings);
+		JavascriptExecutor executor = (JavascriptExecutor) ldriver;
+		executor.executeScript("arguments[0].click();", SystemSettings);
 
-	public void PreferencesBtnISEnabled() {
-
-		try {
-            
-			Am.waitForAnElementPresence(Preferences);
-			Am.waitForAnElementToBeClickable(Preferences);
-
-		}
-
-		catch (TimeoutException e) {
-			System.out.println("Preferences Settings Element isn't clickable");
-		}
+		// SystemSettings.click();
 
 	}
 
 	public void clickPreferencesBtn() {
-		
-		Am.waitForAnElementPresence(Preferences);
+
+		Am.waitForAnElementPresence(By.xpath("//*[contains(text(),'Preferences')]"));
+
+		Am.waitForAnElementToBeClickable(Preferences);
+
 		Preferences.click();
 
 	}
@@ -229,46 +181,51 @@ public class TemperatureRuntimeSettings {
 	public Boolean getTemperatureunitstut()
 
 	{
-		
-		Boolean tempvalue =false;
-	    
-		if(Temperatureunit.size()==1)
-			tempvalue=true;
-		
-		else 
-			tempvalue=false;
-		
+
+		Boolean tempvalue = false;
+
+		if (Temperatureunit.size() == 1)
+			tempvalue = true;
+
+		else
+			tempvalue = false;
+
 		return tempvalue;
 	}
-	public String getSelectedTemperatureunit()
-	{
+
+	public String getSelectedTemperatureunit() {
 		String tempunt;
-		tempunt=SelectedTemperatureunit.getText();
+		tempunt = SelectedTemperatureunit.getText();
 		return tempunt;
 	}
-	public String getTemperatureunt()
-	{
+
+	public String getTemperatureunt() {
 		String tempunt;
-		tempunt=Temperatureunt.getText();
+		tempunt = Temperatureunt.getText();
 		return tempunt;
-		
+
 	}
 
 	public void clickCelsiusUnit() {
 
+		Am.waitForAnElementPresence(
+				By.xpath("//*[@formcontrolname='TempUnits']//*[contains(text(),'C')]//preceding-sibling::div"));
 		CelsiusTemperatureunit.click();
 
 	}
 
 	public void clickFarhenitUnit() {
 
-		Am.waitForAnElementPresence(FarhenitTemperatureunit);
+		Am.waitForAnElementPresence(
+				By.xpath("//*[@formcontrolname='TempUnits']//*[contains(text(),'F')]//preceding-sibling::div"));
 		FarhenitTemperatureunit.click();
 
 	}
 
 	public void clickSave() {
 
+		Am.waitForAnElementPresence(SAVE);
+		Am.waitForAnElementToBeClickable(SAVE);
 		SAVE.click();
 
 	}
@@ -276,71 +233,36 @@ public class TemperatureRuntimeSettings {
 	public void clickSavebtn() {
 
 		Am.waitForAnElementPresence(SAVE1);
+		Am.waitForAnElementPresence(By.xpath("//*[@class='apply btn submit-bt']"));
+		Am.waitForAnElementToBeClickable(SAVE1);
 		SAVE1.click();
 
 	}
 
-	public void RuntimeSettingsBtnISEnabled() {
-
-		try {
-			wait = new WebDriverWait(ldriver, 60);
-			Am.waitForAnElementToBeClickable(RuntimeSettings);
-		} catch (TimeoutException e) {
-			System.out.println("Runtime Settings Element isn't clickable");
-		}
-	}
-
-	public void RuntimeSettingsBtn() {
+	public void RuntimeSettingsBtn() throws InterruptedException {
 
 		Am.waitForAnElementPresence(RuntimeSettings);
-		RuntimeSettings.click();
+		Am.waitForAnElementToBeClickable(RuntimeSettings);
+		JavascriptExecutor executor = (JavascriptExecutor) ldriver;
+		executor.executeScript("arguments[0].click();", RuntimeSettings);
 
-	}
-
-	public void ZoneTemperatureBtnISEnabled() {
-
-		try {
-			Am.waitForAnElementToBeClickable(ZoneTemperature);
-
-		}
-
-		catch (TimeoutException e) {
-			System.out.println("Zone Temperature Element isn't clickable");
-		}
-
+		// RuntimeSettings.click();
 	}
 
 	public void ZoneTemperatureBtn() {
 
 		Am.waitForAnElementPresence(ZoneTemperature);
+		Am.waitForAnElementToBeClickable(ZoneTemperature);
 		ZoneTemperature.click();
-
-	}
-
-	public void TemperatureBtnISEnabled() {
-
-		try {
-			Am.waitForAnElementToBeClickable(Temperature);
-
-		}
-
-		catch (TimeoutException e) {
-			System.out.println("Temperature Element isn't clickable");
-		}
-
-	}
-
-	public void TemperatureBtn() {
-
-		Am.waitForAnElementPresence(Temperature);
-		Temperature.click();
 
 	}
 
 	public String getGlobalSetPoint() {
 
 		Am.waitForAnElementPresence(GlobalSetPoint);
+
 		String globalSetPoint = GlobalSetPoint.getAttribute("value");
+
 		return globalSetPoint;
 
 	}
@@ -348,8 +270,7 @@ public class TemperatureRuntimeSettings {
 	public void setGlobalSetPoint(String globalpnt) {
 
 		Am.waitForAnElementPresence(GlobalSetPoint);
-		Actions Sndinput =new Actions(ldriver);
-		Sndinput.sendKeys(GlobalSetPoint, globalpnt).build().perform();	
+		GlobalSetPoint.sendKeys(globalpnt);
 
 	}
 
@@ -360,9 +281,11 @@ public class TemperatureRuntimeSettings {
 
 	}
 
-	public String getTankSetPoint() {
+	public String getTankSetPoint() throws InterruptedException {
 
-		Am.waitForAnElementPresence(Tank);
+		Am.waitForAnElementPresence(By.xpath("//*[contains(text(),'Tank')]/../following-sibling::tr/td//input"));
+		Am.waitForAnElementVisible(Tank);
+		Am.waitFortexttoBePresent(By.xpath("//*[contains(text(),'Tank')]/../following-sibling::tr/td//input"));
 		String tanksetpoint = Tank.getAttribute("value");
 		return tanksetpoint;
 	}
@@ -373,21 +296,25 @@ public class TemperatureRuntimeSettings {
 
 	}
 
-	public String getManifold() {
+	public String getManifold() throws InterruptedException {
 
-		Am.waitForAnElementPresence(Manifold);
+		Am.waitForAnElementPresence(By.xpath("//*[contains(text(),'Manifold')]/../following-sibling::tr/td//input"));
+		Am.waitFortexttoBePresent(By.xpath("//*[contains(text(),'Manifold')]/../following-sibling::tr/td//input"));
 		String manifold = Manifold.getAttribute("value");
 		return manifold;
 	}
 
-	public List<Integer> getHoseEnableStatus() {
+	public List<Integer> getHoseEnableStatus() throws InterruptedException {
 		String hose = "";
 		int hosewebelcunt = 0;
 		List<Integer> hosecuntele = new ArrayList<Integer>();
+		
+		Am.waitForAnElementPresence(By.xpath("//*[contains(text(),'Hose')]"));
 
 		for (int i = 1; i <= Hose.size(); i++) {
 			hose = "//*[text()='Hose " + i
-					+ "']/following-sibling::td//*[not(contains(@class,'mat-checked'))]//input[@aria-checked='false']";
+					+ "']/following-sibling::td//*[not(contains(@class,'mat-checked'))]//input[@aria-checked='false']";	
+			Thread.sleep(1500);
 			hosewebelcunt = ldriver.findElements(By.xpath(hose)).size();
 			hosecuntele.add(hosewebelcunt);
 
@@ -397,13 +324,14 @@ public class TemperatureRuntimeSettings {
 
 	}
 
-	public List<Integer> getApplicatorEnableStatus() {
+	public List<Integer> getApplicatorEnableStatus() throws InterruptedException {
 		String applicator = "";
 		int applicatorWebenblcunt = 0;
 		List<Integer> applicatorlscunt = new ArrayList<Integer>();
 		for (int i = 1; i <= Applicator.size(); i++) {
 			applicator = "//*[text()='Applicator " + i
 					+ "']/following-sibling::td//*[not(contains(@class,'mat-checked'))]//input[@aria-checked='false']";
+			Thread.sleep(1500);
 			applicatorWebenblcunt = ldriver.findElements(By.xpath(applicator)).size();
 			applicatorlscunt.add(applicatorWebenblcunt);
 
@@ -411,13 +339,15 @@ public class TemperatureRuntimeSettings {
 		return applicatorlscunt;
 	}
 
-	public List<String> getHoseSetTemp() {
+	public List<String> getHoseSetTemp() throws InterruptedException {
 		String hosesetpnt = "";
 		List<String> Hosesetpointslst = new ArrayList<String>();
 
 		for (int i = 1; i <= HoseSetpoint.size(); i++) {
 			hosesetpnt = "//*[@name='hose" + i + "']";
+			
 			WebElement el = ldriver.findElement(By.xpath(hosesetpnt));
+			Am.waitFortexttoBePresent(By.xpath(hosesetpnt));
 			String hosesettemppnt = el.getAttribute("value");
 			Hosesetpointslst.add(hosesettemppnt);
 
@@ -426,13 +356,14 @@ public class TemperatureRuntimeSettings {
 		return Hosesetpointslst;
 	}
 
-	public List<String> getApplicatorSetTemp() {
+	public List<String> getApplicatorSetTemp() throws InterruptedException {
 		String applicatorsetpnt = "";
 		List<String> Applicatorsetpointslst = new ArrayList<String>();
 
 		for (int i = 1; i <= Applicator.size(); i++) {
 			applicatorsetpnt = "//*[@name='applicator" + i + "']";
 			WebElement el = ldriver.findElement(By.xpath(applicatorsetpnt));
+			Am.waitFortexttoBePresent(By.xpath(applicatorsetpnt));			
 			String hosesettemppnt = el.getAttribute("value");
 			Applicatorsetpointslst.add(hosesettemppnt);
 
@@ -440,22 +371,23 @@ public class TemperatureRuntimeSettings {
 
 		return Applicatorsetpointslst;
 	}
-	
-	
+
 	public String getHosetemp1()
-	
+
 	{
-		String hsettemp=Hose1.getAttribute("value");
+		Am.waitFortexttoBePresent(By.xpath("//*[@name='hose1']"));	
+		String hsettemp = Hose1.getAttribute("value");
 		return hsettemp;
-		
+
 	}
-	
-  public String getAPP1temp1()
-	
+
+	public String getAPP1temp1()
+
 	{
-		String appl1=Applicator1.getAttribute("value");
+		Am.waitFortexttoBePresent(By.xpath("//*[@name='applicator1']"));
+		String appl1 = Applicator1.getAttribute("value");
 		return appl1;
-		
+
 	}
 
 	public void clearTanktemperature() {
@@ -486,71 +418,10 @@ public class TemperatureRuntimeSettings {
 
 	}
 
-	public void Applicator1temperature(String Appl1temp) {
+	public void setApplicator1temperature(String Appl1temp) {
 
 		Am.waitForAnElementPresence(Applicator1);
 		Applicator1.sendKeys(Appl1temp);
-
-	}
-
-	public void setOTTemperature(String OTtemp) {
-		Am.waitForAnElementPresence(OTTemperature);
-		OTTemperature.sendKeys(OTtemp);
-
-	}
-
-	public void setUTTemperature(String UTTtemp) {
-
-		Am.waitForAnElementPresence(UTTemperature);
-		UTTemperature.sendKeys(UTTtemp);
-
-	}
-
-	public void setSetbckTemperature(String tempstbck) {
-		Am.waitForAnElementPresence(TemperatureSetback);
-		TemperatureSetback.sendKeys(tempstbck);
-
-	}
-
-	public String getOTTemperature() {
-
-		Am.waitForAnElementPresence(OTTemperature);
-		String OTTemp = OTTemperature.getAttribute("value");
-		return OTTemp;
-	}
-
-	public String getUTTemperature() {
-
-		Am.waitForAnElementPresence(UTTemperature);
-		String UTTemp = UTTemperature.getAttribute("value");
-		return UTTemp;
-	}
-
-	public String getTemperatureSetback() {
-
-		Am.waitForAnElementPresence(TemperatureSetback);
-		String TempSB = TemperatureSetback.getAttribute("value");
-		return TempSB;
-	}
-
-	public void clearOTTemperature() {
-
-		Am.waitForAnElementPresence(OTTemperature);
-		OTTemperature.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-
-	}
-
-	public void clearUTTemperature() {
-
-		Am.waitForAnElementPresence(UTTemperature);
-		UTTemperature.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-
-	}
-
-	public void clearTemperaturesetbck() {
-
-		Am.waitForAnElementPresence(TemperatureSetback);
-		TemperatureSetback.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 
 	}
 
@@ -561,7 +432,7 @@ public class TemperatureRuntimeSettings {
 		return sttus;
 	}
 
-	public void clickOnHose1toEnable() {
+	public void clickOnHose1toEnable() throws InterruptedException {
 
 		List<Integer> hosestuts = getHoseEnableStatus();
 		int hose1ele = hosestuts.get(0);
@@ -572,7 +443,7 @@ public class TemperatureRuntimeSettings {
 		}
 	}
 
-	public void clickApplicator1toEnable() {
+	public void clickApplicator1toEnable() throws InterruptedException {
 
 		List<Integer> hosestuts = getApplicatorEnableStatus();
 		int Applicator1 = hosestuts.get(0);
@@ -581,16 +452,127 @@ public class TemperatureRuntimeSettings {
 
 		{
 			Am.waitForAnElementPresence(ApplicatorEnbbtn);
+
+			Am.waitForAnElementToBeClickable(ApplicatorEnbbtn);
+
 			ApplicatorEnbbtn.click();
 		}
 
 	}
 
-	public Boolean getToastmsg() {
+	public String getToastmsg() {
 
 		Am.waitForAnElementPresence(Toastmsg);
-		Boolean toastmsg = Toastmsg.isDisplayed();
+		String toastmsg = "";
+		if (Toastmsg.isDisplayed()) {
+			toastmsg = Toastmsg.getText();
+			Am.waitForAnElementIsInVisible(By.xpath("//div[contains(@class,'toast-message ng-star-inserted')]"));
+
+		} else
+			System.out.println("toast msg not displayed");
+
 		return toastmsg;
 	}
 
+	public Boolean getToastmsgststus() {
+
+		Am.waitForAnElementPresence(Toastmsg);
+		Boolean toastmsg = false;
+		if (Toastmsg.isDisplayed()) {
+			toastmsg = true;
+			Am.waitForAnElementIsInVisible(By.xpath("//div[contains(@class,'toast-message ng-star-inserted')]"));
+
+		} else
+			toastmsg = false;
+
+		return toastmsg;
+	}
+
+	public void clickCelsiusTempUnit() {
+
+		Boolean tempvalue = getTemperatureunitstut();
+
+		if (tempvalue == true) {
+
+			String tempunt = getSelectedTemperatureunit();
+			if (!(tempunt.equalsIgnoreCase("oC"))) {
+				clickCelsiusUnit();
+
+			}
+		} else
+			System.out.println("Temperature not selected");
+	}
+
+	public void clickFarnheitTempUnit() {
+
+		Boolean tempvalue = getTemperatureunitstut();
+
+		if (tempvalue == true) {
+
+			String tempunt = getSelectedTemperatureunit();
+			if (!(tempunt.equalsIgnoreCase("oF"))) {
+				clickFarhenitUnit();
+
+			}
+		} else
+			System.out.println("Temperature not selected");
+	}
+
+	public void gethosesstatus() throws InterruptedException {
+
+		int count = 1;
+		List<Integer> hoseEnableststus = getHoseEnableStatus();
+
+		for (int i = 0; i < hoseEnableststus.size(); i++) {
+			if (hoseEnableststus.get(i) > 0) {
+				System.out.println("Hose" + count + "set point temperature is disabled by default val");
+			} else
+
+				System.out.println("Hose" + count + "set point temperature is not disabled by default val");
+			count++;
+		}
+
+	}
+
+	public void getApplicatorsstatus() throws InterruptedException {
+		int countas = 1;
+		List<Integer> applicatorEnableststus = getApplicatorEnableStatus();
+
+		for (int i = 0; i < applicatorEnableststus.size(); i++) {
+			if (applicatorEnableststus.get(i) > 0) {
+				System.out.println("Applicator" + countas + " Set point is disbaled by default Val");
+			} else
+				Assert.fail("Applicator" + countas + "Set point is enabled and not disabled by default Val");
+			countas++;
+		}
+
+	}
+
+	public void getHosesSettempStatus(String defaulttemp) throws InterruptedException {
+		List<String> hosestpnt = getHoseSetTemp();
+		int hosestpntsz = hosestpnt.size();
+		int count = 1;
+		for (int i = 0; i < hosestpntsz; i++) {
+			if (hosestpnt.get(i).equals(defaulttemp)) {
+				System.out.println("Hose" + count + "set point temperature set to " + hosestpnt.get(i) + " value");
+			} else
+
+				System.out.println("Hose" + count + "set point temperature not set" + hosestpnt.get(i) + " value ");
+			count++;
+		}
+	}
+
+	public void getApplicatorsSettempStatus(String defsettemp) throws InterruptedException {
+		List<String> applicatorsetpnt = getApplicatorSetTemp();
+		int count = 1;
+		for (int i = 0; i < applicatorsetpnt.size(); i++) {
+			if (applicatorsetpnt.get(i).equals(defsettemp)) {
+				System.out.println("Applicator" + count + "set point temperature set to " + applicatorsetpnt.get(i));
+			} else
+
+				System.out
+						.println("Applicator" + count + "set point temperature not set to " + applicatorsetpnt.get(i));
+			count++;
+		}
+	}
 }

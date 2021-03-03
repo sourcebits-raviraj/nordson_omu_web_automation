@@ -1,9 +1,7 @@
 package com.nordson.testCases;
 
 import java.io.IOException;
-import java.util.List;
 
-import org.testng.Assert;
 
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -11,7 +9,14 @@ import org.testng.asserts.SoftAssert;
 import com.nordson.pageObjects.TemperatureRuntimeSettings;
 import com.nordson.utilities.ActionMethods;
 import com.nordson.utilities.Constants;
+import com.nordson.utilities.XLUtils;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+
+@Epic("Regression Tests")
+@Feature("Temperature Runtime settings verification of default values")
 public class TC_RuntimeDefaultSettings_TemperatureTest extends TC_LoginTest_DDT_001 {
 
 	TemperatureRuntimeSettings Trs;
@@ -20,57 +25,31 @@ public class TC_RuntimeDefaultSettings_TemperatureTest extends TC_LoginTest_DDT_
 	private SoftAssert softAssert = new SoftAssert();
 
 	@Test(priority = 1, enabled = true)
+	@Description("Verify the Default Values for Celsius Temperature Unit")
 	public void Test_Celsius_RuntimeSettingDefaultTempValidations() throws InterruptedException, IOException {
 
 		Trs = new TemperatureRuntimeSettings(driver);
-		Trs.SetUpToolBtnISEnabled();
-		Thread.sleep(1800);
+		
+
 		Trs.clickSetUpToolBtn();
-		log.info("Clicked on SetUp Tool button");
-		Thread.sleep(2000);
-
-		Trs.CreateNewBtnISEnabled();
 		Trs.clickCreateNewBtn();
-		log.info("Clicked on CreateNew button");
-		Thread.sleep(2000);
-
 		Trs.clickSubmitBtn();
-		log.info("Clicked on Submit button");
-		Thread.sleep(2000);
-
-		Trs.SystemSettingsBtnISEnabled();
-		Thread.sleep(2000);
+		
 		Trs.clickSystemSettingsBtn();
 		log.info("Clicked on System settings button");
-		Thread.sleep(2000);
 
-		Trs.PreferencesBtnISEnabled();
+		
 		Trs.clickPreferencesBtn();
 		log.info("Clicked on Preferences button");
-		Thread.sleep(2000);
 
-		Boolean tempvalue = Trs.getTemperatureunitstut();
-		Thread.sleep(2000);
-		if (tempvalue == true) {
+		Trs.clickCelsiusTempUnit();
+		log.info("Clicked on Celsius temperature button");
+		
+    	Trs.RuntimeSettingsBtn();
+    	log.info("Clicked on Runtime settings button");
 
-			String tempunt = Trs.getSelectedTemperatureunit();
-			if (!(tempunt.equalsIgnoreCase("oC"))) {
-				Trs.clickCelsiusUnit();
-				Thread.sleep(2000);
-				log.info("Temperature Unit celsius is selected by clicking");
-			}
-		} else
-			log.info("Temperature Unit celsius is selected by default");
-
-		Trs.RuntimeSettingsBtnISEnabled();
-		Thread.sleep(2000);
-		Trs.RuntimeSettingsBtn();
-		Thread.sleep(2000);
-
-		Trs.ZoneTemperatureBtnISEnabled();
-		Thread.sleep(2000);
-		Trs.ZoneTemperatureBtn();
-		Thread.sleep(2000);
+        Trs.ZoneTemperatureBtn();
+        log.info("Clicked on Runtime settings button");
 
 		// Verfication of Default Values for Celsius unit
 
@@ -94,104 +73,61 @@ public class TC_RuntimeDefaultSettings_TemperatureTest extends TC_LoginTest_DDT_
 
 		// To check the toggle bar status is enabled or not
 
-		int count = 1;
-		List<Integer> hoseEnableststus = Trs.getHoseEnableStatus();
-
-		for (int i = 0; i < hoseEnableststus.size(); i++) {
-			if (hoseEnableststus.get(i) > 0) {
-				log.info("Hose" + count + "set point temperature is disabled by default for celsius unit");
-			} else
-
-				log.info("Hose" + count + "set point temperature is not disabled by default for celsius unit");
-			count++;
-		}
+		Trs.gethosesstatus();
+		log.info("All the hoses are disabled by defaultlly");
 
 		// To check all the applicators are enabled or not
-		List<Integer> applicatorEnableststus = Trs.getApplicatorEnableStatus();
-		count = 1;
-		for (int i = 0; i < hoseEnableststus.size(); i++) {
-			if (applicatorEnableststus.get(i) > 0) {
-				log.info("Applicator" + count + " Set point is disbaled by default for celsius unit");
-			} else
-				Assert.fail("Applicator" + count + "Set point is enabled and not disabled by default for celsius unit");
-			count++;
-		}
-
+		Trs.getApplicatorsstatus();
+		log.info("All the applicators are disabled by defaultlly");
+	
 		// To check the Hose set point temperature
-		List<String> hosestpnt = Trs.getHoseSetTemp();
-		int hosestpntsz = hosestpnt.size();
-		count = 1;
-		for (int i = 0; i < hosestpntsz; i++) {
-			if (hosestpnt.get(i).equals(Constants.HoseSetTemp)) {
-				log.info("Hose" + count + "set point temperature set to default value for celsius unit "
-						+ Constants.HoseSetTemp);
-			} else
-
-				log.info("Hose" + count + "set point temperature not set to default value for celsius unit "
-						+ Constants.HoseSetTemp);
-			count++;
-		}
+		 Trs.getHosesSettempStatus(Constants.HoseSetTemp);
+		 log.info("All Hoses are set to default values");
 
 		// To check the Applicator set point temperature
-		List<String> applicatorsetpnt = Trs.getApplicatorSetTemp();
-		int applicatorsetpntsz = hosestpnt.size();
-		count = 1;
-		for (int i = 0; i < applicatorsetpntsz; i++) {
-			if (applicatorsetpnt.get(i).equals(Constants.ApplicatorSetTemp)) {
-				log.info("Applicator" + count + "set point temperature set to default value for celsius unit"
-						+ Constants.ApplicatorSetTemp);
-			} else
+		Trs.getApplicatorsSettempStatus(Constants.ApplicatorSetTemp);
+		log.info("All Applicators are set to default values");
 
-				log.info("Applicator" + count + "set point temperature not set to default value for celsius unit"
-						+ Constants.ApplicatorSetTemp);
-			count++;
-		}
+		softAssert.assertAll();
 
 	}
 
 	@Test(priority = 2, enabled = true)
+	@Description("Verify the Default Values for Farnheit Temperature Unit")
 	public void Test_Farnhenit_RuntimeSettingDefaultTempValidations() throws InterruptedException, IOException
 
 	{
 
 		// To Validiate the Default Values in Runtime settings for Farnheit Unit
 
-		Trs.SystemSettingsBtnISEnabled();
 		Trs.clickSystemSettingsBtn();
 		log.info("Clicked on System settings button to change preferences");
-		Thread.sleep(2000);
 
-		Trs.PreferencesBtnISEnabled();
+		
 		Trs.clickPreferencesBtn();
 		log.info("Clicked on Preferences to validate Farnheit Default values");
-		Thread.sleep(2000);
-
-		Boolean tempvaluefh = Trs.getTemperatureunitstut();
-		if (tempvaluefh == false) {
-			Trs.clickFarhenitUnit();
-			Thread.sleep(2000);
-			log.info("Temperature Unit Farhenit is selected by clicking");
-		} else
-			log.info("Temperature Unit Farhenit is selected");
 
 		Trs.clickFarhenitUnit();
-		Thread.sleep(2000);
+		log.info("Clicked on Farnheit temperature button");
+		
 		Trs.clickSave();
-		Thread.sleep(2500);
-		log.info("Farnheit Value saved to verfiy Default values in run time settings");
+        log.info("Farnheit Value saved to verfiy Default values in run time settings");
+        
+        
+        if(Trs.getToastmsgststus()==true)
+        {
+        	log.info("Preferences sucessfully updated");
+        }
 
-		Trs.RuntimeSettingsBtnISEnabled();
-		Thread.sleep(3000);
 		Trs.RuntimeSettingsBtn();
 		log.info("Runtime Setting is clicked to verfiy Farnheit Unit deafult values");
-		Thread.sleep(2000);
 
-		Trs.ZoneTemperatureBtnISEnabled();
-		Thread.sleep(2000);
+
 		Trs.ZoneTemperatureBtn();
 		log.info("Zone temperature is clicked to verify default Farnheit Values");
-		Thread.sleep(3000);
+		
 
+		// Validations of default values for GP,Tank,Manifold,hoses and applicators
 		String globalSetPointfh = Trs.getGlobalSetPoint();
 		softAssert.assertTrue(globalSetPointfh.isEmpty(), "Global set point is not set to null for Farnheit Unit");
 		log.info("Global set point is set null for Farnheit Unit");
@@ -212,54 +148,23 @@ public class TC_RuntimeDefaultSettings_TemperatureTest extends TC_LoginTest_DDT_
 				"Manifold set point is not set to Default value for Farnheit Unit: " + farhenitvalump);
 		log.info("Manifold set point is set to Default value for Farnheit Unit:" + farhenitvalump);
 
-		List<Integer> hoseEnableststusfh = Trs.getHoseEnableStatus();
-		int count = 1;
-		for (int i = 0; i < hoseEnableststusfh.size(); i++) {
-			if (hoseEnableststusfh.size() > 0) {
-				log.info("Hose " + count + "set point temperature is disabled by default for Farnheit Unit");
-			} else
+		Trs.gethosesstatus();
+		log.info("Hoses are disabled by default");
 
-				log.info("Hose " + count + "set point temperature is not disabled by default for Farnheit Unit");
+		Trs.getApplicatorsstatus();
+		log.info("Applicators are disabled by default");
+		
+		
+		 Trs.getHosesSettempStatus(ActionMethods.getConversionToFahrenheit(Constants.HoseSetTemp));
+		 log.info("All Hose set point temperature set to default value in Farnheit Unit");
 
-			count++;
-		}
-
-		List<Integer> applicatorEnableststusfh = Trs.getApplicatorEnableStatus();
-		count = 1;
-		for (int i = 0; i < hoseEnableststusfh.size(); i++) {
-			if (applicatorEnableststusfh.get(i) > 0) {
-				log.info("Applicator " + count + " Set point temperature is disbaled by default");
-			} else
-				log.info("Applicator " + count + "Set point temperature is enabled and not disabled by default");
-			count++;
-		}
-		List<String> hosestpntfh = Trs.getHoseSetTemp();
-		String fahrenitSetpointtemp = ActionMethods.getConversionToFahrenheit(Constants.HoseSetTemp);
-		count = 1;
-		for (int i = 0; i < hosestpntfh.size(); i++) {
-			if (hosestpntfh.get(i).equals(fahrenitSetpointtemp)) {
-				log.info("Hose" + count + "set point temperature set to default value for Farnheit Unit"
-						+ fahrenitSetpointtemp);
-			} else
-
-				log.info("Hose" + count + "set point temperature not set to default value for Farnheit Unit"
-						+ fahrenitSetpointtemp);
-			count++;
-		}
-
-		List<String> applicatorsetpntfh = Trs.getApplicatorSetTemp();
-		String appfahrenitSetpointtemp = ActionMethods.getConversionToFahrenheit(Constants.ApplicatorSetTemp);
-		count = 1;
-		for (int i = 0; i < applicatorsetpntfh.size(); i++) {
-			if (applicatorsetpntfh.get(i).equals(appfahrenitSetpointtemp)) {
-				log.info("Applicator" + count + "set point temperature set to default value for Farnheit Unit"
-						+ appfahrenitSetpointtemp);
-			} else
-
-				log.info("Applicator" + count + "set point temperature not set to default value for Farnheit Unit"
-						+ appfahrenitSetpointtemp);
-			count++;
-		}
+		// To check the Applicator set point temperature
+		Trs.getApplicatorsSettempStatus(ActionMethods.getConversionToFahrenheit(Constants.ApplicatorSetTemp));
+		log.info("All Applicator set point temperature set to default value in Farnheit Unit");
+        	
+		XLUtils.setExcelSheetNm("GlobalPointCelsius");
+		softAssert.assertAll();
+		
 
 	}
 
