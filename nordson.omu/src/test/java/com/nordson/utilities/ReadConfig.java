@@ -127,5 +127,23 @@ public class ReadConfig {
 		return UIfildTobefetchedtmpstbck;
 
 	}
+	
+	public String getUIfieldTobefetched_SMTTmeDly() {
+
+		String UIfildTobefetchedsmttimedly = pro.getProperty("UIfildTobefetched_SMTTmeDly");
+		return UIfildTobefetchedsmttimedly;
+	}
+
+	public String getUIfieldTobefetched_AutoHeaterOffTme() {
+
+		String UIfildTobefetchedautohtrofftime = pro.getProperty("UIfildTobefetched_AutoHeaterOffTme");
+		return UIfildTobefetchedautohtrofftime;
+	}
+
+	public String getUIfieldTobefetched_SystemSetbckDly() {
+
+		String UIfildTobefetchedsystemsetbckdly = pro.getProperty("UIfildTobefetched_SystemSetbckDly");
+		return UIfildTobefetchedsystemsetbckdly;
+	}
 
 }
