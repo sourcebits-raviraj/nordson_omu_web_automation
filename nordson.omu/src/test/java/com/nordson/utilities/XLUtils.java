@@ -86,23 +86,22 @@ public class XLUtils {
 		ws = wb.getSheet(xlsheet);
 		row = ws.getRow(rownum);
 		int colnum = cell.getColumnIndex();
-
 		return colnum;
-
 	}
 
 	public static int getColumnindex(String xlfile, String xlsheet, String Colnm) throws IOException {
-
 		fi = new FileInputStream(xlfile);
 		wb = new XSSFWorkbook(fi);
 		ws = wb.getSheet(xlsheet);
 		row = ws.getRow(0);
-		int colnum = cell.getColumnIndex();
-
-		return colnum;
-
+		int colindx=0;
+		for(Cell cell:row){
+		 if(cell.getStringCellValue().equalsIgnoreCase(Colnm))
+			 colindx = cell.getColumnIndex();
+		 else
+			 System.out.println("Colnname not found");}
+		return colindx;
 	}
-
 	public static List<String> getCellDataColindx(String xlfile, String xlsheet, int rownum, int colnum)
 			throws IOException {
 

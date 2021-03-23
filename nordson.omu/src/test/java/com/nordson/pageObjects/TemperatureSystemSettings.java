@@ -161,34 +161,24 @@ public void clickDashboard() {
 		Am.waitForAnElementToBeClickable(SystemSettings);
 		JavascriptExecutor executor = (JavascriptExecutor) ldriver;
 		executor.executeScript("arguments[0].click();", SystemSettings);
-
 		// SystemSettings.click();
 
 	}
 
 	public void clickPreferencesBtn() {
-
 		Am.waitForAnElementPresence(By.xpath("//*[contains(text(),'Preferences')]"));
-
 		Am.waitForAnElementToBeClickable(Preferences);
-
 		Preferences.click();
-
 	}
 
 	public Boolean getTemperatureunitstut()
-
 	{
-		
-
 		Boolean tempvalue = false;
 		Am.waitForAnElementPresence(By.xpath("//*[@formcontrolname='TempUnits']//*[contains(@class,'mat-radio-checked')]//div[@class='mat-radio-container']"));
 		if (Temperatureunit.size() == 1)
 			tempvalue = true;
-
 		else
 			tempvalue = false;
-
 		return tempvalue;
 	}
 
@@ -234,13 +224,11 @@ public void clickDashboard() {
 
 	}
 
-	public void clickFarhenitUnit() {
-
+	public void clickFahrenheit() {
 		Am.waitForAnElementPresence(
 				By.xpath("//*[@formcontrolname='TempUnits']//*[contains(text(),'F')]//preceding-sibling::div"));
 		Am.waitForAnElementToBeClickable(CelsiusTemperatureunit);
 		FarhenitTemperatureunit.click();
-
 	}
 
 	public void clickSave() {
@@ -395,16 +383,14 @@ public void clickDashboard() {
 			System.out.println("Temperature not selected");
 	}
 
-	public void clickFarnheitTempUnit() {
+	public void clickFahrenheitTempUnit() {
 
 		Boolean tempvalue = getTemperatureunitstut();
 
 		if (tempvalue == true) {
-
 			String tempunt = getSelectedTemperatureunit();
 			if (!(tempunt.equalsIgnoreCase("oF"))) {
-				clickFarhenitUnit();
-
+				clickFahrenheit();
 			}
 		} else
 			System.out.println("Temperature not selected");

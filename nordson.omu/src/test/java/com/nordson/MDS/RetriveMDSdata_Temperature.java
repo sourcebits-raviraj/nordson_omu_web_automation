@@ -12,16 +12,17 @@ public class RetriveMDSdata_Temperature {
 	int rwindx = 0;
 	String UIfildtobefetched = "";
 
-	String prmryunt = "";
+	// Variables declaration to store the values Temperature MDS file 
+
 	String default1 = "";
 	String min1 = "";
 	String max1 = "";
-
-	String scndryunt = "";
+	
 	String default2 = "";
 	String min2 = "";
 	String max2 = "";
 
+	// Variables declaration to store the required parameters cell index in Temperature MDS file
 	int prmryuntindx = 0;
 	int dfault1indx = 0;
 	int min1indx = 0;
@@ -31,13 +32,15 @@ public class RetriveMDSdata_Temperature {
 	int dfault2indx = 0;
 	int min2indx = 0;
 	int max2indx = 0;
-	String dflt1 = "";
-	String dflt2 = "";
+	
 
+	// Hashmap declaration to store the row headings
 	HashMap<Integer, String> MDSrowhding = new HashMap<Integer, String>();
+	// object creation of the class to set the MDS file values retrieved
 	MDSGetterandSetters_Temperature mgs = new MDSGetterandSetters_Temperature();
 	ReadConfig rcf = new ReadConfig();
 
+	// Method to store the column indexes for required MDS field for temperature
 	public void getColindx(String path) throws IOException
 
 	{
@@ -71,52 +74,44 @@ public class RetriveMDSdata_Temperature {
 
 	}
 
+	// Method to retrieve the values from MDS file
 	public void getMDSDataVal(String UIfieldTobefetched) throws IOException {
 
 		String path = System.getProperty("user.dir") + rcf.getExcelMDSpath();
 		getColindx(path);
 		int colcount = XLUtils.getCellCount(path, "ProBlue Flex", 1);
-
 		for (int i = 0; i < colcount; i++) {
+			// storing the heading row values in hasmap
 			MDSrowhding.put(0, XLUtils.getCellData(path, "ProBlue Flex", 0, i));
 
 			for (String lbls : MDSrowhding.values()) {
-
+				//checking whether heading row contains UI Label
 				if (lbls.contains("UI Label")) {
-
 					int columnindxUIlbl = XLUtils.getColumnindex(path, "ProBlue Flex", 0);
 					List<String> UIlblcol = XLUtils.getCellDataColindx(path, "ProBlue Flex", 0, columnindxUIlbl);
-
 					for (String colnms : UIlblcol) {
-
+						// Verifying the UI field to be fetched is present or not and storing the row index of that label
 						if (colnms.trim().equalsIgnoreCase(UIfieldTobefetched)) {
 							if(UIfieldTobefetched.equalsIgnoreCase("Zone #"))
 								rwindx=5;
 							else
 							rwindx = XLUtils.getrowindex(path, "ProBlue Flex", colnms);
-
-							prmryunt = XLUtils.getCellData(path, "ProBlue Flex", rwindx, prmryuntindx);
-							mgs.setPrmryunt(prmryunt);
-							default1 = XLUtils.getCellData(path, "ProBlue Flex", rwindx, dfault1indx);
-							dflt1 = default1.replaceAll("[-+]*", "");
-							mgs.setDefault1(dflt1);
+							// Getting the cell data from MDS file and setting to setters methods
+							mgs.setPrmryunt(XLUtils.getCellData(path, "ProBlue Flex", rwindx, prmryuntindx));
+							default1 = XLUtils.getCellData(path, "ProBlue Flex", rwindx, dfault1indx); 
+							mgs.setDefault1(default1.replaceAll("[-+]*", ""));
 							min1 = XLUtils.getCellData(path, "ProBlue Flex", rwindx, min1indx);
-							String mn1 = min1.replaceAll("[-+]*", "");
-							mgs.setMin1(mn1);
+							mgs.setMin1(min1.replaceAll("[-+]*", ""));
 							max1 = XLUtils.getCellData(path, "ProBlue Flex", rwindx, max1indx);
-							String mx1 = max1.replaceAll("[-+]*", "");
-							mgs.setMax1(mx1);
-							scndryunt = XLUtils.getCellData(path, "ProBlue Flex", rwindx, secondryuntindx);
-							mgs.setScndryunt(scndryunt);
+							mgs.setMax1(max1.replaceAll("[-+]*", ""));
+							
+							mgs.setScndryunt(XLUtils.getCellData(path, "ProBlue Flex", rwindx, secondryuntindx));
 							default2 = XLUtils.getCellData(path, "ProBlue Flex", rwindx, dfault2indx);
-							dflt2 = default2.replaceAll("[-+]*", "");
-							mgs.setDefault2(dflt2);
+							mgs.setDefault2(default2.replaceAll("[-+]*", ""));
 							min2 = XLUtils.getCellData(path, "ProBlue Flex", rwindx, min2indx);
-							String mn2 = min2.replaceAll("[-+]*", "");
-							mgs.setMin2(mn2);
+							mgs.setMin2(min2.replaceAll("[-+]*", ""));
 							max2 = XLUtils.getCellData(path, "ProBlue Flex", rwindx, max2indx);
-							String mx2 = max2.replaceAll("[-+]*", "");
-							mgs.setMax2(mx2);
+							mgs.setMax2(max2.replaceAll("[-+]*", ""));
 
 						}
 
@@ -127,7 +122,7 @@ public class RetriveMDSdata_Temperature {
 		}
 
 	}
-
+	//Method to assign the UIfieldtobe fetched to a variable
 	public void setUIfieldTobefetched(String UIfieldTobefetched) {
 
 		this.UIfildtobefetched = UIfieldTobefetched;

@@ -25,7 +25,7 @@ public class TC_RuntimeSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 
 	@Feature("Verify the Runtime Settings MDS Values")
 	@Description("Verify the MDS Global Set Point for Celsius Temperature Unit")
-	@Test(priority = 1)
+	@Test(priority = 1 ,enabled = true)
 	public void Test_RuntimeSetting_GlobalSetPoint_MDS_Celsius() throws InterruptedException, IOException {
 
 		trs = new TemperatureRuntimeSettings(driver);
@@ -92,7 +92,7 @@ public class TC_RuntimeSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 	}
 
 	@Description("Verify the MDS Tank Set Point for Celsius Temperature Unit")
-	@Test(priority = 2)
+	@Test(priority = 2,enabled = true)
 	public void Test_RuntimeSetting_TankSetPoint_MDS_Celsius() throws InterruptedException, IOException {
 
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_TP());	
@@ -129,7 +129,7 @@ public class TC_RuntimeSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 	}
 
 	@Description("Verify the MDS Manifold Set Point for Celsius Temperature Unit")
-	@Test(priority = 3)
+	@Test(priority = 3,enabled = true)
 	public void Test_RuntimeSetting_ManifoldSetPoint_MDS_Celsius() throws InterruptedException, IOException {
 
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_MFP());
@@ -167,7 +167,7 @@ public class TC_RuntimeSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 	}
 
 	@Description("Verify the MDS Hose and Applicator Set Point for Celsius Temperature Unit")
-	@Test(priority = 4)
+	@Test(priority = 4,enabled = true)
 	public void Test_RuntimeSetting_HoseAppSetPoint_MDS_Celsius() throws InterruptedException, IOException {
 
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_HoseApp());
@@ -191,9 +191,9 @@ public class TC_RuntimeSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		log.info("All Applicators are set to max value and save successfully");
 	}
 
-	@Description("Verify the MDS Global Set Point for Farnheit Temperature Unit")
-	@Test(priority = 5)
-	public void Test_RuntimeSetting_GlobalSetPoint_MDS_Farnheit() throws InterruptedException, IOException {
+	@Description("Verify the MDS Global Set Point for Fahrenheit Temperature Unit")
+	@Test(priority = 5,enabled = true)
+	public void Test_RuntimeSetting_GlobalSetPoint_MDS_Fahrenheit() throws InterruptedException, IOException {
 
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_GP());
 		trs.clickDashboard();
@@ -202,9 +202,9 @@ public class TC_RuntimeSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		trs.clickPreferencesBtn();
 		log.info("Clicked on Preferences button");
 		trs.clickFarhenitUnit();
-		log.info("Clicked on farnhit temperature button");
+		log.info("Clicked on Fahrenheit temperature button");
 		trs.clickSave();
-		log.info("Temperature Unit Farnheit is saved ");
+		log.info("Temperature Unit Fahrenheit is saved ");
 		if (trs.getToastmsgststus() == true)
 			log.info("Preferences sucessfully updated");
 		else
@@ -215,56 +215,56 @@ public class TC_RuntimeSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		log.info("Clicked on Runtime settings button");
 		// Verfication default temp unt
 		if (trs.getTemperatureunt().contains(mds.getScndryunt()))
-			log.info("Global set point is set to Default  farnhit unit");
+			log.info("Global set point is set to Default  Fahrenheit unit");
 		else
-			log.info("Global set point is not set to Default farnhit unit");
+			log.info("Global set point is not set to Default Fahrenheit unit");
 
 		// Verification of min value
 		trs.setGlobalSetPoint(mds.getMin2());
 		trs.clickSavebtn();
 		softAssert.assertEquals(trs.getToastmsg(), Constants.SucssmsgRuntime,
-				"Toast msg is not shown for MDS min Global Set point farnheit unit");
-		log.info("Toast msg is shown for MDS Globalset point min value farnheit unit");
+				"Toast msg is not shown for MDS min Global Set point Fahrenheit unit");
+		log.info("Toast msg is shown for MDS Globalset point min value Fahrenheit unit");
 		boolean glblpntSavebtnstutsMin2 = trs.getSavebtnstatus();
 		softAssert.assertEquals(glblpntSavebtnstutsMin2, false);
-		log.info("Save button is disabled for Global set point mds min val for farnheit unit");
+		log.info("Save button is disabled for Global set point mds min val for Fahrenheit unit");
 
 		// Verification of Tankpoint with respect to global set min point
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_TP());
 		softAssert.assertEquals(trs.getTankSetPoint(), mds.getMin2(),
-				"Tank set point is not set to Minimum value : " + mds.getMin2() + "for farnheit unit");
-		log.info("Tank set point for global minimun point is set to :" + mds.getMin2() + "for farnheit unit");
+				"Tank set point is not set to Minimum value : " + mds.getMin2() + "for Fahrenheit unit");
+		log.info("Tank set point for global minimun point is set to :" + mds.getMin2() + "for Fahrenheit unit");
 		// Verification of Manifold with respect to global set min point
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_MFP());
 		softAssert.assertEquals(trs.getManifold(), mds.getMin2(),
-				"Manifold  set point is not set to Minimum value : " + mds.getMin2() + "for farnheit unit");
-		log.info("Manifold set point for global minimun point is set to :" + mds.getMin2() + "for farnheit unit");
+				"Manifold  set point is not set to Minimum value : " + mds.getMin2() + "for Fahrenheit unit");
+		log.info("Manifold set point for global minimun point is set to :" + mds.getMin2() + "for Fahrenheit unit");
 		// Verification of Hose/App with respect to global set min point
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_HoseApp());
 		trs.getHosesSettempStatus(mds.getMin2());
-		log.info("All the Hoses are set to min value for minium global set point for farnheit unit");
+		log.info("All the Hoses are set to min value for minium global set point for Fahrenheit unit");
 		trs.getApplicatorsSettempStatus(mds.getMin2());
-		log.info("All the Applicators are set to min value for minimun global set point for farnheit unit");
+		log.info("All the Applicators are set to min value for minimun global set point for Fahrenheit unit");
 		// Verification of max value
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_GP());
 		trs.setGlobalSetPoint(mds.getMax2());
 		trs.clickSavebtn();
 		softAssert.assertEquals(trs.getToastmsg(), Constants.SucssmsgRuntime,
-				"Toast msg is not shown for MDS min Global Set point farnheit unit");
-		log.info("Toast msg is shown for MDS Globalset point max value farnheit unit");
+				"Toast msg is not shown for MDS min Global Set point Fahrenheit unit");
+		log.info("Toast msg is shown for MDS Globalset point max value Fahrenheit unit");
 		boolean glblpntSavebtnstutsMax2 = trs.getSavebtnstatus();
 		softAssert.assertEquals(glblpntSavebtnstutsMax2, false);
-		log.info("Save button is disabled for Global set point mds max val for farnheit unit");
+		log.info("Save button is disabled for Global set point mds max val for Fahrenheit unit");
 		// Verification of Tankpoint with respect to global set max point
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_TP());
 		softAssert.assertEquals(trs.getTankSetPoint(), mds.getMax2(),
-				"Tank set point is not set to maximum value : " + mds.getMax2() + "for farnheit unit");
-		log.info("Tank set point for global maximun point is set to :" + mds.getMax2() + "for farnheit unit");
+				"Tank set point is not set to maximum value : " + mds.getMax2() + "for Fahrenheit unit");
+		log.info("Tank set point for global maximun point is set to :" + mds.getMax2() + "for Fahrenheit unit");
 		// Verification of Manifold with respect to global set max point
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_MFP());
 		softAssert.assertEquals(trs.getManifold(), mds.getMax2(),
-				"Manifold  set point is not set to maximum value : " + mds.getMax2() + "for farnheit unit");
-		log.info("Manifold set point for global maximun point is set to :" + mds.getMax2() + "for farnheit unit");
+				"Manifold  set point is not set to maximum value : " + mds.getMax2() + "for Fahrenheit unit");
+		log.info("Manifold set point for global maximun point is set to :" + mds.getMax2() + "for Fahrenheit unit");
 		// Verification of Hose/Applicator with respect to global set max point
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_HoseApp());
 		trs.getHosesSettempStatus(mds.getMax2());
@@ -274,9 +274,9 @@ public class TC_RuntimeSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 
 	}
 
-	@Description("Verify the MDS Tank Set Point for Farnheit Temperature Unit")
-	@Test(priority = 6)
-	public void Test_RuntimeSetting_TankSetPoint_MDS_Farnheit() throws InterruptedException, IOException {
+	@Description("Verify the MDS Tank Set Point for Fahrenheit Temperature Unit")
+	@Test(priority = 6,enabled = true)
+	public void Test_RuntimeSetting_TankSetPoint_MDS_Fahrenheit() throws InterruptedException, IOException {
 
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_TP());
 		trs.clickDashboard();
@@ -285,9 +285,9 @@ public class TC_RuntimeSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		trs.clickPreferencesBtn();
 		log.info("Clicked on Preferences button");
 		trs.clickFarhenitUnit();
-		log.info("Clicked on farnhit temperature button");
+		log.info("Clicked on Fahrenheit temperature button");
 		trs.clickSave();
-		log.info("Temperature Unit Farnheit is saved ");
+		log.info("Temperature Unit Fahrenheit is saved ");
 		if (trs.getToastmsgststus() == true)
 			log.info("Preferences sucessfully updated");
 		else
@@ -299,35 +299,35 @@ public class TC_RuntimeSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		
 		// Default Value Validations
 		softAssert.assertEquals(trs.getTankSetPoint(), mds.getDefault2(),
-				"Tank set point is not set to Default value for farnheit unit");
-		log.info("Tank set point is set to Default value for farnheit unit");
-		// Min value validations for Tank point in farnheit
+				"Tank set point is not set to Default value for Fahrenheit unit");
+		log.info("Tank set point is set to Default value for Fahrenheit unit");
+		// Min value validations for Tank point in Fahrenheit
 		trs.clearTanktemperature();
-		log.info("Tank temperature cleared to enter min mds val for farnheit unit");
+		log.info("Tank temperature cleared to enter min mds val for Fahrenheit unit");
 		trs.setTankSetPoint(mds.getMin2());
 		trs.clickSavebtn();
 		softAssert.assertEquals(trs.getToastmsg(), Constants.SucssmsgRuntime,
-				"Toast msg is not shown for MDS min Tankset point farnheit unit");
-		log.info("MDS Min val for Tank set pointsaved successfully for farnheit unit");
+				"Toast msg is not shown for MDS min Tankset point Fahrenheit unit");
+		log.info("MDS Min val for Tank set pointsaved successfully for Fahrenheit unit");
 		boolean TnkpntSavebtnstutsmin2 = trs.getSavebtnstatus();
 		softAssert.assertEquals(TnkpntSavebtnstutsmin2, false);
-		log.info("Save button is disabled for Tank set point mds min val for farnheit unit");
-		// Max value validations for Tank point in farnheit
+		log.info("Save button is disabled for Tank set point mds min val for Fahrenheit unit");
+		// Max value validations for Tank point in Fahrenheit
 		trs.clearTanktemperature();
-		log.info("Tank temperature cleared to enter Max Tankset point value for farnheit unit");
+		log.info("Tank temperature cleared to enter Max Tankset point value for Fahrenheit unit");
 		trs.setTankSetPoint(mds.getMax2());
 		trs.clickSavebtn();
 		softAssert.assertEquals(trs.getToastmsg(), Constants.SucssmsgRuntime,
-				"Toast msg is not shown for MDS max Tankset point farnheit unit");
-		log.info("Toast msg is shown for MDS Tankset point max value farnheit unit");
+				"Toast msg is not shown for MDS max Tankset point Fahrenheit unit");
+		log.info("Toast msg is shown for MDS Tankset point max value Fahrenheit unit");
 		boolean TnkpntSavebtnstutsmax2 = trs.getSavebtnstatus();
 		softAssert.assertEquals(TnkpntSavebtnstutsmax2, false);
-		log.info("Save button is disabled for Tank set point mds max val for farnheit unit");
+		log.info("Save button is disabled for Tank set point mds max val for Fahrenheit unit");
 	}
 
-	@Description("Verify the MDS Manifold Set Point for Farnheit Temperature Unit")
-	@Test(priority = 7)
-	public void Test_RuntimeSetting_ManifoldSetPoint_MDS_Farnheit() throws InterruptedException, IOException {
+	@Description("Verify the MDS Manifold Set Point for Fahrenheit Temperature Unit")
+	@Test(priority = 7,enabled = true)
+	public void Test_RuntimeSetting_ManifoldSetPoint_MDS_Fahrenheit() throws InterruptedException, IOException {
 
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_MFP());
 		trs.clickDashboard();
@@ -336,9 +336,9 @@ public class TC_RuntimeSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		trs.clickPreferencesBtn();
 		log.info("Clicked on Preferences button");
 		trs.clickFarhenitUnit();
-		log.info("Clicked on farnhit temperature button");
+		log.info("Clicked on Fahrenheit temperature button");
 		trs.clickSave();
-		log.info("Temperature Unit Farnheit is saved ");
+		log.info("Temperature Unit Fahrenheit is saved ");
 		if (trs.getToastmsgststus() == true)
 			log.info("Preferences sucessfully updated");
 		else
@@ -350,37 +350,37 @@ public class TC_RuntimeSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		
 		// Default Value Validations
 		softAssert.assertEquals(trs.getManifold(), mds.getDefault2(),
-				"Manifold set point is not set to Default value for farnheit unit");
-		log.info("Manifold set point is set to Default value for farnheit unit");
-		// Min value validations for Manifold point in farnheit
+				"Manifold set point is not set to Default value for Fahrenheit unit");
+		log.info("Manifold set point is set to Default value for Fahrenheit unit");
+		// Min value validations for Manifold point in Fahrenheit
 		trs.clearManifoldtemperature();
-		log.info("Manifold temperature cleared to enter min mds val for farnheit unit");
+		log.info("Manifold temperature cleared to enter min mds val for Fahrenheit unit");
 		trs.setManifoldSetPoint(mds.getMin2());
 		trs.clickSavebtn();
 		softAssert.assertEquals(trs.getToastmsg(), Constants.SucssmsgRuntime,
-				"Toast msg is not shown for MDS min Manifoldset point farnheit unit");
-		log.info("MDS Min val for Manifold set pointsaved successfully for farnheit unit");
+				"Toast msg is not shown for MDS min Manifoldset point Fahrenheit unit");
+		log.info("MDS Min val for Manifold set pointsaved successfully for Fahrenheit unit");
 		boolean TnkpntSavebtnstutsmin2 = trs.getSavebtnstatus();
 		softAssert.assertEquals(TnkpntSavebtnstutsmin2, false);
-		log.info("Save button is disabled for Manifold set point mds min val for farnheit unit");
-		// Max value validations for Manifold point in farnheit
+		log.info("Save button is disabled for Manifold set point mds min val for Fahrenheit unit");
+		// Max value validations for Manifold point in Fahrenheit
 		trs.clearManifoldtemperature();
-		log.info("Manifold temperature cleared to enter Max Manifoldset point value for farnheit unit");
+		log.info("Manifold temperature cleared to enter Max Manifoldset point value for Fahrenheit unit");
 		trs.setManifoldSetPoint(mds.getMax2());
 		trs.clickSavebtn();
 		softAssert.assertEquals(trs.getToastmsg(), Constants.SucssmsgRuntime,
-				"Toast msg is not shown for MDS max Manifoldset point farnheit unit");
-		log.info("Toast msg is shown for MDS Manifoldset point max value farnheit unit");
+				"Toast msg is not shown for MDS max Manifoldset point Fahrenheit unit");
+		log.info("Toast msg is shown for MDS Manifoldset point max value Fahrenheit unit");
 		boolean TnkpntSavebtnstutsmax2 = trs.getSavebtnstatus();
 		softAssert.assertEquals(TnkpntSavebtnstutsmax2, false);
-		log.info("Save button is disabled for Manifold set point mds max val for farnheit unit");
+		log.info("Save button is disabled for Manifold set point mds max val for Fahrenheit unit");
 
 		softAssert.assertAll();
 	}
 
-	@Description("Verify the MDS Hose and Applicator Set Point for Farnheit Temperature Unit")
-	@Test(priority = 8)
-	public void Test_RuntimeSetting_HoseAppSetPoint_MDS_Farnheit() throws InterruptedException, IOException {
+	@Description("Verify the MDS Hose and Applicator Set Point for Fahrenheit Temperature Unit")
+	@Test(priority = 8,enabled = true)
+	public void Test_RuntimeSetting_HoseAppSetPoint_MDS_Fahrenheit() throws InterruptedException, IOException {
 
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_HoseApp());
 		trs.clickDashboard();
@@ -389,9 +389,9 @@ public class TC_RuntimeSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		trs.clickPreferencesBtn();
 		log.info("Clicked on Preferences button");
 		trs.clickFarhenitUnit();
-		log.info("Clicked on farnhit temperature button");
+		log.info("Clicked on Fahrenheit temperature button");
 		trs.clickSave();
-		log.info("Temperature Unit Farnheit is saved ");
+		log.info("Temperature Unit Fahrenheit is saved ");
 		if (trs.getToastmsgststus() == true)
 			log.info("Preferences sucessfully updated");
 		else
@@ -403,19 +403,19 @@ public class TC_RuntimeSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		
 		// Default Values verification for Hoses and Applicators
 		trs.getHosesSettempStatus(mds.getDefault1());
-		log.info("All Hoses are set to MDS default values for farnhit unit");
+		log.info("All Hoses are set to MDS default values for Fahrenheit unit");
 		trs.getApplicatorsSettempStatus(mds.getDefault1());
-		log.info("All Applicators are set to MDS default values for farnhit unit");
+		log.info("All Applicators are set to MDS default values for Fahrenheit unit");
 		// Minium Values Verification for Hoses and Applicators
 		trs.setHosestemp(mds.getMin2());
-		log.info("All Hoses are set to min MDS value and save successfully for farnhit unit");
+		log.info("All Hoses are set to min MDS value and save successfully for Fahrenheit unit");
 		trs.setApplicatorstemp(mds.getMin2());
-		log.info("All Applicators are set to min value and save successfully for farnhit unit");
+		log.info("All Applicators are set to min value and save successfully for Fahrenheit unit");
 		// Maximum Values Verification for Hoses and Applicators
 		trs.setHosestemp(mds.getMax2());
-		log.info("All Hoses are set to Max MDS value and saved successfully for farnhit unit");
+		log.info("All Hoses are set to Max MDS value and saved successfully for Fahrenheit unit");
 		trs.setApplicatorstemp(mds.getMax2());
-		log.info("All Applicators are set to max MDS value and save successfully for farnhit unit");
+		log.info("All Applicators are set to max MDS value and save successfully for Fahrenheit unit");
 
 	}
 }

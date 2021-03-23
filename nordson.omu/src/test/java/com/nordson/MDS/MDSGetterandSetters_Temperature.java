@@ -2,6 +2,7 @@ package com.nordson.MDS;
 
 public class MDSGetterandSetters_Temperature {
 	
+	// Declaration of Temperature MDS variables to set and get the Values
 	private static String prmryunt = "";
 	private static String default1="";
 	private static String min1 = "";
@@ -12,6 +13,7 @@ public class MDSGetterandSetters_Temperature {
 	private static String min2 = "";
 	private static String max2 = "";
 	
+	//Methods to set and get the values of MDS temperature file
 	public String getPrmryunt() {
 
 		return prmryunt;

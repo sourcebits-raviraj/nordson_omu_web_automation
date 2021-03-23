@@ -24,7 +24,7 @@ public class TC_SystemSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 	RetriveMDSdata_Temperature rmds = new RetriveMDSdata_Temperature();
 	ReadConfig rcf = new ReadConfig();
 
-	@Test(priority = 1)
+	@Test(priority = 1,enabled = true)
 	@Feature("System settings over temperature threshold set point validations for MDS values")
 	@Description("Verify MDS Over Temperature Threshold set  values for Celsius Temperature Unit")
 	public void Test_Systemsettings_OverTempThreshold_MDS_Celsius() throws InterruptedException, IOException {
@@ -67,7 +67,7 @@ public class TC_SystemSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 			log.info("OTT is not set to celsius unit");
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2,enabled = true)
 	@Feature("System settings under temperature threshold set point validations for MDS values")
 	@Description("Verify MDS Under Temperature Threshold set  values for Celsius Temperature Unit")
 	public void Test_Systemsettings_UnderTempThreshold_MDS_Celsius() throws InterruptedException, IOException {
@@ -100,7 +100,7 @@ public class TC_SystemSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3,enabled = true)
 	@Feature("System settings temperature Set back set point validations for MDS values")
 	@Description("Verify MDS Temperature Set back set  values for Celsius Temperature Unit")
 	public void Test_Systemsettings_TemperatureSetbck_MDS_Celsius() throws InterruptedException, IOException {
@@ -138,10 +138,10 @@ public class TC_SystemSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 			log.info("Temp Set bck is not set to celsius unit");
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4,enabled = true)
 	@Feature("System settings over temperature threshold set point validations for MDS values")
-	@Description("Verify MDS Over Temperature Threshold set  values for Farnheit Temperature Unit")
-	public void Test_Systemsettings_OverTempThreshold_MDS_Farnheit() throws InterruptedException, IOException {
+	@Description("Verify MDS Over Temperature Threshold set  values for Fahrenheit Temperature Unit")
+	public void Test_Systemsettings_OverTempThreshold_MDS_Fahrenheit() throws InterruptedException, IOException {
 		
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_OTT());
 		tss.clickDashboard();
@@ -149,58 +149,56 @@ public class TC_SystemSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		Thread.sleep(1000);
 		tss.createNewNORfile();
 		tss.clickPreferencesBtn();
-		tss.clickFarhenitUnit();
-		log.info("Temperature Unit Farhenit is selected by clicking");
+		tss.clickFahrenheit();
+		log.info("Temperature Unit Fahrenheit is selected by clicking");
 		tss.clickSave();
-		log.info("Saved Farhenit OPtion");
+		log.info("Saved Fahrenheit OPtion");
 		if (tss.getToastmsgststus() == false)
-			log.info("Prefrences updated sucessfully");
+			log.info("Preferences updated sucessfully");
 		else
-			log.info("Prefrences not updated sucessfully");
+			log.info("Preferences not updated sucessfully");
 		tss.clickTemperatureBtn();
-
 		// check for default values
 		softAssert.assertEquals(tss.getOTTemperature(), mds.getDefault2(),
 				"Over Temperature threshold temp is not set to Default value : " + mds.getDefault2());
 		log.info("Over Temperature threshold temp is set to Default value  :" + mds.getDefault2());
-
 		// check for Minimum MDS value
 		tss.clearOTTemperature();
 		tss.setOTTemperature(mds.getMin2());
 		tss.clickSavebtn();
 		softAssert.assertEquals(tss.getToastmsg(), Constants.Sucssmsg,
-				"Toast msg for min val not saved for farnhit unit");
-		log.info("Minimum OTTemp MDS val for farhenit unit saved sucessfully");
+				"Toast msg for min val not saved for Fahrenheit unit");
+		log.info("Minimum OTTemp MDS val for Fahrenheit unit saved sucessfully");
 		boolean OTTSavebtnstutsmin2 = tss.getSavebtnstatus();
 		softAssert.assertEquals(OTTSavebtnstutsmin2, false,
-				"Save button is not disabled for OTTemp min val for farnhit unit");
-		log.info("Save button is disabled for OTTemp min val for farnhit unit");
+				"Save button is not disabled for OTTemp min val for Fahrenheit unit");
+		log.info("Save button is disabled for OTTemp min val for Fahrenheit unit");
 
 		// check for Maximum MDS value
 		tss.clearOTTemperature();
 		tss.setOTTemperature(mds.getMax2());
 		tss.clickSavebtn();
 		softAssert.assertEquals(tss.getToastmsg(), Constants.Sucssmsg,
-				"Toast error message is shown up for Farnheit unit");
-		log.info("Maximum OTTemp MDS val for farhenit unit saved sucessfully");
+				"Toast error message is shown up for Fahrenheit unit");
+		log.info("Maximum OTTemp MDS val for Fahrenheit unit saved sucessfully");
 		boolean OTTSavebtnstutsmax2 = tss.getSavebtnstatus();
 		softAssert.assertEquals(OTTSavebtnstutsmax2, false,
-				"Save button is not disabled for OTTemp max val for farnhit unit");
-		log.info("Save button is disabled for OTTemp max val for farnhit unit");
+				"Save button is not disabled for OTTemp max val for Fahrenheit unit");
+		log.info("Save button is disabled for OTTemp max val for Fahrenheit unit");
 
 		// Check for Temperature unit
 		if (tss.getOTTTemperatureunt().contains(mds.getScndryunt()))
-			log.info("OTT is set to Farnheit unit");
+			log.info("OTT is set to Fahrenheit unit");
 		else
-			log.info("OTT is not set to Farnheit unit");
+			log.info("OTT is not set to Fahrenheit unit");
 		softAssert.assertAll();
 
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 5,enabled = true)
 	@Feature("System settings under temperature threshold set point validations for MDS values")
-	@Description("Verify MDS Under Temperature Threshold set  values for Farnheit Temperature Unit")
-	public void Test_Systemsettings_UnderTempThreshold_MDS_Farnheit() throws InterruptedException, IOException {
+	@Description("Verify MDS Under Temperature Threshold set  values for Fahrenheit Temperature Unit")
+	public void Test_Systemsettings_UnderTempThreshold_MDS_Fahrenheit() throws InterruptedException, IOException {
 
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_UTT());
 		// check for default values
@@ -213,38 +211,38 @@ public class TC_SystemSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		tss.setUTTemperature(mds.getMin2());
 		tss.clickSavebtn();
 		softAssert.assertEquals(tss.getToastmsg(), Constants.Sucssmsg,
-				"Toast msg for min val not saved for farnhit unit");
-		log.info("Minimum MDS UTTemp val for farhenit unit Saved successfully");
+				"Toast msg for min val not saved for Fahrenheit unit");
+		log.info("Minimum MDS UTTemp val for Fahrenheit unit Saved successfully");
 		boolean UTTSavebtnstutsmin2 = tss.getSavebtnstatus();
 		softAssert.assertEquals(UTTSavebtnstutsmin2, false,
-				"Save button is not disabled for UTTemp min val for farnhit unit");
-		log.info("Save button is disabled for UTTemp min val for farnhit unit");
+				"Save button is not disabled for UTTemp min val for Fahrenheit unit");
+		log.info("Save button is disabled for UTTemp min val for Fahrenheit unit");
 
 		// check for Maximum MDS value
 		tss.clearUTTemperature();
 		tss.setUTTemperature(mds.getMax2());
 		tss.clickSavebtn();
 		softAssert.assertEquals(tss.getToastmsg(), Constants.Sucssmsg,
-				"Toast error message is shown up for Farnheit unit");
-		log.info("Maximum MDS UTTemp val for farhenit unit Saved successfully");
+				"Toast error message is shown up for Fahrenheit unit");
+		log.info("Maximum MDS UTTemp val for Fahrenheit unit Saved successfully");
 		boolean UTTSavebtnstutsmax2 = tss.getSavebtnstatus();
 		softAssert.assertEquals(UTTSavebtnstutsmax2, false,
-				"Save button is not disabled for UTTemp max val for farnhit unit");
-		log.info("Save button is disabled for UTTemp max val for farnhit unit");
+				"Save button is not disabled for UTTemp max val for Fahrenheit unit");
+		log.info("Save button is disabled for UTTemp max val for Fahrenheit unit");
 
 		// Check for Temperature unit
 		if (tss.getUTTemperatureunt().contains(mds.getScndryunt()))
-			log.info("UTT is set to Farnheit unit");
+			log.info("UTT is set to Fahrenheit unit");
 		else
-			log.info("UTT is not set to Farnheit unit");
+			log.info("UTT is not set to Fahrenheit unit");
 
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 6,enabled = true)
 	@Feature("System settings temperature Set back set point validations for MDS values")
-	@Description("Verify MDS Temperature seet back set values for Farnheit Temperature Unit")
-	public void Test_Systemsettings_TemperatureSetbck_MDS_Farnheit() throws InterruptedException, IOException {
+	@Description("Verify MDS Temperature seet back set values for Fahrenheit Temperature Unit")
+	public void Test_Systemsettings_TemperatureSetbck_MDS_Fahrenheit() throws InterruptedException, IOException {
 		
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_Tmpstbck());
 		// check for default values
@@ -257,34 +255,34 @@ public class TC_SystemSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		tss.setSetbckTemperature(mds.getMin2());
 		tss.clickSavebtn();
 		softAssert.assertEquals(tss.getToastmsg(), Constants.Sucssmsg,
-				"Toast msg for min val not saved for farnhit unit");
-		log.info("Minimum Temp Set back val for farhenit unit saved sucessfully");
+				"Toast msg for min val not saved for Fahrenheit unit");
+		log.info("Minimum Temp Set back val for Fahrenheit unit saved sucessfully");
 		boolean TempstbckSavebtnstutsmin2 = tss.getSavebtnstatus();
 		softAssert.assertEquals(TempstbckSavebtnstutsmin2, false,
-				"Save button is not disabled for Temp Set back min val for farnhit unit");
-		log.info("Save button is disabled for Temp Set back min val for farnhit unit");
+				"Save button is not disabled for Temp Set back min val for Fahrenheit unit");
+		log.info("Save button is disabled for Temp Set back min val for Fahrenheit unit");
 
 		// check for Maximum MDS value
 		tss.clearTemperaturesetbck();
 		tss.setSetbckTemperature(mds.getMax2());
 		tss.clickSavebtn();
 		softAssert.assertEquals(tss.getToastmsg(), Constants.Sucssmsg,
-				"Toast error message is not shown up for Farnheit unit");
-		log.info("Maximum Temp Set back val for farhenit unit saved sucessfully");
+				"Toast error message is not shown up for Fahrenheit unit");
+		log.info("Maximum Temp Set back val for Fahrenheit unit saved sucessfully");
 		boolean TempstbckSavebtnstutsmax2 = tss.getSavebtnstatus();
 		softAssert.assertEquals(TempstbckSavebtnstutsmax2, false,
-				"Save button is not disabled for Temp Set back max val for farnhit unit");
-		log.info("Save button is disabled for Temp Set back max val for farnhit unit");
+				"Save button is not disabled for Temp Set back max val for Fahrenheit unit");
+		log.info("Save button is disabled for Temp Set back max val for Fahrenheit unit");
 
 		// Check for Temperature unit
 		if (tss.getTempsetbckTemperatureunt().contains(mds.getScndryunt()))
-			log.info("Temp set bck is set to farnheit unit");
+			log.info("Temp set bck is set to Fahrenheit unit");
 		else
-			log.info("Temp Set bck is not set to farnheit unit");
+			log.info("Temp Set bck is not set to Fahrenheit unit");
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 7,enabled = true)
 	@Feature("System settings SmartMelt Time delay validations for MDS values")
 	@Description("Verify MDS SmartMelt Time delay")
 	public void Test_Systemsettings_SmartMeltTimeDelay_MDS() throws InterruptedException, IOException {
@@ -323,7 +321,7 @@ public class TC_SystemSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 8,enabled = true)
 	@Feature("Verify MDS System Set Back Delay Time")
 	@Description("System System Set Back Delay Time validations for MDS values")
 	public void Test_Systemsettings_SystemSetBackDelay_MDS() throws InterruptedException, IOException {
@@ -361,7 +359,7 @@ public class TC_SystemSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		softAssert.assertAll();
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 9,enabled = true)
 	@Feature("Verify MDS Auto Heater Off Time")
 	@Description("System settings Auto Heater Off Time validations for MDS values")
 	public void Test_Systemsettings_AutoHeaterOffTime_MDS() throws InterruptedException, IOException {
