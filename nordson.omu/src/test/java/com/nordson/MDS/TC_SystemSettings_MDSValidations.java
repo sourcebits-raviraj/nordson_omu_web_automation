@@ -145,7 +145,7 @@ public class TC_SystemSettings_MDSValidations extends TC_LoginTest_DDT_001 {
 		
 		rmds.getMDSDataVal(rcf.getUIfieldTobefetched_OTT());
 		tss.clickDashboard();
-		log.info("Clicked on dshboard to create Nor file");
+		log.info("Clicked on dashboard to create Nor file");
 		Thread.sleep(1000);
 		tss.createNewNORfile();
 		tss.clickPreferencesBtn();
