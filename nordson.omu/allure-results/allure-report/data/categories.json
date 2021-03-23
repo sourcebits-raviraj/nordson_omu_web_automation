@@ -2,51 +2,129 @@
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
   "children" : [ {
-    "name" : "Test defects",
+    "name" : "Ignored tests",
     "children" : [ {
-      "name" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//input[contains(@name,'ulPressureMinSetPoint')]\"}\n  (Session info: chrome=88.0.4324.182)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'SBWIN604', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\\Users\\Ravi Raj\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:54609}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 8431b5f1efe162cf59789acb799c379c\n*** Element info: {Using=xpath, value=//input[contains(@name,'ulPressureMinSetPoint')]}",
+      "name" : "java.lang.NullPointerException",
       "children" : [ {
-        "name" : "PressureValues_PSI_Min_Max_0_101",
-        "uid" : "c0fa14345c85b5af",
-        "parentUid" : "3ae96d84d2cfd7e9579816f3b6b2a59b",
-        "status" : "broken",
+        "name" : "PressureValues_Kpa_Min_0_Max_0",
+        "uid" : "ce762430c84f5531",
+        "parentUid" : "5b8ea0e9096904f0a8211b13a98ba93c",
+        "status" : "skipped",
         "time" : {
-          "start" : 1614149974787,
-          "stop" : 1614149974808,
-          "duration" : 21
+          "start" : 1614236270530,
+          "stop" : 1614236270531,
+          "duration" : 1
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ "0", "6.9", "chrome" ]
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_Kpa_Min_0_Max_691",
+        "uid" : "d5003340a625e83c",
+        "parentUid" : "5b8ea0e9096904f0a8211b13a98ba93c",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236270632,
+          "stop" : 1614236270633,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_Kpa_Min_0_Max_690",
+        "uid" : "5cbdca8bff7a30ed",
+        "parentUid" : "5b8ea0e9096904f0a8211b13a98ba93c",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236270712,
+          "stop" : 1614236270712,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_BAR_Same_Min_Max",
+        "uid" : "6c0cee643c881f13",
+        "parentUid" : "5b8ea0e9096904f0a8211b13a98ba93c",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236366483,
+          "stop" : 1614236366484,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_Min_19_Max_2",
+        "uid" : "2d93522363dca12a",
+        "parentUid" : "5b8ea0e9096904f0a8211b13a98ba93c",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236366520,
+          "stop" : 1614236366520,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValuesMin_0_Max_690",
+        "uid" : "c04965d8bac59bfb",
+        "parentUid" : "5b8ea0e9096904f0a8211b13a98ba93c",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236366554,
+          "stop" : 1614236366554,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_PSI_Min_Max_0_101",
+        "uid" : "4dc499f2516259c1",
+        "parentUid" : "5b8ea0e9096904f0a8211b13a98ba93c",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236412579,
+          "stop" : 1614236412580,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
       }, {
         "name" : "PressureValues_PSI_Same_Min_Max",
-        "uid" : "c8bb32b2ad688484",
-        "parentUid" : "3ae96d84d2cfd7e9579816f3b6b2a59b",
-        "status" : "broken",
+        "uid" : "35e976232b7c6089",
+        "parentUid" : "5b8ea0e9096904f0a8211b13a98ba93c",
+        "status" : "skipped",
         "time" : {
-          "start" : 1614149974867,
-          "stop" : 1614149974884,
-          "duration" : 17
+          "start" : 1614236412610,
+          "stop" : 1614236412610,
+          "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ "0", "6.9", "chrome" ]
+        "parameters" : [ "chrome" ]
       }, {
         "name" : "PressureValues_PSI_Min_Max_0_100",
-        "uid" : "eeb9a27aacc66129",
-        "parentUid" : "3ae96d84d2cfd7e9579816f3b6b2a59b",
-        "status" : "broken",
+        "uid" : "a3985ab218967797",
+        "parentUid" : "5b8ea0e9096904f0a8211b13a98ba93c",
+        "status" : "skipped",
         "time" : {
-          "start" : 1614149974939,
-          "stop" : 1614149974963,
-          "duration" : 24
+          "start" : 1614236412641,
+          "stop" : 1614236412641,
+          "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
-        "parameters" : [ "0", "6.9", "chrome" ]
+        "parameters" : [ "chrome" ]
       } ],
-      "uid" : "3ae96d84d2cfd7e9579816f3b6b2a59b"
+      "uid" : "5b8ea0e9096904f0a8211b13a98ba93c"
     } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
+    "uid" : "de462066317a26259da5dbde82325643"
   } ]
 }

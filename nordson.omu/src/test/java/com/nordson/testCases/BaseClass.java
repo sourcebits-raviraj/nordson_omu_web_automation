@@ -28,7 +28,7 @@ public class BaseClass {
 
 	// Set Up Before Class Testng Annotations launching of the Web application
 	@Parameters("browser")
-	@BeforeClass
+	@BeforeClass(description = "Webdriver Intialization and Launch the Base URL")
 	public void setUp(String br) {
 
 		log = Logger.getLogger("nordson");
@@ -95,7 +95,7 @@ public class BaseClass {
 
 	// Tear Down Method Before Class Testng Annotations launching of the Web
 	// application
-	@AfterClass
+	@AfterClass(description = "Quit all the Webdrivers and close and the browser tabs")
 	public void tearDown() {
 
 		driver.quit();

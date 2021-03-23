@@ -1,5 +1,14 @@
 package com.nordson.pageObjects;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -367,4 +376,14 @@ public class Pressure_Min_Max_Validations {
 		return tm;
 	}
 
+	public static XSSFCell celldata() throws IOException {
+		File file = new File("C:\\Users\\Ravi Raj\\Documents\\MDS.xlsx");
+		FileInputStream inputStream = new FileInputStream(file);
+		XSSFWorkbook workbook = new XSSFWorkbook(inputStream);
+		XSSFSheet sheet = workbook.getSheetAt(1);
+		Row row = sheet.getRow(6);
+		Cell cell = row.getCell(13);
+		System.out.println(sheet.getRow(6).getCell(13));
+		return sheet.getRow(6).getCell(13);
+	}
 }

@@ -1,3 +1,4 @@
+com\nordson\pageObjects\Runtime_Settings_Pressure_Validations.class
 com\nordson\utilities\ActionMethods.class
 com\nordson\utilities\XLUtils.class
 com\nordson\testCases\TC_LoginTest_001.class
@@ -7,7 +8,10 @@ com\nordson\pageObjects\LoginPage.class
 com\nordson\pageObjects\LinksPages.class
 com\nordson\testCases\TC_LoginTest_DDT_001.class
 com\nordson\utilities\ReadConfig.class
+com\nordson\testCases\TC_Pressure_Min_Max_Data_Validations.class
 com\nordson\pageObjects\LandingPage.class
+com\nordson\testCases\TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values.class
 com\nordson\pageObjects\RegistrationPage.class
 com\nordson\testCases\TC_VerifyLinkTests_003.class
+com\nordson\pageObjects\Pressure_Min_Max_Validations.class
 com\nordson\utilities\Reporting.class

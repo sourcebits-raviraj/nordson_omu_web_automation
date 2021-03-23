@@ -1,6 +1,30 @@
 [ {
+  "buildOrder" : 13,
+  "reportUrl" : "http://192.168.29.229:60417/index.html",
+  "reportName" : "Nordosn Automation Reports",
   "data" : {
-    "run" : 26,
-    "retry" : 112
+    "run" : 60,
+    "retry" : 504
+  }
+}, {
+  "buildOrder" : 13,
+  "reportUrl" : "http://192.168.29.229:60417/index.html",
+  "reportName" : "Nordosn Automation Reports",
+  "data" : {
+    "run" : 32,
+    "retry" : 39
+  }
+}, {
+  "buildOrder" : 13,
+  "reportUrl" : "http://192.168.29.229:60417/index.html",
+  "reportName" : "Nordosn Automation Reports",
+  "data" : {
+    "run" : 32,
+    "retry" : 39
+  }
+}, {
+  "data" : {
+    "run" : 32,
+    "retry" : 23
   }
 } ]

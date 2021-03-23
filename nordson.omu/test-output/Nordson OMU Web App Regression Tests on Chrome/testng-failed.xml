@@ -13,9 +13,8 @@
         <methods>
           <include name="implictwaits"/>
           <include name="tearDown"/>
-          <include name="PressureValuesMin_0_Max_690" invocation-numbers="0"/>
           <include name="setUp"/>
-          <include name="PressureValues_Kpa_Min_0_Max_690" invocation-numbers="0"/>
+          <include name="PressureValues_MDS"/>
         </methods>
       </class> <!-- com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations -->
     </classes>

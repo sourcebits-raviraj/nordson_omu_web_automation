@@ -10,10 +10,10 @@ import com.nordson.utilities.ActionMethods;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 
-@Epic("Regression Tests")
-@Feature("Pressure Min & Max Field verification of default Values")
+@Epic("N30-1 Pressure - OMU R2.5")
+@Story("N30-2 Pressure Min & Max Field verification of default Values")
 public class TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values extends TC_LoginTest_DDT_001 {
 
 	Runtime_Settings_Pressure_Validations rsp;

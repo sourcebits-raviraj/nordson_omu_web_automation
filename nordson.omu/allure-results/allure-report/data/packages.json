@@ -4,351 +4,429 @@
   "children" : [ {
     "name" : "com.nordson.testCases",
     "children" : [ {
-      "name" : "TC_Pressure_Min_Max_Data_Validations",
-      "children" : [ {
-        "name" : "PressureValues_PSI_Min_Max_0_101",
-        "uid" : "c0fa14345c85b5af",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1614149974787,
-          "stop" : 1614149974808,
-          "duration" : 21
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "0", "6.9", "chrome" ]
-      }, {
-        "name" : "PressureValues_PSI_Same_Min_Max",
-        "uid" : "c8bb32b2ad688484",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1614149974867,
-          "stop" : 1614149974884,
-          "duration" : 17
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "0", "6.9", "chrome" ]
-      }, {
-        "name" : "PressureValues_PSI_Min_Max_0_100",
-        "uid" : "eeb9a27aacc66129",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "broken",
-        "time" : {
-          "start" : 1614149974939,
-          "stop" : 1614149974963,
-          "duration" : 24
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "0", "6.9", "chrome" ]
-      }, {
-        "name" : "loginDDT",
-        "uid" : "6089ebdca26663b1",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175694532,
-          "stop" : 1614175701303,
-          "duration" : 6771
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "raviuser@yopmail.com", "12345678", "chrome" ]
-      }, {
-        "name" : "Pressure_Validation_Kpa_Clear_Data_Min_Save",
-        "uid" : "3bea4ee0ad6a2efb",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175701325,
-          "stop" : 1614175734524,
-          "duration" : 33199
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "chrome" ]
-      }, {
-        "name" : "Pressure_Validation_Kpa_Clear_Data_Max_Save",
-        "uid" : "669c2927ee9207ac",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175734532,
-          "stop" : 1614175744112,
-          "duration" : 9580
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "chrome" ]
-      }, {
-        "name" : "PressureValues_Kpa_Min_0_Max_0",
-        "uid" : "169df8214599b27d",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175744247,
-          "stop" : 1614175765314,
-          "duration" : 21067
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "0", "0", "chrome" ]
-      }, {
-        "name" : "PressureValues_Kpa_Min_0_Max_691",
-        "uid" : "1ee48fad376f2697",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175765425,
-          "stop" : 1614175786646,
-          "duration" : 21221
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "0", "691", "chrome" ]
-      }, {
-        "name" : "PressureValues_Kpa_Min_0_Max_690",
-        "uid" : "8d068bdb8463a327",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175786740,
-          "stop" : 1614175793173,
-          "duration" : 6433
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "0", "690", "chrome" ]
-      }, {
-        "name" : "Pressure_Validation_BAR_Clear_Data_Min_Save",
-        "uid" : "1318f379d22841df",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175793192,
-          "stop" : 1614175821309,
-          "duration" : 28117
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "chrome" ]
-      }, {
-        "name" : "Pressure_Validation_BAR_Clear_Data_Max_Save",
-        "uid" : "6de5bedbd486f457",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175821318,
-          "stop" : 1614175845645,
-          "duration" : 24327
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "chrome" ]
-      }, {
-        "name" : "PressureValues_BAR_Same_Min_Max",
-        "uid" : "41b6e09dc3b75db7",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175845742,
-          "stop" : 1614175866970,
-          "duration" : 21228
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "7", "7", "chrome" ]
-      }, {
-        "name" : "PressureValues_Min_19_Max_2",
-        "uid" : "29783203fbdb56ad",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175867067,
-          "stop" : 1614175888224,
-          "duration" : 21157
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "1.9", "2", "chrome" ]
-      }, {
-        "name" : "PressureValuesMin_0_Max_690",
-        "uid" : "e412de6756cb79c9",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175888291,
-          "stop" : 1614175894638,
-          "duration" : 6347
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "0", "6.9", "chrome" ]
-      }, {
-        "name" : "Pressure_Validation_PSI_Clear_Data_Min_Save",
-        "uid" : "d08266fc269eaf67",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175894655,
-          "stop" : 1614175922792,
-          "duration" : 28137
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "chrome" ]
-      }, {
-        "name" : "Pressure_Validation_PSI_Clear_Data_Max_Save",
-        "uid" : "8030c18e6f80cdbc",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175922806,
-          "stop" : 1614175947051,
-          "duration" : 24245
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "chrome" ]
-      }, {
-        "name" : "PressureValues_PSI_Min_Max_0_101",
-        "uid" : "c57c5176a6015a71",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175947131,
-          "stop" : 1614175968375,
-          "duration" : 21244
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "50", "51", "chrome" ]
-      }, {
-        "name" : "PressureValues_PSI_Same_Min_Max",
-        "uid" : "d013e795b755f38",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175968439,
-          "stop" : 1614175989590,
-          "duration" : 21151
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "0", "100", "chrome" ]
-      }, {
-        "name" : "PressureValues_PSI_Min_Max_0_100",
-        "uid" : "ddb1c4c2995430e7",
-        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
-        "status" : "passed",
-        "time" : {
-          "start" : 1614175989657,
-          "stop" : 1614175999048,
-          "duration" : 9391
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ "0", "101", "chrome" ]
-      } ],
-      "uid" : "2a27c6cbe946d08d0516ef8ab4c17d4d"
-    }, {
       "name" : "TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values",
       "children" : [ {
         "name" : "loginDDT",
-        "uid" : "a450a0cecd87215b",
+        "uid" : "3df62f120482098d",
         "parentUid" : "9b6cf40cb14cc40461b829572ff21aee",
         "status" : "passed",
         "time" : {
-          "start" : 1614175465929,
-          "stop" : 1614175472763,
-          "duration" : 6834
+          "start" : 1614234276533,
+          "stop" : 1614234283747,
+          "duration" : 7214
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ "raviuser@yopmail.com", "12345678", "chrome" ]
       }, {
         "name" : "Pressure_Validation_Kpa_default_values",
-        "uid" : "c820c73eaa69c15c",
+        "uid" : "e8195e555cc5564f",
         "parentUid" : "9b6cf40cb14cc40461b829572ff21aee",
         "status" : "passed",
         "time" : {
-          "start" : 1614175472789,
-          "stop" : 1614175509774,
-          "duration" : 36985
+          "start" : 1614234283801,
+          "stop" : 1614234321645,
+          "duration" : 37844
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ "chrome" ]
       }, {
         "name" : "Pressure_Validation_BAR_default_values",
-        "uid" : "e46832babcf3d41a",
+        "uid" : "ba5346c6a880b94e",
         "parentUid" : "9b6cf40cb14cc40461b829572ff21aee",
         "status" : "passed",
         "time" : {
-          "start" : 1614175509785,
-          "stop" : 1614175545792,
-          "duration" : 36007
+          "start" : 1614234321663,
+          "stop" : 1614234358249,
+          "duration" : 36586
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ "chrome" ]
       }, {
         "name" : "Pressure_Validation_PSI_default_values",
-        "uid" : "762a62b687fddc6a",
+        "uid" : "7e3e17e62b5a167c",
         "parentUid" : "9b6cf40cb14cc40461b829572ff21aee",
         "status" : "passed",
         "time" : {
-          "start" : 1614175545802,
-          "stop" : 1614175577711,
-          "duration" : 31909
+          "start" : 1614234358269,
+          "stop" : 1614234390628,
+          "duration" : 32359
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ "chrome" ]
       }, {
         "name" : "Pressure_Validation_Kpa_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA",
-        "uid" : "af8b344c88221daf",
+        "uid" : "b3837a3c736c8c2c",
         "parentUid" : "9b6cf40cb14cc40461b829572ff21aee",
         "status" : "passed",
         "time" : {
-          "start" : 1614175577734,
-          "stop" : 1614175617829,
-          "duration" : 40095
+          "start" : 1614234390644,
+          "stop" : 1614234431591,
+          "duration" : 40947
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ "chrome" ]
       }, {
         "name" : "Pressure_Validation_BAR_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA",
-        "uid" : "aeb9cc405889c870",
+        "uid" : "2fc52b0594329748",
         "parentUid" : "9b6cf40cb14cc40461b829572ff21aee",
         "status" : "passed",
         "time" : {
-          "start" : 1614175617840,
-          "stop" : 1614175653752,
-          "duration" : 35912
+          "start" : 1614234431611,
+          "stop" : 1614234468208,
+          "duration" : 36597
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ "chrome" ]
       }, {
         "name" : "Pressure_Validation_PSI_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA",
-        "uid" : "2f1c6070ed07b1f8",
+        "uid" : "b8bc6571f37e02ae",
         "parentUid" : "9b6cf40cb14cc40461b829572ff21aee",
         "status" : "passed",
         "time" : {
-          "start" : 1614175653762,
-          "stop" : 1614175685647,
-          "duration" : 31885
+          "start" : 1614234468229,
+          "stop" : 1614234500721,
+          "duration" : 32492
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ "chrome" ]
       } ],
       "uid" : "9b6cf40cb14cc40461b829572ff21aee"
+    }, {
+      "name" : "TC_Pressure_Min_Max_Data_Validations",
+      "children" : [ {
+        "name" : "PressureValues_Kpa_Min_0_Max_0",
+        "uid" : "ce762430c84f5531",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236270530,
+          "stop" : 1614236270531,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_Kpa_Min_0_Max_691",
+        "uid" : "d5003340a625e83c",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236270632,
+          "stop" : 1614236270633,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_Kpa_Min_0_Max_690",
+        "uid" : "5cbdca8bff7a30ed",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236270712,
+          "stop" : 1614236270712,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_BAR_Same_Min_Max",
+        "uid" : "6c0cee643c881f13",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236366483,
+          "stop" : 1614236366484,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_Min_19_Max_2",
+        "uid" : "2d93522363dca12a",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236366520,
+          "stop" : 1614236366520,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValuesMin_0_Max_690",
+        "uid" : "c04965d8bac59bfb",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236366554,
+          "stop" : 1614236366554,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_PSI_Min_Max_0_101",
+        "uid" : "4dc499f2516259c1",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236412579,
+          "stop" : 1614236412580,
+          "duration" : 1
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_PSI_Same_Min_Max",
+        "uid" : "35e976232b7c6089",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236412610,
+          "stop" : 1614236412610,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_PSI_Min_Max_0_100",
+        "uid" : "a3985ab218967797",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1614236412641,
+          "stop" : 1614236412641,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "loginDDT",
+        "uid" : "b0703999eefe2b2c",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240662552,
+          "stop" : 1614240669462,
+          "duration" : 6910
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "raviuser@yopmail.com", "12345678", "chrome" ]
+      }, {
+        "name" : "Pressure_Validation_Kpa_Clear_Data_Min_Save",
+        "uid" : "365721deafe675a3",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240669487,
+          "stop" : 1614240702768,
+          "duration" : 33281
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "Pressure_Validation_Kpa_Clear_Data_Max_Save",
+        "uid" : "e5d184ac0237adf1",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240702789,
+          "stop" : 1614240712320,
+          "duration" : 9531
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_Kpa_Min_0_Max_0",
+        "uid" : "a5cc9b766f243174",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240712474,
+          "stop" : 1614240733724,
+          "duration" : 21250
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "0", "0", "chrome" ]
+      }, {
+        "name" : "PressureValues_Kpa_Min_0_Max_691",
+        "uid" : "1111a25d75f86b21",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240733823,
+          "stop" : 1614240754871,
+          "duration" : 21048
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "0", "691", "chrome" ]
+      }, {
+        "name" : "PressureValues_Kpa_Min_0_Max_690",
+        "uid" : "88ef8c81d0e1c20",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240754983,
+          "stop" : 1614240761492,
+          "duration" : 6509
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "0", "690", "chrome" ]
+      }, {
+        "name" : "Pressure_Validation_BAR_Clear_Data_Min_Save",
+        "uid" : "61a899df3bbc9495",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240761506,
+          "stop" : 1614240789762,
+          "duration" : 28256
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "Pressure_Validation_BAR_Clear_Data_Max_Save",
+        "uid" : "376a8161b67f8300",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240789783,
+          "stop" : 1614240814040,
+          "duration" : 24257
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_BAR_Same_Min_Max",
+        "uid" : "9f78acfd28e2840a",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240814120,
+          "stop" : 1614240835465,
+          "duration" : 21345
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "7", "7", "chrome" ]
+      }, {
+        "name" : "PressureValues_Min_19_Max_2",
+        "uid" : "5826772f0a4e7913",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240835562,
+          "stop" : 1614240856871,
+          "duration" : 21309
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "1.9", "2", "chrome" ]
+      }, {
+        "name" : "PressureValuesMin_0_Max_690",
+        "uid" : "cce044dc8db239f0",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240856950,
+          "stop" : 1614240863359,
+          "duration" : 6409
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "0", "6.9", "chrome" ]
+      }, {
+        "name" : "Pressure_Validation_PSI_Clear_Data_Min_Save",
+        "uid" : "d79eec153594f347",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240863377,
+          "stop" : 1614240891637,
+          "duration" : 28260
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "Pressure_Validation_PSI_Clear_Data_Max_Save",
+        "uid" : "dfa4c5c5850e1ec3",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240891658,
+          "stop" : 1614240915793,
+          "duration" : 24135
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "chrome" ]
+      }, {
+        "name" : "PressureValues_PSI_Min_Max_0_101",
+        "uid" : "1dacee590570998f",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240915875,
+          "stop" : 1614240937019,
+          "duration" : 21144
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "50", "51", "chrome" ]
+      }, {
+        "name" : "PressureValues_PSI_Same_Min_Max",
+        "uid" : "978ef0359d97d6cd",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240937084,
+          "stop" : 1614240958415,
+          "duration" : 21331
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "0", "100", "chrome" ]
+      }, {
+        "name" : "PressureValues_PSI_Min_Max_0_100",
+        "uid" : "1cadafe99a433d9c",
+        "parentUid" : "2a27c6cbe946d08d0516ef8ab4c17d4d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1614240958482,
+          "stop" : 1614240967891,
+          "duration" : 9409
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "0", "101", "chrome" ]
+      } ],
+      "uid" : "2a27c6cbe946d08d0516ef8ab4c17d4d"
     } ],
     "uid" : "com.nordson.testCases"
   } ]

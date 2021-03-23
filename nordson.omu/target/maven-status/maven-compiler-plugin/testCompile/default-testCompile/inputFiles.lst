@@ -1,11 +1,15 @@
 C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_Registration_DDT_002.java
+C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\Pressure_Min_Max_Validations.java
 C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\BaseClass.java
+C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values.java
 C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\utilities\ActionMethods.java
 C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\LinksPages.java
 C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_VerifyLinkTests_003.java
 C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_LoginTest_001.java
+C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\Runtime_Settings_Pressure_Validations.java
 C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\utilities\ReadConfig.java
 C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_LoginTest_DDT_001.java
+C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_Pressure_Min_Max_Data_Validations.java
 C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\LoginPage.java
 C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\LandingPage.java
 C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\RegistrationPage.java

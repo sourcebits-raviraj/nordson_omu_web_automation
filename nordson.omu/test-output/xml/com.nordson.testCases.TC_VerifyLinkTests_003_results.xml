@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Nordson OMU Web App Regression Tests on Chrome"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="16.830">
+  <properties />
+  
+  
+            <testcase name="LinksLoginDDT" time="16.830" classname="com.nordson.testCases.TC_VerifyLinkTests_003" />
+      
+</testsuite>

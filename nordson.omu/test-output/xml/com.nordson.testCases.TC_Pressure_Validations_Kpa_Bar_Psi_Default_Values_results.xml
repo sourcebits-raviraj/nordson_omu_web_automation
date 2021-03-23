@@ -4,16 +4,16 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="219.665">
+           time="224.545">
   <properties />
   
   
-            <testcase name="Pressure_Validation_PSI_default_values" time="31.911" classname="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values" />
-                <testcase name="Pressure_Validation_Kpa_default_values" time="36.986" classname="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values" />
-                <testcase name="Pressure_Validation_BAR_default_values" time="36.010" classname="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values" />
-                <testcase name="Pressure_Validation_BAR_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA" time="35.913" classname="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values" />
-                <testcase name="Pressure_Validation_PSI_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA" time="31.886" classname="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values" />
-                <testcase name="loginDDT" time="6.862" classname="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values" />
-                <testcase name="Pressure_Validation_Kpa_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA" time="40.097" classname="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values" />
+            <testcase name="Pressure_Validation_Kpa_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA" time="41.294" classname="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values" />
+                <testcase name="Pressure_Validation_BAR_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA" time="36.553" classname="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values" />
+                <testcase name="Pressure_Validation_Kpa_default_values" time="37.762" classname="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values" />
+                <testcase name="Pressure_Validation_PSI_Default_Values_with_Hydraulic_Pump_Ratio_STD_STD_DA" time="32.530" classname="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values" />
+                <testcase name="Pressure_Validation_BAR_default_values" time="36.748" classname="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values" />
+                <testcase name="loginDDT" time="6.997" classname="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values" />
+                <testcase name="Pressure_Validation_PSI_default_values" time="32.661" classname="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values" />
       
 </testsuite>

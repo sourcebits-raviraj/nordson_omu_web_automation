@@ -12,13 +12,12 @@ import com.nordson.utilities.ActionMethods;
 import com.nordson.utilities.XLUtils;
 
 import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 
-@Epic("Regression Tests")
-@Feature("Pressure Min and Max Validations with different combinations of data")
+@Epic("N30-1 Pressure - OMU R2.5")
+@Story("N30-2 Pressure Manual Adjust screen - Default values")
 public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 	LoginPage lp;
 	Pressure_Min_Max_Validations pmv;
@@ -26,8 +25,8 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 
 	private SoftAssert softAssert = new SoftAssert();
 
-	@Epic("")
 	@Test(priority = 1, enabled = true)
+	// @Feature("Pressure Validation Clear KPA Min data and save")
 	public void Pressure_Validation_Kpa_Clear_Data_Min_Save() throws InterruptedException, IOException, AWTException {
 
 		pmv = new Pressure_Min_Max_Validations(driver);
@@ -72,6 +71,7 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 	}
 
 	@Test(priority = 2, enabled = true)
+	// @Feature("Pressure Validation Clear KPA max data and save")
 	public void Pressure_Validation_Kpa_Clear_Data_Max_Save() throws InterruptedException, IOException, AWTException {
 
 		log.info("clear the value in max set point kpa");
@@ -84,8 +84,8 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 		XLUtils.setExcelSheetNm("kpaMinMaxSameValues");
 	}
 
-	@Test(priority = 3, dataProvider = "PressureValuesMinMax0_0", dataProviderClass = com.nordson.utilities.XLUtils.class)
-	@Story("Pressure Unit Values Min and Max 0 and 0")
+	@Test(priority = 3, enabled = true, dataProvider = "PressureValuesMinMax0_0", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	// @Feature("Pressure Unit Values Min and Max 0 and 0")
 	public void PressureValues_Kpa_Min_0_Max_0(String min, String max) throws InterruptedException {
 
 		// pmv = new Pressure_Min_Max_Validations(driver);
@@ -116,8 +116,8 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 		pmv.clearMaxSetPoint();
 	}
 
-	@Test(priority = 4, dataProvider = "PressureValuesMinMax_0_691", dataProviderClass = com.nordson.utilities.XLUtils.class)
-	@Story("Pressure Unit Values Min and Max 0 and 691")
+	@Test(priority = 4, enabled = true, dataProvider = "PressureValuesMinMax_0_691", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	// @Feature("Pressure Unit Values Min and Max 0 and 691")
 	public void PressureValues_Kpa_Min_0_Max_691(String min, String max) throws InterruptedException {
 
 		// pmv = new Pressure_Min_Max_Validations(driver);
@@ -148,8 +148,8 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 	}
 
 	@Severity(SeverityLevel.CRITICAL)
-	@Test(priority = 5, dataProvider = "PressureValuesMinMax_0_690", dataProviderClass = com.nordson.utilities.XLUtils.class)
-	@Story("Pressure Unit Values Min and Max 0 and 690")
+	@Test(priority = 5, enabled = true, dataProvider = "PressureValuesMinMax_0_690", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	// @Feature("Pressure Unit Values Min and Max 0 and 690")
 	public void PressureValues_Kpa_Min_0_Max_690(String min, String max) throws InterruptedException {
 
 		// pmv = new Pressure_Min_Max_Validations(driver);
@@ -179,7 +179,7 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 	// ==================================================================
 
 	@Test(priority = 6, enabled = true)
-	@Story("Pressure Unit clear Data for Min field and Save")
+	// @Feature("Pressure Unit clear Data for Min field and Save")
 	public void Pressure_Validation_BAR_Clear_Data_Min_Save() throws InterruptedException, IOException, AWTException {
 
 		log.info("Clicked on System Setting Link");
@@ -211,7 +211,7 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 	}
 
 	@Test(priority = 7, enabled = true)
-	@Story("Pressure Unit clear data for Max field")
+	// @Feature("Pressure Unit clear data for Max field")
 	public void Pressure_Validation_BAR_Clear_Data_Max_Save() throws InterruptedException, IOException, AWTException {
 
 		log.info("clear the value in max set point BAR");
@@ -226,8 +226,8 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 		pmv.clearMaxSetPoint();
 	}
 
-	@Test(priority = 8, dataProvider = "PressureValues_BAR_MinMax_7_7", dataProviderClass = com.nordson.utilities.XLUtils.class)
-	@Story("Pressure Unit Values Min and Max 7 and 7 and save it")
+	@Test(priority = 8, enabled = true, dataProvider = "PressureValues_BAR_MinMax_7_7", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	// @Feature("Pressure Unit Values Min and Max 7 and 7 and save it")
 	public void PressureValues_BAR_Same_Min_Max(String min, String max) throws InterruptedException {
 
 		// pmv = new Pressure_Min_Max_Validations(driver);
@@ -258,8 +258,8 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 		pmv.clearMaxSetPoint();
 	}
 
-	@Test(priority = 9, dataProvider = "PressureValuesMinMax_1.9_2", dataProviderClass = com.nordson.utilities.XLUtils.class)
-	@Story("Pressure Unit Values Min and Max 1.9 and 2")
+	@Test(priority = 9, enabled = true, dataProvider = "PressureValuesMinMax_1.9_2", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	// @Feature("Pressure Unit Values Min and Max 1.9 and 2")
 	public void PressureValues_Min_19_Max_2(String min, String max) throws InterruptedException {
 
 		// pmv = new Pressure_Min_Max_Validations(driver);
@@ -291,8 +291,8 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 	}
 
 	@Severity(SeverityLevel.CRITICAL)
-	@Test(priority = 10, dataProvider = "PressureValues_MinMax_0_6.9", dataProviderClass = com.nordson.utilities.XLUtils.class)
-	@Story("Pressure Unit Values Min and Max 0 and 6.9")
+	@Test(priority = 10, enabled = true, dataProvider = "PressureValues_MinMax_0_6.9", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	// @Feature("Pressure Unit Values Min and Max 0 and 6.9")
 	public void PressureValuesMin_0_Max_690(String min, String max) throws InterruptedException {
 
 		// pmv = new Pressure_Min_Max_Validations(driver);
@@ -323,7 +323,7 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 // -------------------------------------------------------------------------------
 
 	@Test(priority = 11, enabled = true)
-	@Story("Pressure Unit clear data in Min and save")
+	// @Feature("Pressure Unit clear data in Min and save")
 	public void Pressure_Validation_PSI_Clear_Data_Min_Save() throws InterruptedException, IOException, AWTException {
 
 		log.info("Clicked on System Setting Link");
@@ -355,7 +355,7 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 	}
 
 	@Test(priority = 12, enabled = true)
-	@Story("Pressure Unit clear data in Max and save")
+	// @Feature("Pressure Unit clear data in Max and save")
 	public void Pressure_Validation_PSI_Clear_Data_Max_Save() throws InterruptedException, IOException, AWTException {
 
 		log.info("clear the value in max set point PSI");
@@ -370,8 +370,8 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 		pmv.clearMaxSetPoint();
 	}
 
-	@Test(priority = 13, dataProvider = "PressureValues_PSI_MinMax_50_51", dataProviderClass = com.nordson.utilities.XLUtils.class)
-	@Story("Pressure Unit values Min 50 and Max 51")
+	@Test(priority = 13, enabled = true, dataProvider = "PressureValues_PSI_MinMax_50_51", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	// @Feature("Pressure Unit values Min 50 and Max 51")
 	public void PressureValues_PSI_Same_Min_Max(String min, String max) throws InterruptedException {
 
 		log.info("Set the min value as 50 PSI");
@@ -400,8 +400,9 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 		pmv.clearMaxSetPoint();
 	}
 
-	@Test(priority = 13, dataProvider = "PressureValues_PSI_MinMax_0_101", dataProviderClass = com.nordson.utilities.XLUtils.class)
-	@Story("Pressure Unit values Min 0 and Max 101")
+	@Severity(SeverityLevel.NORMAL)
+	@Test(priority = 13, enabled = true, dataProvider = "PressureValues_PSI_MinMax_0_101", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	// @Feature("Pressure Unit values Min 0 and Max 101")
 	public void PressureValues_PSI_Min_Max_0_101(String min, String max) throws InterruptedException {
 
 		log.info("Set the min value as 0 PSI");
@@ -431,8 +432,8 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 	}
 
 	@Severity(SeverityLevel.CRITICAL)
-	@Test(priority = 14, dataProvider = "PressureValues_PSI_MinMax_0_100", dataProviderClass = com.nordson.utilities.XLUtils.class)
-	@Story("Pressure Unit values Min 0 and Max 100")
+	@Test(priority = 14, enabled = true, dataProvider = "PressureValues_PSI_MinMax_0_100", dataProviderClass = com.nordson.utilities.XLUtils.class)
+	// @Feature("Pressure Unit values Min 0 and Max 100")
 	public void PressureValues_PSI_Min_Max_0_100(String min, String max) throws InterruptedException {
 
 		log.info("Set the min value as 0 PSI");
@@ -457,10 +458,6 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 		}
 		Thread.sleep(3000);
 
-		/*
-		 * XLUtils.setExcelSheetNm("PSI_Min_Max_0_100"); pmv.clearMinSetPoint();
-		 * pmv.clearMaxSetPoint();
-		 */
 	}
 
 }
