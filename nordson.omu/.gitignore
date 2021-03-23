@@ -2,11 +2,8 @@
 /test-output/
 *.json
 *.json
-*.json
-*.json
-*.json
-*.json
 *.html
 *.json
 *.csv
 *.js
+
