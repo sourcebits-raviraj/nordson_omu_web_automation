@@ -1,11 +1,12 @@
-
-*.json
-*.json
-*.json
-*.json
+/target/
+/test-output/
+/logs/
+/allure-report/
+/allure-results/
 *.json
 *.json
 *.html
 *.json
 *.csv
 *.js
+*.logs
