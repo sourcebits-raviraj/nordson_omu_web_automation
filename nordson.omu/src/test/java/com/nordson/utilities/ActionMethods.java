@@ -11,6 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -50,8 +51,31 @@ public class ActionMethods extends BaseClass {
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.visibilityOf(element));
 		}
+	
+	public void waitForAnElementIsInVisible(By element) throws Error 
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 40);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(element));
+    }
+	
+	
+	public void waitFortexttoBePresent(final By byObject)
+	{
+		
+		WebDriverWait wait = new WebDriverWait(driver, 40);
 
+		wait.until(new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver d) {
+                return (d.findElement(byObject).getAttribute ("value").length() >= 1);
+            }
+        }); 
+	}
 
+	public void waitForAnElementVisible(WebElement element) throws Error 
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 40);
+		wait.until(ExpectedConditions.visibilityOf(element));
+    }
 	public static String getConversionToFahrenheit(String celsiustemp)
 	{
 		double fahrenheittemp=0;
