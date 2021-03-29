@@ -11,7 +11,6 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import com.nordson.utilities.ReadConfig;
@@ -27,10 +26,9 @@ public class BaseClass {
 	public static WebDriver driver;
 	public static Logger log;
 
-
 	// Set Up Before Class Testng Annotations launching of the Web application
 	@Parameters("browser")
-	@BeforeClass
+	@BeforeClass(description = "Webdriver Intialization and Launch the Base URL")
 	public void setUp(String br) {
 
 		log = Logger.getLogger("nordson");
@@ -90,17 +88,19 @@ public class BaseClass {
 		}
 	}
 
-	
+	@BeforeMethod
+	public void implictwaits() throws Exception {
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}
+
 	// Tear Down Method Before Class Testng Annotations launching of the Web
 	// application
-	@AfterClass
+	@AfterClass(description = "Quit all the Webdrivers and close and the browser tabs")
 	public void tearDown() {
 
 		driver.quit();
 		log.info("All the tabs are closed");
 
 	}
-	
-	
 
 }

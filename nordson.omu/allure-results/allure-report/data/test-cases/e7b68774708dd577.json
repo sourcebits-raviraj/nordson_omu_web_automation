@@ -1,0 +1,180 @@
+{
+  "uid" : "e7b68774708dd577",
+  "name" : "Pressure_Validation_BAR_default_values",
+  "fullName" : "com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values.Pressure_Validation_BAR_default_values",
+  "historyId" : "e3b52ba6f70b89e369fbb490cfa092a4",
+  "time" : {
+    "start" : 1614146049869,
+    "stop" : 1614146071861,
+    "duration" : 21992
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1614146013453,
+      "stop" : 1614146022601,
+      "duration" : 9148
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1614146150517,
+      "stop" : 1614146151163,
+      "duration" : 646
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values"
+  }, {
+    "name" : "testClass",
+    "value" : "com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values"
+  }, {
+    "name" : "testMethod",
+    "value" : "Pressure_Validation_BAR_default_values"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "suite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values"
+  }, {
+    "name" : "host",
+    "value" : "SBWIN604"
+  }, {
+    "name" : "thread",
+    "value" : "41900@SBWIN604.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "b7da83824ebd8b86",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613985753755,
+        "stop" : 1613985776010,
+        "duration" : 22255
+      }
+    }, {
+      "uid" : "3d71438f530e427f",
+      "status" : "broken",
+      "statusDetails" : "no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[contains(@class,'row row-margin')]//span[contains(@class,'min')][normalize-space()='BAR']/preceding::input[1]\"}\n  (Session info: chrome=88.0.4324.182)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'SBWIN604', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\\Users\\Ravi Raj\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:53432}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: f162aab83cffe479cd895cfbaad44864\n*** Element info: {Using=xpath, value=//div[contains(@class,'row row-margin')]//span[contains(@class,'min')][normalize-space()='BAR']/preceding::input[1]}",
+      "time" : {
+        "start" : 1613985218225,
+        "stop" : 1613985234090,
+        "duration" : 15865
+      }
+    }, {
+      "uid" : "8e2fe0d242bc11d2",
+      "status" : "broken",
+      "statusDetails" : "chrome not reachable\n  (Session info: chrome=88.0.4324.182)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'SBWIN604', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\\Users\\Ravi Raj\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:53281}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 933f63a646c727e3bf2aa82623a148ec\n*** Element info: {Using=xpath, value=//span[@class='heading-text-sidenav']/following::mat-expansion-panel-header[2]}",
+      "time" : {
+        "start" : 1613985212385,
+        "stop" : 1613985226544,
+        "duration" : 14159
+      }
+    }, {
+      "uid" : "33a346dba2a75ee2",
+      "status" : "broken",
+      "statusDetails" : "chrome not reachable\n  (Session info: chrome=88.0.4324.182)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'SBWIN604', ip: '192.168.29.229', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.182, chrome: {chromedriverVersion: 88.0.4324.96 (68dba2d8a0b14..., userDataDir: C:\\Users\\Ravi Raj\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:53081}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 71f613e2341e42b5d79e96bbe79ce701\n*** Element info: {Using=xpath, value=//span[@class='heading-text-sidenav']/following::mat-expansion-panel-header[2]}",
+      "time" : {
+        "start" : 1613985103792,
+        "stop" : 1613985117925,
+        "duration" : 14133
+      }
+    }, {
+      "uid" : "bc3dd9f4ff2733ab",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613977614074,
+        "stop" : 1613977633022,
+        "duration" : 18948
+      }
+    }, {
+      "uid" : "70aff97fbde44c18",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613977342225,
+        "stop" : 1613977373171,
+        "duration" : 30946
+      }
+    }, {
+      "uid" : "babe53e00ecb6e19",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613977219998,
+        "stop" : 1613977250932,
+        "duration" : 30934
+      }
+    }, {
+      "uid" : "d707db594717d89",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613976777553,
+        "stop" : 1613976808514,
+        "duration" : 30961
+      }
+    }, {
+      "uid" : "d4f800689fb8a080",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613976208128,
+        "stop" : 1613976237014,
+        "duration" : 28886
+      }
+    }, {
+      "uid" : "7ba8d1793b27aacf",
+      "status" : "passed",
+      "time" : {
+        "start" : 1613973616937,
+        "stop" : 1613973645792,
+        "duration" : 28855
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e7b68774708dd577.json",
+  "parameterValues" : [ "chrome" ]
+}

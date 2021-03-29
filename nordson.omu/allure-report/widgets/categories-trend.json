@@ -1,0 +1,27 @@
+[ {
+  "buildOrder" : 13,
+  "reportUrl" : "http://192.168.29.229:60417/index.html",
+  "reportName" : "Nordosn Automation Reports",
+  "data" : {
+    "Test defects" : 6,
+    "Ignored tests" : 3
+  }
+}, {
+  "buildOrder" : 13,
+  "reportUrl" : "http://192.168.29.229:60417/index.html",
+  "reportName" : "Nordosn Automation Reports",
+  "data" : {
+    "Ignored tests" : 9
+  }
+}, {
+  "buildOrder" : 13,
+  "reportUrl" : "http://192.168.29.229:60417/index.html",
+  "reportName" : "Nordosn Automation Reports",
+  "data" : {
+    "Ignored tests" : 9
+  }
+}, {
+  "data" : {
+    "Ignored tests" : 9
+  }
+} ]

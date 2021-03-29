@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -39,23 +37,29 @@ public class TC_LoginTest_DDT_001 extends BaseClass {
 
 		// verify the login is successful
 
-		if (driver.getPageSource().contains(" Sub User Account ")) {
-			
-			System.out.println("Login Successful");
-			Am = new ActionMethods();
-			Am.captureScreen(driver, "loginDDT");
-			Assert.assertTrue(true);
-			//lp.clickLogoutBtn();
+		if (driver.getPageSource().contains("Welcome")) {
 
-		}
+			if (driver.getPageSource().contains(" Sub User Account ")) {
 
-		else {
+				System.out.println("Login Successful");
+				Am = new ActionMethods();
+				Am.captureScreen(driver, "loginDDT");
+				Assert.assertTrue(true);
 
-			Am = new ActionMethods();
-			Am.captureScreen(driver, "loginDDT");
-			System.out.println("Login Failed");
-			softAssert.assertTrue(false);
+				// lp.clickLogoutBtn();
 
+				// lp.clickLogoutBtn();
+
+			}
+
+			else {
+
+				Am = new ActionMethods();
+				Am.captureScreen(driver, "loginDDT");
+				System.out.println("Login Failed");
+				softAssert.assertTrue(false);
+
+			}
 		}
 	}
 

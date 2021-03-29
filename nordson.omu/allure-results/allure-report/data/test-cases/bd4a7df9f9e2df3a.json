@@ -1,0 +1,101 @@
+{
+  "uid" : "bd4a7df9f9e2df3a",
+  "name" : "loginDDT",
+  "fullName" : "com.nordson.testCases.TC_LoginTest_DDT_001.loginDDT",
+  "historyId" : "d09be1e8ee8cb7ca04c69822aa79a09c",
+  "time" : {
+    "start" : 1613993774581,
+    "stop" : 1613993781370,
+    "duration" : 6789
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1613993753374,
+      "stop" : 1613993774107,
+      "duration" : 20733
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1613993792517,
+      "stop" : 1613993793168,
+      "duration" : 651
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "hasContent" : false,
+    "stepsCount" : 0
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "testClass",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "testMethod",
+    "value" : "loginDDT"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "suite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "host",
+    "value" : "SBWIN604"
+  }, {
+    "name" : "thread",
+    "value" : "17868@SBWIN604.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "raviuser@yopmail.com"
+  }, {
+    "name" : "arg1",
+    "value" : "12345678"
+  }, {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bd4a7df9f9e2df3a.json",
+  "parameterValues" : [ "raviuser@yopmail.com", "12345678", "chrome" ]
+}

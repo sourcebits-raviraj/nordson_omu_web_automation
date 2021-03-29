@@ -1,0 +1,13 @@
+[ {
+  "values" : [ "Pre Prod" ],
+  "name" : "Stand"
+}, {
+  "values" : [ "Chomre" ],
+  "name" : "Browser"
+}, {
+  "values" : [ "88.0.4324.182" ],
+  "name" : "Browser.Version"
+}, {
+  "values" : [ "http://omupreprod.azurewebsites.net/login" ],
+  "name" : "URL"
+} ]

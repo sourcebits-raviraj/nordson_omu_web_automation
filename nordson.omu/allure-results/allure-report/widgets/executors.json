@@ -1,0 +1,10 @@
+[ {
+  "name" : "Jenkins",
+  "type" : "jenkins",
+  "url" : "http://omupreprod.azurewebsites.net/login",
+  "buildOrder" : 13,
+  "buildName" : "allure-report_deploy#13",
+  "buildUrl" : "http://localhost:8080/job/NordsonOMU_Auto_Project/",
+  "reportName" : "Nordosn Automation Reports",
+  "reportUrl" : "http://192.168.29.229:60417/index.html"
+} ]

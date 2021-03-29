@@ -1,0 +1,95 @@
+{
+  "uid" : "7a57a5de9c559b60",
+  "name" : "Pressure_Validation_Kpa_Clear_Data_Min_Save",
+  "fullName" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.Pressure_Validation_Kpa_Clear_Data_Min_Save",
+  "historyId" : "9506bc300c8c72a3c07ec37d9ea3b44c",
+  "time" : {
+    "start" : 1613990852267,
+    "stop" : 1613990909148,
+    "duration" : 56881
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1613990823415,
+      "stop" : 1613990844433,
+      "duration" : 21018
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1613990913994,
+      "stop" : 1613990914753,
+      "duration" : 759
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "testClass",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "testMethod",
+    "value" : "Pressure_Validation_Kpa_Clear_Data_Min_Save"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "suite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "host",
+    "value" : "SBWIN604"
+  }, {
+    "name" : "thread",
+    "value" : "23556@SBWIN604.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7a57a5de9c559b60.json",
+  "parameterValues" : [ "chrome" ]
+}

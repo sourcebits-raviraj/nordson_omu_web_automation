@@ -20,14 +20,13 @@ public class XLUtils {
 	public static XSSFRow row;
 	public static XSSFCell cell;
 	public static String sheetNm;
-	
-	
-public static void setExcelSheetNm(String SheetName) {
-		
-		XLUtils.sheetNm=SheetName;
-		
+
+	public static void setExcelSheetNm(String SheetName) {
+
+		XLUtils.sheetNm = SheetName;
+
 	}
-	
+
 	public static int getRowCount(String xlfile, String xlsheet) throws IOException {
 		fi = new FileInputStream(xlfile);
 		wb = new XSSFWorkbook(fi);
@@ -83,7 +82,6 @@ public static void setExcelSheetNm(String SheetName) {
 		fo.close();
 	}
 
-	
 	@DataProvider(name = "GlobalPointValues_Celsius")
 	public static String[][] getDataGP_Celsius() throws IOException {
 		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
@@ -105,8 +103,7 @@ public static void setExcelSheetNm(String SheetName) {
 		}
 		return tempdata;
 	}
-	
-	
+
 	@DataProvider(name = "GlobalPointValues_Farnhenit")
 	public static String[][] getDataGP_Farnheit() throws IOException {
 		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
@@ -128,7 +125,7 @@ public static void setExcelSheetNm(String SheetName) {
 		}
 		return tempdata;
 	}
-	
+
 	@DataProvider(name = "TankPointValues_Celsius")
 	public static String[][] getDataTP_Celsius() throws IOException {
 		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
@@ -150,8 +147,7 @@ public static void setExcelSheetNm(String SheetName) {
 		}
 		return tempdata;
 	}
-	
-	
+
 	@DataProvider(name = "TankPointValues_Farnhenit")
 	public static String[][] getDataTP_Farnheit() throws IOException {
 		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
@@ -173,8 +169,7 @@ public static void setExcelSheetNm(String SheetName) {
 		}
 		return tempdata;
 	}
-	
-	
+
 	@DataProvider(name = "HoseAppPointValues_Celsius")
 	public static String[][] getDataHAP_Celsius() throws IOException {
 		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
@@ -196,8 +191,7 @@ public static void setExcelSheetNm(String SheetName) {
 		}
 		return tempdata;
 	}
-	
-	
+
 	@DataProvider(name = "HoseAppPointValues_Farnhenit")
 	public static String[][] getDataHAP_Farnheit() throws IOException {
 		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
@@ -219,7 +213,7 @@ public static void setExcelSheetNm(String SheetName) {
 		}
 		return tempdata;
 	}
-	
+
 	@DataProvider(name = "OTTValues_Celsius")
 	public static String[][] getDataOTT_Celsius() throws IOException {
 		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
@@ -241,7 +235,7 @@ public static void setExcelSheetNm(String SheetName) {
 		}
 		return tempdata;
 	}
-	
+
 	@DataProvider(name = "OTTValues_Farnheit")
 	public static String[][] getDataOTT_Farnheit() throws IOException {
 		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
@@ -263,8 +257,7 @@ public static void setExcelSheetNm(String SheetName) {
 		}
 		return tempdata;
 	}
-	
-	
+
 	@DataProvider(name = "UTTValues_Celsius")
 	public static String[][] getDataUTT_Celsius() throws IOException {
 		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
@@ -286,7 +279,7 @@ public static void setExcelSheetNm(String SheetName) {
 		}
 		return tempdata;
 	}
-	
+
 	@DataProvider(name = "UTTValues_Farnheit")
 	public static String[][] getDataTT_Farnheit() throws IOException {
 		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";
@@ -308,8 +301,6 @@ public static void setExcelSheetNm(String SheetName) {
 		}
 		return tempdata;
 	}
-	
-	
 
 	@DataProvider(name = "TempstbckValues_Celsius")
 	public static String[][] getDataTempstbck_Celsius() throws IOException {
@@ -332,8 +323,6 @@ public static void setExcelSheetNm(String SheetName) {
 		}
 		return tempdata;
 	}
-	
-	
 
 	@DataProvider(name = "TempstbckValues_Farnheit")
 	public static String[][] getDataTempstbck_Farnheit() throws IOException {

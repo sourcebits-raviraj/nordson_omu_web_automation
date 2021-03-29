@@ -1,0 +1,15 @@
+{
+  "total" : 1,
+  "items" : [ {
+    "uid" : "ea4b5e19845b1fffc3bab9350669fb89",
+    "name" : "Nordson OMU Web App Regression Tests on Chrome",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 9,
+      "passed" : 23,
+      "unknown" : 0,
+      "total" : 32
+    }
+  } ]
+}

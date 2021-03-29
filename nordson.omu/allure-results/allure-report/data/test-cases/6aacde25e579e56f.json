@@ -1,0 +1,101 @@
+{
+  "uid" : "6aacde25e579e56f",
+  "name" : "PressureValuesMin_0_Max_690",
+  "fullName" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations.PressureValuesMin_0_Max_690",
+  "historyId" : "b67117b7c45a349ecc6672d092a43754",
+  "time" : {
+    "start" : 1614077848938,
+    "stop" : 1614077849283,
+    "duration" : 345
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setUp",
+    "time" : {
+      "start" : 1614077668870,
+      "stop" : 1614077678779,
+      "duration" : 9909
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "tearDown",
+    "time" : {
+      "start" : 1614077849286,
+      "stop" : 1614077849939,
+      "duration" : 653
+    },
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "testClass",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "testMethod",
+    "value" : "PressureValuesMin_0_Max_690"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "suite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "host",
+    "value" : "SBWIN604"
+  }, {
+    "name" : "thread",
+    "value" : "43484@SBWIN604.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "0"
+  }, {
+    "name" : "arg1",
+    "value" : "6.9"
+  }, {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6aacde25e579e56f.json",
+  "parameterValues" : [ "0", "6.9", "chrome" ]
+}

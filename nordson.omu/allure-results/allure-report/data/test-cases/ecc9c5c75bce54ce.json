@@ -1,0 +1,69 @@
+{
+  "uid" : "ecc9c5c75bce54ce",
+  "name" : "loginDDT",
+  "fullName" : "com.nordson.testCases.TC_LoginTest_DDT_001.loginDDT",
+  "historyId" : "d09be1e8ee8cb7ca04c69822aa79a09c",
+  "time" : {
+    "start" : 1613999301680,
+    "stop" : 1613999308515,
+    "duration" : 6835
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "package",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "testClass",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "testMethod",
+    "value" : "loginDDT"
+  }, {
+    "name" : "parentSuite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "suite",
+    "value" : "Nordson OMU Web App Regression Tests on Chrome"
+  }, {
+    "name" : "subSuite",
+    "value" : "com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"
+  }, {
+    "name" : "host",
+    "value" : "SBWIN604"
+  }, {
+    "name" : "thread",
+    "value" : "32716@SBWIN604.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "testng"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "arg0",
+    "value" : "raviuser@yopmail.com"
+  }, {
+    "name" : "arg1",
+    "value" : "12345678"
+  }, {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "ecc9c5c75bce54ce.json",
+  "parameterValues" : [ "raviuser@yopmail.com", "12345678", "chrome" ]
+}
