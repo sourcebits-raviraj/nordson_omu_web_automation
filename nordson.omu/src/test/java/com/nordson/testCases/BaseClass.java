@@ -11,10 +11,6 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-<<<<<<< HEAD
-=======
-import org.testng.annotations.BeforeTest;
->>>>>>> e9ac0448e900171654437682e656fb2495cf03f7
 import org.testng.annotations.Parameters;
 
 import com.nordson.utilities.ReadConfig;
@@ -29,7 +25,6 @@ public class BaseClass {
 	String expectedTitle = "BBconnCloud";
 	public static WebDriver driver;
 	public static Logger log;
-
 
 	// Set Up Before Class Testng Annotations launching of the Web application
 	@Parameters("browser")
@@ -93,15 +88,11 @@ public class BaseClass {
 		}
 	}
 
-<<<<<<< HEAD
 	@BeforeMethod
 	public void implictwaits() throws Exception {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-=======
-	
->>>>>>> e9ac0448e900171654437682e656fb2495cf03f7
 	// Tear Down Method Before Class Testng Annotations launching of the Web
 	// application
 	@AfterClass(description = "Quit all the Webdrivers and close and the browser tabs")
@@ -111,7 +102,5 @@ public class BaseClass {
 		log.info("All the tabs are closed");
 
 	}
-	
-	
 
 }
