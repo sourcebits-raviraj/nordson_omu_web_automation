@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Nordson OMU Web App Regression Tests on Chrome]">
+  <listeners>
+    <listener class-name="com.nordson.utilities.Reporting"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="5" name="Nordson OMU Web App Regression Tests on Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.nordson.testCases.TC_RuntimeMinmax_TemperatureTest">
+        <methods>
+          <include name="Test_Celsius_RuntimeMinmaxTankval"/>
+          <include name="Test_Farnhit_RuntimeMinmaxTankval"/>
+          <include name="tearDown"/>
+          <include name="Test_RuntimeMinmaxGlobalPointValidations" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="Test_Celsius_RuntimeMinmaxHoseval"/>
+          <include name="Test_Farnhit_RuntimeMinmaxHoseApplicator1val"/>
+          <include name="Test_Runtime_Farnhit_MinmaxGlobalPointValidations"/>
+          <include name="Test_farnhit_ToCelsius_RuntimeSetttings_Conversion"/>
+        </methods>
+      </class> <!-- com.nordson.testCases.TC_RuntimeMinmax_TemperatureTest -->
+    </classes>
+  </test> <!-- Nordson OMU Web App Regression Tests on Chrome(failed) -->
+</suite> <!-- Failed suite [Nordson OMU Web App Regression Tests on Chrome] -->
