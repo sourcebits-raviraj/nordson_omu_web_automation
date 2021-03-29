@@ -36,7 +36,7 @@ public class TC_LoginTest_DDT_001 extends BaseClass {
 		Thread.sleep(4000);
 
 		// verify the login is successful
-		if (driver.getPageSource().contains("Welcome RaviRaj Metri")) {
+		if (driver.getPageSource().contains("Welcome")) {
 			System.out.println("Login Successful");
 			Am = new ActionMethods();
 			Am.captureScreen(driver, "loginDDT");
