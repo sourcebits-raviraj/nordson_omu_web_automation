@@ -1,5 +1,7 @@
 package com.nordson.testCases;
 
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +10,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import com.nordson.utilities.ReadConfig;
@@ -22,6 +26,7 @@ public class BaseClass {
 	String expectedTitle = "BBconnCloud";
 	public static WebDriver driver;
 	public static Logger log;
+
 
 	// Set Up Before Class Testng Annotations launching of the Web application
 	@Parameters("browser")
@@ -85,6 +90,7 @@ public class BaseClass {
 		}
 	}
 
+	
 	// Tear Down Method Before Class Testng Annotations launching of the Web
 	// application
 	@AfterClass
@@ -94,5 +100,7 @@ public class BaseClass {
 		log.info("All the tabs are closed");
 
 	}
+	
+	
 
 }

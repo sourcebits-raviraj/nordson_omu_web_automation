@@ -3,13 +3,20 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.nordson.testCases.TC_VerifyLinkTests_003">
+      <class name="com.nordson.testCases.TC_RuntimeMinmax_TemperatureTest">
         <methods>
+          <include name="Test_Celsius_RuntimeMinmaxTankval"/>
+          <include name="Test_Farnhit_RuntimeMinmaxTankval"/>
           <include name="tearDown"/>
+          <include name="Test_RuntimeMinmaxGlobalPointValidations"/>
           <include name="setUp"/>
-          <include name="LinksLoginDDT"/>
+          <include name="Test_Celsius_RuntimeMinmaxHoseval"/>
+          <include name="loginDDT"/>
+          <include name="Test_Farnhit_RuntimeMinmaxHoseApplicator1val"/>
+          <include name="Test_Runtime_Farnhit_MinmaxGlobalPointValidations"/>
+          <include name="Test_farnhit_ToCelsius_RuntimeSetttings_Conversion"/>
         </methods>
-      </class> <!-- com.nordson.testCases.TC_VerifyLinkTests_003 -->
+      </class> <!-- com.nordson.testCases.TC_RuntimeMinmax_TemperatureTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

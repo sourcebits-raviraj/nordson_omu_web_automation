@@ -1,13 +1,18 @@
-C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_Registration_DDT_002.java
-C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\BaseClass.java
-C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\utilities\ActionMethods.java
-C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\LinksPages.java
-C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_VerifyLinkTests_003.java
-C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_LoginTest_001.java
-C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\utilities\ReadConfig.java
-C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_LoginTest_DDT_001.java
-C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\LoginPage.java
-C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\LandingPage.java
-C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\RegistrationPage.java
-C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\utilities\Reporting.java
-C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\utilities\XLUtils.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_LoginTest_DDT_001.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_Registration_DDT_002.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_RuntimeDefaultSettings_TemperatureTest.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_RuntimeMinmax_TemperatureTest.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\utilities\Reporting.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\utilities\ReadConfig.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\TemperatureRuntimeSettings.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\BaseClass.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\LandingPage.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\LoginPage.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_SystemSettings_TemperatureTest.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_LoginTest_001.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\testCases\TC_VerifyLinkTests_003.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\utilities\Constants.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\utilities\XLUtils.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\RegistrationPage.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\pageObjects\LinksPages.java
+C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu\src\test\java\com\nordson\utilities\ActionMethods.java
