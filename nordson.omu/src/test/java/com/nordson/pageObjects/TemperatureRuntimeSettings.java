@@ -8,9 +8,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -82,10 +84,9 @@ public class TemperatureRuntimeSettings {
 	WebElement MinmaxGlobalSetPoint;
 
 	@FindBy(xpath = "//*[contains(text(),'Tank')]/../following-sibling::tr/td//input")
-
 	WebElement Tank;
-	@FindBy(xpath = "//*[contains(text(),'Manifold')]/../following-sibling::tr/td//input")
 
+	@FindBy(xpath = "//*[contains(text(),'Manifold')]/../following-sibling::tr/td//input")
 	WebElement Manifold;
 	@FindBy(xpath = "//*[contains(text(),'Hose')]")
 	List<WebElement> Hose;
@@ -123,7 +124,6 @@ public void clickDashboard() {
 		Am.waitForAnElementToBeClickable(Dashboard);
 		Dashboard.click();
 	}
-	
 
 	public void clickSetUpToolBtn() {
 		Am.waitForAnElementToBeClickable(SetUpToolButton);
@@ -141,7 +141,6 @@ public void clickDashboard() {
 		Am.waitForAnElementToBeClickable(SubmitButton);
 		SubmitButton.click();
 	}
-
 	public void clickSystemSettingsBtn() {
 		Am.waitForAnElementPresence(By.xpath("//*[contains(text(),'System Settings')]/ancestor::span"));
 		Am.waitForAnElementToBeClickable(SystemSettings);
@@ -163,30 +162,26 @@ public void clickDashboard() {
 		else
 			tempvalue = false;
 		return tempvalue;
-	}
+		// SystemSettings.click();
 
+	}
 	public String getSelectedTemperatureunit() {
 		String tempunt;
 		tempunt = SelectedTemperatureunit.getText();
 		return tempunt;
 	}
-
 	public String getTemperatureunt() {
 		String tempunt;
 		Am.waitForAnElementPresence(Temperatureunt);
 		tempunt = Temperatureunt.getText();
 		return tempunt;
-
 	}
-
 	public void clickCelsiusUnit() {
 
 		Am.waitForAnElementPresence(
 				By.xpath("//*[@formcontrolname='TempUnits']//*[contains(text(),'C')]//preceding-sibling::div"));
 		CelsiusTemperatureunit.click();
-
 	}
-
 	public void clickFarhenitUnit() {
 
 		Am.waitForAnElementPresence(
@@ -194,7 +189,6 @@ public void clickDashboard() {
 		FarhenitTemperatureunit.click();
 
 	}
-
 	public void clickSave() {
 
 		Am.waitForAnElementPresence(SAVE);
@@ -268,13 +262,12 @@ public void clickDashboard() {
 		Tank.sendKeys(tnkpnt);
 
 	}
-	
+
 	public void setManifoldSetPoint(String Mnfld) {
 		Am.waitForAnElementPresence(Manifold);
 		Manifold.sendKeys(Mnfld);
 
 	}
-
 	public String getManifold() throws InterruptedException {
 
 		Am.waitForAnElementPresence(By.xpath("//*[contains(text(),'Manifold')]/../following-sibling::tr/td//input"));
@@ -291,16 +284,13 @@ public void clickDashboard() {
 		Am.waitForAnElementPresence(By.xpath("//*[contains(text(),'Hose')]"));
 
 		for (int i = 1; i <= Hose.size(); i++) {
-			hose = "//*[text()='Hose " + i
-					+ "']/following-sibling::td//*[not(contains(@class,'mat-checked'))]//input[@aria-checked='false']";
+			hose = "//*[text()='Hose " + i + "']/following-sibling::td//*[not(contains(@class,'mat-checked'))]//input[@aria-checked='false']";
 			Thread.sleep(1500);
 			hosewebelcunt = ldriver.findElements(By.xpath(hose)).size();
 			hosecuntele.add(hosewebelcunt);
-
 		}
 
 		return hosecuntele;
-
 	}
 
 	public List<Integer> getApplicatorEnableStatus() throws InterruptedException {
@@ -324,7 +314,6 @@ public void clickDashboard() {
 
 		for (int i = 1; i <= HoseSetpoint.size(); i++) {
 			hosesetpnt = "//*[@name='hose" + i + "']";
-
 			WebElement el = ldriver.findElement(By.xpath(hosesetpnt));
 			Am.waitFortexttoBePresent(By.xpath(hosesetpnt));
 			String hosesettemppnt = el.getAttribute("value");
@@ -345,19 +334,15 @@ public void clickDashboard() {
 			Am.waitFortexttoBePresent(By.xpath(applicatorsetpnt));
 			String hosesettemppnt = el.getAttribute("value");
 			Applicatorsetpointslst.add(hosesettemppnt);
-
 		}
-
 		return Applicatorsetpointslst;
 	}
 
 	public String getHosetemp1()
-
 	{
-		Am.waitFortexttoBePresent(By.xpath("//*[@name='hose1']"));
+		Am.waitFortexttoBePresent(By.xpath("//*[@name='hose1']"));	
 		String hsettemp = Hose1.getAttribute("value");
 		return hsettemp;
-
 	}
 
 	public String getAPP1temp1()
@@ -375,12 +360,10 @@ public void clickDashboard() {
 		Tank.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 
 	}
-	
 	public void clearManifoldtemperature() {
 
 		Am.waitForAnElementPresence(Manifold);
 		Manifold.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-
 	}
 
 	public void clearHosesetTemperature() {
@@ -410,9 +393,7 @@ public void clickDashboard() {
 		Applicator1.sendKeys(Appl1temp);
 
 	}
-
 	public Boolean getSavebtnstatus() {
-
 		Am.waitForAnElementPresence(SAVE1);
 		Boolean sttus = SAVE1.isEnabled();
 		return sttus;
@@ -561,7 +542,6 @@ public void clickDashboard() {
 			count++;
 		}
 	}
-	
 	public void setHosestemp(String hosesettemp) throws InterruptedException {
 		String hose="";
 		Am.waitForAnElementPresence(By.xpath("//*[contains(text(),'Hose')]"));
@@ -613,6 +593,6 @@ public void clickDashboard() {
 		clickSubmitBtn();
 		clickSystemSettingsBtn();
 		Thread.sleep(1000);
-		
 	}
+
 }

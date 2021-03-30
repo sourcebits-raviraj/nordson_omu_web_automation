@@ -30,11 +30,10 @@ public class TemperatureSystemSettings {
 	}
 
 	@FindBy(id = "bt")
-
 	WebElement SetUpToolButton;
 
-	@FindBy(xpath = "//div[contains(text(),'CREATE NEW')]")
 
+	@FindBy(xpath = "//div[contains(text(),'CREATE NEW')]")
 	WebElement CreateNewButton;
 
 	@FindBy(xpath = "//*[@class='btn-set-up submit-btn-color']")
@@ -77,16 +76,14 @@ public class TemperatureSystemSettings {
 	WebElement SAVE1;
 
 	@FindBy(xpath = "//*[contains(text(),'Runtime settings')]")
-
 	WebElement RuntimeSettings;
 
 	@FindBy(xpath = "//*[contains(@routerlink,'settings/temperaturesettings')]")
-
 	WebElement Temperature;
 
 	@FindBy(xpath = "//*[@formcontrolname='OTDelta']")
 	WebElement OTTemperature;
-
+	
 	@FindBy(xpath = "//*[@formcontrolname='OTDelta']/../span")
 	WebElement OTTemperatureunt;
 	
@@ -127,29 +124,23 @@ public class TemperatureSystemSettings {
 	WebElement Dashboard;
 
 	
-public void clickDashboard() {
+    public void clickDashboard() {
 		Am.waitForAnElementPresence(By.xpath("//*[contains(text(),'DASHBOARD')]"));
 		Am.waitForAnElementToBeClickable(Dashboard);
 		Dashboard.click();
 	}
-	
-	public void clickSetUpToolBtn() {
-		Am.waitForAnElementPresence(By.xpath("//*[@id='bt']"));
-		Am.waitForAnElementToBeClickable(SetUpToolButton);
-		SetUpToolButton.click();
-	}
-
 	public void clickCreateNewBtn() {
 
 		Am.waitForAnElementPresence(By.xpath("//div[contains(text(),'CREATE NEW')]"));
+		Am.waitForAnElementPresence(CreateNewButton);
 		Am.waitForAnElementToBeClickable(CreateNewButton);
 		CreateNewButton.click();
 
 	}
 
 	public void clickSubmitBtn() throws InterruptedException {
-
 		Am.waitForAnElementPresence(By.xpath("//*[@class='btn-set-up submit-btn-color']"));
+		Am.waitForAnElementPresence(SubmitButton);
 		Am.waitForAnElementToBeClickable(SubmitButton);
 		SubmitButton.click();
 
@@ -162,7 +153,6 @@ public void clickDashboard() {
 		JavascriptExecutor executor = (JavascriptExecutor) ldriver;
 		executor.executeScript("arguments[0].click();", SystemSettings);
 		// SystemSettings.click();
-
 	}
 
 	public void clickPreferencesBtn() {
@@ -215,6 +205,7 @@ public void clickDashboard() {
 		return tempstbcktempunt;
 	}
 
+
 	public void clickCelsiusUnit() {
 
 		Am.waitForAnElementPresence(
@@ -223,47 +214,55 @@ public void clickDashboard() {
 		CelsiusTemperatureunit.click();
 
 	}
-
 	public void clickFahrenheit() {
 		Am.waitForAnElementPresence(
 				By.xpath("//*[@formcontrolname='TempUnits']//*[contains(text(),'F')]//preceding-sibling::div"));
 		Am.waitForAnElementToBeClickable(CelsiusTemperatureunit);
 		FarhenitTemperatureunit.click();
 	}
+	public void clickFarhenitUnit() {
+
+		Am.waitForAnElementPresence(
+				By.xpath("//*[@formcontrolname='TempUnits']//*[contains(text(),'F')]//preceding-sibling::div"));
+		FarhenitTemperatureunit.click();
+	}
 
 	public void clickSave() {
 
 		Am.waitForAnElementPresence(By.xpath("//*[@class='btn apply']"));
+		Am.waitForAnElementPresence(SAVE);
 		Am.waitForAnElementToBeClickable(SAVE);
 		SAVE.click();
 
 	}
 
 	public void clickSavebtn() {
-
+		Am.waitForAnElementPresence(SAVE1);
 		Am.waitForAnElementPresence(By.xpath("//*[@class='apply btn submit-bt']"));
 		Am.waitForAnElementToBeClickable(SAVE1);
 		SAVE1.click();
 
 	}
-
+	public void clickSetUpToolBtn()
+	{
+		Am.waitForAnElementPresence(SetUpToolButton);
+		Am.waitForAnElementPresence(By.id("bt"));
+		Am.waitForAnElementToBeClickable(SetUpToolButton);
+		SetUpToolButton.click();
+	}
 	public void RuntimeSettingsBtn() throws InterruptedException {
 
 		Am.waitForAnElementPresence(RuntimeSettings);
 		Am.waitForAnElementToBeClickable(RuntimeSettings);
 		JavascriptExecutor executor = (JavascriptExecutor) ldriver;
 		executor.executeScript("arguments[0].click();", RuntimeSettings);
-
 		// RuntimeSettings.click();
 	}
 
 	public void clickTemperatureBtn() {
-
 		Am.waitForAnElementPresence(Temperature);
 		Am.waitForAnElementToBeClickable(Temperature);
-
 		Temperature.click();
-
 	}
 
 	public void setOTTemperature(String OTTtemp) {
@@ -333,7 +332,6 @@ public void clickDashboard() {
 	}
 
 	public Boolean getSavebtnstatus() {
-
 		Am.waitForAnElementPresence(SAVE1);
 		Boolean sttus = SAVE1.isEnabled();
 		return sttus;
@@ -368,11 +366,7 @@ public void clickDashboard() {
 	}
 
 	public void clickCelsiusTempUnit() {
-
-	
 		Boolean tempvalue = getTemperatureunitstut();
-		
-
 		if (tempvalue == true) {			
 			String tempunt = getSelectedTemperatureunit();
 			if (!(tempunt.equalsIgnoreCase("oC"))) {
@@ -384,19 +378,16 @@ public void clickDashboard() {
 	}
 
 	public void clickFahrenheitTempUnit() {
-
 		Boolean tempvalue = getTemperatureunitstut();
 
 		if (tempvalue == true) {
 			String tempunt = getSelectedTemperatureunit();
 			if (!(tempunt.equalsIgnoreCase("oF"))) {
 				clickFahrenheit();
-			}
 		} else
 			System.out.println("Temperature not selected");
+	                           }
 	}
-	
-	
 	public String getSmartMeltTimeDly() throws InterruptedException {
 
 		Am.waitForAnElementPresence(SmrtMeltTmeDly);
