@@ -48,16 +48,31 @@ public class TC_LoginTest_DDT_001 extends BaseClass {
 			Assert.assertTrue(true);
 			//lp.clickLogoutBtn();
 
-		}
+		if (driver.getPageSource().contains("Welcome")) {
 
-		else {
+			if (driver.getPageSource().contains(" Sub User Account ")) {
 
-			Am = new ActionMethods();
-			Am.captureScreen(driver, "loginDDT");
-			System.out.println("Login Failed");
-			softAssert.assertTrue(false);
+				System.out.println("Login Successful");
+				Am = new ActionMethods();
+				Am.captureScreen(driver, "loginDDT");
+				Assert.assertTrue(true);
 
-		}
+				// lp.clickLogoutBtn();
+
+				// lp.clickLogoutBtn();
+
+			}
+
+			else {
+
+				Am = new ActionMethods();
+				Am.captureScreen(driver, "loginDDT");
+				System.out.println("Login Failed");
+				softAssert.assertTrue(false);
+
+			}
+		
+		} }
 	}
 
 	@DataProvider(name = "LoginTestData")
