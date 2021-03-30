@@ -1,5 +1,9 @@
 package com.nordson.testCases;
 
+import com.nordson.pageObjects.LoginPage;
+import com.nordson.utilities.ActionMethods;
+import com.nordson.utilities.XLUtils;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -8,9 +12,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.nordson.pageObjects.LoginPage;
-import com.nordson.utilities.ActionMethods;
-import com.nordson.utilities.XLUtils;
+
+
 
 public class TC_LoginTest_DDT_001 extends BaseClass {
 
@@ -36,6 +39,13 @@ public class TC_LoginTest_DDT_001 extends BaseClass {
 		Thread.sleep(4000);
 
 		// verify the login is successful
+		if (driver.getPageSource().contains(" Sub User Account ")) {
+			
+			System.out.println("Login Successful");
+			Am = new ActionMethods();
+			Am.captureScreen(driver, "loginDDT");
+			Assert.assertTrue(true);
+			//lp.clickLogoutBtn();
 
 		if (driver.getPageSource().contains("Welcome")) {
 
@@ -60,7 +70,8 @@ public class TC_LoginTest_DDT_001 extends BaseClass {
 				softAssert.assertTrue(false);
 
 			}
-		}
+		
+		} }
 	}
 
 	@DataProvider(name = "LoginTestData")

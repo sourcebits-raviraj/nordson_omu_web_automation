@@ -1,2 +1,2 @@
-cd C:\Users\Jayasena\git\nordsonomu_automation\nordson.omu
+cd C:\Users\Ravi Raj\git\nordsonomu_automation\nordson.omu
 mvn clean install

@@ -3,8 +3,13 @@ package com.nordson.utilities;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -80,6 +85,87 @@ public class XLUtils {
 		wb.close();
 		fi.close();
 		fo.close();
+	}
+
+	public static int getColumnindex(String xlfile, String xlsheet, int rownum) throws IOException {
+
+		fi = new FileInputStream(xlfile);
+		wb = new XSSFWorkbook(fi);
+		ws = wb.getSheet(xlsheet);
+		row = ws.getRow(rownum);
+		int colnum = cell.getColumnIndex();
+		return colnum;
+	}
+
+	public static int getColumnindex(String xlfile, String xlsheet, String Colnm) throws IOException {
+		fi = new FileInputStream(xlfile);
+		wb = new XSSFWorkbook(fi);
+		ws = wb.getSheet(xlsheet);
+		row = ws.getRow(0);
+		int colindx=0;
+		for(Cell cell:row){
+		 if(cell.getStringCellValue().equalsIgnoreCase(Colnm))
+			 colindx = cell.getColumnIndex();
+		 else
+			 System.out.println("Colnname not found");}
+		return colindx;
+	}
+	public static List<String> getCellDataColindx(String xlfile, String xlsheet, int rownum, int colnum)
+			throws IOException {
+
+		fi = new FileInputStream(xlfile);
+		wb = new XSSFWorkbook(fi);
+		ws = wb.getSheet(xlsheet);
+
+		List<String> UIlabl = new ArrayList<String>();
+
+		if (colnum != 0) {
+			for (Row row : ws) {
+				Cell c = row.getCell(colnum);
+				CellType ctype = c.getCellType();
+
+				if (c != null && ctype != CellType.BLANK && ctype == CellType.STRING) {
+					String cllvalue = c.getStringCellValue();
+					System.out.println(cllvalue);
+					UIlabl.add(cllvalue);
+
+				}
+
+				else if (c != null && ctype != CellType.BLANK && ctype == CellType.NUMERIC) {
+					double cllvalue = c.getNumericCellValue();
+					UIlabl.add(String.valueOf(cllvalue));
+				}
+			}
+
+		}
+
+		return UIlabl;
+
+	}
+
+	public static int getrowindex(String xlfile, String xlsheet, String UIfild) throws IOException {
+
+		fi = new FileInputStream(xlfile);
+		wb = new XSSFWorkbook(fi);
+		ws = wb.getSheet(xlsheet);
+		int rwindx = 0;
+		for (Row row : ws) {
+			for (Cell cell : row) {
+				CellType ctype = cell.getCellType();
+
+				if (ctype == CellType.STRING) {
+					if (cell.getStringCellValue().equals(UIfild)) {
+
+						rwindx = row.getRowNum();
+						System.out.println(rwindx);
+					}
+
+				}
+			}
+
+		}
+		return rwindx;
+
 	}
 
 	@DataProvider(name = "GlobalPointValues_Celsius")

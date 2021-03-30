@@ -30,11 +30,10 @@ public class TemperatureSystemSettings {
 	}
 
 	@FindBy(id = "bt")
-
 	WebElement SetUpToolButton;
 
-	@FindBy(xpath = "//*[contains(text(),'CREATE NEW')]")
 
+	@FindBy(xpath = "//div[contains(text(),'CREATE NEW')]")
 	WebElement CreateNewButton;
 
 	@FindBy(xpath = "//*[@class='btn-set-up submit-btn-color']")
@@ -77,33 +76,62 @@ public class TemperatureSystemSettings {
 	WebElement SAVE1;
 
 	@FindBy(xpath = "//*[contains(text(),'Runtime settings')]")
-
 	WebElement RuntimeSettings;
 
 	@FindBy(xpath = "//*[contains(@routerlink,'settings/temperaturesettings')]")
-
 	WebElement Temperature;
 
 	@FindBy(xpath = "//*[@formcontrolname='OTDelta']")
 	WebElement OTTemperature;
-
+	
+	@FindBy(xpath = "//*[@formcontrolname='OTDelta']/../span")
+	WebElement OTTemperatureunt;
+	
 	@FindBy(xpath = "//*[@formcontrolname='UTDelta']")
 	WebElement UTTemperature;
+	
+	@FindBy(xpath = "//*[@formcontrolname='UTDelta']/../span")
+	WebElement UTTemperatureunt;
 
 	@FindBy(xpath = "//*[@formcontrolname='StandbyDelta']")
 	WebElement TemperatureSetback;
+	
+	@FindBy(xpath = "//*[@formcontrolname='StandbyDelta']/../span")
+	WebElement Tmpstbckemperatureunt;
 
 	@FindBy(xpath = "//div[contains(@class,'toast-message ng-star-inserted')]")
 	WebElement Toastmsg;
+	
+	@FindBy(xpath = "//*[@formcontrolname='SmartMeltTime']")
+	WebElement SmrtMeltTmeDly;
+	
+	@FindBy(xpath = "//*[@formcontrolname='AutoHeatersOffTime']")
+	WebElement AutoHterOffTme;
+	
+	@FindBy(xpath = "//*[@formcontrolname='AutoStandbyTime']")
+	WebElement SystemsetBckDly;
+	
+	@FindBy(xpath = "//*[@formcontrolname='SmartMeltTime']//../following-sibling::span")
+	WebElement SmrtMeltTmeDlyunt;
+	
+	@FindBy(xpath = "//*[@formcontrolname='AutoHeatersOffTime']//../following-sibling::span")
+	WebElement AutoHterOffTmeunt;
+	
+	@FindBy(xpath = "//*[@formcontrolname='AutoStandbyTime']//../following-sibling::span")
+	WebElement SystemsetBckDlyunt;
+	
+	@FindBy(xpath = "//*[contains(text(),'DASHBOARD')]")
+	WebElement Dashboard;
 
-	public void clickSetUpToolBtn() {
-		Am.waitForAnElementToBeClickable(SetUpToolButton);
-		SetUpToolButton.click();
-
+	
+    public void clickDashboard() {
+		Am.waitForAnElementPresence(By.xpath("//*[contains(text(),'DASHBOARD')]"));
+		Am.waitForAnElementToBeClickable(Dashboard);
+		Dashboard.click();
 	}
-
 	public void clickCreateNewBtn() {
 
+		Am.waitForAnElementPresence(By.xpath("//div[contains(text(),'CREATE NEW')]"));
 		Am.waitForAnElementPresence(CreateNewButton);
 		Am.waitForAnElementToBeClickable(CreateNewButton);
 		CreateNewButton.click();
@@ -111,7 +139,7 @@ public class TemperatureSystemSettings {
 	}
 
 	public void clickSubmitBtn() throws InterruptedException {
-
+		Am.waitForAnElementPresence(By.xpath("//*[@class='btn-set-up submit-btn-color']"));
 		Am.waitForAnElementPresence(SubmitButton);
 		Am.waitForAnElementToBeClickable(SubmitButton);
 		SubmitButton.click();
@@ -124,33 +152,23 @@ public class TemperatureSystemSettings {
 		Am.waitForAnElementToBeClickable(SystemSettings);
 		JavascriptExecutor executor = (JavascriptExecutor) ldriver;
 		executor.executeScript("arguments[0].click();", SystemSettings);
-
 		// SystemSettings.click();
-
 	}
 
 	public void clickPreferencesBtn() {
-
 		Am.waitForAnElementPresence(By.xpath("//*[contains(text(),'Preferences')]"));
-
 		Am.waitForAnElementToBeClickable(Preferences);
-
 		Preferences.click();
-
 	}
 
 	public Boolean getTemperatureunitstut()
-
 	{
-
 		Boolean tempvalue = false;
-
+		Am.waitForAnElementPresence(By.xpath("//*[@formcontrolname='TempUnits']//*[contains(@class,'mat-radio-checked')]//div[@class='mat-radio-container']"));
 		if (Temperatureunit.size() == 1)
 			tempvalue = true;
-
 		else
 			tempvalue = false;
-
 		return tempvalue;
 	}
 
@@ -166,25 +184,52 @@ public class TemperatureSystemSettings {
 		return tempunt;
 
 	}
+	
+	public String getOTTTemperatureunt() {
+		String Ottempunt;
+		Ottempunt = OTTemperatureunt.getText();
+		return Ottempunt;
+
+	}
+	
+	public String getUTTemperatureunt() {
+		String Uttempunt;
+		Uttempunt = UTTemperatureunt.getText();
+		return Uttempunt;
+
+	}
+	
+	public String getTempsetbckTemperatureunt() {
+		String tempstbcktempunt;
+		tempstbcktempunt = UTTemperatureunt.getText();
+		return tempstbcktempunt;
+	}
+
 
 	public void clickCelsiusUnit() {
 
 		Am.waitForAnElementPresence(
 				By.xpath("//*[@formcontrolname='TempUnits']//*[contains(text(),'C')]//preceding-sibling::div"));
+		Am.waitForAnElementToBeClickable(CelsiusTemperatureunit);
 		CelsiusTemperatureunit.click();
 
 	}
-
+	public void clickFahrenheit() {
+		Am.waitForAnElementPresence(
+				By.xpath("//*[@formcontrolname='TempUnits']//*[contains(text(),'F')]//preceding-sibling::div"));
+		Am.waitForAnElementToBeClickable(CelsiusTemperatureunit);
+		FarhenitTemperatureunit.click();
+	}
 	public void clickFarhenitUnit() {
 
 		Am.waitForAnElementPresence(
 				By.xpath("//*[@formcontrolname='TempUnits']//*[contains(text(),'F')]//preceding-sibling::div"));
 		FarhenitTemperatureunit.click();
-
 	}
 
 	public void clickSave() {
 
+		Am.waitForAnElementPresence(By.xpath("//*[@class='btn apply']"));
 		Am.waitForAnElementPresence(SAVE);
 		Am.waitForAnElementToBeClickable(SAVE);
 		SAVE.click();
@@ -192,31 +237,32 @@ public class TemperatureSystemSettings {
 	}
 
 	public void clickSavebtn() {
-
 		Am.waitForAnElementPresence(SAVE1);
 		Am.waitForAnElementPresence(By.xpath("//*[@class='apply btn submit-bt']"));
 		Am.waitForAnElementToBeClickable(SAVE1);
 		SAVE1.click();
 
 	}
-
+	public void clickSetUpToolBtn()
+	{
+		Am.waitForAnElementPresence(SetUpToolButton);
+		Am.waitForAnElementPresence(By.id("bt"));
+		Am.waitForAnElementToBeClickable(SetUpToolButton);
+		SetUpToolButton.click();
+	}
 	public void RuntimeSettingsBtn() throws InterruptedException {
 
 		Am.waitForAnElementPresence(RuntimeSettings);
 		Am.waitForAnElementToBeClickable(RuntimeSettings);
 		JavascriptExecutor executor = (JavascriptExecutor) ldriver;
 		executor.executeScript("arguments[0].click();", RuntimeSettings);
-
 		// RuntimeSettings.click();
 	}
 
 	public void clickTemperatureBtn() {
-
 		Am.waitForAnElementPresence(Temperature);
 		Am.waitForAnElementToBeClickable(Temperature);
-
 		Temperature.click();
-
 	}
 
 	public void setOTTemperature(String OTTtemp) {
@@ -285,8 +331,7 @@ public class TemperatureSystemSettings {
 
 	}
 
-	public Boolean getbtnstatus() {
-
+	public Boolean getSavebtnstatus() {
 		Am.waitForAnElementPresence(SAVE1);
 		Boolean sttus = SAVE1.isEnabled();
 		return sttus;
@@ -321,11 +366,8 @@ public class TemperatureSystemSettings {
 	}
 
 	public void clickCelsiusTempUnit() {
-
 		Boolean tempvalue = getTemperatureunitstut();
-
-		if (tempvalue == true) {
-
+		if (tempvalue == true) {			
 			String tempunt = getSelectedTemperatureunit();
 			if (!(tempunt.equalsIgnoreCase("oC"))) {
 				clickCelsiusUnit();
@@ -335,19 +377,89 @@ public class TemperatureSystemSettings {
 			System.out.println("Temperature not selected");
 	}
 
-	public void clickFarnheitTempUnit() {
-
+	public void clickFahrenheitTempUnit() {
 		Boolean tempvalue = getTemperatureunitstut();
 
 		if (tempvalue == true) {
-
 			String tempunt = getSelectedTemperatureunit();
 			if (!(tempunt.equalsIgnoreCase("oF"))) {
-				clickFarhenitUnit();
-
-			}
+				clickFahrenheit();
 		} else
 			System.out.println("Temperature not selected");
+	                           }
+	}
+	public String getSmartMeltTimeDly() throws InterruptedException {
+
+		Am.waitForAnElementPresence(SmrtMeltTmeDly);
+		Am.waitFortexttoBePresent(By.xpath("//*[@formcontrolname='SmartMeltTime']"));
+		String smartmelttmdly = SmrtMeltTmeDly.getAttribute("value");
+		return smartmelttmdly;
+	}
+	
+	public String getAutoHeatersOffTme() throws InterruptedException {
+
+		Am.waitForAnElementPresence(AutoHterOffTme);
+		Am.waitFortexttoBePresent(By.xpath("//*[@formcontrolname='AutoHeatersOffTime']"));
+		String autohtrofftme = AutoHterOffTme.getAttribute("value");
+		return autohtrofftme;
+	}
+	
+	public String getSystemSetbackTmeDly() throws InterruptedException {
+
+		Am.waitForAnElementPresence(SystemsetBckDly);
+		Am.waitFortexttoBePresent(By.xpath("//*[@formcontrolname='AutoStandbyTime']"));
+		String systemsetbckdly = SystemsetBckDly.getAttribute("value");
+		return systemsetbckdly;
+	}
+	
+	public void clearSmartMeltTimeDly() {
+		Am.waitForAnElementPresence(SmrtMeltTmeDly);
+		SmrtMeltTmeDly.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+	}
+	
+	public void clearAutoHeatersOffTme() {
+		Am.waitForAnElementPresence(AutoHterOffTme);
+		AutoHterOffTme.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+	}
+	
+	public void clearSystemsetbckTmeDly() {
+		Am.waitForAnElementPresence(SystemsetBckDly);
+		SystemsetBckDly.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+	}
+	public void setSmartMeltTimeDly(String smarttimedly) {
+		Am.waitForAnElementPresence(SmrtMeltTmeDly);
+		SmrtMeltTmeDly.sendKeys(smarttimedly);
+	}
+	public void setAutoHeatersOffTme(String autohtrofftme) {
+		Am.waitForAnElementPresence(AutoHterOffTme);
+		AutoHterOffTme.sendKeys(autohtrofftme);
+	}
+	public void setSystemsetbckTmeDly(String Systmsetbckdly) {
+		Am.waitForAnElementPresence(SystemsetBckDly);
+		SystemsetBckDly.sendKeys(Systmsetbckdly);
+	}
+	public String getSmartMeltTimeDlyunt() {
+		String smartmlttimedly;
+		smartmlttimedly = SmrtMeltTmeDlyunt.getText();
+		return smartmlttimedly;
+	}
+	public String getSystemsetbckdlyunt() {
+		String systmsetbckdly;
+		systmsetbckdly = SystemsetBckDlyunt.getText();
+		return systmsetbckdly;
+	}
+	public String getAutoheaterofftimeunt() {
+		String AutoHterOffTimeunt;
+		AutoHterOffTimeunt = AutoHterOffTmeunt.getText();
+		return AutoHterOffTimeunt;
+	}
+	public void createNewNORfile() throws InterruptedException {
+		clickSetUpToolBtn();
+		Thread.sleep(1000);
+		clickCreateNewBtn();
+		Thread.sleep(1000);
+		clickSubmitBtn();
+		clickSystemSettingsBtn();
 	}
 
 }

@@ -1,7 +1,5 @@
 package com.nordson.testCases;
 
-import java.util.concurrent.TimeUnit;
-
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +8,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
 import com.nordson.utilities.ReadConfig;
@@ -28,7 +25,7 @@ public class BaseClass {
 
 	// Set Up Before Class Testng Annotations launching of the Web application
 	@Parameters("browser")
-	@BeforeClass(description = "Webdriver Intialization and Launch the Base URL")
+	@BeforeClass
 	public void setUp(String br) {
 
 		log = Logger.getLogger("nordson");
@@ -88,14 +85,9 @@ public class BaseClass {
 		}
 	}
 
-	@BeforeMethod
-	public void implictwaits() throws Exception {
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	}
-
 	// Tear Down Method Before Class Testng Annotations launching of the Web
 	// application
-	@AfterClass(description = "Quit all the Webdrivers and close and the browser tabs")
+	@AfterClass
 	public void tearDown() {
 
 		driver.quit();

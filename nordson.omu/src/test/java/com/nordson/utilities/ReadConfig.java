@@ -64,13 +64,86 @@ public class ReadConfig {
 		return chropath;
 
 	}
-	
-	public String sheetname() {
+
+	public String getExcelMDSpath() {
+
+		String MDSpath = pro.getProperty("MDSpath");
+		return MDSpath;
+
+	}
+
+	public String getSheetname() {
 
 		String sheetname = pro.getProperty("sheetname");
 		return sheetname;
 
 	}
 
+	public String getUIfieldTobefetched_GP() {
+
+		String UIfildTobefetchedGP = pro.getProperty("UIfildTobefetched_GP");
+		return UIfildTobefetchedGP;
+
+	}
+
+	public String getUIfieldTobefetched_TP() {
+
+		String UIfildTobefetchedTP = pro.getProperty("UIfildTobefetched_TP");
+		return UIfildTobefetchedTP;
+
+	}
+
+	public String getUIfieldTobefetched_MFP() {
+
+		String UIfildTobefetchedMFP = pro.getProperty("UIfildTobefetched_MFP");
+		return UIfildTobefetchedMFP;
+
+	}
+
+	public String getUIfieldTobefetched_HoseApp() {
+
+		String UIfildTobefetchedHAP = pro.getProperty("UIfildTobefetched_Hose/Applicator");
+		return UIfildTobefetchedHAP;
+
+	}
+
+	public String getUIfieldTobefetched_OTT() {
+
+		String UIfildTobefetchedOTT = pro.getProperty("UIfildTobefetched_OTT");
+		return UIfildTobefetchedOTT;
+
+	}
+
+	public String getUIfieldTobefetched_UTT() {
+
+		String UIfildTobefetchedUTT = pro.getProperty("UIfildTobefetched_UTT");
+		return UIfildTobefetchedUTT;
+
+	}
+
+	public String getUIfieldTobefetched_Tmpstbck() {
+
+		String UIfildTobefetchedtmpstbck = pro.getProperty("UIfildTobefetched_Tempstbck");
+		return UIfildTobefetchedtmpstbck;
+
+	}
+	
+	public String getUIfieldTobefetched_SMTTmeDly() {
+
+		String UIfildTobefetchedsmttimedly = pro.getProperty("UIfildTobefetched_SMTTmeDly");
+		return UIfildTobefetchedsmttimedly;
+	}
+
+	public String getUIfieldTobefetched_AutoHeaterOffTme() {
+
+		String UIfildTobefetchedautohtrofftime = pro.getProperty("UIfildTobefetched_AutoHeaterOffTme");
+		return UIfildTobefetchedautohtrofftime;
+	}
+
+	public String getUIfieldTobefetched_SystemSetbckDly() {
+
+		String UIfildTobefetchedsystemsetbckdly = pro.getProperty("UIfildTobefetched_SystemSetbckDly");
+		return UIfildTobefetchedsystemsetbckdly;
+	}
 
 }

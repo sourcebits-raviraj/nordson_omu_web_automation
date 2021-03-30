@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Nordson OMU]" parallel="methods">
+  <listeners>
+    <listener class-name="com.nordson.utilities.Reporting"/>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="2" name="Nordson OMU Web App Regression Tests on Chrome(failed)" parallel="methods">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.nordson.testCases.TC_LoginTest_DDT_001">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="loginDDT" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nordson.testCases.TC_LoginTest_DDT_001 -->
+      <class name="com.nordson.testCases.TC_VerifyLinkTests_003">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="Verify_All_the_Links_After_Login" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.nordson.testCases.TC_VerifyLinkTests_003 -->
+    </classes>
+  </test> <!-- Nordson OMU Web App Regression Tests on Chrome(failed) -->
+</suite> <!-- Failed suite [Nordson OMU] -->
