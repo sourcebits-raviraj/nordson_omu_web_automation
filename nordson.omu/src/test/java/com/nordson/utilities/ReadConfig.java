@@ -64,6 +64,14 @@ public class ReadConfig {
 		return chropath;
 
 	}
+	
+	public String sheetname() {
+
+		String sheetname = pro.getProperty("sheetname");
+		return sheetname;
+
+	}
+
 
 	public String getExcelMDSpath() {
 

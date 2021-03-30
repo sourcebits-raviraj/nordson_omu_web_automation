@@ -592,7 +592,7 @@ public void clickDashboard() {
 		Thread.sleep(1000);
 		clickSubmitBtn();
 		clickSystemSettingsBtn();
-		Thread.sleep(1000);
+		Thread.sleep(800);
 	}
 
 }

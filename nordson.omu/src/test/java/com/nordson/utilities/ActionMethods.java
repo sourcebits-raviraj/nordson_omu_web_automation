@@ -37,38 +37,7 @@ public class ActionMethods extends BaseClass {
 	}
 	
 	
-	public void waitForAnElementPresence(By string) {
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-		wait.until(ExpectedConditions.presenceOfElementLocated((string)));
-		}
 	
-	public void waitForAnElementToBeClickable(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, 60);
-		wait.until(ExpectedConditions.elementToBeClickable((element)));
-		}
-	
-	public void waitForAnElementPresence(WebElement element) throws Error {
-		WebDriverWait wait = new WebDriverWait(driver, 40);
-		wait.until(ExpectedConditions.visibilityOf(element));
-    }
-   
-	public void waitForAnElementVisible(WebElement element) throws Error 
-	{
-		WebDriverWait wait = new WebDriverWait(driver, 40);
-		wait.until(ExpectedConditions.visibilityOf(element));
-    }
-
-	public void waitFortexttoBePresent(final By byObject)
-	{
-		
-		WebDriverWait wait = new WebDriverWait(driver, 40);
-
-		wait.until(new ExpectedCondition<Boolean>() {
-            public Boolean apply(WebDriver d) {
-                return (d.findElement(byObject).getAttribute ("value").length() >= 1);
-            }
-        }); 
-	}
    
 	public void waitForAnElementIsInVisible(By element) throws Error 
 	{
@@ -88,6 +57,37 @@ public class ActionMethods extends BaseClass {
 
 	}
 	
+	public void waitForAnElementPresenceofElementLocated(By element) {
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.presenceOfElementLocated((element)));
+	}
+
+	public void waitForAnElementToBeClickable(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.elementToBeClickable((element)));
+	}
+
+	public void waitForAnElementPresence(WebElement element) throws Error {
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+
+	public void waitFortexttoBePresent(final By byObject) {
+
+		WebDriverWait wait = new WebDriverWait(driver, 40);
+
+		wait.until(new ExpectedCondition<Boolean>() {
+			public Boolean apply(WebDriver d) {
+				return (d.findElement(byObject).getAttribute("value").length() >= 1);
+			}
+		});
+	}
+
+	public void waitForAnElementVisible(WebElement element) throws Error {
+		WebDriverWait wait = new WebDriverWait(driver, 40);
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+
 	public static String getConversionToFahrenheit(String celsiustemp)
 	{
 		double fahrenheittemp=0;
@@ -112,18 +112,14 @@ public class ActionMethods extends BaseClass {
 		
 	}
 	
-	
 	public static String getConversionToFahrenheitSys(String celsiustemp)
 	{
 		double fahrenheittemp=0;
 		String farntemp="";
-		
 		   int ctemp = Integer.parseInt(celsiustemp);
-		   fahrenheittemp = ctemp*1.8;
-		   farntemp = String.valueOf((int) Math.round(fahrenheittemp));
-		 
+		   fahrenheittemp = ctemp *1.8;
+		   farntemp= String.valueOf((int) Math.round(fahrenheittemp));
 		   return farntemp;
-		
 	}
 	
 	public static String getConversionToCelsiusSys(String farnhittemp)
@@ -138,5 +134,19 @@ public class ActionMethods extends BaseClass {
 		
 	}
 	
+	public void waitForAnElementPresence(By element) {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.presenceOfElementLocated((element)));
+	}
+
+	public void waitForAnElementClickable(By element) {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+
+	public void waitForAnElementVisible(By element) {
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+	}
 
 }

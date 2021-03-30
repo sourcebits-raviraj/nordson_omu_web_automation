@@ -261,6 +261,7 @@ public class TemperatureSystemSettings {
 
 	public void clickTemperatureBtn() {
 		Am.waitForAnElementPresence(Temperature);
+		Am.waitForAnElementPresence(By.xpath("//*[contains(@routerlink,'settings/temperaturesettings')]"));
 		Am.waitForAnElementToBeClickable(Temperature);
 		Temperature.click();
 	}
@@ -339,7 +340,7 @@ public class TemperatureSystemSettings {
 
 	public String getToastmsg() {
 
-		Am.waitForAnElementPresence(Toastmsg);
+		Am.waitForAnElementPresence(By.xpath("//div[contains(@class,'toast-message ng-star-inserted')]"));
 		String toastmsg = "";
 		if (Toastmsg.isDisplayed()) {
 			toastmsg = Toastmsg.getText();
