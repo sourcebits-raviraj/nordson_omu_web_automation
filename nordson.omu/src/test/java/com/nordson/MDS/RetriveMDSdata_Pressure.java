@@ -108,7 +108,7 @@ public class RetriveMDSdata_Pressure {
 
 				if (lbls.contains("UI Label")) {
 
-					int columnindxUIlbl = XLUtils.getColumnindex(path, "ProBlue Flex", 0);
+					int columnindxUIlbl = XLUtils.getColumnindexnum(path, "ProBlue Flex", 0);
 					List<String> UIlblcol = XLUtils.getCellDataColindx(path, "ProBlue Flex", 0, columnindxUIlbl);
 
 					for (String colnms : UIlblcol) {

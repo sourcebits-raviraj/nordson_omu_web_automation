@@ -67,6 +67,56 @@ public class ActionMethods extends BaseClass {
 		WebDriverWait wait = new WebDriverWait(driver, 40);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(element));
     }
+
+	public static String getConversionToFahrenheit(String celsiustemp)
+	{
+		double fahrenheittemp=0;
+		String fahrheittemp="";
+		
+		   int ctemp = Integer.parseInt(celsiustemp);
+		   fahrenheittemp = ctemp *1.8 +32;
+		   fahrheittemp= String.valueOf((int) Math.round(fahrenheittemp));
+		   return fahrheittemp;
+		
+	}
 	
+	public static String getConversionToCelsius(String farnhittemp)
+	{
+		double celsiustemp=0;
+		String celsius ="";
+		
+		   int ctemp = Integer.parseInt(farnhittemp);
+		   celsiustemp = (ctemp-32) *5/9;
+		   celsius= String.valueOf((int) Math.round(celsiustemp));
+		   return celsius;
+		
+	}
+	
+	public static String getConversionToCelsiusSys(String farnhittemp)
+	{
+		double celsiustemp=0;
+		String celsius ="";
+		
+		   int ctemp = Integer.parseInt(farnhittemp);
+		   celsiustemp = ctemp *5/9;
+		   celsius= String.valueOf((int) Math.round(celsiustemp));
+		   return celsius;
+		
+	}
+	
+	public static String getConversionToFahrenheitSys(String celsiustemp)
+	{
+		double fahrenheittemp=0;
+		String farntemp="";
+		   int ctemp = Integer.parseInt(celsiustemp);
+		   fahrenheittemp = ctemp *1.8;
+		   farntemp= String.valueOf((int) Math.round(fahrenheittemp));
+		   return farntemp;
+	}
+	
+	public void waitForAnElementToBeClickable(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.elementToBeClickable((element)));
+	}
 
 }
