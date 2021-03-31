@@ -88,7 +88,6 @@ public class XLUtils {
 	}
 
 	public static int getColumnindex(String xlfile, String xlsheet, int rownum) throws IOException {
-
 		fi = new FileInputStream(xlfile);
 		wb = new XSSFWorkbook(fi);
 		ws = wb.getSheet(xlsheet);
@@ -98,6 +97,7 @@ public class XLUtils {
 	}
 
 	public static int getColumnindex(String xlfile, String xlsheet, String Colnm) throws IOException {
+
 		fi = new FileInputStream(xlfile);
 		wb = new XSSFWorkbook(fi);
 		ws = wb.getSheet(xlsheet);
@@ -167,7 +167,6 @@ public class XLUtils {
 		return rwindx;
 
 	}
-
 	@DataProvider(name = "GlobalPointValues_Celsius")
 	public static String[][] getDataGP_Celsius() throws IOException {
 		String path = System.getProperty("user.dir") + "/src/test/java/com/nordson/testData/Temperature.xlsx";

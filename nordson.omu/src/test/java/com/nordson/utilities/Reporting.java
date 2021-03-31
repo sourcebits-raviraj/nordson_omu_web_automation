@@ -88,7 +88,6 @@ public class Reporting extends TestListenerAdapter {
 
 		// send the passed information to the report with ORANGE color highlighted
 		logger.log(Status.SKIP, MarkupHelper.createLabel(tr.getName(), ExtentColor.ORANGE));
-
 	}
 
 	public void onFinish(ITestContext testContext) {
