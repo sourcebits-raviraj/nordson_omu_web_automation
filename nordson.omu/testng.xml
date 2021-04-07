@@ -11,13 +11,23 @@
 
   <test name="Nordson OMU Web App Regression Tests on Chrome">
       <parameter name="browser" value="chrome"/>
-       <classes>
-     <!--<class name="com.nordson.testCases.TC_LoginTest_001"/> -->
+   <classes>
+    <!--   <class name="com.nordson.testCases.TC_LoginTest_001"/>
      
-     <class name="com.nordson.testCases.TC_VerifyLinkTests_003"/>  
-     <class name="com.nordson.testCases.TC_LoginTest_DDT_001"/>   
-        
-     <!--   <class name="com.nordson.testCases.TC_Registration_DDT_002"/> -->
+      
+     <class name="com.nordson.testCases.TC_LoginTest_DDT_001"/>
+     <class name="com.nordson.testCases.TC_VerifyLinkTests_003"/> 
+     <class name="com.nordson.testCases.TC_RuntimeSettings_Pressure_MDS_Validations"/> 
+     <class name="com.nordson.testCases.TC_RuntimeSettings_Temperature_MDSValidations"/> 
+     <class name="com.nordson.testCases.TC_SystemSettings_Temperature_MDSValidations"/> 
+    
+     <class name="com.nordson.testCases.TC_Pressure_Validations_Kpa_Bar_Psi_Default_Values"/> 
+     <class name="com.nordson.testCases.TC_RuntimeDefaultSettings_TemperatureTest"/> 
+     <class name="com.nordson.testCases.TC_RuntimeMinmax_TemperatureTest"/> 
+     <class name="com.nordson.testCases.TC_SystemSettings_TemperatureTest"/>
+     <class name="com.nordson.testCases.TC_Pressure_Min_Max_Data_Validations"/>  -->
+     
+      <class name="com.nordson.testCases.TC_Registration_DDT_002"/>
       </classes>
      
        </test> 

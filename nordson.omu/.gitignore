@@ -4,6 +4,7 @@
 /allure-results/
 /Screenshots/
 allure-results/
-test-output/
+/test-output/
 *.html
 *.png
+/testng.xml/
