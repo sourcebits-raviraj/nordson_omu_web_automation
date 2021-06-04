@@ -1,0 +1,9 @@
+/target/
+/target/
+/test-output/
+/allure-results/
+/Screenshots/
+allure-results/
+test-output/
+*.html
+*.png
