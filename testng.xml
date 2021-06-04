@@ -15,7 +15,7 @@
      <!--<class name="com.nordson.testCases.TC_LoginTest_001"/> -->
      
      <class name="com.nordson.testCases.TC_VerifyLinkTests_003"/>  
-     <class name="com.nordson.testCases.TC_LoginTest_DDT_001"/>   
+    
         
      <!--   <class name="com.nordson.testCases.TC_Registration_DDT_002"/> -->
       </classes>
