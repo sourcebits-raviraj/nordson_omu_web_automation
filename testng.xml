@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Nordson OMU Web App Regression Tests on Chrome" thread-count="1" parallel="methods">
+<suite name="Nordson OMU Web App Regression Tests on Chrome">
 
 <listeners>
 <listener class-name="com.nordson.utilities.Reporting" />
