@@ -19,8 +19,18 @@ public class ReadConfig {
 		}
 	}
 
-	public String getAppURL() {
-		String url = pro.getProperty("baseURL");
+	public String getPreprodAppURL() {
+		String url = pro.getProperty("PreProdURL");
+		return url;
+	}
+
+	public String getQAAppURL() {
+		String url = pro.getProperty("QAURL");
+		return url;
+	}
+
+	public String getProdAppURL() {
+		String url = pro.getProperty("PRODURL");
 		return url;
 	}
 
@@ -52,85 +62,66 @@ public class ReadConfig {
 	}
 
 	public String getExcelMDSpathTemperature() {
-
-		String MDSpath = pro.getProperty("MDSpathtemp");
-		return MDSpath;
-
+		return pro.getProperty("MDSpathtemp");
 	}
+
 	public String getExcelMDSpathPressure() {
+
 		String MDSpath = pro.getProperty("MDSpathPressure");
 		return MDSpath;
-
 	}
-	//Temperature Properties to be fetched for MDS Validations
+
+	public String getExcelMDSpathFlow() {
+		return pro.getProperty("MDSpathFlow");
+	}
+
+	public String getExcelMDSpathFill() {
+		return pro.getProperty("MDSpathFill");
+	}
+
+	// Temperature Properties to be fetched for MDS Validations from config file
+
 	public String getUIfieldTobefetched_GP() {
-
-		String UIfildTobefetchedGP = pro.getProperty("UIfildTobefetched_GP");
-		return UIfildTobefetchedGP;
-
+		return pro.getProperty("UIfildTobefetched_GP");
 	}
 
 	public String getUIfieldTobefetched_TP() {
-
-		String UIfildTobefetchedTP = pro.getProperty("UIfildTobefetched_TP");
-		return UIfildTobefetchedTP;
-
+		return pro.getProperty("UIfildTobefetched_TP");
 	}
 
 	public String getUIfieldTobefetched_MFP() {
-
-		String UIfildTobefetchedMFP = pro.getProperty("UIfildTobefetched_MFP");
-		return UIfildTobefetchedMFP;
-
+		return pro.getProperty("UIfildTobefetched_MFP");
 	}
 
 	public String getUIfieldTobefetched_HoseApp() {
-
-		String UIfildTobefetchedHAP = pro.getProperty("UIfildTobefetched_Hose/Applicator");
-		return UIfildTobefetchedHAP;
-
+		return pro.getProperty("UIfildTobefetched_Hose/Applicator");
 	}
 
 	public String getUIfieldTobefetched_OTT() {
-
-		String UIfildTobefetchedOTT = pro.getProperty("UIfildTobefetched_OTT");
-		return UIfildTobefetchedOTT;
-
+		return pro.getProperty("UIfildTobefetched_OTT");
 	}
 
 	public String getUIfieldTobefetched_UTT() {
-
-		String UIfildTobefetchedUTT = pro.getProperty("UIfildTobefetched_UTT");
-		return UIfildTobefetchedUTT;
-
+		return pro.getProperty("UIfildTobefetched_UTT");
 	}
 
 	public String getUIfieldTobefetched_Tmpstbck() {
-
-		String UIfildTobefetchedtmpstbck = pro.getProperty("UIfildTobefetched_Tempstbck");
-		return UIfildTobefetchedtmpstbck;
-
+		return pro.getProperty("UIfildTobefetched_Tempstbck");
 	}
-	
-	public String getUIfieldTobefetched_SMTTmeDly() {
 
-		String UIfildTobefetchedsmttimedly = pro.getProperty("UIfildTobefetched_SMTTmeDly");
-		return UIfildTobefetchedsmttimedly;
+	public String getUIfieldTobefetched_SMTTmeDly() {
+		return pro.getProperty("UIfildTobefetched_SMTTmeDly");
 	}
 
 	public String getUIfieldTobefetched_AutoHeaterOffTme() {
-
-		String UIfildTobefetchedautohtrofftime = pro.getProperty("UIfildTobefetched_AutoHeaterOffTme");
-		return UIfildTobefetchedautohtrofftime;
+		return pro.getProperty("UIfildTobefetched_AutoHeaterOffTme");
 	}
 
 	public String getUIfieldTobefetched_SystemSetbckDly() {
-
-		String UIfildTobefetchedsystemsetbckdly = pro.getProperty("UIfildTobefetched_SystemSetbckDly");
-		return UIfildTobefetchedsystemsetbckdly;
+		return pro.getProperty("UIfildTobefetched_SystemSetbckDly");
 	}
-	
-// Pressure Properties to be fetched from config file
+// Pressure Properties to be fetched from config file for validations
+
 	public String getUIfieldTobefetched_MinimumPressureAlrt() {
 		return pro.getProperty("UIfildTobefetched_MinPA");
 	}
@@ -185,9 +176,136 @@ public class ReadConfig {
 
 	public String getUIfieldTobefetched_FullScaleLineSpeed() {
 		return pro.getProperty("UIfildTobefetched_FullScaleLineSpeed");
+	}
 
+	// Fill Properties to be fetched from MDS file for Validations
+	public String getUIfieldTobefetched_MaximumFillTime() {
+		return pro.getProperty("UIfildTobefetched_MaximumFillTime");
+	}
+
+	public String getUIfieldTobefetched_TargetFillLevel() {
+		return pro.getProperty("UIfildTobefetched_TargetFillLevel");
+	}
+
+	public String getUIfiledTobefetched_LowLevelThreshold() {
+		return pro.getProperty("UIfildTobefetched_LowLevelThreshold");
+	}
+
+	public String getUIfieldTobefetched_LidOpenAlertTime() {
+		return pro.getProperty("UIfildTobefetched_LidOpenAlertTime");
+	}
+
+	// Sign up url method to fetch the signup url
+	public String getSignUpURL() {
+		String url = pro.getProperty("SignupUrl");
+		return url;
+	}
+
+	// Privacy Policy URL
+	public String getPrivacyPolicyURL() {
+		String policyurl = pro.getProperty("privacyPolicyUrl");
+		return policyurl;
+	}
+
+	public String getCookiesURL() {
+		String cookiesurl = pro.getProperty("CookiesUrl");
+		return cookiesurl;
+	}
+
+	public String getManageLincenseURL() {
+		String lincensesurl = pro.getProperty("LincenseUrl");
+		return lincensesurl;
+	}
+
+	public String getHelpCenterURL() {
+		String HCurl = pro.getProperty("HelpCenterUrl");
+		return HCurl;
+	}
+
+// Flow Properties to be fetched from config file
+	public String getUIfieldTobefetched_TargetAddOn() {
+		return pro.getProperty("UIfildTobefetched_TargetAddOn");
+	}
+
+	public String getUIfieldTobefetched_LowAlertThreshold() {
+		return pro.getProperty("UIfildTobefetched_LowAlertThreshold");
+	}
+
+	public String getUIfieldTobefetched_HighAlertThreshold() {
+		return pro.getProperty("UIfildTobefetched_HighAlertThreshold");
+	}
+
+	public String getUIfieldTobefetched_LowStopThreshold() {
+		return pro.getProperty("UIfildTobefetched_LowStopThreshold");
+	}
+
+	public String getUIfieldTobefetched_HighStopThreshold() {
+		return pro.getProperty("UIfildTobefetched_HighStopThreshold");
+	}
+
+	public String getUIfieldTobefetched_AlertDelayCount() {
+		return pro.getProperty("UIfildTobefetched_AlertDelayCount");
+	}
+
+	public String getUIfieldTobefetched_StopDelayCount() {
+		return pro.getProperty("UIfildTobefetched_StopDelayCount");
+	}
+
+	public String getUIfieldTobefetched_SpecificGravity() {
+		return pro.getProperty("UIfildTobefetched_SpecificGravity");
+	}
+
+	public String getUIfieldTobefetched_CalibrationConstantSetting() {
+		return pro.getProperty("UIfildTobefetched_CalibrationConstantSetting");
+	}
+
+	public String getUIfieldTobefetched_ProductSkipCount() {
+		return pro.getProperty("UIfildTobefetched_ProductSkipCount");
+	}
+
+	public String getUIfieldTobefetched_ProductstoAverage() {
+		return pro.getProperty("UIfildTobefetched_ProductstoAverage");
+	}
+
+	public String getUIfieldTobefetched_IdleSkipTime() {
+		return pro.getProperty("UIfildTobefetched_IdleSkipTime");
+	}
+
+	public String getUIfieldTobefetched_StartupSkipCount() {
+		return pro.getProperty("UIfildTobefetched_StartupSkipCount");
+	}
+
+	public String getDashboardPath() {
+		return pro.getProperty("DashboardPath");
+	}
+
+	public String getExceptionPath() {
+		return pro.getProperty("ExceptionPath");
+	}
+
+	public String getIndexPath() {
+		return pro.getProperty("IndexPath");
+	}
+
+	public String getNordsonOMUPath() {
+		return pro.getProperty("RegressionReportsPath");
+	}
+
+	public String getEmailableReport() {
+		return pro.getProperty("EmailableReportsPath");
+	}
+
+	public String getExcelEndevaourStringfilepath() {
+		// TODO Auto-generated method stub
+		return pro.getProperty("EndevaourStringfile");
+	}
+
+	public String getLocaleLanguage() {
+		return pro.getProperty("locale.language");
 	}
 	
+	public String getDownloadPath() {
+		return pro.getProperty("downloadpath");
+	}
 	
-
 }
