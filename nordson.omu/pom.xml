@@ -181,6 +181,10 @@
 				<configuration>
 					 <source>1.8</source>
                                           <target>1.8</target>
+					</configuration>
+				<configuration>
+					 <source>1.8</source>
+                                          <target>1.8</target>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
 						<suiteXmlFile>testng.xml</suiteXmlFile>
