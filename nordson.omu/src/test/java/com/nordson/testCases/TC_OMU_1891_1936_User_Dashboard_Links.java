@@ -47,8 +47,8 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		}
 	}
 
-	@JiraPolicy(logTicketReady = false)
-	@Test(priority = 2, enabled = false)
+	@JiraPolicy(logTicketReady = true)
+	@Test(priority = 2, enabled = true)
 	public void Welcome_Displayed() throws Exception {
 
 		if (lp.welcomeDisplayed() == false) {
@@ -251,7 +251,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 11, enabled = true)
 	public void View_DashBoard() throws Exception {
 
