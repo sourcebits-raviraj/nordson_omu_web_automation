@@ -252,7 +252,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 	}
 
 	@JiraPolicy(logTicketReady = false)
-	@Test(priority = 11, enabled = false)
+	@Test(priority = 11, enabled = true)
 	public void View_DashBoard() throws Exception {
 
 		if (lp.Dashboard_Text().equalsIgnoreCase("xxxx")) {
