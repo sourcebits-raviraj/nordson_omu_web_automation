@@ -49,7 +49,7 @@ public class LocalisationReadWriteLocaleProperties {
 
 		// get the sheet at location 0 by calling getSheetAt() method of the Workbook
 		XSSFSheet sht = wb.getSheetAt(0);
-		// switch case english
+		// switch case all lanaguages
 		switch (rcf.getLocaleLanguage()) {
 
 		case "English":

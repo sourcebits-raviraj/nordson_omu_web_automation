@@ -26,7 +26,7 @@ public class Language {
 
 	public void selectLanguage(WebDriver driver, String langague) throws Exception {
 		lp = new LandingPage(driver);
-		// switch english
+		// switch langauges
 		switch (langague) {
 
 		case "English":
