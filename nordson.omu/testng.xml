@@ -12,7 +12,7 @@
 
   <test name="Nordson OMU Web App Regression Tests on Chrome">
       <parameter name="browser" value="chrome"/>
-      <parameter name="environment" value="preprod"/>
+      <parameter name="environment" value="PreProd"/>
        <classes>
             
             <!--  

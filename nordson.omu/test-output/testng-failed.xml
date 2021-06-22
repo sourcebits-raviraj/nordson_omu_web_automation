@@ -5,18 +5,20 @@
     <listener class-name="com.nordson.utilities.Reporting"/>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.listeners.TestJiraListener"/>
   </listeners>
   <test thread-count="5" name="Nordson OMU Web App Regression Tests on Chrome(failed)">
-    <parameter name="environment" value="Preprod"/>
+    <parameter name="environment" value="PreProd"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.nordson.ui.testcases.TC_OMU_1891_1936_User_Dashboard_Links">
+      <class name="com.nordson.testCases.TC_OMU_1891_1936_User_Dashboard_Links">
         <methods>
-          <include name="TC_Verficiation_CreateNewNorfile_Popup_Elements"/>
+          <include name="Logo_Displayed"/>
+          <include name="Registration_Nordson_Cookies"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.nordson.ui.testcases.TC_OMU_1891_1936_User_Dashboard_Links -->
+      </class> <!-- com.nordson.testCases.TC_OMU_1891_1936_User_Dashboard_Links -->
     </classes>
   </test> <!-- Nordson OMU Web App Regression Tests on Chrome(failed) -->
 </suite> <!-- Failed suite [Nordson OMU Web App Regression Tests on Chrome] -->

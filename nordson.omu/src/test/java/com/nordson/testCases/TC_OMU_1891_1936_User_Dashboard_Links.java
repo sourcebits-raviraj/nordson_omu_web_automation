@@ -51,7 +51,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 	@Test(priority = 2, enabled = true)
 	public void Welcome_Displayed() throws Exception {
 
-		if (lp.welcomeDisplayed() == false) {
+		if (lp.welcomeDisplayed() == true) {
 
 			Am.drawBorder(lp.welcome, driver);
 			Am.sleepTime(1000);
@@ -88,7 +88,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 	}
 
 	@JiraPolicy(logTicketReady = true)
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 4, enabled = true)
 	public void Recently_Viewed_Card_Text() throws Exception {
 
 		if (lp.Recently_Viewed_Event_Logs_Text().equalsIgnoreCase("Recently Viewed")) {
@@ -107,6 +107,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		}
 	}
 
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 5, enabled = true)
 	public void Event_Log_Files_Card_Text() throws Exception {
 
@@ -126,7 +127,8 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		}
 	}
 
-	@Test(priority = 6, enabled = false)
+	@JiraPolicy(logTicketReady = true)
+	@Test(priority = 6, enabled = true)
 	public void CopyRightText() throws Exception {
 
 		// lp.pageRefresh();
@@ -158,7 +160,8 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@Test(priority = 7, enabled = false)
+	@JiraPolicy(logTicketReady = true)
+	@Test(priority = 7, enabled = true)
 	public void Registration_Nordson_Privacy_Policy() throws Exception {
 
 		if (lp.PrivacyPolicyDisplayed() == true) {
@@ -181,7 +184,8 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		}
 	}
 
-	@Test(priority = 8, enabled = false)
+	@JiraPolicy(logTicketReady = true)
+	@Test(priority = 8, enabled = true)
 	public void Registration_Nordosn_Terms_of_Services() throws Exception {
 
 		if (lp.TermsOfServiceDisplayed() == true) {
@@ -204,10 +208,11 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@Test(priority = 9, enabled = false)
+	@JiraPolicy(logTicketReady = true)
+	@Test(priority = 9, enabled = true)
 	public void Registration_Nordson_Cookies() throws Exception {
 
-		if (lp.cookiesDisplayed() == true) {
+		if (lp.cookiesDisplayed() == false) {
 
 			log.info("Cookies Link Displayed");
 			softAssert.assertTrue(true);
@@ -227,7 +232,8 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@Test(priority = 10, enabled = false)
+	@JiraPolicy(logTicketReady = true)
+	@Test(priority = 10, enabled = true)
 	public void Registration_Nordson_Contact_Us() throws Exception {
 
 		if (lp.contactUsDisplayed() == true) {
@@ -255,7 +261,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 	@Test(priority = 11, enabled = true)
 	public void View_DashBoard() throws Exception {
 
-		if (lp.Dashboard_Text().equalsIgnoreCase("xxxx")) {
+		if (lp.Dashboard_Text().equalsIgnoreCase("DASHBOARD")) {
 
 			Am.drawBorder(lp.DashBoard, driver);
 			Am.sleepTime(1000);

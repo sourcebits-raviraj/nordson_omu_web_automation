@@ -1,8 +1,5 @@
 package com.nordson.testCases;
 
-import java.awt.AWTException;
-import java.io.IOException;
-
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -19,6 +16,7 @@ import io.qameta.allure.Story;
 @Epic("N30-1 Pressure - OMU R2.5")
 @Story("N30-2 Pressure Manual Adjust screen - Default values")
 public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
+
 	LoginPage lp;
 	Pressure_Min_Max_Validations pmv;
 	ActionMethods Am = new ActionMethods();
@@ -151,7 +149,7 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 	@Severity(SeverityLevel.CRITICAL)
 	@Test(priority = 5, enabled = true, dataProvider = "PressureValuesMinMax_0_690", dataProviderClass = com.nordson.utilities.XLUtils.class)
 	// @Feature("Pressure Unit Values Min and Max 0 and 690")
-	public void PressureValues_Kpa_Min_0_Max_690(String min, String max) throws  Exception {
+	public void PressureValues_Kpa_Min_0_Max_690(String min, String max) throws Exception {
 
 		// pmv = new Pressure_Min_Max_Validations(driver);
 
@@ -181,7 +179,7 @@ public class TC_Pressure_Min_Max_Data_Validations extends TC_LoginTest_DDT_001 {
 
 	@Test(priority = 6, enabled = true)
 	// @Feature("Pressure Unit clear Data for Min field and Save")
-	public void Pressure_Validation_BAR_Clear_Data_Min_Save() throws Exception{
+	public void Pressure_Validation_BAR_Clear_Data_Min_Save() throws Exception {
 
 		log.info("Clicked on System Setting Link");
 		pmv.ClickSystemSettingsLink();
