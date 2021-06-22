@@ -24,7 +24,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 	User_Dashboard_Details_Landing_Page lp;
 	ReadConfig readconfig = new ReadConfig();
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 1, enabled = true)
 	public void Logo_Displayed() throws Exception {
 
@@ -47,7 +47,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		}
 	}
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 2, enabled = true)
 	public void Welcome_Displayed() throws Exception {
 
@@ -70,7 +70,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 3, enabled = true)
 	public void Cards_Display_Setting_Event_log_File() throws Exception {
 
@@ -88,7 +88,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 4, enabled = true)
 	public void Recently_Viewed_Card_Text() throws Exception {
 
@@ -108,7 +108,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		}
 	}
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 5, enabled = true)
 	public void Event_Log_Files_Card_Text() throws Exception {
 
@@ -128,7 +128,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		}
 	}
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 6, enabled = true)
 	public void CopyRightText() throws Exception {
 
@@ -161,7 +161,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 7, enabled = true)
 	public void Registration_Nordson_Privacy_Policy() throws Exception {
 
@@ -185,7 +185,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		}
 	}
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 8, enabled = true)
 	public void Registration_Nordosn_Terms_of_Services() throws Exception {
 
@@ -209,7 +209,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 9, enabled = true)
 	public void Registration_Nordson_Cookies() throws Exception {
 
@@ -233,7 +233,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 10, enabled = true)
 	public void Registration_Nordson_Contact_Us() throws Exception {
 
@@ -258,11 +258,11 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 11, enabled = true)
 	public void View_DashBoard() throws Exception {
 
-		if (lp.Dashboard_Text().equalsIgnoreCase("DASHBOARD")) {
+		if (lp.Dashboard_Text().equals("DASHBOARD")) {
 
 			Am.drawBorder(lp.DashBoard, driver);
 			Am.sleepTime(1000);
@@ -276,7 +276,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		}
 	}
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 12, enabled = false)
 	public void Model_Registration() throws Exception {
 
@@ -296,7 +296,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		}
 	}
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 13, enabled = false)
 	public void Sub_User_Account_Link() throws Exception {
 
@@ -314,7 +314,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		}
 	}
 
-	@JiraPolicy(logTicketReady = false)
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 14, enabled = false)
 	public void Set_Up_Tool() throws Exception {
 
