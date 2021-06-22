@@ -277,7 +277,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 	}
 
 	@JiraPolicy(logTicketReady = false)
-	@Test(priority = 12, enabled = true)
+	@Test(priority = 12, enabled = false)
 	public void Model_Registration() throws Exception {
 
 		if (lp.Model_Registration().equalsIgnoreCase("Model Registration")) {
@@ -297,7 +297,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 	}
 
 	@JiraPolicy(logTicketReady = false)
-	@Test(priority = 13, enabled = true)
+	@Test(priority = 13, enabled = false)
 	public void Sub_User_Account_Link() throws Exception {
 
 		if (lp.SubUserAccount().equalsIgnoreCase("Sub User Account")) {
@@ -315,7 +315,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 	}
 
 	@JiraPolicy(logTicketReady = false)
-	@Test(priority = 14, enabled = true)
+	@Test(priority = 14, enabled = false)
 	public void Set_Up_Tool() throws Exception {
 
 		if (lp.SetUpTool().equalsIgnoreCase("SETUP TOOL")) {
