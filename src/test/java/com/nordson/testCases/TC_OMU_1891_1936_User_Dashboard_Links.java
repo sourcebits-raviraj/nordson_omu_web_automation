@@ -136,7 +136,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		// Am.sleepTime(1000);
 		// lp.clickDashboard();
 
-		if (lp.getCopyRightDisplayed() == true) {
+		if (lp.getCopyRightDisplayed() == false) {
 
 			log.info("Copy Right Displayed Nordson Corporation");
 			softAssert.assertTrue(true);
