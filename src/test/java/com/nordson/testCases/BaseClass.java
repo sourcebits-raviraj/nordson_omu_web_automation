@@ -11,6 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
+import com.nordson.utilities.ActionMethods;
 import com.nordson.utilities.ReadConfig;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -275,7 +276,7 @@ public class BaseClass {
 
 	@AfterClass
 	public void tearDown() throws EmailException {
-		// ActionMethods.sendEmail();
+		ActionMethods.sendEmail();
 		driver.quit();
 		log.info("All the tabs are closed");
 

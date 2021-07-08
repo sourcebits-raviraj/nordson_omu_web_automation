@@ -30,12 +30,12 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 		lp = new User_Dashboard_Details_Landing_Page(driver);
 		Am.sleepTime(2000);
-		if (lp.logoDisplayed() == true) {
+		if (lp.logoDisplayed() == false) {
 			Am.drawBorder(lp.logo, driver);
 			Am.sleepTime(1000);
 			log.info("Nordosn Logo is displayed");
 			Am.takeSnapShot();
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 
 		} else
 
@@ -45,6 +45,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			Assert.assertTrue(false);
 
 		}
+
 	}
 
 	@JiraPolicy(logTicketReady = true)
@@ -57,7 +58,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			Am.sleepTime(1000);
 			Assert.assertTrue(lp.welcome.getText().contains("Welcome"));
 			log.info("Welcome text is displayed");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 
 		} else
 
@@ -77,13 +78,14 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		if (lp.setting_Event_Cards_Displayed() == 2) {
 
 			log.info("Number of cards displayed in displayed are 2");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 
 		} else
 
 		{
 			log.info("No Cards Displayed");
 			Assert.assertTrue(false);
+
 		}
 
 	}
@@ -105,7 +107,9 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			log.info("Recently Viewed Event logs are not displayed");
 			Am.drawBorderFail(lp.RecentlyViewed, driver);
 			Assert.assertTrue(false);
+
 		}
+
 	}
 
 	@JiraPolicy(logTicketReady = true)
@@ -119,31 +123,29 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			// Assert.assertTrue((lp.EventLogFiles).getText().contains("Recently Created or
 			// Imported Setting Files"));
 			log.info("Recently Created or Imported Setting Files are displayed");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 
 		} else {
 			Am.drawBorderFail(lp.EventLogFiles, driver);
 			log.info("Recently Created or Imported Setting Files are not displayed");
 			Assert.assertTrue(false);
+
 		}
+
 	}
 
 	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 6, enabled = true)
 	public void CopyRightText() throws Exception {
 
-		// lp.pageRefresh();
-		// Am.sleepTime(1000);
-		// lp.clickDashboard();
-
-		if (lp.getCopyRightDisplayed() == false) {
+		if (lp.getCopyRightDisplayed() == true) {
 
 			log.info("Copy Right Displayed Nordson Corporation");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 			String copytext = lp.getCopyRightText();
 			Am.drawBorder(lp.CopyRight, driver);
 
-			softAssert.assertEquals(Constants.copyRight, copytext);
+			Assert.assertEquals(Constants.copyRight, copytext);
 			Am = new ActionMethods();
 			Am.captureScreen(driver, "CopyRightPassDashboard");
 
@@ -152,10 +154,11 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		else {
 			Am.drawBorderFail(lp.CopyRight, driver);
 			log.info("Copy Right not Displayed");
-			Assert.assertTrue(false);
+
 			Am = new ActionMethods();
 			Am.captureScreen(driver, "CopyRightFailDashboard");
 			System.out.println("Copy Right Not Present");
+			Assert.assertTrue(false);
 
 		}
 
@@ -164,14 +167,14 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 7, enabled = true)
 	public void Registration_Nordson_Privacy_Policy() throws Exception {
-
+		Am.sleepTime(1000);
 		if (lp.PrivacyPolicyDisplayed() == true) {
 
 			log.info("Privacy Link Displayed");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 			String PrivacyPolicyText = lp.getPrivacyPolicyText();
 			Am.drawBorder(lp.PrivacyPolicy, driver);
-			softAssert.assertEquals(Constants.privacyPolicy, PrivacyPolicyText);
+			Assert.assertEquals(Constants.privacyPolicy, PrivacyPolicyText);
 			System.out.println("Privacy Policy link is displayed");
 
 		}
@@ -183,6 +186,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			System.out.println("Privacy Policy link is not displayed");
 
 		}
+
 	}
 
 	@JiraPolicy(logTicketReady = true)
@@ -192,10 +196,10 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		if (lp.TermsOfServiceDisplayed() == true) {
 
 			log.info("Terms Of Service text is Displayed");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 			String TermsServicesText = lp.getTermsOFServiceText();
 			Am.drawBorder(lp.TermsService, driver);
-			softAssert.assertEquals(Constants.termsOfServices, TermsServicesText);
+			Assert.assertEquals(Constants.termsOfServices, TermsServicesText);
 			System.out.println("Terms of Service text is displayed");
 
 		}
@@ -205,6 +209,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			Assert.assertTrue(false);
 			log.info("Terms of Service text is displayed");
 			System.out.println("Terms of Service text is displayed");
+
 		}
 
 	}
@@ -213,13 +218,13 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 	@Test(priority = 9, enabled = true)
 	public void Registration_Nordson_Cookies() throws Exception {
 
-		if (lp.cookiesDisplayed() == true) {
+		if (lp.cookiesDisplayed() == false) {
 
 			log.info("Cookies Link Displayed");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 			String CookiesText = lp.getCookiesText();
 			Am.drawBorder(lp.Cookies, driver);
-			softAssert.assertEquals(Constants.CookiesText, CookiesText);
+			Assert.assertEquals(Constants.CookiesText, CookiesText);
 			System.out.println("Cookies link is displayed");
 
 		}
@@ -229,6 +234,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			log.info("Cookies Link not Displayed");
 			System.out.println("Cookies Link is not displayed");
 			Assert.assertTrue(false);
+
 		}
 
 	}
@@ -240,10 +246,10 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 		if (lp.contactUsDisplayed() == true) {
 
 			log.info("Contact Us Link Displayed");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 			String ContactUsText = lp.getContactUsText();
 			Am.drawBorder(lp.ContactUs, driver);
-			softAssert.assertEquals(Constants.ContactUs, ContactUsText);
+			Assert.assertEquals(Constants.ContactUs, ContactUsText);
 			System.out.println("Contact Us link is displayed");
 
 		}
@@ -254,30 +260,33 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			Am.captureScreen(driver, "CookiesFail");
 			System.out.println("Cookies Link not opened");
 			Assert.assertTrue(false);
+
 		}
 
 	}
 
-	@JiraPolicy(logTicketReady = true)
+	@JiraPolicy(logTicketReady = false)
 	@Test(priority = 11, enabled = true)
 	public void View_DashBoard() throws Exception {
 
-		if (lp.Dashboard_Text().equals("DASHBOARD")) {
+		if (lp.Dashboard_Text().equalsIgnoreCase("DASHBOARD")) {
 
 			Am.drawBorder(lp.DashBoard, driver);
 			Am.sleepTime(1000);
 			log.info("Dashboard Text displayed");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 
 		} else {
 			Am.drawBorderFail(lp.DashBoard, driver);
 			log.info("Dashboard Text not displayed");
 			Assert.assertTrue(false);
+
 		}
+
 	}
 
 	@JiraPolicy(logTicketReady = true)
-	@Test(priority = 12, enabled = false)
+	@Test(priority = 12, enabled = true)
 	public void Model_Registration() throws Exception {
 
 		if (lp.Model_Registration().equalsIgnoreCase("Model Registration")) {
@@ -285,19 +294,19 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			Am.drawBorder(lp.ModelRegistration, driver);
 			Am.sleepTime(1000);
 			log.info("Model Registration Text displayed");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 
-		} else
-
-		{
+		} else {
 			Am.drawBorderFail(lp.ModelRegistration, driver);
 			log.info("Model Registration not Text displayed");
 			Assert.assertTrue(false);
+
 		}
+
 	}
 
 	@JiraPolicy(logTicketReady = true)
-	@Test(priority = 13, enabled = false)
+	@Test(priority = 13, enabled = true)
 	public void Sub_User_Account_Link() throws Exception {
 
 		if (lp.SubUserAccount().equalsIgnoreCase("Sub User Account")) {
@@ -305,17 +314,19 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			Am.drawBorder(lp.SubUserAccount, driver);
 			Am.sleepTime(1000);
 			log.info("Sub User Account Text displayed");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 
 		} else {
 			Am.drawBorderFail(lp.SubUserAccount, driver);
 			log.info("Sub User Account not Text displayed");
 			Assert.assertTrue(false);
+
 		}
+
 	}
 
 	@JiraPolicy(logTicketReady = true)
-	@Test(priority = 14, enabled = false)
+	@Test(priority = 14, enabled = true)
 	public void Set_Up_Tool() throws Exception {
 
 		if (lp.SetUpTool().equalsIgnoreCase("SETUP TOOL")) {
@@ -325,20 +336,21 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			lp.clickOnSetUpTool();
 			Am.drawBorder(lp.SetUpToolLink, driver);
 
-			softAssert.assertEquals(lp.CreateNewFile(), Constants.CreateNewNor);
+			Assert.assertEquals(lp.CreateNewFile(), Constants.CreateNewNor);
 			Am.drawBorder(lp.CreateNewNorFileButton, driver);
 
-			softAssert.assertEquals(lp.LoadFromUSB(), Constants.LoadFromUSB);
+			Assert.assertEquals(lp.LoadFromUSB(), Constants.LoadFromUSB);
 			Am.drawBorder(lp.LoadFromUSB, driver);
 
-			softAssert.assertEquals(lp.PreviousFileText(), Constants.PreviousFileText);
+			Assert.assertEquals(lp.PreviousFileText(), Constants.PreviousFileText);
 			Am.drawBorder(lp.PreviousFile, driver);
 
 			log.info("Set Up tool Displayed");
-			Am.sleepTime(1000);
-			driver.navigate().back();
+			Am.sleepTime(2000);
 
-			softAssert.assertTrue(true);
+			driver.navigate().refresh();
+
+			Assert.assertTrue(true);
 
 		} else {
 
@@ -349,10 +361,13 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 			log.info("Set Up tool not  Displayed");
 			Assert.assertTrue(false);
+
 		}
+
 	}
 
-	@Test(priority = 15, enabled = false)
+	@JiraPolicy(logTicketReady = true)
+	@Test(priority = 15, enabled = true)
 	public void MediaCenter() throws Exception {
 
 		if (lp.MediaCenterText().equalsIgnoreCase("Media Center")) {
@@ -371,28 +386,33 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			// Am.drawBorder(lp.PreviousFile, driver);
 			// Am.sleepTime(1000);
 			log.info("Set Up tool Displayed");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 
 		} else {
 			Am.drawBorderFail(lp.MediaCenter, driver);
 			log.info("Set Up tool not  Displayed");
 			Assert.assertTrue(false);
+
 		}
+
 	}
 
-	@Test(priority = 16, enabled = false)
+	@JiraPolicy(logTicketReady = true)
+	@Test(priority = 16, enabled = true)
 	public void Manage_Lincenses() throws Exception {
 
 		if (lp.manageLincenseDisplayed() == true) {
 
 			log.info("Manage License Link Displayed");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 			String LincenseText = lp.getLincenseText();
-			softAssert.assertEquals(Constants.LincenseText, LincenseText);
+			Assert.assertEquals(Constants.LincenseText, LincenseText);
 			System.out.println("Cookies link is displayed");
 			Am.drawBorder(lp.ManageLincense, driver);
 			lp.clickManageLincense();
+			Am.sleepTime(4000);
 			Am.switchToNexttab();
+
 			// tab1 = new ArrayList<String>(driver.getWindowHandles());
 			// driver.switchTo().window(tab1.get(1));
 
@@ -403,12 +423,15 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			log.info("Manage Lincense Link not Displayed");
 			System.out.println("Cookies Link is not displayed");
 			Assert.assertTrue(false);
+
 		}
+
+		Am.sleepTime(4000);
 
 		if (readconfig.getManageLincenseURL().equals(driver.getCurrentUrl())) {
 
 			// Am = new ActionMethods();
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 			Am.captureScreen(driver, "ManageLicensePass");
 			System.out.println(driver.getCurrentUrl());
 			System.out.println("Manage Lincense link is opened and navigated");
@@ -423,6 +446,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 			log.info("Manage Lincense link is not displayed ");
 			// Am = new ActionMethods();
+			System.out.println(driver.getCurrentUrl());
 			Am.captureScreen(driver, "ManageLicenseFail");
 			System.out.println("Manage Lincense Link not opened");
 			Assert.assertTrue(false);
@@ -431,18 +455,20 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@Test(priority = 17, enabled = false)
+	@JiraPolicy(logTicketReady = true)
+	@Test(priority = 17, enabled = true)
 	public void Help_Center() throws Exception {
 
 		if (lp.helpCenterDisplayed() == true) {
 
 			log.info("Help Center Link Displayed");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 			String HelpCenterText = lp.getHelpCenterText();
-			softAssert.assertEquals(Constants.HelpCenterText, HelpCenterText);
+			Assert.assertEquals(Constants.HelpCenterText, HelpCenterText);
 			System.out.println("Help Center link is displayed");
 			Am.drawBorder(lp.HelpCenter, driver);
 			lp.clickHelpCenter();
+			Am.sleepTime(5000);
 			Am.switchToNexttab();
 			// tab1 = new ArrayList<String>(driver.getWindowHandles());
 			// driver.switchTo().window(tab1.get(1));
@@ -454,16 +480,17 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			log.info("Help Center Link not Displayed");
 			System.out.println("Help Center Link is not displayed");
 			Assert.assertTrue(false);
+
 		}
 
-		if (readconfig.getHelpCenterURL().equals(driver.getCurrentUrl())) {
+		if ((driver.getCurrentUrl().contains(readconfig.getHelpCenterURL()))) {
 
 			// Am = new ActionMethods();
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 			Am.captureScreen(driver, "ManageLicensePass");
 			System.out.println(driver.getCurrentUrl());
-			System.out.println("Manage Lincense link is opened and navigated");
-			log.info("Manage Lincense link is opened and navigated");
+			System.out.println("Help Center link is opened and navigated");
+			log.info("Help Center is opened and navigated");
 			Am.closeCurrentTab_SwitchtoPrevioustab();
 			// driver.close();
 			// driver.switchTo().window(tabs.get(0));
@@ -472,7 +499,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 		else {
 
-			log.info("Manage Lincense link is not displayed ");
+			log.info("Help Centre link is not displayed ");
 			// Am = new ActionMethods();
 			Am.captureScreen(driver, "ManageLicenseFail");
 			System.out.println("Manage Lincense Link not opened");
@@ -483,16 +510,17 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@Test(priority = 18, enabled = false)
+	@JiraPolicy(logTicketReady = true)
+	@Test(priority = 18, enabled = true)
 	public void Langauges() throws Exception {
 
+		Am.sleepTime(2000);
 		lp.clickLanguage();
 		Am.sleepTime(1000);
-
 		if (lp.LanguageDropdownsCount() == 9) {
 
 			log.info("Language count is 9");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 
 			System.out.println("Language count is = 9");
 			Am.drawBorder(lp.ClickLanguage, driver);
@@ -504,6 +532,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			log.info("Language count is not equal 8");
 			System.out.println("Language count is not equal 8");
 			Assert.assertTrue(false);
+
 		}
 
 		String EnglishText = lp.LanaguageDropdowns.get(0).getText();
@@ -512,7 +541,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 			System.out.println("English Language is present");
 			log.info("English Language is present");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 			Am.captureScreen(driver, "EnglisDropdownPass");
 
 		} else {
@@ -528,53 +557,56 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@Test(priority = 19, enabled = false)
+	@JiraPolicy(logTicketReady = true)
+	@Test(priority = 19, enabled = true)
 	public void Profile() throws Exception {
 
+		Am.sleepTime(2000);
 		lp.LanaguageDropdowns.get(0).click();
 
+		Am.sleepTime(2000);
 		lp.clickProfile();
 		Am.sleepTime(3000);
 
 		if (lp.profileDisplayed() == true) {
 
 			log.info("Profile Displayed");
-			softAssert.assertTrue(true);
+			Assert.assertTrue(true);
 
-			softAssert.assertEquals(Constants.ProfileText, lp.profileText());
+			Assert.assertEquals(Constants.ProfileText, lp.profileText());
 			Am.drawBorder(lp.ProfileDetails, driver);
 
-			softAssert.assertEquals(Constants.FullName, lp.FullNameProfile());
+			Assert.assertEquals(Constants.FullName, lp.FullNameProfile());
 			Am.drawBorder(lp.FullName, driver);
 
-			softAssert.assertEquals(Constants.Email, lp.EmailText());
+			Assert.assertEquals(Constants.Email, lp.EmailText());
 			Am.drawBorder(lp.Email, driver);
 
-			softAssert.assertEquals(Constants.Country, lp.CountryText());
+			Assert.assertEquals(Constants.Country, lp.CountryText());
 			Am.drawBorder(lp.Country, driver);
 
-			softAssert.assertEquals(Constants.PhoneNumber, lp.PhoneNumberText());
+			Assert.assertEquals(Constants.PhoneNumber, lp.PhoneNumberText());
 			Am.drawBorder(lp.PhoneNumber, driver);
 
-			softAssert.assertEquals(Constants.PlantName, lp.PlantNameText());
+			Assert.assertEquals(Constants.PlantName, lp.PlantNameText());
 			Am.drawBorder(lp.PlantName, driver);
 
-			softAssert.assertEquals(Constants.CompanyName, lp.CompanyNameText());
+			Assert.assertEquals(Constants.CompanyName, lp.CompanyNameText());
 			Am.drawBorder(lp.CompanyName, driver);
 
-			softAssert.assertEquals(Constants.CompanyType, lp.CompanyTypeText());
+			Assert.assertEquals(Constants.CompanyType, lp.CompanyTypeText());
 			Am.drawBorder(lp.CompanyType, driver);
 
-			softAssert.assertEquals(Constants.Address, lp.AddressText());
+			Assert.assertEquals(Constants.Address, lp.AddressText());
 			Am.drawBorder(lp.Address, driver);
 
-			softAssert.assertEquals(Constants.NordosnAccountNumber, lp.NordsonAccountNumberText());
+			Assert.assertEquals(Constants.NordosnAccountNumber, lp.NordsonAccountNumberText());
 			Am.drawBorder(lp.NordsonAccountNumber, driver);
 
-			softAssert.assertEquals(Constants.ChangePassword, lp.ChangePasswordText());
+			Assert.assertEquals(Constants.ChangePassword, lp.ChangePasswordText());
 			Am.drawBorder(lp.ChangePassword, driver);
 
-			softAssert.assertEquals(Constants.EditProfile, lp.EditProfileText());
+			Assert.assertEquals(Constants.EditProfile, lp.EditProfileText());
 			Am.drawBorder(lp.EditProfile, driver);
 
 			System.out.println("All the profile fields are displayed");
@@ -589,6 +621,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			Am.captureScreen(driver, "ProfileFile");
 			System.out.println("Profile not opened");
 			Assert.assertTrue(false);
+
 		}
 
 	}
