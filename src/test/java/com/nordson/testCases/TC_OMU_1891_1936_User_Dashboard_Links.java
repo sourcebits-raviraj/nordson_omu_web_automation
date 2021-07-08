@@ -265,10 +265,10 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@JiraPolicy(logTicketReady = true)
-	@Test(priority = 11, enabled = true)
+	@JiraPolicy(logTicketReady = false)
+	@Test(priority = 11, enabled = false)
 	public void View_DashBoard() throws Exception {
-		Am.sleepTime(4000);
+
 		if (lp.Dashboard_Text().equalsIgnoreCase("DASHBOARD")) {
 
 			Am.drawBorder(lp.DashBoard, driver);
@@ -285,11 +285,10 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@JiraPolicy(logTicketReady = true)
-	@Test(priority = 12, enabled = true)
+	@JiraPolicy(logTicketReady = false)
+	@Test(priority = 12, enabled = false)
 	public void Model_Registration() throws Exception {
 
-		Am.sleepTime(4000);
 		if (lp.Model_Registration().equalsIgnoreCase("Model Registration")) {
 
 			Am.drawBorder(lp.ModelRegistration, driver);
@@ -306,11 +305,10 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@JiraPolicy(logTicketReady = true)
-	@Test(priority = 13, enabled = true)
+	@JiraPolicy(logTicketReady = false)
+	@Test(priority = 13, enabled = false)
 	public void Sub_User_Account_Link() throws Exception {
 
-		Am.sleepTime(4000);
 		if (lp.SubUserAccount().equalsIgnoreCase("Sub User Account")) {
 
 			Am.drawBorder(lp.SubUserAccount, driver);
@@ -327,26 +325,23 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@JiraPolicy(logTicketReady = true)
+	@JiraPolicy(logTicketReady = false)
 	@Test(priority = 14, enabled = true)
 	public void Set_Up_Tool() throws Exception {
-		Am.sleepTime(4000);
+
 		if (lp.SetUpTool().equalsIgnoreCase("SETUP TOOL")) {
 
 			Am.sleepTime(1000);
 			log.info("Clicked on Set Up Tool Link");
 			lp.clickOnSetUpTool();
-
 			Am.drawBorder(lp.SetUpToolLink, driver);
-			Am.sleepTime(4000);
+
 			Assert.assertEquals(lp.CreateNewFile(), Constants.CreateNewNor);
 			Am.drawBorder(lp.CreateNewNorFileButton, driver);
 
-			Am.sleepTime(4000);
 			Assert.assertEquals(lp.LoadFromUSB(), Constants.LoadFromUSB);
 			Am.drawBorder(lp.LoadFromUSB, driver);
 
-			Am.sleepTime(4000);
 			Assert.assertEquals(lp.PreviousFileText(), Constants.PreviousFileText);
 			Am.drawBorder(lp.PreviousFile, driver);
 
@@ -371,11 +366,10 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@JiraPolicy(logTicketReady = true)
-	@Test(priority = 15, enabled = true)
+	@JiraPolicy(logTicketReady = false)
+	@Test(priority = 15, enabled = false)
 	public void MediaCenter() throws Exception {
 
-		Am.sleepTime(4000);
 		if (lp.MediaCenterText().equalsIgnoreCase("Media Center")) {
 
 			Am.sleepTime(1000);
@@ -403,11 +397,10 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@JiraPolicy(logTicketReady = true)
-	@Test(priority = 16, enabled = true)
+	@JiraPolicy(logTicketReady = false)
+	@Test(priority = 16, enabled = false)
 	public void Manage_Lincenses() throws Exception {
 
-		Am.sleepTime(4000);
 		if (lp.manageLincenseDisplayed() == true) {
 
 			log.info("Manage License Link Displayed");
@@ -462,10 +455,10 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 
 	}
 
-	@JiraPolicy(logTicketReady = true)
-	@Test(priority = 17, enabled = true)
+	@JiraPolicy(logTicketReady = false)
+	@Test(priority = 17, enabled = false)
 	public void Help_Center() throws Exception {
-		Am.sleepTime(4000);
+
 		if (lp.helpCenterDisplayed() == true) {
 
 			log.info("Help Center Link Displayed");
@@ -489,7 +482,6 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 			Assert.assertTrue(false);
 
 		}
-		Am.sleepTime(4000);
 
 		if ((driver.getCurrentUrl().contains(readconfig.getHelpCenterURL()))) {
 
