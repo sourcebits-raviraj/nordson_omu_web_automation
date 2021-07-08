@@ -326,7 +326,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 	}
 
 	@JiraPolicy(logTicketReady = false)
-	@Test(priority = 14, enabled = true)
+	@Test(priority = 14, enabled = false)
 	public void Set_Up_Tool() throws Exception {
 
 		if (lp.SetUpTool().equalsIgnoreCase("SETUP TOOL")) {
