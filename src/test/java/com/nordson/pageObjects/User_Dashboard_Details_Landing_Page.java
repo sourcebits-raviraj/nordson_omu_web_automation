@@ -43,17 +43,17 @@ public class User_Dashboard_Details_Landing_Page {
 	@FindBy(xpath = "//div[contains(text(),'Recently Created or Imported Setting Files')]")
 	public WebElement EventLogFiles;
 
-	// @FindBy(xpath = "//div[normalize-space()='DASHBOARD']")
-	@FindBy(xpath = "(//*[@routerlink='/dashboard']//div)[3]")
+	@FindBy(xpath = "//div[normalize-space()='DASHBOARD']")
+	// @FindBy(xpath = "//*[@routerlink='/dashboard']//div)[3]")
 	public WebElement DashBoard;
 
-	@FindBy(xpath = "//div[normalize-space()='Model Registration']")
+	@FindBy(xpath = "//div[contains(text(),'Model Registration')]")
 	public WebElement ModelRegistration;
 
-	@FindBy(xpath = "//div[normalize-space()='Sub User Account']")
+	@FindBy(xpath = "//div[contains(text(),'Sub User Account')]")
 	public WebElement SubUserAccount;
 
-	@FindBy(xpath = "//div[contains(text(),' SETUP TOOL ')]")
+	@FindBy(xpath = "//div[contains(text(),'SETUP TOOL')]")
 	public WebElement SetUpToolLink;
 
 	@FindBy(xpath = "//div[contains(text(),'CREATE NEW')]")
@@ -68,7 +68,7 @@ public class User_Dashboard_Details_Landing_Page {
 	@FindBy(xpath = "//div[contains(text(),'Use Previous File')]")
 	public WebElement PreviousFile;
 
-	@FindBy(xpath = "//*[contains(@routerlink,'media-center')]/div")
+	@FindBy(xpath = "//div[contains(text(),'Media Center')]")
 	public WebElement MediaCenter;
 
 	@FindBy(xpath = "//div[contains(text(),'Manage Licenses')]")
