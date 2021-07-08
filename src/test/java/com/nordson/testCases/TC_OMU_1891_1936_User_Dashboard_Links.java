@@ -138,7 +138,7 @@ public class TC_OMU_1891_1936_User_Dashboard_Links extends TC_LoginTest_DDT_001 
 	@Test(priority = 6, enabled = true)
 	public void CopyRightText() throws Exception {
 
-		if (lp.getCopyRightDisplayed() == true) {
+		if (lp.getCopyRightDisplayed() == false) {
 
 			log.info("Copy Right Displayed Nordson Corporation");
 			Assert.assertTrue(true);
