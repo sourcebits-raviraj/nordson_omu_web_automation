@@ -15905,3 +15905,603 @@
 2021-06-22 15:56:32,909 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
 2021-06-22 15:56:32,910 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
 2021-06-22 15:56:32,910 DEBUG [main] cache:45 - Loading template for "commons/commons-inject-js.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/commons/commons-inject-js.ftl"
+2021-07-08 23:07:21,742  INFO [main] WebDriverManager:269 - Please answer the following questionnaire based on your experience with WebDriverManager. Thanks a lot!
+2021-07-08 23:07:21,744  INFO [main] WebDriverManager:271 - ====> http://tiny.cc/wdm-survey <====
+2021-07-08 23:07:22,208 DEBUG [main] ResolutionCache:183 - Resolution chrome=91 in cache (valid until 12:22:24 09/07/2021 IST)
+2021-07-08 23:07:22,209  INFO [main] WebDriverManager:571 - Using chromedriver 91.0.4472.19 (since Chrome 91 is installed in your machine)
+2021-07-08 23:07:22,224 DEBUG [main] WebDriverManager:520 - Driver chromedriver 91.0.4472.19 found in cache
+2021-07-08 23:07:22,225  INFO [main] WebDriverManager:615 - Exporting webdriver.chrome.driver as C:\Users\Ravi Raj\.m2\repository\webdriver\chromedriver\win32\91.0.4472.19\chromedriver.exe
+2021-07-08 23:07:24,170  INFO [main] nordson:48 - New Chrome driver Instantiated
+2021-07-08 23:07:31,734  INFO [main] nordson:23 - URL is launched
+2021-07-08 23:07:31,885  INFO [main] nordson:26 - Wait for the page load time out
+2021-07-08 23:07:34,026  INFO [main] nordson:31 - user name provided
+2021-07-08 23:07:34,108  INFO [main] nordson:33 - password provided
+2021-07-08 23:07:40,737  INFO [main] nordson:44 - Nordosn Logo is not displayed
+2021-07-08 23:07:41,100 DEBUG [main] BasicClientConnectionManager:159 - Get connection for route {s}->https://sourcebits.atlassian.net
+2021-07-08 23:07:41,149 DEBUG [main] DefaultClientConnectionOperator:177 - Connecting to sourcebits.atlassian.net:443
+2021-07-08 23:07:41,509 DEBUG [main] RequestAddCookies:132 - CookieSpec selected: best-match
+2021-07-08 23:07:41,515 DEBUG [main] RequestAuthCache:78 - Auth cache not set in the context
+2021-07-08 23:07:41,516 DEBUG [main] RequestProxyAuthentication:87 - Proxy auth state: UNCHALLENGED
+2021-07-08 23:07:41,516 DEBUG [main] DefaultHttpClient:713 - Attempt 1 to execute request
+2021-07-08 23:07:41,516 DEBUG [main] DefaultClientConnection:269 - Sending request: GET /rest/api/latest/issue/createmeta?expand=projects.issuetypes.fields&issuetypeNames=Bug&projectKeys=NORBUG HTTP/1.1
+2021-07-08 23:07:41,517 DEBUG [main] wire:63 - >> "GET /rest/api/latest/issue/createmeta?expand=projects.issuetypes.fields&issuetypeNames=Bug&projectKeys=NORBUG HTTP/1.1[\r][\n]"
+2021-07-08 23:07:41,517 DEBUG [main] wire:63 - >> "Accept: application/json[\r][\n]"
+2021-07-08 23:07:41,517 DEBUG [main] wire:63 - >> "Authorization: Basic cmF2aXJhai5tZXRyaUBhc2NlbmR1bS5jb206ZFRscGVxSllqNUZpRThheHFkQzlFNzk4[\r][\n]"
+2021-07-08 23:07:41,517 DEBUG [main] wire:63 - >> "Host: sourcebits.atlassian.net[\r][\n]"
+2021-07-08 23:07:41,518 DEBUG [main] wire:63 - >> "Connection: Keep-Alive[\r][\n]"
+2021-07-08 23:07:41,518 DEBUG [main] wire:63 - >> "User-Agent: Apache-HttpClient/4.2.5 (java 1.5)[\r][\n]"
+2021-07-08 23:07:41,518 DEBUG [main] wire:63 - >> "[\r][\n]"
+2021-07-08 23:07:41,518 DEBUG [main] headers:273 - >> GET /rest/api/latest/issue/createmeta?expand=projects.issuetypes.fields&issuetypeNames=Bug&projectKeys=NORBUG HTTP/1.1
+2021-07-08 23:07:41,518 DEBUG [main] headers:276 - >> Accept: application/json
+2021-07-08 23:07:41,518 DEBUG [main] headers:276 - >> Authorization: Basic cmF2aXJhai5tZXRyaUBhc2NlbmR1bS5jb206ZFRscGVxSllqNUZpRThheHFkQzlFNzk4
+2021-07-08 23:07:41,518 DEBUG [main] headers:276 - >> Host: sourcebits.atlassian.net
+2021-07-08 23:07:41,518 DEBUG [main] headers:276 - >> Connection: Keep-Alive
+2021-07-08 23:07:41,518 DEBUG [main] headers:276 - >> User-Agent: Apache-HttpClient/4.2.5 (java 1.5)
+2021-07-08 23:07:42,131 DEBUG [main] wire:63 - << "HTTP/1.1 200 OK[\r][\n]"
+2021-07-08 23:07:42,133 DEBUG [main] wire:63 - << "Server: AtlassianProxy/1.19.3.1[\r][\n]"
+2021-07-08 23:07:42,133 DEBUG [main] wire:63 - << "vary: Accept-Encoding[\r][\n]"
+2021-07-08 23:07:42,133 DEBUG [main] wire:63 - << "cache-control: no-cache, no-store, no-transform[\r][\n]"
+2021-07-08 23:07:42,133 DEBUG [main] wire:63 - << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2021-07-08 23:07:42,133 DEBUG [main] wire:63 - << "Strict-Transport-Security: max-age=315360000; includeSubDomains; preload[\r][\n]"
+2021-07-08 23:07:42,133 DEBUG [main] wire:63 - << "Date: Thu, 08 Jul 2021 17:37:42 GMT[\r][\n]"
+2021-07-08 23:07:42,133 DEBUG [main] wire:63 - << "ATL-TraceId: 3320e8daa24fe401[\r][\n]"
+2021-07-08 23:07:42,133 DEBUG [main] wire:63 - << "x-arequestid: c2449a8a-422f-414a-a2e5-128283d49a72[\r][\n]"
+2021-07-08 23:07:42,134 DEBUG [main] wire:63 - << "x-aaccountid: 5d43e195d99e6c0da904d987[\r][\n]"
+2021-07-08 23:07:42,134 DEBUG [main] wire:63 - << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-07-08 23:07:42,134 DEBUG [main] wire:63 - << "Transfer-Encoding: chunked[\r][\n]"
+2021-07-08 23:07:42,134 DEBUG [main] wire:63 - << "timing-allow-origin: *[\r][\n]"
+2021-07-08 23:07:42,134 DEBUG [main] wire:63 - << "x-envoy-upstream-service-time: 350[\r][\n]"
+2021-07-08 23:07:42,134 DEBUG [main] wire:63 - << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-07-08 23:07:42,134 DEBUG [main] wire:63 - << "Connection: keep-alive[\r][\n]"
+2021-07-08 23:07:42,134 DEBUG [main] wire:63 - << "set-cookie: atlassian.xsrf.token=B0D5-VC6W-COIN-AQH4_910a5d4c498267a2b441996f49d942b3c0f38372_lin; Path=/; Secure[\r][\n]"
+2021-07-08 23:07:42,134 DEBUG [main] wire:63 - << "Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400[\r][\n]"
+2021-07-08 23:07:42,135 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:42,135 DEBUG [main] DefaultClientConnection:254 - Receiving response: HTTP/1.1 200 OK
+2021-07-08 23:07:42,135 DEBUG [main] headers:257 - << HTTP/1.1 200 OK
+2021-07-08 23:07:42,135 DEBUG [main] headers:260 - << Server: AtlassianProxy/1.19.3.1
+2021-07-08 23:07:42,135 DEBUG [main] headers:260 - << vary: Accept-Encoding
+2021-07-08 23:07:42,135 DEBUG [main] headers:260 - << cache-control: no-cache, no-store, no-transform
+2021-07-08 23:07:42,135 DEBUG [main] headers:260 - << Content-Type: application/json;charset=UTF-8
+2021-07-08 23:07:42,135 DEBUG [main] headers:260 - << Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+2021-07-08 23:07:42,135 DEBUG [main] headers:260 - << Date: Thu, 08 Jul 2021 17:37:42 GMT
+2021-07-08 23:07:42,136 DEBUG [main] headers:260 - << ATL-TraceId: 3320e8daa24fe401
+2021-07-08 23:07:42,136 DEBUG [main] headers:260 - << x-arequestid: c2449a8a-422f-414a-a2e5-128283d49a72
+2021-07-08 23:07:42,136 DEBUG [main] headers:260 - << x-aaccountid: 5d43e195d99e6c0da904d987
+2021-07-08 23:07:42,136 DEBUG [main] headers:260 - << X-XSS-Protection: 1; mode=block
+2021-07-08 23:07:42,136 DEBUG [main] headers:260 - << Transfer-Encoding: chunked
+2021-07-08 23:07:42,136 DEBUG [main] headers:260 - << timing-allow-origin: *
+2021-07-08 23:07:42,136 DEBUG [main] headers:260 - << x-envoy-upstream-service-time: 350
+2021-07-08 23:07:42,136 DEBUG [main] headers:260 - << X-Content-Type-Options: nosniff
+2021-07-08 23:07:42,136 DEBUG [main] headers:260 - << Connection: keep-alive
+2021-07-08 23:07:42,136 DEBUG [main] headers:260 - << set-cookie: atlassian.xsrf.token=B0D5-VC6W-COIN-AQH4_910a5d4c498267a2b441996f49d942b3c0f38372_lin; Path=/; Secure
+2021-07-08 23:07:42,137 DEBUG [main] headers:260 - << Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+2021-07-08 23:07:42,140 DEBUG [main] ResponseProcessCookies:122 - Cookie accepted: "[version: 0][name: atlassian.xsrf.token][value: B0D5-VC6W-COIN-AQH4_910a5d4c498267a2b441996f49d942b3c0f38372_lin][domain: sourcebits.atlassian.net][path: /][expiry: null]". 
+2021-07-08 23:07:42,142 DEBUG [main] DefaultHttpClient:543 - Connection can be kept alive indefinitely
+2021-07-08 23:07:42,144 DEBUG [main] wire:63 - << "18d1[\r][\n]"
+2021-07-08 23:07:42,144 DEBUG [main] wire:77 - << "{"expand":"projects","projects":[{"expand":"issuetypes","self":"https://sourcebits.atlassian.net/rest/api/2/project/25480","id":"25480","key":"NORBUG","name":"NORDSON - Automation Bug","avatarUrls":{"48x48":"https://sourcebits.atlassian.net/secure/projectavatar?pid=25480&avatarId=21816","24x24":"https://sourcebits.atlassian.net/secure/projectavatar?size=small&s=small&pid=25480&avatarId=21816","16x16":"https://sourcebits.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&pid=25480&avatarId=21816","32x32":"https://sourcebits.atlassian.net/secure/projectavatar?size=medium&s=medium&pid=25480&avatarId=21816"},"issuetypes":[{"self":"https://sourcebits.atlassian.net/rest/api/2/issuetype/1","id":"1","description":"A problem which impairs or prevents the functions of the product.","iconUrl":"https://sourcebits.atlassian.net/secure/viewavatar?size=medium&avatarId=16633&avatarType=issuetype","name":"Bug","untranslatedName":"Bug","subtask":false,"expand":"fields","fields":{"summary":{"required":true,"schema":{"type":"string","system":"summary"},"name":"Summary","key":"summary","hasDefaultValue":false,"operations":["set"]},"issuetype":{"required":true,"schema":{"type":"issuetype","system":"issuetype"},"name":"Issue Type","key":"issuetype","hasDefaultValue":false,"operations":[],"allowedValues":[{"self":"https://sourcebits.atlassian.net/rest/api/2/issuetype/1","id":"1","description":"A problem which impairs or prevents the functions of the product.","iconUrl":"https://sourcebits.atlassian.net/secure/viewavatar?size=medium&avatarId=16633&avatarType=issuetype","name":"Bug","subtask":false,"avatarId":16633,"hierarchyLevel":0}]},"components":{"required":false,"schema":{"type":"array","items":"component","system":"components"},"name":"Components","key":"components","hasDefaultValue":false,"operations":["add","set","remove"],"allowedValues":[]},"customfield_11190":{"required":false,"schema":{"type":"any","custom":"com.pyxis.greenhopper.jira:gh-epic-link","customId":11190},"name":"Epic Link","key":"customfield_11190","hasDefaultValue":false,"operations":["set"]},"description":{"required":false,"schema":{"type":"string","system":"description"},"name":"Description","key":"description","hasDefaultValue":false,"operations":["set"]},"project":{"required":true,"schema":{"type":"project","system":"project"},"name":"Project","key":"project","hasDefaultValue":false,"operations":["set"],"allowedValues":[{"self":"https://sourcebits.atlassian.net/rest/api/2/project/25480","id":"25480","key":"NORBUG","name":"NORDSON - Automation Bug","projectTypeKey":"software","simplified":false,"avatarUrls":{"48x48":"https://sourcebits.atlassian.net/secure/projectavatar?pid=25480&avatarId=21816","24x24":"https://sourcebits.atlassian.net/secure/projectavatar?size=small&s=small&pid=25480&avatarId=21816","16x16":"https://sourcebits.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&pid=25480&avatarId=21816","32x32":"https://sourcebits.atlassian.net/secure/projectavatar?size=medium&s=medium&pid=25480&avatarId=21816"}}]},"reporter":{"required":true,"schema":{"type":"user","system":"reporter"},"name":"Reporter","key":"reporter","autoCompleteUrl":"https://sourcebits.atlassian.net/rest/api/2/user/search?query=","hasDefaultValue":true,"operations":["set"]},"priority":{"required":false,"schema":{"type":"priority","system":"priority"},"name":"Priority","key":"priority","hasDefaultValue":true,"operations":["set"],"allowedValues":[{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/1","iconUrl":"https://sourcebits.atlassian.net/images/icons/priorities/blocker.svg","name":"Blocker","id":"1"},{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/2","iconUrl":"https://sourcebits.atlassian.net/images/icons/priorities/critical.svg","name":"Critical","id":"2"},{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/3","iconUrl":"https://sourcebits.atlassian.net/images/icons/priorities/major.svg","name":"Major","id":"3"},{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/4","iconUrl":"https://sourcebits.atlassian.net/images/icons/priorities/minor.svg","name":"Minor","id":"4"},{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/5","iconUrl":"https://sourcebits.atlassian.net/images/icons/priorities/trivial.svg","name":"Trivial","id":"5"},{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/10000","iconUrl":"https://www.transparenttextures.com/patterns/transparent-square-tiles.png","name":"Not Set","id":"10000"}],"defaultValue":{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/10000","iconUrl":"https://www.transparenttextures.com/patterns/transparent-square-tiles.png","name":"Not Set","id":"10000"}},"customfield_10894":{"required":false,"schema":{"type":"array","items":"json","custom":"com.pyxis.greenhopper.jira:gh-sprint","customId":10894},"name":"Sprint","key":"customfield_10894","hasDefaultValue":false,"operations":["set"]},"timetracking":{"required":false,"schema":{"type":"timetracking","system":"timetracking"},"name":"Time tracking","key":"timetracking","hasDefaultValue":false,"operations":["set","edit"]},"labels":{"required":false,"schema":{"type":"array","items":"string","system":"labels"},"name":"Labels","key":"labels","autoCompleteUrl":"https://sourcebits.atlassian.net/rest/api/1.0/labels/suggest?query=","hasDefaultValue":false,"operations":["add","set","remove"]},"environment":{"required":false,"schema":{"type":"string","system":"environment"},"name":"Environment","key":"environment","hasDefaultValue":false,"operations":["set"]},"attachment":{"required":false,"schema":{"type":"array","items":"attachment","system":"attachment"},"name":"Attachment","key":"attachment","hasDefaultValue":false,"operations":["set"]},"issuelinks":{"required":false,"schema":{"type":"array","items":"issuelinks","system":"issuelinks"},"name":"Linked Issues","key":"issuelinks","autoCompleteUrl":"https://sourcebits.atlassian.net/rest/api/2/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=null&query=","hasDefaultValue":false,"operations":["add"]},"assignee":{"required":false,"schema":{"type":"user","system":"assignee"},"name":"Assignee","key":"assignee","autoCompleteUrl":"https://sourcebits.atlassian.net/rest/api/2/user/assignable/search?project=NORBUG&query=","hasDefaultValue":false,"operations":["set"]}}}]}]}"
+2021-07-08 23:07:42,144 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:42,145 DEBUG [main] wire:63 - << "0[\r][\n]"
+2021-07-08 23:07:42,145 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:42,145 DEBUG [main] BasicClientConnectionManager:201 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@bbf9e07
+2021-07-08 23:07:42,145 DEBUG [main] BasicClientConnectionManager:228 - Connection can be kept alive indefinitely
+2021-07-08 23:07:42,211 DEBUG [main] BasicClientConnectionManager:159 - Get connection for route {s}->https://sourcebits.atlassian.net
+2021-07-08 23:07:42,211 DEBUG [main] DefaultHttpClient:465 - Stale connection check
+2021-07-08 23:07:42,217 DEBUG [main] RequestAddCookies:132 - CookieSpec selected: best-match
+2021-07-08 23:07:42,217 DEBUG [main] RequestAddCookies:184 - Cookie [version: 0][name: atlassian.xsrf.token][value: B0D5-VC6W-COIN-AQH4_910a5d4c498267a2b441996f49d942b3c0f38372_lin][domain: sourcebits.atlassian.net][path: /][expiry: null] match [(secure)sourcebits.atlassian.net:443/rest/api/latest/issue/]
+2021-07-08 23:07:42,218 DEBUG [main] RequestAuthCache:78 - Auth cache not set in the context
+2021-07-08 23:07:42,219 DEBUG [main] RequestProxyAuthentication:87 - Proxy auth state: UNCHALLENGED
+2021-07-08 23:07:42,219 DEBUG [main] DefaultHttpClient:713 - Attempt 1 to execute request
+2021-07-08 23:07:42,219 DEBUG [main] DefaultClientConnection:269 - Sending request: POST /rest/api/latest/issue/ HTTP/1.1
+2021-07-08 23:07:42,220 DEBUG [main] wire:63 - >> "POST /rest/api/latest/issue/ HTTP/1.1[\r][\n]"
+2021-07-08 23:07:42,220 DEBUG [main] wire:63 - >> "Content-Type: application/json[\r][\n]"
+2021-07-08 23:07:42,220 DEBUG [main] wire:63 - >> "Accept: application/json[\r][\n]"
+2021-07-08 23:07:42,221 DEBUG [main] wire:63 - >> "Authorization: Basic cmF2aXJhai5tZXRyaUBhc2NlbmR1bS5jb206ZFRscGVxSllqNUZpRThheHFkQzlFNzk4[\r][\n]"
+2021-07-08 23:07:42,221 DEBUG [main] wire:63 - >> "Content-Length: 2543[\r][\n]"
+2021-07-08 23:07:42,221 DEBUG [main] wire:63 - >> "Host: sourcebits.atlassian.net[\r][\n]"
+2021-07-08 23:07:42,221 DEBUG [main] wire:63 - >> "Connection: Keep-Alive[\r][\n]"
+2021-07-08 23:07:42,222 DEBUG [main] wire:63 - >> "User-Agent: Apache-HttpClient/4.2.5 (java 1.5)[\r][\n]"
+2021-07-08 23:07:42,222 DEBUG [main] wire:63 - >> "Cookie: atlassian.xsrf.token=B0D5-VC6W-COIN-AQH4_910a5d4c498267a2b441996f49d942b3c0f38372_lin[\r][\n]"
+2021-07-08 23:07:42,222 DEBUG [main] wire:63 - >> "Cookie2: $Version=1[\r][\n]"
+2021-07-08 23:07:42,222 DEBUG [main] wire:63 - >> "[\r][\n]"
+2021-07-08 23:07:42,223 DEBUG [main] headers:273 - >> POST /rest/api/latest/issue/ HTTP/1.1
+2021-07-08 23:07:42,223 DEBUG [main] headers:276 - >> Content-Type: application/json
+2021-07-08 23:07:42,223 DEBUG [main] headers:276 - >> Accept: application/json
+2021-07-08 23:07:42,223 DEBUG [main] headers:276 - >> Authorization: Basic cmF2aXJhai5tZXRyaUBhc2NlbmR1bS5jb206ZFRscGVxSllqNUZpRThheHFkQzlFNzk4
+2021-07-08 23:07:42,224 DEBUG [main] headers:276 - >> Content-Length: 2543
+2021-07-08 23:07:42,224 DEBUG [main] headers:276 - >> Host: sourcebits.atlassian.net
+2021-07-08 23:07:42,224 DEBUG [main] headers:276 - >> Connection: Keep-Alive
+2021-07-08 23:07:42,224 DEBUG [main] headers:276 - >> User-Agent: Apache-HttpClient/4.2.5 (java 1.5)
+2021-07-08 23:07:42,224 DEBUG [main] headers:276 - >> Cookie: atlassian.xsrf.token=B0D5-VC6W-COIN-AQH4_910a5d4c498267a2b441996f49d942b3c0f38372_lin
+2021-07-08 23:07:42,224 DEBUG [main] headers:276 - >> Cookie2: $Version=1
+2021-07-08 23:07:42,225 DEBUG [main] wire:77 - >> "{"fields":{"summary":"Logo_Displayedgot failed due to some assertion / exception","issuetype":{"name":"Bug"},"project":{"key":"NORBUG"},"description":"java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:97)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:969)\r\n\tat org.testng.Assert.assertTrue(Assert.java:43)\r\n\tat org.testng.Assert.assertTrue(Assert.java:53)\r\n\tat com.nordson.testCases.TC_OMU_1891_1936_User_Dashboard_Links.Logo_Displayed(TC_OMU_1891_1936_User_Dashboard_Links.java:45)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)\r\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)\r\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)\r\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)\r\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\r\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\r\n\tat java.util.ArrayList.forEach(ArrayList.java:1257)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:766)\r\n\tat org.testng.TestRunner.run(TestRunner.java:587)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:384)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:286)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1109)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1039)\r\n\tat org.testng.TestNG.run(TestNG.java:1007)\r\n\tat org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)\r\n\tat org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)\r\n\tat org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)\r\n"}}"
+2021-07-08 23:07:42,853 DEBUG [main] wire:63 - << "HTTP/1.1 201 Created[\r][\n]"
+2021-07-08 23:07:42,854 DEBUG [main] wire:63 - << "Server: AtlassianProxy/1.19.3.1[\r][\n]"
+2021-07-08 23:07:42,854 DEBUG [main] wire:63 - << "vary: Accept-Encoding[\r][\n]"
+2021-07-08 23:07:42,854 DEBUG [main] wire:63 - << "cache-control: no-cache, no-store, no-transform[\r][\n]"
+2021-07-08 23:07:42,854 DEBUG [main] wire:63 - << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2021-07-08 23:07:42,854 DEBUG [main] wire:63 - << "Strict-Transport-Security: max-age=315360000; includeSubDomains; preload[\r][\n]"
+2021-07-08 23:07:42,854 DEBUG [main] wire:63 - << "Date: Thu, 08 Jul 2021 17:37:42 GMT[\r][\n]"
+2021-07-08 23:07:42,855 DEBUG [main] wire:63 - << "ATL-TraceId: 560ff26e6d4db1ce[\r][\n]"
+2021-07-08 23:07:42,855 DEBUG [main] wire:63 - << "x-arequestid: 831941d2-ec1a-48c8-b288-28c4e96b2169[\r][\n]"
+2021-07-08 23:07:42,855 DEBUG [main] wire:63 - << "x-aaccountid: 5d43e195d99e6c0da904d987[\r][\n]"
+2021-07-08 23:07:42,855 DEBUG [main] wire:63 - << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-07-08 23:07:42,855 DEBUG [main] wire:63 - << "Transfer-Encoding: chunked[\r][\n]"
+2021-07-08 23:07:42,855 DEBUG [main] wire:63 - << "timing-allow-origin: *[\r][\n]"
+2021-07-08 23:07:42,855 DEBUG [main] wire:63 - << "x-envoy-upstream-service-time: 572[\r][\n]"
+2021-07-08 23:07:42,855 DEBUG [main] wire:63 - << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-07-08 23:07:42,856 DEBUG [main] wire:63 - << "Connection: keep-alive[\r][\n]"
+2021-07-08 23:07:42,856 DEBUG [main] wire:63 - << "Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400[\r][\n]"
+2021-07-08 23:07:42,856 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:42,856 DEBUG [main] DefaultClientConnection:254 - Receiving response: HTTP/1.1 201 Created
+2021-07-08 23:07:42,857 DEBUG [main] headers:257 - << HTTP/1.1 201 Created
+2021-07-08 23:07:42,857 DEBUG [main] headers:260 - << Server: AtlassianProxy/1.19.3.1
+2021-07-08 23:07:42,857 DEBUG [main] headers:260 - << vary: Accept-Encoding
+2021-07-08 23:07:42,857 DEBUG [main] headers:260 - << cache-control: no-cache, no-store, no-transform
+2021-07-08 23:07:42,857 DEBUG [main] headers:260 - << Content-Type: application/json;charset=UTF-8
+2021-07-08 23:07:42,857 DEBUG [main] headers:260 - << Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+2021-07-08 23:07:42,857 DEBUG [main] headers:260 - << Date: Thu, 08 Jul 2021 17:37:42 GMT
+2021-07-08 23:07:42,857 DEBUG [main] headers:260 - << ATL-TraceId: 560ff26e6d4db1ce
+2021-07-08 23:07:42,857 DEBUG [main] headers:260 - << x-arequestid: 831941d2-ec1a-48c8-b288-28c4e96b2169
+2021-07-08 23:07:42,857 DEBUG [main] headers:260 - << x-aaccountid: 5d43e195d99e6c0da904d987
+2021-07-08 23:07:42,857 DEBUG [main] headers:260 - << X-XSS-Protection: 1; mode=block
+2021-07-08 23:07:42,858 DEBUG [main] headers:260 - << Transfer-Encoding: chunked
+2021-07-08 23:07:42,858 DEBUG [main] headers:260 - << timing-allow-origin: *
+2021-07-08 23:07:42,858 DEBUG [main] headers:260 - << x-envoy-upstream-service-time: 572
+2021-07-08 23:07:42,858 DEBUG [main] headers:260 - << X-Content-Type-Options: nosniff
+2021-07-08 23:07:42,858 DEBUG [main] headers:260 - << Connection: keep-alive
+2021-07-08 23:07:42,858 DEBUG [main] headers:260 - << Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+2021-07-08 23:07:42,858 DEBUG [main] DefaultHttpClient:543 - Connection can be kept alive indefinitely
+2021-07-08 23:07:42,858 DEBUG [main] wire:63 - << "68[\r][\n]"
+2021-07-08 23:07:42,858 DEBUG [main] wire:77 - << "{"id":"219350","key":"NORBUG-82","self":"https://sourcebits.atlassian.net/rest/api/latest/issue/219350"}"
+2021-07-08 23:07:42,858 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:42,859 DEBUG [main] wire:63 - << "0[\r][\n]"
+2021-07-08 23:07:42,859 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:42,859 DEBUG [main] BasicClientConnectionManager:201 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1442f788
+2021-07-08 23:07:42,859 DEBUG [main] BasicClientConnectionManager:228 - Connection can be kept alive indefinitely
+2021-07-08 23:07:42,859 DEBUG [main] BasicClientConnectionManager:159 - Get connection for route {s}->https://sourcebits.atlassian.net
+2021-07-08 23:07:42,859 DEBUG [main] DefaultHttpClient:465 - Stale connection check
+2021-07-08 23:07:42,868 DEBUG [main] RequestAddCookies:132 - CookieSpec selected: best-match
+2021-07-08 23:07:42,869 DEBUG [main] RequestAddCookies:184 - Cookie [version: 0][name: atlassian.xsrf.token][value: B0D5-VC6W-COIN-AQH4_910a5d4c498267a2b441996f49d942b3c0f38372_lin][domain: sourcebits.atlassian.net][path: /][expiry: null] match [(secure)sourcebits.atlassian.net:443/rest/api/latest/issue/NORBUG-82]
+2021-07-08 23:07:42,870 DEBUG [main] RequestAuthCache:78 - Auth cache not set in the context
+2021-07-08 23:07:42,870 DEBUG [main] RequestProxyAuthentication:87 - Proxy auth state: UNCHALLENGED
+2021-07-08 23:07:42,871 DEBUG [main] DefaultHttpClient:713 - Attempt 1 to execute request
+2021-07-08 23:07:42,871 DEBUG [main] DefaultClientConnection:269 - Sending request: GET /rest/api/latest/issue/NORBUG-82 HTTP/1.1
+2021-07-08 23:07:42,872 DEBUG [main] wire:63 - >> "GET /rest/api/latest/issue/NORBUG-82 HTTP/1.1[\r][\n]"
+2021-07-08 23:07:42,872 DEBUG [main] wire:63 - >> "Accept: application/json[\r][\n]"
+2021-07-08 23:07:42,873 DEBUG [main] wire:63 - >> "Authorization: Basic cmF2aXJhai5tZXRyaUBhc2NlbmR1bS5jb206ZFRscGVxSllqNUZpRThheHFkQzlFNzk4[\r][\n]"
+2021-07-08 23:07:42,873 DEBUG [main] wire:63 - >> "Host: sourcebits.atlassian.net[\r][\n]"
+2021-07-08 23:07:42,873 DEBUG [main] wire:63 - >> "Connection: Keep-Alive[\r][\n]"
+2021-07-08 23:07:42,874 DEBUG [main] wire:63 - >> "User-Agent: Apache-HttpClient/4.2.5 (java 1.5)[\r][\n]"
+2021-07-08 23:07:42,874 DEBUG [main] wire:63 - >> "Cookie: atlassian.xsrf.token=B0D5-VC6W-COIN-AQH4_910a5d4c498267a2b441996f49d942b3c0f38372_lin[\r][\n]"
+2021-07-08 23:07:42,875 DEBUG [main] wire:63 - >> "Cookie2: $Version=1[\r][\n]"
+2021-07-08 23:07:42,875 DEBUG [main] wire:63 - >> "[\r][\n]"
+2021-07-08 23:07:42,875 DEBUG [main] headers:273 - >> GET /rest/api/latest/issue/NORBUG-82 HTTP/1.1
+2021-07-08 23:07:42,876 DEBUG [main] headers:276 - >> Accept: application/json
+2021-07-08 23:07:42,876 DEBUG [main] headers:276 - >> Authorization: Basic cmF2aXJhai5tZXRyaUBhc2NlbmR1bS5jb206ZFRscGVxSllqNUZpRThheHFkQzlFNzk4
+2021-07-08 23:07:42,876 DEBUG [main] headers:276 - >> Host: sourcebits.atlassian.net
+2021-07-08 23:07:42,877 DEBUG [main] headers:276 - >> Connection: Keep-Alive
+2021-07-08 23:07:42,877 DEBUG [main] headers:276 - >> User-Agent: Apache-HttpClient/4.2.5 (java 1.5)
+2021-07-08 23:07:42,878 DEBUG [main] headers:276 - >> Cookie: atlassian.xsrf.token=B0D5-VC6W-COIN-AQH4_910a5d4c498267a2b441996f49d942b3c0f38372_lin
+2021-07-08 23:07:42,878 DEBUG [main] headers:276 - >> Cookie2: $Version=1
+2021-07-08 23:07:43,258 DEBUG [main] wire:63 - << "HTTP/1.1 200 OK[\r][\n]"
+2021-07-08 23:07:43,258 DEBUG [main] wire:63 - << "Server: AtlassianProxy/1.19.3.1[\r][\n]"
+2021-07-08 23:07:43,258 DEBUG [main] wire:63 - << "vary: Accept-Encoding[\r][\n]"
+2021-07-08 23:07:43,258 DEBUG [main] wire:63 - << "cache-control: no-cache, no-store, no-transform[\r][\n]"
+2021-07-08 23:07:43,258 DEBUG [main] wire:63 - << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2021-07-08 23:07:43,258 DEBUG [main] wire:63 - << "Strict-Transport-Security: max-age=315360000; includeSubDomains; preload[\r][\n]"
+2021-07-08 23:07:43,259 DEBUG [main] wire:63 - << "Date: Thu, 08 Jul 2021 17:37:43 GMT[\r][\n]"
+2021-07-08 23:07:43,259 DEBUG [main] wire:63 - << "ATL-TraceId: 7c9713b6497fcfc4[\r][\n]"
+2021-07-08 23:07:43,259 DEBUG [main] wire:63 - << "x-arequestid: 74fc5f8e-6e75-4681-9d0c-c97fc710e004[\r][\n]"
+2021-07-08 23:07:43,259 DEBUG [main] wire:63 - << "x-aaccountid: 5d43e195d99e6c0da904d987[\r][\n]"
+2021-07-08 23:07:43,259 DEBUG [main] wire:63 - << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-07-08 23:07:43,259 DEBUG [main] wire:63 - << "Transfer-Encoding: chunked[\r][\n]"
+2021-07-08 23:07:43,259 DEBUG [main] wire:63 - << "timing-allow-origin: *[\r][\n]"
+2021-07-08 23:07:43,259 DEBUG [main] wire:63 - << "x-envoy-upstream-service-time: 316[\r][\n]"
+2021-07-08 23:07:43,259 DEBUG [main] wire:63 - << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-07-08 23:07:43,260 DEBUG [main] wire:63 - << "Connection: keep-alive[\r][\n]"
+2021-07-08 23:07:43,260 DEBUG [main] wire:63 - << "Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400[\r][\n]"
+2021-07-08 23:07:43,260 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:43,260 DEBUG [main] DefaultClientConnection:254 - Receiving response: HTTP/1.1 200 OK
+2021-07-08 23:07:43,260 DEBUG [main] headers:257 - << HTTP/1.1 200 OK
+2021-07-08 23:07:43,260 DEBUG [main] headers:260 - << Server: AtlassianProxy/1.19.3.1
+2021-07-08 23:07:43,260 DEBUG [main] headers:260 - << vary: Accept-Encoding
+2021-07-08 23:07:43,260 DEBUG [main] headers:260 - << cache-control: no-cache, no-store, no-transform
+2021-07-08 23:07:43,261 DEBUG [main] headers:260 - << Content-Type: application/json;charset=UTF-8
+2021-07-08 23:07:43,261 DEBUG [main] headers:260 - << Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+2021-07-08 23:07:43,261 DEBUG [main] headers:260 - << Date: Thu, 08 Jul 2021 17:37:43 GMT
+2021-07-08 23:07:43,261 DEBUG [main] headers:260 - << ATL-TraceId: 7c9713b6497fcfc4
+2021-07-08 23:07:43,261 DEBUG [main] headers:260 - << x-arequestid: 74fc5f8e-6e75-4681-9d0c-c97fc710e004
+2021-07-08 23:07:43,261 DEBUG [main] headers:260 - << x-aaccountid: 5d43e195d99e6c0da904d987
+2021-07-08 23:07:43,261 DEBUG [main] headers:260 - << X-XSS-Protection: 1; mode=block
+2021-07-08 23:07:43,261 DEBUG [main] headers:260 - << Transfer-Encoding: chunked
+2021-07-08 23:07:43,261 DEBUG [main] headers:260 - << timing-allow-origin: *
+2021-07-08 23:07:43,261 DEBUG [main] headers:260 - << x-envoy-upstream-service-time: 316
+2021-07-08 23:07:43,261 DEBUG [main] headers:260 - << X-Content-Type-Options: nosniff
+2021-07-08 23:07:43,261 DEBUG [main] headers:260 - << Connection: keep-alive
+2021-07-08 23:07:43,262 DEBUG [main] headers:260 - << Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+2021-07-08 23:07:43,262 DEBUG [main] DefaultHttpClient:543 - Connection can be kept alive indefinitely
+2021-07-08 23:07:43,262 DEBUG [main] wire:63 - << "1dfe[\r][\n]"
+2021-07-08 23:07:43,263 DEBUG [main] wire:77 - << "{"expand":"renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations,customfield_12400.properties,customfield_12401.properties","id":"219350","self":"https://sourcebits.atlassian.net/rest/api/latest/issue/219350","key":"NORBUG-82","fields":{"statuscategorychangedate":"2021-07-08T23:07:42.799+0530","customfield_12491":null,"customfield_12493":null,"customfield_12492":null,"customfield_10590":null,"customfield_10591":null,"customfield_12495":null,"customfield_12497":null,"customfield_12496":null,"customfield_12411":null,"customfield_12410":[],"resolution":null,"customfield_12413":null,"customfield_12412":null,"customfield_12404":null,"customfield_12403":null,"customfield_12406":null,"customfield_12405":null,"customfield_12408":null,"customfield_12409":null,"lastViewed":null,"customfield_11390":"0|i0t8b3:","customfield_12000":null,"customfield_11790":{"hasEpicLinkFieldDependency":false,"showField":false,"nonEditableReason":{"reason":"PLUGIN_LICENSE_ERROR","message":"The Parent Link is only available to Jira Premium users."}},"customfield_12400":null,"priority":{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/10000","iconUrl":"https://www.transparenttextures.com/patterns/transparent-square-tiles.png","name":"Not Set","id":"10000"},"customfield_12402":null,"labels":[],"customfield_12401":null,"customfield_12514":{"self":"https://sourcebits.atlassian.net/rest/api/2/customFieldOption/10653","value":"TBD","id":"10653"},"customfield_12513":null,"timeestimate":null,"aggregatetimeoriginalestimate":null,"issuelinks":[],"assignee":null,"status":{"self":"https://sourcebits.atlassian.net/rest/api/2/status/10160","description":"","iconUrl":"https://sourcebits.atlassian.net/","name":"To Do","id":"10160","statusCategory":{"self":"https://sourcebits.atlassian.net/rest/api/2/statuscategory/2","id":2,"key":"new","colorName":"blue-gray","name":"To Do"}},"components":[],"customfield_12471":null,"customfield_10292":null,"customfield_12470":null,"customfield_10690":null,"customfield_12473":{"hasEpicLinkFieldDependency":false,"showField":false,"nonEditableReason":{"reason":"PLUGIN_LICENSE_ERROR","message":"The Parent Link is only available to Jira Premium users."}},"customfield_12472":null,"customfield_12475":null,"customfield_12474":null,"customfield_12510":null,"customfield_11300":null,"customfield_12476":null,"customfield_11301":null,"customfield_12511":null,"customfield_12469":null,"customfield_12502":null,"customfield_12504":null,"aggregatetimeestimate":null,"customfield_12509":null,"creator":{"self":"https://sourcebits.atlassian.net/rest/api/2/user?accountId=5d43e195d99e6c0da904d987","accountId":"5d43e195d99e6c0da904d987","emailAddress":"raviraj.metri@ascendum.com","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png","24x24":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png","16x16":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png","32x32":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png"},"displayName":"Raviraj Metri","active":true,"timeZone":"Asia/Calcutta","accountType":"atlassian"},"subtasks":[],"customfield_12460":null,"customfield_12462":null,"customfield_11890":"{}","customfield_12461":null,"customfield_12464":null,"reporter":{"self":"https://sourcebits.atlassian.net/rest/api/2/user?accountId=5d43e195d99e6c0da904d987","accountId":"5d43e195d99e6c0da904d987","emailAddress":"raviraj.metri@ascendum.com","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png","24x24":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png","16x16":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png","32x32":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png"},"displayName":"Raviraj Metri","active":true,"timeZone":"Asia/Calcutta","accountType":"atlassian"},"customfield_12100":null,"customfield_12463":null,"aggregateprogress":{"progress":0,"total":0},"customfield_12466":null,"customfield_12465":null,"customfield_12468":null,"customfield_12467":null,"progress":{"progress":0,"total":0},"votes":{"self":"https://sourcebits.atlassian.net/rest/api/2/issue/NORBUG-82/votes","votes":0,"hasVoted":false},"worklog":{"startAt":0,"maxResults":20,"total":0,"worklogs":[]},"issuetype":{"self":"https://sourcebits.atlassian.net/rest/api/2/issuetype/1","id":"1","description":"A problem which impairs or prevents the functions of the product.","iconUrl":"https://sourcebits.atlassian.net/secure/viewavatar?size=medium&avatarId=16633&avatarType=issuetype","name":"Bug","subtask":false,"avatarId":16633,"hierarchyLevel":0},"timespent":null,"project":{"self":"https://sourcebits.atlassian.net/rest/api/2/project/25480","id":"25480","key":"NORBUG","name":"NORDSON - Automation Bug","projectTypeKey":"software","simplified":false,"avatarUrls":{"48x48":"https://sourcebits.atlassian.net/secure/projectavatar?pid=25480&avatarId=21816","24x24":"https://sourcebits.atlassian.net/secure/projectavatar?size=small&s=small&pid=25480&avatarId=21816","16x16":"https://sourcebits.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&pid=25480&avatarId=21816","32x32":"https://sourcebits.atlassian.net/secure/projectavatar?size=medium&s=medium&pid=25480&avatarId=21816"}},"customfield_10791":null,"aggregatetimespent":null,"resolutiondate":null,"workratio":-1,"issuerestriction":{"issuerestrictions":{},"shouldDisplay":false},"watches":{"self":"https://sourcebits.atlassian.net/rest/api/2/issue/NORBUG-82/watchers","watchCount":1,"isWatching":true},"customfield_11190":null,"created":"2021-07-08T23:07:42.468+0530","customfield_12200":null,"customfield_12442":null,"customfield_12441":null,"customfield_12444":null,"customfield_12443":null,"customfield_12446":null,"customfield_12445":null,"customfield_12439":null,"updated":"2021-07-08T23:07:42.468+0530","timeoriginalestimate":null,"description":"java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:97)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:969)\r\n\tat org.testng.Assert.assertTrue(Assert.java:43)\r\n\tat org.testng.Assert.assertTrue(Assert.java:53)\r\n\tat com.nordson.testCases.TC_OMU_1891_1936_User_Dashboard_Links.Logo_Displayed(TC_OMU_1891_1936_User_Dashboard_Links.java:45)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.testng.internal.MethodInvocati"
+2021-07-08 23:07:43,263 DEBUG [main] wire:77 - << "onHelper.invokeMethod(MethodInvocationHelper.java:134)\r\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:1"
+2021-07-08 23:07:43,263 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:43,264 DEBUG [main] wire:63 - << "a93[\r][\n]"
+2021-07-08 23:07:43,264 DEBUG [main] wire:77 - << "73)\r\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)\r\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)\r\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\r\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\r\n\tat java.util.ArrayList.forEach(ArrayList.java:1257)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:766)\r\n\tat org.testng.TestRunner.run(TestRunner.java:587)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:384)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:286)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1109)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1039)\r\n\tat org.testng.TestNG.run(TestNG.java:1007)\r\n\tat org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)\r\n\tat org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)\r\n\tat org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)\r\n","customfield_12431":null,"customfield_10010":null,"customfield_12430":null,"customfield_12433":null,"customfield_12432":null,"customfield_12435":null,"customfield_10894":null,"customfield_12434":null,"timetracking":{},"customfield_12426":null,"customfield_12425":null,"security":null,"customfield_12428":null,"customfield_12427":null,"attachment":[],"customfield_12429":null,"summary":"Logo_Displayedgot failed due to some assertion / exception","customfield_11290":null,"customfield_10081":null,"customfield_11291":null,"customfield_11292":null,"customfield_11293":null,"customfield_11690":null,"customfield_11294":null,"customfield_11295":null,"customfield_11296":null,"customfield_11297":null,"customfield_12420":null,"customfield_11298":null,"customfield_10000":null,"customfield_12422":null,"customfield_11299":null,"customfield_10002":null,"customfield_12421":null,"customfield_12424":null,"customfield_12423":null,"customfield_10004":null,"customfield_12415":null,"customfield_12414":null,"environment":null,"customfield_12417":null,"customfield_12416":null,"customfield_12419":null,"customfield_12418":null,"duedate":null,"comment":{"comments":[],"self":"https://sourcebits.atlassian.net/rest/api/2/issue/219350/comment","maxResults":0,"total":0,"startAt":0}}}"
+2021-07-08 23:07:43,264 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:43,264 DEBUG [main] wire:63 - << "0[\r][\n]"
+2021-07-08 23:07:43,264 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:43,264 DEBUG [main] BasicClientConnectionManager:201 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@113e13f9
+2021-07-08 23:07:43,264 DEBUG [main] BasicClientConnectionManager:228 - Connection can be kept alive indefinitely
+2021-07-08 23:07:45,873  INFO [main] nordson:60 - Welcome text is displayed
+2021-07-08 23:07:45,954  INFO [main] nordson:80 - Number of cards displayed in displayed are 2
+2021-07-08 23:07:48,560  INFO [main] nordson:102 - Recently Viewed Event log Files are displayed
+2021-07-08 23:07:51,138  INFO [main] nordson:125 - Recently Created or Imported Setting Files are displayed
+2021-07-08 23:07:51,178  INFO [main] nordson:143 - Copy Right Displayed Nordson Corporation
+2021-07-08 23:07:53,971  INFO [main] nordson:173 - Privacy Link Displayed
+2021-07-08 23:07:55,594  INFO [main] nordson:198 - Terms Of Service text is Displayed
+2021-07-08 23:07:57,238  INFO [main] nordson:234 - Cookies Link not Displayed
+2021-07-08 23:07:57,512 DEBUG [main] BasicClientConnectionManager:159 - Get connection for route {s}->https://sourcebits.atlassian.net
+2021-07-08 23:07:57,512 DEBUG [main] DefaultClientConnectionOperator:177 - Connecting to sourcebits.atlassian.net:443
+2021-07-08 23:07:57,743 DEBUG [main] RequestAddCookies:132 - CookieSpec selected: best-match
+2021-07-08 23:07:57,743 DEBUG [main] RequestAuthCache:78 - Auth cache not set in the context
+2021-07-08 23:07:57,743 DEBUG [main] RequestProxyAuthentication:87 - Proxy auth state: UNCHALLENGED
+2021-07-08 23:07:57,744 DEBUG [main] DefaultHttpClient:713 - Attempt 1 to execute request
+2021-07-08 23:07:57,744 DEBUG [main] DefaultClientConnection:269 - Sending request: GET /rest/api/latest/issue/createmeta?expand=projects.issuetypes.fields&issuetypeNames=Bug&projectKeys=NORBUG HTTP/1.1
+2021-07-08 23:07:57,744 DEBUG [main] wire:63 - >> "GET /rest/api/latest/issue/createmeta?expand=projects.issuetypes.fields&issuetypeNames=Bug&projectKeys=NORBUG HTTP/1.1[\r][\n]"
+2021-07-08 23:07:57,744 DEBUG [main] wire:63 - >> "Accept: application/json[\r][\n]"
+2021-07-08 23:07:57,744 DEBUG [main] wire:63 - >> "Authorization: Basic cmF2aXJhai5tZXRyaUBhc2NlbmR1bS5jb206ZFRscGVxSllqNUZpRThheHFkQzlFNzk4[\r][\n]"
+2021-07-08 23:07:57,744 DEBUG [main] wire:63 - >> "Host: sourcebits.atlassian.net[\r][\n]"
+2021-07-08 23:07:57,744 DEBUG [main] wire:63 - >> "Connection: Keep-Alive[\r][\n]"
+2021-07-08 23:07:57,744 DEBUG [main] wire:63 - >> "User-Agent: Apache-HttpClient/4.2.5 (java 1.5)[\r][\n]"
+2021-07-08 23:07:57,744 DEBUG [main] wire:63 - >> "[\r][\n]"
+2021-07-08 23:07:57,744 DEBUG [main] headers:273 - >> GET /rest/api/latest/issue/createmeta?expand=projects.issuetypes.fields&issuetypeNames=Bug&projectKeys=NORBUG HTTP/1.1
+2021-07-08 23:07:57,744 DEBUG [main] headers:276 - >> Accept: application/json
+2021-07-08 23:07:57,745 DEBUG [main] headers:276 - >> Authorization: Basic cmF2aXJhai5tZXRyaUBhc2NlbmR1bS5jb206ZFRscGVxSllqNUZpRThheHFkQzlFNzk4
+2021-07-08 23:07:57,745 DEBUG [main] headers:276 - >> Host: sourcebits.atlassian.net
+2021-07-08 23:07:57,745 DEBUG [main] headers:276 - >> Connection: Keep-Alive
+2021-07-08 23:07:57,745 DEBUG [main] headers:276 - >> User-Agent: Apache-HttpClient/4.2.5 (java 1.5)
+2021-07-08 23:07:58,014 DEBUG [main] wire:63 - << "HTTP/1.1 200 OK[\r][\n]"
+2021-07-08 23:07:58,015 DEBUG [main] wire:63 - << "Server: AtlassianProxy/1.19.3.1[\r][\n]"
+2021-07-08 23:07:58,016 DEBUG [main] wire:63 - << "vary: Accept-Encoding[\r][\n]"
+2021-07-08 23:07:58,016 DEBUG [main] wire:63 - << "cache-control: no-cache, no-store, no-transform[\r][\n]"
+2021-07-08 23:07:58,017 DEBUG [main] wire:63 - << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2021-07-08 23:07:58,017 DEBUG [main] wire:63 - << "Strict-Transport-Security: max-age=315360000; includeSubDomains; preload[\r][\n]"
+2021-07-08 23:07:58,017 DEBUG [main] wire:63 - << "Date: Thu, 08 Jul 2021 17:37:57 GMT[\r][\n]"
+2021-07-08 23:07:58,018 DEBUG [main] wire:63 - << "ATL-TraceId: 97bff771905bef4f[\r][\n]"
+2021-07-08 23:07:58,018 DEBUG [main] wire:63 - << "x-arequestid: 184a2cd4-bed0-41ad-9bdd-d882c5cfc482[\r][\n]"
+2021-07-08 23:07:58,019 DEBUG [main] wire:63 - << "x-aaccountid: 5d43e195d99e6c0da904d987[\r][\n]"
+2021-07-08 23:07:58,019 DEBUG [main] wire:63 - << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-07-08 23:07:58,020 DEBUG [main] wire:63 - << "Transfer-Encoding: chunked[\r][\n]"
+2021-07-08 23:07:58,020 DEBUG [main] wire:63 - << "timing-allow-origin: *[\r][\n]"
+2021-07-08 23:07:58,020 DEBUG [main] wire:63 - << "x-envoy-upstream-service-time: 208[\r][\n]"
+2021-07-08 23:07:58,021 DEBUG [main] wire:63 - << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-07-08 23:07:58,021 DEBUG [main] wire:63 - << "Connection: keep-alive[\r][\n]"
+2021-07-08 23:07:58,021 DEBUG [main] wire:63 - << "set-cookie: atlassian.xsrf.token=B0D5-VC6W-COIN-AQH4_3e2375d5ea2996fb24c09dec4ef976913e01f84e_lin; Path=/; Secure[\r][\n]"
+2021-07-08 23:07:58,022 DEBUG [main] wire:63 - << "Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400[\r][\n]"
+2021-07-08 23:07:58,022 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:58,022 DEBUG [main] DefaultClientConnection:254 - Receiving response: HTTP/1.1 200 OK
+2021-07-08 23:07:58,023 DEBUG [main] headers:257 - << HTTP/1.1 200 OK
+2021-07-08 23:07:58,023 DEBUG [main] headers:260 - << Server: AtlassianProxy/1.19.3.1
+2021-07-08 23:07:58,023 DEBUG [main] headers:260 - << vary: Accept-Encoding
+2021-07-08 23:07:58,024 DEBUG [main] headers:260 - << cache-control: no-cache, no-store, no-transform
+2021-07-08 23:07:58,024 DEBUG [main] headers:260 - << Content-Type: application/json;charset=UTF-8
+2021-07-08 23:07:58,024 DEBUG [main] headers:260 - << Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+2021-07-08 23:07:58,024 DEBUG [main] headers:260 - << Date: Thu, 08 Jul 2021 17:37:57 GMT
+2021-07-08 23:07:58,024 DEBUG [main] headers:260 - << ATL-TraceId: 97bff771905bef4f
+2021-07-08 23:07:58,025 DEBUG [main] headers:260 - << x-arequestid: 184a2cd4-bed0-41ad-9bdd-d882c5cfc482
+2021-07-08 23:07:58,025 DEBUG [main] headers:260 - << x-aaccountid: 5d43e195d99e6c0da904d987
+2021-07-08 23:07:58,025 DEBUG [main] headers:260 - << X-XSS-Protection: 1; mode=block
+2021-07-08 23:07:58,025 DEBUG [main] headers:260 - << Transfer-Encoding: chunked
+2021-07-08 23:07:58,025 DEBUG [main] headers:260 - << timing-allow-origin: *
+2021-07-08 23:07:58,025 DEBUG [main] headers:260 - << x-envoy-upstream-service-time: 208
+2021-07-08 23:07:58,026 DEBUG [main] headers:260 - << X-Content-Type-Options: nosniff
+2021-07-08 23:07:58,026 DEBUG [main] headers:260 - << Connection: keep-alive
+2021-07-08 23:07:58,026 DEBUG [main] headers:260 - << set-cookie: atlassian.xsrf.token=B0D5-VC6W-COIN-AQH4_3e2375d5ea2996fb24c09dec4ef976913e01f84e_lin; Path=/; Secure
+2021-07-08 23:07:58,026 DEBUG [main] headers:260 - << Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+2021-07-08 23:07:58,027 DEBUG [main] ResponseProcessCookies:122 - Cookie accepted: "[version: 0][name: atlassian.xsrf.token][value: B0D5-VC6W-COIN-AQH4_3e2375d5ea2996fb24c09dec4ef976913e01f84e_lin][domain: sourcebits.atlassian.net][path: /][expiry: null]". 
+2021-07-08 23:07:58,027 DEBUG [main] DefaultHttpClient:543 - Connection can be kept alive indefinitely
+2021-07-08 23:07:58,028 DEBUG [main] wire:63 - << "18d1[\r][\n]"
+2021-07-08 23:07:58,030 DEBUG [main] wire:77 - << "{"expand":"projects","projects":[{"expand":"issuetypes","self":"https://sourcebits.atlassian.net/rest/api/2/project/25480","id":"25480","key":"NORBUG","name":"NORDSON - Automation Bug","avatarUrls":{"48x48":"https://sourcebits.atlassian.net/secure/projectavatar?pid=25480&avatarId=21816","24x24":"https://sourcebits.atlassian.net/secure/projectavatar?size=small&s=small&pid=25480&avatarId=21816","16x16":"https://sourcebits.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&pid=25480&avatarId=21816","32x32":"https://sourcebits.atlassian.net/secure/projectavatar?size=medium&s=medium&pid=25480&avatarId=21816"},"issuetypes":[{"self":"https://sourcebits.atlassian.net/rest/api/2/issuetype/1","id":"1","description":"A problem which impairs or prevents the functions of the product.","iconUrl":"https://sourcebits.atlassian.net/secure/viewavatar?size=medium&avatarId=16633&avatarType=issuetype","name":"Bug","untranslatedName":"Bug","subtask":false,"expand":"fields","fields":{"summary":{"required":true,"schema":{"type":"string","system":"summary"},"name":"Summary","key":"summary","hasDefaultValue":false,"operations":["set"]},"issuetype":{"required":true,"schema":{"type":"issuetype","system":"issuetype"},"name":"Issue Type","key":"issuetype","hasDefaultValue":false,"operations":[],"allowedValues":[{"self":"https://sourcebits.atlassian.net/rest/api/2/issuetype/1","id":"1","description":"A problem which impairs or prevents the functions of the product.","iconUrl":"https://sourcebits.atlassian.net/secure/viewavatar?size=medium&avatarId=16633&avatarType=issuetype","name":"Bug","subtask":false,"avatarId":16633,"hierarchyLevel":0}]},"components":{"required":false,"schema":{"type":"array","items":"component","system":"components"},"name":"Components","key":"components","hasDefaultValue":false,"operations":["add","set","remove"],"allowedValues":[]},"customfield_11190":{"required":false,"schema":{"type":"any","custom":"com.pyxis.greenhopper.jira:gh-epic-link","customId":11190},"name":"Epic Link","key":"customfield_11190","hasDefaultValue":false,"operations":["set"]},"description":{"required":false,"schema":{"type":"string","system":"description"},"name":"Description","key":"description","hasDefaultValue":false,"operations":["set"]},"project":{"required":true,"schema":{"type":"project","system":"project"},"name":"Project","key":"project","hasDefaultValue":false,"operations":["set"],"allowedValues":[{"self":"https://sourcebits.atlassian.net/rest/api/2/project/25480","id":"25480","key":"NORBUG","name":"NORDSON - Automation Bug","projectTypeKey":"software","simplified":false,"avatarUrls":{"48x48":"https://sourcebits.atlassian.net/secure/projectavatar?pid=25480&avatarId=21816","24x24":"https://sourcebits.atlassian.net/secure/projectavatar?size=small&s=small&pid=25480&avatarId=21816","16x16":"https://sourcebits.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&pid=25480&avatarId=21816","32x32":"https://sourcebits.atlassian.net/secure/projectavatar?size=medium&s=medium&pid=25480&avatarId=21816"}}]},"reporter":{"required":true,"schema":{"type":"user","system":"reporter"},"name":"Reporter","key":"reporter","autoCompleteUrl":"https://sourcebits.atlassian.net/rest/api/2/user/search?query=","hasDefaultValue":true,"operations":["set"]},"priority":{"required":false,"schema":{"type":"priority","system":"priority"},"name":"Priority","key":"priority","hasDefaultValue":true,"operations":["set"],"allowedValues":[{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/1","iconUrl":"https://sourcebits.atlassian.net/images/icons/priorities/blocker.svg","name":"Blocker","id":"1"},{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/2","iconUrl":"https://sourcebits.atlassian.net/images/icons/priorities/critical.svg","name":"Critical","id":"2"},{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/3","iconUrl":"https://sourcebits.atlassian.net/images/icons/priorities/major.svg","name":"Major","id":"3"},{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/4","iconUrl":"https://sourcebits.atlassian.net/images/icons/priorities/minor.svg","name":"Minor","id":"4"},{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/5","iconUrl":"https://sourcebits.atlassian.net/images/icons/priorities/trivial.svg","name":"Trivial","id":"5"},{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/10000","iconUrl":"https://www.transparenttextures.com/patterns/transparent-square-tiles.png","name":"Not Set","id":"10000"}],"defaultValue":{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/10000","iconUrl":"https://www.transparenttextures.com/patterns/transparent-square-tiles.png","name":"Not Set","id":"10000"}},"customfield_10894":{"required":false,"schema":{"type":"array","items":"json","custom":"com.pyxis.greenhopper.jira:gh-sprint","customId":10894},"name":"Sprint","key":"customfield_10894","hasDefaultValue":false,"operations":["set"]},"timetracking":{"required":false,"schema":{"type":"timetracking","system":"timetracking"},"name":"Time tracking","key":"timetracking","hasDefaultValue":false,"operations":["set","edit"]},"labels":{"required":false,"schema":{"type":"array","items":"string","system":"labels"},"name":"Labels","key":"labels","autoCompleteUrl":"https://sourcebits.atlassian.net/rest/api/1.0/labels/suggest?query=","hasDefaultValue":false,"operations":["add","set","remove"]},"environment":{"required":false,"schema":{"type":"string","system":"environment"},"name":"Environment","key":"environment","hasDefaultValue":false,"operations":["set"]},"attachment":{"required":false,"schema":{"type":"array","items":"attachment","system":"attachment"},"name":"Attachment","key":"attachment","hasDefaultValue":false,"operations":["set"]},"issuelinks":{"required":false,"schema":{"type":"array","items":"issuelinks","system":"issuelinks"},"name":"Linked Issues","key":"issuelinks","autoCompleteUrl":"https://sourcebits.atlassian.net/rest/api/2/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=null&query=","hasDefaultValue":false,"operations":["add"]},"assignee":{"required":false,"schema":{"type":"user","system":"assignee"},"name":"Assignee","key":"assignee","autoCompleteUrl":"https://sourcebits.atlassian.net/rest/api/2/user/assignable/search?project=NORBUG&query=","hasDefaultValue":false,"operations":["set"]}}}]}]}"
+2021-07-08 23:07:58,030 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:58,030 DEBUG [main] wire:63 - << "0[\r][\n]"
+2021-07-08 23:07:58,031 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:58,031 DEBUG [main] BasicClientConnectionManager:201 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@79e66b2f
+2021-07-08 23:07:58,031 DEBUG [main] BasicClientConnectionManager:228 - Connection can be kept alive indefinitely
+2021-07-08 23:07:58,037 DEBUG [main] BasicClientConnectionManager:159 - Get connection for route {s}->https://sourcebits.atlassian.net
+2021-07-08 23:07:58,037 DEBUG [main] DefaultHttpClient:465 - Stale connection check
+2021-07-08 23:07:58,042 DEBUG [main] RequestAddCookies:132 - CookieSpec selected: best-match
+2021-07-08 23:07:58,042 DEBUG [main] RequestAddCookies:184 - Cookie [version: 0][name: atlassian.xsrf.token][value: B0D5-VC6W-COIN-AQH4_3e2375d5ea2996fb24c09dec4ef976913e01f84e_lin][domain: sourcebits.atlassian.net][path: /][expiry: null] match [(secure)sourcebits.atlassian.net:443/rest/api/latest/issue/]
+2021-07-08 23:07:58,042 DEBUG [main] RequestAuthCache:78 - Auth cache not set in the context
+2021-07-08 23:07:58,042 DEBUG [main] RequestProxyAuthentication:87 - Proxy auth state: UNCHALLENGED
+2021-07-08 23:07:58,042 DEBUG [main] DefaultHttpClient:713 - Attempt 1 to execute request
+2021-07-08 23:07:58,043 DEBUG [main] DefaultClientConnection:269 - Sending request: POST /rest/api/latest/issue/ HTTP/1.1
+2021-07-08 23:07:58,043 DEBUG [main] wire:63 - >> "POST /rest/api/latest/issue/ HTTP/1.1[\r][\n]"
+2021-07-08 23:07:58,043 DEBUG [main] wire:63 - >> "Content-Type: application/json[\r][\n]"
+2021-07-08 23:07:58,044 DEBUG [main] wire:63 - >> "Accept: application/json[\r][\n]"
+2021-07-08 23:07:58,044 DEBUG [main] wire:63 - >> "Authorization: Basic cmF2aXJhai5tZXRyaUBhc2NlbmR1bS5jb206ZFRscGVxSllqNUZpRThheHFkQzlFNzk4[\r][\n]"
+2021-07-08 23:07:58,044 DEBUG [main] wire:63 - >> "Content-Length: 2572[\r][\n]"
+2021-07-08 23:07:58,044 DEBUG [main] wire:63 - >> "Host: sourcebits.atlassian.net[\r][\n]"
+2021-07-08 23:07:58,044 DEBUG [main] wire:63 - >> "Connection: Keep-Alive[\r][\n]"
+2021-07-08 23:07:58,044 DEBUG [main] wire:63 - >> "User-Agent: Apache-HttpClient/4.2.5 (java 1.5)[\r][\n]"
+2021-07-08 23:07:58,044 DEBUG [main] wire:63 - >> "Cookie: atlassian.xsrf.token=B0D5-VC6W-COIN-AQH4_3e2375d5ea2996fb24c09dec4ef976913e01f84e_lin[\r][\n]"
+2021-07-08 23:07:58,045 DEBUG [main] wire:63 - >> "Cookie2: $Version=1[\r][\n]"
+2021-07-08 23:07:58,045 DEBUG [main] wire:63 - >> "[\r][\n]"
+2021-07-08 23:07:58,045 DEBUG [main] headers:273 - >> POST /rest/api/latest/issue/ HTTP/1.1
+2021-07-08 23:07:58,045 DEBUG [main] headers:276 - >> Content-Type: application/json
+2021-07-08 23:07:58,045 DEBUG [main] headers:276 - >> Accept: application/json
+2021-07-08 23:07:58,045 DEBUG [main] headers:276 - >> Authorization: Basic cmF2aXJhai5tZXRyaUBhc2NlbmR1bS5jb206ZFRscGVxSllqNUZpRThheHFkQzlFNzk4
+2021-07-08 23:07:58,045 DEBUG [main] headers:276 - >> Content-Length: 2572
+2021-07-08 23:07:58,045 DEBUG [main] headers:276 - >> Host: sourcebits.atlassian.net
+2021-07-08 23:07:58,045 DEBUG [main] headers:276 - >> Connection: Keep-Alive
+2021-07-08 23:07:58,046 DEBUG [main] headers:276 - >> User-Agent: Apache-HttpClient/4.2.5 (java 1.5)
+2021-07-08 23:07:58,046 DEBUG [main] headers:276 - >> Cookie: atlassian.xsrf.token=B0D5-VC6W-COIN-AQH4_3e2375d5ea2996fb24c09dec4ef976913e01f84e_lin
+2021-07-08 23:07:58,046 DEBUG [main] headers:276 - >> Cookie2: $Version=1
+2021-07-08 23:07:58,047 DEBUG [main] wire:77 - >> "{"fields":{"summary":"Registration_Nordson_Cookiesgot failed due to some assertion / exception","issuetype":{"name":"Bug"},"project":{"key":"NORBUG"},"description":"java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:97)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:969)\r\n\tat org.testng.Assert.assertTrue(Assert.java:43)\r\n\tat org.testng.Assert.assertTrue(Assert.java:53)\r\n\tat com.nordson.testCases.TC_OMU_1891_1936_User_Dashboard_Links.Registration_Nordson_Cookies(TC_OMU_1891_1936_User_Dashboard_Links.java:236)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)\r\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)\r\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)\r\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)\r\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\r\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\r\n\tat java.util.ArrayList.forEach(ArrayList.java:1257)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:766)\r\n\tat org.testng.TestRunner.run(TestRunner.java:587)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:384)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:286)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1109)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1039)\r\n\tat org.testng.TestNG.run(TestNG.java:1007)\r\n\tat org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)\r\n\tat org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)\r\n\tat org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)\r\n"}}"
+2021-07-08 23:07:58,770 DEBUG [main] wire:63 - << "HTTP/1.1 201 Created[\r][\n]"
+2021-07-08 23:07:58,771 DEBUG [main] wire:63 - << "Server: AtlassianProxy/1.19.3.1[\r][\n]"
+2021-07-08 23:07:58,771 DEBUG [main] wire:63 - << "vary: Accept-Encoding[\r][\n]"
+2021-07-08 23:07:58,772 DEBUG [main] wire:63 - << "cache-control: no-cache, no-store, no-transform[\r][\n]"
+2021-07-08 23:07:58,772 DEBUG [main] wire:63 - << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2021-07-08 23:07:58,772 DEBUG [main] wire:63 - << "Strict-Transport-Security: max-age=315360000; includeSubDomains; preload[\r][\n]"
+2021-07-08 23:07:58,772 DEBUG [main] wire:63 - << "Date: Thu, 08 Jul 2021 17:37:58 GMT[\r][\n]"
+2021-07-08 23:07:58,773 DEBUG [main] wire:63 - << "ATL-TraceId: dcba132e7273a0f7[\r][\n]"
+2021-07-08 23:07:58,773 DEBUG [main] wire:63 - << "x-arequestid: 10cdd954-d683-45f0-b593-720735bde668[\r][\n]"
+2021-07-08 23:07:58,774 DEBUG [main] wire:63 - << "x-aaccountid: 5d43e195d99e6c0da904d987[\r][\n]"
+2021-07-08 23:07:58,774 DEBUG [main] wire:63 - << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-07-08 23:07:58,774 DEBUG [main] wire:63 - << "Transfer-Encoding: chunked[\r][\n]"
+2021-07-08 23:07:58,775 DEBUG [main] wire:63 - << "timing-allow-origin: *[\r][\n]"
+2021-07-08 23:07:58,775 DEBUG [main] wire:63 - << "x-envoy-upstream-service-time: 668[\r][\n]"
+2021-07-08 23:07:58,775 DEBUG [main] wire:63 - << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-07-08 23:07:58,776 DEBUG [main] wire:63 - << "Connection: keep-alive[\r][\n]"
+2021-07-08 23:07:58,776 DEBUG [main] wire:63 - << "Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400[\r][\n]"
+2021-07-08 23:07:58,776 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:58,776 DEBUG [main] DefaultClientConnection:254 - Receiving response: HTTP/1.1 201 Created
+2021-07-08 23:07:58,776 DEBUG [main] headers:257 - << HTTP/1.1 201 Created
+2021-07-08 23:07:58,777 DEBUG [main] headers:260 - << Server: AtlassianProxy/1.19.3.1
+2021-07-08 23:07:58,777 DEBUG [main] headers:260 - << vary: Accept-Encoding
+2021-07-08 23:07:58,777 DEBUG [main] headers:260 - << cache-control: no-cache, no-store, no-transform
+2021-07-08 23:07:58,777 DEBUG [main] headers:260 - << Content-Type: application/json;charset=UTF-8
+2021-07-08 23:07:58,777 DEBUG [main] headers:260 - << Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+2021-07-08 23:07:58,778 DEBUG [main] headers:260 - << Date: Thu, 08 Jul 2021 17:37:58 GMT
+2021-07-08 23:07:58,778 DEBUG [main] headers:260 - << ATL-TraceId: dcba132e7273a0f7
+2021-07-08 23:07:58,778 DEBUG [main] headers:260 - << x-arequestid: 10cdd954-d683-45f0-b593-720735bde668
+2021-07-08 23:07:58,778 DEBUG [main] headers:260 - << x-aaccountid: 5d43e195d99e6c0da904d987
+2021-07-08 23:07:58,778 DEBUG [main] headers:260 - << X-XSS-Protection: 1; mode=block
+2021-07-08 23:07:58,778 DEBUG [main] headers:260 - << Transfer-Encoding: chunked
+2021-07-08 23:07:58,778 DEBUG [main] headers:260 - << timing-allow-origin: *
+2021-07-08 23:07:58,778 DEBUG [main] headers:260 - << x-envoy-upstream-service-time: 668
+2021-07-08 23:07:58,778 DEBUG [main] headers:260 - << X-Content-Type-Options: nosniff
+2021-07-08 23:07:58,778 DEBUG [main] headers:260 - << Connection: keep-alive
+2021-07-08 23:07:58,778 DEBUG [main] headers:260 - << Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+2021-07-08 23:07:58,778 DEBUG [main] DefaultHttpClient:543 - Connection can be kept alive indefinitely
+2021-07-08 23:07:58,779 DEBUG [main] wire:63 - << "68[\r][\n]"
+2021-07-08 23:07:58,779 DEBUG [main] wire:77 - << "{"id":"219351","key":"NORBUG-83","self":"https://sourcebits.atlassian.net/rest/api/latest/issue/219351"}"
+2021-07-08 23:07:58,779 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:58,779 DEBUG [main] wire:63 - << "0[\r][\n]"
+2021-07-08 23:07:58,779 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:58,779 DEBUG [main] BasicClientConnectionManager:201 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@17273273
+2021-07-08 23:07:58,779 DEBUG [main] BasicClientConnectionManager:228 - Connection can be kept alive indefinitely
+2021-07-08 23:07:58,779 DEBUG [main] BasicClientConnectionManager:159 - Get connection for route {s}->https://sourcebits.atlassian.net
+2021-07-08 23:07:58,780 DEBUG [main] DefaultHttpClient:465 - Stale connection check
+2021-07-08 23:07:58,787 DEBUG [main] RequestAddCookies:132 - CookieSpec selected: best-match
+2021-07-08 23:07:58,787 DEBUG [main] RequestAddCookies:184 - Cookie [version: 0][name: atlassian.xsrf.token][value: B0D5-VC6W-COIN-AQH4_3e2375d5ea2996fb24c09dec4ef976913e01f84e_lin][domain: sourcebits.atlassian.net][path: /][expiry: null] match [(secure)sourcebits.atlassian.net:443/rest/api/latest/issue/NORBUG-83]
+2021-07-08 23:07:58,788 DEBUG [main] RequestAuthCache:78 - Auth cache not set in the context
+2021-07-08 23:07:58,788 DEBUG [main] RequestProxyAuthentication:87 - Proxy auth state: UNCHALLENGED
+2021-07-08 23:07:58,789 DEBUG [main] DefaultHttpClient:713 - Attempt 1 to execute request
+2021-07-08 23:07:58,789 DEBUG [main] DefaultClientConnection:269 - Sending request: GET /rest/api/latest/issue/NORBUG-83 HTTP/1.1
+2021-07-08 23:07:58,789 DEBUG [main] wire:63 - >> "GET /rest/api/latest/issue/NORBUG-83 HTTP/1.1[\r][\n]"
+2021-07-08 23:07:58,789 DEBUG [main] wire:63 - >> "Accept: application/json[\r][\n]"
+2021-07-08 23:07:58,790 DEBUG [main] wire:63 - >> "Authorization: Basic cmF2aXJhai5tZXRyaUBhc2NlbmR1bS5jb206ZFRscGVxSllqNUZpRThheHFkQzlFNzk4[\r][\n]"
+2021-07-08 23:07:58,790 DEBUG [main] wire:63 - >> "Host: sourcebits.atlassian.net[\r][\n]"
+2021-07-08 23:07:58,790 DEBUG [main] wire:63 - >> "Connection: Keep-Alive[\r][\n]"
+2021-07-08 23:07:58,790 DEBUG [main] wire:63 - >> "User-Agent: Apache-HttpClient/4.2.5 (java 1.5)[\r][\n]"
+2021-07-08 23:07:58,790 DEBUG [main] wire:63 - >> "Cookie: atlassian.xsrf.token=B0D5-VC6W-COIN-AQH4_3e2375d5ea2996fb24c09dec4ef976913e01f84e_lin[\r][\n]"
+2021-07-08 23:07:58,791 DEBUG [main] wire:63 - >> "Cookie2: $Version=1[\r][\n]"
+2021-07-08 23:07:58,791 DEBUG [main] wire:63 - >> "[\r][\n]"
+2021-07-08 23:07:58,791 DEBUG [main] headers:273 - >> GET /rest/api/latest/issue/NORBUG-83 HTTP/1.1
+2021-07-08 23:07:58,791 DEBUG [main] headers:276 - >> Accept: application/json
+2021-07-08 23:07:58,791 DEBUG [main] headers:276 - >> Authorization: Basic cmF2aXJhai5tZXRyaUBhc2NlbmR1bS5jb206ZFRscGVxSllqNUZpRThheHFkQzlFNzk4
+2021-07-08 23:07:58,792 DEBUG [main] headers:276 - >> Host: sourcebits.atlassian.net
+2021-07-08 23:07:58,792 DEBUG [main] headers:276 - >> Connection: Keep-Alive
+2021-07-08 23:07:58,792 DEBUG [main] headers:276 - >> User-Agent: Apache-HttpClient/4.2.5 (java 1.5)
+2021-07-08 23:07:58,792 DEBUG [main] headers:276 - >> Cookie: atlassian.xsrf.token=B0D5-VC6W-COIN-AQH4_3e2375d5ea2996fb24c09dec4ef976913e01f84e_lin
+2021-07-08 23:07:58,792 DEBUG [main] headers:276 - >> Cookie2: $Version=1
+2021-07-08 23:07:59,171 DEBUG [main] wire:63 - << "HTTP/1.1 200 OK[\r][\n]"
+2021-07-08 23:07:59,171 DEBUG [main] wire:63 - << "Server: AtlassianProxy/1.19.3.1[\r][\n]"
+2021-07-08 23:07:59,171 DEBUG [main] wire:63 - << "vary: Accept-Encoding[\r][\n]"
+2021-07-08 23:07:59,172 DEBUG [main] wire:63 - << "cache-control: no-cache, no-store, no-transform[\r][\n]"
+2021-07-08 23:07:59,172 DEBUG [main] wire:63 - << "Content-Type: application/json;charset=UTF-8[\r][\n]"
+2021-07-08 23:07:59,172 DEBUG [main] wire:63 - << "Strict-Transport-Security: max-age=315360000; includeSubDomains; preload[\r][\n]"
+2021-07-08 23:07:59,172 DEBUG [main] wire:63 - << "Date: Thu, 08 Jul 2021 17:37:59 GMT[\r][\n]"
+2021-07-08 23:07:59,172 DEBUG [main] wire:63 - << "ATL-TraceId: 65655f965352d02e[\r][\n]"
+2021-07-08 23:07:59,172 DEBUG [main] wire:63 - << "x-arequestid: 31feacbb-67fb-4310-8fa1-6199b1fca565[\r][\n]"
+2021-07-08 23:07:59,172 DEBUG [main] wire:63 - << "x-aaccountid: 5d43e195d99e6c0da904d987[\r][\n]"
+2021-07-08 23:07:59,172 DEBUG [main] wire:63 - << "X-XSS-Protection: 1; mode=block[\r][\n]"
+2021-07-08 23:07:59,172 DEBUG [main] wire:63 - << "Transfer-Encoding: chunked[\r][\n]"
+2021-07-08 23:07:59,172 DEBUG [main] wire:63 - << "timing-allow-origin: *[\r][\n]"
+2021-07-08 23:07:59,172 DEBUG [main] wire:63 - << "x-envoy-upstream-service-time: 317[\r][\n]"
+2021-07-08 23:07:59,172 DEBUG [main] wire:63 - << "X-Content-Type-Options: nosniff[\r][\n]"
+2021-07-08 23:07:59,172 DEBUG [main] wire:63 - << "Connection: keep-alive[\r][\n]"
+2021-07-08 23:07:59,172 DEBUG [main] wire:63 - << "Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400[\r][\n]"
+2021-07-08 23:07:59,173 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:59,173 DEBUG [main] DefaultClientConnection:254 - Receiving response: HTTP/1.1 200 OK
+2021-07-08 23:07:59,173 DEBUG [main] headers:257 - << HTTP/1.1 200 OK
+2021-07-08 23:07:59,173 DEBUG [main] headers:260 - << Server: AtlassianProxy/1.19.3.1
+2021-07-08 23:07:59,173 DEBUG [main] headers:260 - << vary: Accept-Encoding
+2021-07-08 23:07:59,173 DEBUG [main] headers:260 - << cache-control: no-cache, no-store, no-transform
+2021-07-08 23:07:59,173 DEBUG [main] headers:260 - << Content-Type: application/json;charset=UTF-8
+2021-07-08 23:07:59,173 DEBUG [main] headers:260 - << Strict-Transport-Security: max-age=315360000; includeSubDomains; preload
+2021-07-08 23:07:59,173 DEBUG [main] headers:260 - << Date: Thu, 08 Jul 2021 17:37:59 GMT
+2021-07-08 23:07:59,173 DEBUG [main] headers:260 - << ATL-TraceId: 65655f965352d02e
+2021-07-08 23:07:59,173 DEBUG [main] headers:260 - << x-arequestid: 31feacbb-67fb-4310-8fa1-6199b1fca565
+2021-07-08 23:07:59,173 DEBUG [main] headers:260 - << x-aaccountid: 5d43e195d99e6c0da904d987
+2021-07-08 23:07:59,173 DEBUG [main] headers:260 - << X-XSS-Protection: 1; mode=block
+2021-07-08 23:07:59,173 DEBUG [main] headers:260 - << Transfer-Encoding: chunked
+2021-07-08 23:07:59,173 DEBUG [main] headers:260 - << timing-allow-origin: *
+2021-07-08 23:07:59,174 DEBUG [main] headers:260 - << x-envoy-upstream-service-time: 317
+2021-07-08 23:07:59,174 DEBUG [main] headers:260 - << X-Content-Type-Options: nosniff
+2021-07-08 23:07:59,174 DEBUG [main] headers:260 - << Connection: keep-alive
+2021-07-08 23:07:59,174 DEBUG [main] headers:260 - << Expect-CT: report-uri="https://web-security-reports.services.atlassian.com/expect-ct-report/global-proxy", enforce, max-age=86400
+2021-07-08 23:07:59,174 DEBUG [main] DefaultHttpClient:543 - Connection can be kept alive indefinitely
+2021-07-08 23:07:59,174 DEBUG [main] wire:63 - << "1dfe[\r][\n]"
+2021-07-08 23:07:59,174 DEBUG [main] wire:77 - << "{"expand":"renderedFields,names,schema,operations,editmeta,changelog,versionedRepresentations,customfield_12400.properties,customfield_12401.properties","id":"219351","self":"https://sourcebits.atlassian.net/rest/api/latest/issue/219351","key":"NORBUG-83","fields":{"statuscategorychangedate":"2021-07-08T23:07:58.719+0530","customfield_12491":null,"customfield_12493":null,"customfield_12492":null,"customfield_10590":null,"customfield_12495":null,"customfield_10591":null,"customfield_12497":null,"customfield_12496":null,"customfield_12411":null,"resolution":null,"customfield_12410":[],"customfield_12413":null,"customfield_12412":null,"customfield_12404":null,"customfield_12403":null,"customfield_12406":null,"customfield_12405":null,"customfield_12408":null,"customfield_12409":null,"lastViewed":null,"customfield_11390":"0|i0t8bb:","customfield_12000":null,"customfield_11790":{"hasEpicLinkFieldDependency":false,"showField":false,"nonEditableReason":{"reason":"PLUGIN_LICENSE_ERROR","message":"The Parent Link is only available to Jira Premium users."}},"priority":{"self":"https://sourcebits.atlassian.net/rest/api/2/priority/10000","iconUrl":"https://www.transparenttextures.com/patterns/transparent-square-tiles.png","name":"Not Set","id":"10000"},"customfield_12400":null,"customfield_12402":null,"customfield_12401":null,"labels":[],"customfield_12514":{"self":"https://sourcebits.atlassian.net/rest/api/2/customFieldOption/10653","value":"TBD","id":"10653"},"customfield_12513":null,"timeestimate":null,"aggregatetimeoriginalestimate":null,"issuelinks":[],"assignee":null,"status":{"self":"https://sourcebits.atlassian.net/rest/api/2/status/10160","description":"","iconUrl":"https://sourcebits.atlassian.net/","name":"To Do","id":"10160","statusCategory":{"self":"https://sourcebits.atlassian.net/rest/api/2/statuscategory/2","id":2,"key":"new","colorName":"blue-gray","name":"To Do"}},"components":[],"customfield_10292":null,"customfield_12471":null,"customfield_12470":null,"customfield_10690":null,"customfield_12473":{"hasEpicLinkFieldDependency":false,"showField":false,"nonEditableReason":{"reason":"PLUGIN_LICENSE_ERROR","message":"The Parent Link is only available to Jira Premium users."}},"customfield_12472":null,"customfield_12475":null,"customfield_12474":null,"customfield_12510":null,"customfield_11300":null,"customfield_12476":null,"customfield_11301":null,"customfield_12511":null,"customfield_12469":null,"customfield_12502":null,"customfield_12504":null,"aggregatetimeestimate":null,"customfield_12509":null,"creator":{"self":"https://sourcebits.atlassian.net/rest/api/2/user?accountId=5d43e195d99e6c0da904d987","accountId":"5d43e195d99e6c0da904d987","emailAddress":"raviraj.metri@ascendum.com","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png","24x24":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png","16x16":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png","32x32":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png"},"displayName":"Raviraj Metri","active":true,"timeZone":"Asia/Calcutta","accountType":"atlassian"},"subtasks":[],"customfield_12460":null,"customfield_11890":"{}","customfield_12462":null,"customfield_12461":null,"reporter":{"self":"https://sourcebits.atlassian.net/rest/api/2/user?accountId=5d43e195d99e6c0da904d987","accountId":"5d43e195d99e6c0da904d987","emailAddress":"raviraj.metri@ascendum.com","avatarUrls":{"48x48":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png","24x24":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png","16x16":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png","32x32":"https://secure.gravatar.com/avatar/a6a4058a6c0bc159c687e109480cc4b3?d=https%3A%2F%2Favatar-management--avatars.us-west-2.prod.public.atl-paas.net%2Finitials%2FRM-1.png"},"displayName":"Raviraj Metri","active":true,"timeZone":"Asia/Calcutta","accountType":"atlassian"},"customfield_12464":null,"customfield_12463":null,"aggregateprogress":{"progress":0,"total":0},"customfield_12100":null,"customfield_12466":null,"customfield_12465":null,"customfield_12468":null,"customfield_12467":null,"progress":{"progress":0,"total":0},"votes":{"self":"https://sourcebits.atlassian.net/rest/api/2/issue/NORBUG-83/votes","votes":0,"hasVoted":false},"worklog":{"startAt":0,"maxResults":20,"total":0,"worklogs":[]},"issuetype":{"self":"https://sourcebits.atlassian.net/rest/api/2/issuetype/1","id":"1","description":"A problem which impairs or prevents the functions of the product.","iconUrl":"https://sourcebits.atlassian.net/secure/viewavatar?size=medium&avatarId=16633&avatarType=issuetype","name":"Bug","subtask":false,"avatarId":16633,"hierarchyLevel":0},"timespent":null,"project":{"self":"https://sourcebits.atlassian.net/rest/api/2/project/25480","id":"25480","key":"NORBUG","name":"NORDSON - Automation Bug","projectTypeKey":"software","simplified":false,"avatarUrls":{"48x48":"https://sourcebits.atlassian.net/secure/projectavatar?pid=25480&avatarId=21816","24x24":"https://sourcebits.atlassian.net/secure/projectavatar?size=small&s=small&pid=25480&avatarId=21816","16x16":"https://sourcebits.atlassian.net/secure/projectavatar?size=xsmall&s=xsmall&pid=25480&avatarId=21816","32x32":"https://sourcebits.atlassian.net/secure/projectavatar?size=medium&s=medium&pid=25480&avatarId=21816"}},"customfield_10791":null,"aggregatetimespent":null,"resolutiondate":null,"workratio":-1,"watches":{"self":"https://sourcebits.atlassian.net/rest/api/2/issue/NORBUG-83/watchers","watchCount":1,"isWatching":true},"issuerestriction":{"issuerestrictions":{},"shouldDisplay":false},"customfield_11190":null,"created":"2021-07-08T23:07:58.333+0530","customfield_12200":null,"customfield_12442":null,"customfield_12441":null,"customfield_12444":null,"customfield_12443":null,"customfield_12446":null,"customfield_12445":null,"customfield_12439":null,"updated":"2021-07-08T23:07:58.333+0530","timeoriginalestimate":null,"description":"java.lang.AssertionError: expected [true] but found [false]\r\n\tat org.testng.Assert.fail(Assert.java:97)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:969)\r\n\tat org.testng.Assert.assertTrue(Assert.java:43)\r\n\tat org.testng.Assert.assertTrue(Assert.java:53)\r\n\tat com.nordson.testCases.TC_OMU_1891_1936_User_Dashboard_Links.Registration_Nordson_Cookies(TC_OMU_1891_1936_User_Dashboard_Links.java:236)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.lang.reflect.Method.invoke(Method.java:498)\r\n\tat org.testng.internal"
+2021-07-08 23:07:59,174 DEBUG [main] wire:77 - << ".MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)\r\n\tat org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethod(Tes"
+2021-07-08 23:07:59,174 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:59,175 DEBUG [main] wire:63 - << "ab0[\r][\n]"
+2021-07-08 23:07:59,175 DEBUG [main] wire:77 - << "tInvoker.java:173)\r\n\tat org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)\r\n\tat org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)\r\n\tat org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)\r\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)\r\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)\r\n\tat java.util.ArrayList.forEach(ArrayList.java:1257)\r\n\tat org.testng.TestRunner.privateRun(TestRunner.java:766)\r\n\tat org.testng.TestRunner.run(TestRunner.java:587)\r\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:384)\r\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)\r\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)\r\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:286)\r\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)\r\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)\r\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)\r\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1109)\r\n\tat org.testng.TestNG.runSuites(TestNG.java:1039)\r\n\tat org.testng.TestNG.run(TestNG.java:1007)\r\n\tat org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)\r\n\tat org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)\r\n\tat org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)\r\n","customfield_10010":null,"customfield_12431":null,"customfield_12430":null,"customfield_12433":null,"customfield_12432":null,"customfield_12435":null,"customfield_10894":null,"timetracking":{},"customfield_12434":null,"customfield_12426":null,"customfield_12425":null,"customfield_12428":null,"security":null,"customfield_12427":null,"attachment":[],"customfield_12429":null,"summary":"Registration_Nordson_Cookiesgot failed due to some assertion / exception","customfield_11290":null,"customfield_10081":null,"customfield_11291":null,"customfield_11292":null,"customfield_11293":null,"customfield_11690":null,"customfield_11294":null,"customfield_11295":null,"customfield_11296":null,"customfield_11297":null,"customfield_12420":null,"customfield_11298":null,"customfield_10000":null,"customfield_11299":null,"customfield_12422":null,"customfield_12421":null,"customfield_10002":null,"customfield_12424":null,"customfield_12423":null,"customfield_10004":null,"customfield_12415":null,"customfield_12414":null,"environment":null,"customfield_12417":null,"customfield_12416":null,"customfield_12419":null,"customfield_12418":null,"duedate":null,"comment":{"comments":[],"self":"https://sourcebits.atlassian.net/rest/api/2/issue/219351/comment","maxResults":0,"total":0,"startAt":0}}}"
+2021-07-08 23:07:59,175 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:59,175 DEBUG [main] wire:63 - << "0[\r][\n]"
+2021-07-08 23:07:59,175 DEBUG [main] wire:63 - << "[\r][\n]"
+2021-07-08 23:07:59,175 DEBUG [main] BasicClientConnectionManager:201 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5f69e2b
+2021-07-08 23:07:59,175 DEBUG [main] BasicClientConnectionManager:228 - Connection can be kept alive indefinitely
+2021-07-08 23:07:59,219  INFO [main] nordson:248 - Contact Us Link Displayed
+2021-07-08 23:08:03,397  INFO [main] nordson:276 - Dashboard Text displayed
+2021-07-08 23:08:05,970  INFO [main] nordson:296 - Model Registration Text displayed
+2021-07-08 23:08:08,567  INFO [main] nordson:316 - Sub User Account Text displayed
+2021-07-08 23:08:09,626  INFO [main] nordson:335 - Clicked on Set Up Tool Link
+2021-07-08 23:08:09,671 DEBUG [Finalizer] DefaultClientConnection:169 - Connection 0.0.0.0:57847<->18.136.214.10:443 closed
+2021-07-08 23:08:16,033  INFO [main] nordson:348 - Set Up tool Displayed
+2021-07-08 23:08:20,495  INFO [main] nordson:376 - Clicked on Media Center Link
+2021-07-08 23:08:25,139  INFO [main] nordson:388 - Set Up tool Displayed
+2021-07-08 23:08:25,179  INFO [main] nordson:406 - Manage License Link Displayed
+2021-07-08 23:08:35,066  INFO [main] nordson:438 - Manage Lincense link is opened and navigated
+2021-07-08 23:08:36,177  INFO [main] nordson:464 - Help Center Link Displayed
+2021-07-08 23:08:43,035  INFO [main] nordson:493 - Help Center is opened and navigated
+2021-07-08 23:08:47,253  INFO [main] nordson:522 - Language count is 9
+2021-07-08 23:08:48,819  INFO [main] nordson:543 - English Language is present
+2021-07-08 23:08:58,258  INFO [main] nordson:573 - Profile Displayed
+2021-07-08 23:09:17,351 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/test.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,352 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/test_en.ftl"): Not found
+2021-07-08 23:09:17,353 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/test.ftl"): Found
+2021-07-08 23:09:17,353 DEBUG [main] cache:45 - Loading template for "spark/test.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/test.ftl"
+2021-07-08 23:09:17,498 DEBUG [main] cache:45 - Couldn't find template in cache for "commons/commons-variables.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,500 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-variables_en.ftl"): Not found
+2021-07-08 23:09:17,500 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-variables.ftl"): Found
+2021-07-08 23:09:17,500 DEBUG [main] cache:45 - Loading template for "commons/commons-variables.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/commons/commons-variables.ftl"
+2021-07-08 23:09:17,532 DEBUG [main] cache:45 - Couldn't find template in cache for "commons/commons-macros.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,532 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-macros_en.ftl"): Not found
+2021-07-08 23:09:17,533 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-macros.ftl"): Found
+2021-07-08 23:09:17,533 DEBUG [main] cache:45 - Loading template for "commons/commons-macros.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/commons/commons-macros.ftl"
+2021-07-08 23:09:17,536 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/macros/attributes.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,536 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/attributes_en.ftl"): Not found
+2021-07-08 23:09:17,536 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/attributes.ftl"): Found
+2021-07-08 23:09:17,537 DEBUG [main] cache:45 - Loading template for "spark/macros/attributes.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/macros/attributes.ftl"
+2021-07-08 23:09:17,537 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/macros/log.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,538 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/log_en.ftl"): Not found
+2021-07-08 23:09:17,538 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/log.ftl"): Found
+2021-07-08 23:09:17,538 DEBUG [main] cache:45 - Loading template for "spark/macros/log.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/macros/log.ftl"
+2021-07-08 23:09:17,539 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/macros/recurse_nodes.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,539 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en.ftl"): Not found
+2021-07-08 23:09:17,539 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes.ftl"): Found
+2021-07-08 23:09:17,539 DEBUG [main] cache:45 - Loading template for "spark/macros/recurse_nodes.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/macros/recurse_nodes.ftl"
+2021-07-08 23:09:17,541 DEBUG [main] cache:45 - "spark/macros/log.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,548 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/head.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,549 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/head_en.ftl"): Not found
+2021-07-08 23:09:17,549 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/head.ftl"): Found
+2021-07-08 23:09:17,549 DEBUG [main] cache:45 - Loading template for "spark/partials/head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/partials/head.ftl"
+2021-07-08 23:09:17,550 DEBUG [main] cache:45 - Couldn't find template in cache for "commons/commons-inject-css.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,550 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-css_en.ftl"): Not found
+2021-07-08 23:09:17,550 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-css.ftl"): Found
+2021-07-08 23:09:17,550 DEBUG [main] cache:45 - Loading template for "commons/commons-inject-css.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/commons/commons-inject-css.ftl"
+2021-07-08 23:09:17,551 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/navbar.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,551 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/navbar_en.ftl"): Not found
+2021-07-08 23:09:17,551 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/navbar.ftl"): Found
+2021-07-08 23:09:17,551 DEBUG [main] cache:45 - Loading template for "spark/partials/navbar.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/partials/navbar.ftl"
+2021-07-08 23:09:17,555 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/sidenav.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,556 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/sidenav_en.ftl"): Not found
+2021-07-08 23:09:17,556 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/sidenav.ftl"): Found
+2021-07-08 23:09:17,557 DEBUG [main] cache:45 - Loading template for "spark/partials/sidenav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/partials/sidenav.ftl"
+2021-07-08 23:09:17,568 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/standard-content.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,568 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/standard-content_en.ftl"): Not found
+2021-07-08 23:09:17,568 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/standard-content.ftl"): Found
+2021-07-08 23:09:17,569 DEBUG [main] cache:45 - Loading template for "spark/partials/standard-content.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/partials/standard-content.ftl"
+2021-07-08 23:09:17,573 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,580 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,581 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,581 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,582 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,582 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,583 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,583 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,584 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,584 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,585 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,585 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,586 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,586 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,588 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,589 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,590 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,590 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,590 DEBUG [main] cache:45 - "spark/partials/standard-content.ftl"("en", UTF-8, parsed) cached copy not yet stale; using cached.
+2021-07-08 23:09:17,591 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/scripts.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,591 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/scripts_en.ftl"): Not found
+2021-07-08 23:09:17,591 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/scripts.ftl"): Found
+2021-07-08 23:09:17,591 DEBUG [main] cache:45 - Loading template for "spark/partials/scripts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/partials/scripts.ftl"
+2021-07-08 23:09:17,592 DEBUG [main] cache:45 - Couldn't find template in cache for "commons/commons-inject-js.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,592 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
+2021-07-08 23:09:17,593 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
+2021-07-08 23:09:17,593 DEBUG [main] cache:45 - Loading template for "commons/commons-inject-js.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/commons/commons-inject-js.ftl"
+2021-07-08 23:09:17,598 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/exception.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,598 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/exception_en.ftl"): Not found
+2021-07-08 23:09:17,599 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/exception.ftl"): Found
+2021-07-08 23:09:17,599 DEBUG [main] cache:45 - Loading template for "spark/exception.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/exception.ftl"
+2021-07-08 23:09:17,601 DEBUG [main] cache:45 - Couldn't find template in cache for "commons/commons-variables.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,601 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-variables_en.ftl"): Not found
+2021-07-08 23:09:17,601 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-variables.ftl"): Found
+2021-07-08 23:09:17,601 DEBUG [main] cache:45 - Loading template for "commons/commons-variables.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/commons/commons-variables.ftl"
+2021-07-08 23:09:17,603 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/head.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,604 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/head_en.ftl"): Not found
+2021-07-08 23:09:17,604 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/head.ftl"): Found
+2021-07-08 23:09:17,604 DEBUG [main] cache:45 - Loading template for "spark/partials/head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/partials/head.ftl"
+2021-07-08 23:09:17,606 DEBUG [main] cache:45 - Couldn't find template in cache for "commons/commons-inject-css.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,606 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-css_en.ftl"): Not found
+2021-07-08 23:09:17,606 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-css.ftl"): Found
+2021-07-08 23:09:17,606 DEBUG [main] cache:45 - Loading template for "commons/commons-inject-css.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/commons/commons-inject-css.ftl"
+2021-07-08 23:09:17,607 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/navbar.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,608 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/navbar_en.ftl"): Not found
+2021-07-08 23:09:17,608 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/navbar.ftl"): Found
+2021-07-08 23:09:17,608 DEBUG [main] cache:45 - Loading template for "spark/partials/navbar.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/partials/navbar.ftl"
+2021-07-08 23:09:17,609 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/sidenav.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,610 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/sidenav_en.ftl"): Not found
+2021-07-08 23:09:17,610 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/sidenav.ftl"): Found
+2021-07-08 23:09:17,610 DEBUG [main] cache:45 - Loading template for "spark/partials/sidenav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/partials/sidenav.ftl"
+2021-07-08 23:09:17,613 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/scripts.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,614 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/scripts_en.ftl"): Not found
+2021-07-08 23:09:17,614 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/scripts.ftl"): Found
+2021-07-08 23:09:17,614 DEBUG [main] cache:45 - Loading template for "spark/partials/scripts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/partials/scripts.ftl"
+2021-07-08 23:09:17,614 DEBUG [main] cache:45 - Couldn't find template in cache for "commons/commons-inject-js.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,615 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
+2021-07-08 23:09:17,615 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
+2021-07-08 23:09:17,615 DEBUG [main] cache:45 - Loading template for "commons/commons-inject-js.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/commons/commons-inject-js.ftl"
+2021-07-08 23:09:17,616 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/dashboard.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,616 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/dashboard_en.ftl"): Not found
+2021-07-08 23:09:17,617 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/dashboard.ftl"): Found
+2021-07-08 23:09:17,617 DEBUG [main] cache:45 - Loading template for "spark/dashboard.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/dashboard.ftl"
+2021-07-08 23:09:17,643 DEBUG [main] cache:45 - Couldn't find template in cache for "commons/commons-variables.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,644 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-variables_en.ftl"): Not found
+2021-07-08 23:09:17,646 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-variables.ftl"): Found
+2021-07-08 23:09:17,646 DEBUG [main] cache:45 - Loading template for "commons/commons-variables.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/commons/commons-variables.ftl"
+2021-07-08 23:09:17,652 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/head.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,653 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/head_en.ftl"): Not found
+2021-07-08 23:09:17,653 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/head.ftl"): Found
+2021-07-08 23:09:17,654 DEBUG [main] cache:45 - Loading template for "spark/partials/head.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/partials/head.ftl"
+2021-07-08 23:09:17,655 DEBUG [main] cache:45 - Couldn't find template in cache for "commons/commons-inject-css.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,655 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-css_en.ftl"): Not found
+2021-07-08 23:09:17,655 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-css.ftl"): Found
+2021-07-08 23:09:17,655 DEBUG [main] cache:45 - Loading template for "commons/commons-inject-css.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/commons/commons-inject-css.ftl"
+2021-07-08 23:09:17,656 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/navbar.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,656 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/navbar_en.ftl"): Not found
+2021-07-08 23:09:17,657 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/navbar.ftl"): Found
+2021-07-08 23:09:17,657 DEBUG [main] cache:45 - Loading template for "spark/partials/navbar.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/partials/navbar.ftl"
+2021-07-08 23:09:17,658 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/sidenav.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,658 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/sidenav_en.ftl"): Not found
+2021-07-08 23:09:17,659 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/sidenav.ftl"): Found
+2021-07-08 23:09:17,659 DEBUG [main] cache:45 - Loading template for "spark/partials/sidenav.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/partials/sidenav.ftl"
+2021-07-08 23:09:17,672 DEBUG [main] cache:45 - Couldn't find template in cache for "spark/partials/scripts.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,672 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/scripts_en.ftl"): Not found
+2021-07-08 23:09:17,672 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("spark/partials/scripts.ftl"): Found
+2021-07-08 23:09:17,673 DEBUG [main] cache:45 - Loading template for "spark/partials/scripts.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/spark/partials/scripts.ftl"
+2021-07-08 23:09:17,673 DEBUG [main] cache:45 - Couldn't find template in cache for "commons/commons-inject-js.ftl"("en", UTF-8, parsed); will try to load it.
+2021-07-08 23:09:17,674 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
+2021-07-08 23:09:17,674 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
+2021-07-08 23:09:17,674 DEBUG [main] cache:45 - Loading template for "commons/commons-inject-js.ftl"("en", UTF-8, parsed) from "jar:file:/C:/Users/Ravi%20Raj/.m2/repository/com/aventstack/extentreports/4.0.9/extentreports-4.0.9.jar!/com/aventstack/extentreports/view/commons/commons-inject-js.ftl"
